@@ -29,6 +29,8 @@ class HomeViewController: BaseViewController {
         
         view.addSubview(pagerCollectionView)
         
+        userCurrentStateView.addSubview(middleSideBar)
+        
         
     }
     
@@ -65,6 +67,14 @@ class HomeViewController: BaseViewController {
             $0.trailing.equalTo(view)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
+        
+        
+        middleSideBar.snp.makeConstraints {
+            $0.top.equalTo(userCurrentStateView.snp.top).inset(20)
+            $0.bottom.equalTo(userCurrentStateView.snp.bottom).inset(20)
+            $0.width.equalTo(2)
+            $0.centerX.equalTo(userCurrentStateView)
+        }
     }
     
     override func bindRX() {
@@ -85,6 +95,12 @@ class HomeViewController: BaseViewController {
         let view = UIImageView()
         //view.backgroundColor = .red
         view.image = UIImage(named: "cloud.png")
+        return view
+    }()
+    
+    lazy var middleSideBar: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGray
         return view
     }()
     
@@ -114,6 +130,7 @@ class HomeViewController: BaseViewController {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Let's Play"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 35, weight: .heavy)
         return label
     }()

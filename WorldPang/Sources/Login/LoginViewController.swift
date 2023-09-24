@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
         loginImageView.snp.makeConstraints {
             //$0.bottom.equalTo(loginBaseView.snp.top)
             $0.centerX.equalTo(view)
-            $0.top.equalTo(view).inset(80)
+            $0.top.equalTo(view).inset(100)
         }
         
         appleLoginButton.snp.makeConstraints {
