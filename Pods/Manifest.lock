@@ -1,0 +1,86 @@
+PODS:
+  - Alamofire (5.8.0)
+  - KakaoSDKAuth (2.17.0):
+    - KakaoSDKCommon (= 2.17.0)
+  - KakaoSDKCommon (2.17.0):
+    - KakaoSDKCommon/Common (= 2.17.0)
+    - KakaoSDKCommon/Network (= 2.17.0)
+  - KakaoSDKCommon/Common (2.17.0)
+  - KakaoSDKCommon/Network (2.17.0):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.17.0)
+  - KakaoSDKUser (2.17.0):
+    - KakaoSDKAuth (= 2.17.0)
+  - RxAlamofire (6.1.1):
+    - RxAlamofire/Core (= 6.1.1)
+  - RxAlamofire/Core (6.1.1):
+    - Alamofire (~> 5.4)
+    - RxSwift (~> 6.0)
+  - RxCocoa (6.6.0):
+    - RxRelay (= 6.6.0)
+    - RxSwift (= 6.6.0)
+  - RxKakaoSDKAuth (2.17.0):
+    - KakaoSDKAuth (= 2.17.0)
+    - RxKakaoSDKCommon (= 2.17.0)
+  - RxKakaoSDKCommon (2.17.0):
+    - RxKakaoSDKCommon/Common (= 2.17.0)
+    - RxKakaoSDKCommon/Network (= 2.17.0)
+  - RxKakaoSDKCommon/Common (2.17.0):
+    - KakaoSDKCommon/Common (= 2.17.0)
+    - RxCocoa
+    - RxSwift (~> 6.0)
+  - RxKakaoSDKCommon/Network (2.17.0):
+    - KakaoSDKCommon/Network (= 2.17.0)
+    - RxAlamofire (~> 6.0)
+    - RxKakaoSDKCommon/Common (= 2.17.0)
+  - RxKakaoSDKUser (2.17.0):
+    - KakaoSDKUser (= 2.17.0)
+    - RxKakaoSDKAuth (= 2.17.0)
+  - RxRelay (6.6.0):
+    - RxSwift (= 6.6.0)
+  - RxSwift (6.6.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - KakaoSDKAuth
+  - KakaoSDKCommon
+  - KakaoSDKUser
+  - RxCocoa
+  - RxKakaoSDKAuth
+  - RxKakaoSDKCommon
+  - RxKakaoSDKUser
+  - RxSwift
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKUser
+    - RxAlamofire
+    - RxCocoa
+    - RxKakaoSDKAuth
+    - RxKakaoSDKCommon
+    - RxKakaoSDKUser
+    - RxRelay
+    - RxSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  KakaoSDKAuth: 85c1d89f16b8be3bf266a0c77dff8b5438696b43
+  KakaoSDKCommon: 194ccea3710f30036ee63d79cf524ed7ae6c1595
+  KakaoSDKUser: f37e67aebf9061698462eabcb6860c1e750d3b35
+  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
+  RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
+  RxKakaoSDKAuth: 3e03a20a20376bbe7606df6fd842b0b48c4e4895
+  RxKakaoSDKCommon: b1314426c7adf3a0dec6501901c5f9b24b5f0167
+  RxKakaoSDKUser: 326eab08cbbc78d8afe7250b4f342f23cf1596b1
+  RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
+  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 45635130d8854403f4b7dcfa3fcca640de0f64b7
+
+COCOAPODS: 1.11.3
