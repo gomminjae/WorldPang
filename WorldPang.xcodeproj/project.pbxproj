@@ -15,6 +15,7 @@
 		B52E44562AC023A6001135BC /* reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44552AC023A6001135BC /* reusableIdentifier.swift */; };
 		B52E44582AC0336B001135BC /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44572AC0336B001135BC /* LoginButton.swift */; };
 		B52E445B2AC044C2001135BC /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E445A2AC044C2001135BC /* TTSManager.swift */; };
+		B52E445F2AC27AB0001135BC /* CardPagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E445E2AC27AB0001135BC /* CardPagingLayout.swift */; };
 		B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */; };
 		B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */; };
 		B5BF5B392ABDC455008C53F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5BF5B372ABDC455008C53F4 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		B52E44552AC023A6001135BC /* reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reusableIdentifier.swift; sourceTree = "<group>"; };
 		B52E44572AC0336B001135BC /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		B52E445A2AC044C2001135BC /* TTSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSManager.swift; sourceTree = "<group>"; };
+		B52E445E2AC27AB0001135BC /* CardPagingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPagingLayout.swift; sourceTree = "<group>"; };
 		B5BF5B2E2ABDC455008C53F4 /* WorldPang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldPang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				B52E44572AC0336B001135BC /* LoginButton.swift */,
+				B52E445E2AC27AB0001135BC /* CardPagingLayout.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				B5BF5B672ABDC5AA008C53F4 /* LoginViewModel.swift in Sources */,
 				B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */,
 				B52E44562AC023A6001135BC /* reusableIdentifier.swift in Sources */,
+				B52E445F2AC27AB0001135BC /* CardPagingLayout.swift in Sources */,
 				B5BF5B702ABEC526008C53F4 /* BaseViewController.swift in Sources */,
 				B5BF5B6E2ABEC491008C53F4 /* HomeViewController.swift in Sources */,
 			);

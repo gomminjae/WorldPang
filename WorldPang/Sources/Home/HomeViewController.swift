@@ -12,6 +12,9 @@ import SnapKit
 
 class HomeViewController: BaseViewController {
     
+    private let disposeBag = DisposeBag()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,10 +139,9 @@ class HomeViewController: BaseViewController {
     }()
     
     
-    
-    
-    
-    
-    
 
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    
 }
