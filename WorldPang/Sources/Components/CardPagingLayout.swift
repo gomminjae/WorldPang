@@ -3,8 +3,6 @@
 //  WorldPang
 //
 //  Created by 권민재 on 2023/09/26.
-//
-
 import UIKit
 
 class CardPagingLayout: UICollectionViewLayout {
@@ -14,7 +12,7 @@ class CardPagingLayout: UICollectionViewLayout {
     private var itemSize = CGSize.zero
     private var contentInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
     private var maxRotationAngle: CGFloat = .pi * 0.1
-    private let interitemSpace: CGFloat = 16
+    private let interitemSpace: CGFloat = 20
     private var itemWidth: CGFloat {
         itemSize.width
     }

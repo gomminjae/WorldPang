@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        pagerCollectionView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -88,9 +89,10 @@ class HomeViewController: BaseViewController {
     
     
     lazy var pagerCollectionView: UICollectionView = {
-        let layout = UICollectionViewLayout()
+        let layout = CardPagingLayout()
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .clear
+        view.register(PagerCell.self, forCellWithReuseIdentifier: PagerCell.reusableIdentifier)
         return view
     }()
     
@@ -106,9 +108,6 @@ class HomeViewController: BaseViewController {
         view.backgroundColor = .lightGray
         return view
     }()
-    
-    
-    
     
     lazy var baseView: UIView = {
         let view = UIView()
@@ -127,9 +126,6 @@ class HomeViewController: BaseViewController {
         return view
     }()
     
-    
-   
-    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Let's Play"
@@ -145,3 +141,24 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: UIScrollViewDelegate {
     
 }
+
+extension HomeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PagerCell.reusableIdentifier, for: indexPath)
+        
+        if indexPath.item == 0 {
+            //cell.backgroundColor = .systemOrange
+            cell.setShadow()
+        }else {
+            //cell.backgroundColor = .mainBlack
+            cell.setShadow()
+        }
+        return cell
+    }
+}
+

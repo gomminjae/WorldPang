@@ -12,6 +12,8 @@ class PagerCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.layer.cornerRadius = 20
+        setupCell()
     }
     
     required init?(coder: NSCoder) {
@@ -20,6 +22,13 @@ class PagerCell: UICollectionViewCell {
     
     func setupCell() {
         addSubview(imageView)
+        
+        imageView.snp.makeConstraints {
+            $0.top.equalTo(self).inset(10)
+            $0.leading.equalTo(self).inset(20)
+            $0.trailing.equalTo(self).inset(20)
+            $0.bottom.equalTo(self).inset(20)
+        }
     }
     
     
@@ -31,13 +40,18 @@ class PagerCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         let view = UIImageView()
+        view.image = UIImage(named: "ar.png")
         return view
     }()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
+        
         return label
     }()
+    
+    
+    
     
     
 }

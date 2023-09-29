@@ -22,8 +22,16 @@ class LoginViewController: UIViewController {
         
         setupView()
         setupLayout()
+        
+        gesture.addTarget(self, action: #selector(tapped))
+        
+        
 
     
+    }
+    
+    @objc func tapped() {
+        viewModel.kakaoLogin()
     }
     
     private func setupView() {
@@ -74,11 +82,13 @@ class LoginViewController: UIViewController {
         }
     }
     
+    let gesture: UITapGestureRecognizer = UITapGestureRecognizer()
+    
     
     //MARK: UI
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "AR Qqiz"
+        label.text = "AR Quiz"
         return label
     }()
     
@@ -103,7 +113,6 @@ class LoginViewController: UIViewController {
         return view
     }()
     
-    
     lazy var loginImageView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "title")
@@ -121,6 +130,7 @@ class LoginViewController: UIViewController {
         let button = LoginButton()
         button.titleLabel.text = "Sign With Kakao"
         button.imageView.image = UIImage(named: "kakaologin.png")
+        button.addGestureRecognizer(gesture)
         return button
     }()
     
