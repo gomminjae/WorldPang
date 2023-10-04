@@ -86,6 +86,29 @@ class HomeViewController: BaseViewController {
     
     override func bindRX() {
         
+        pagerCollectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+        
+       
+        
+        pagerCollectionView.rx.itemSelected
+            .subscribe(onNext: { [unowned self] indexPath in
+                
+                switch indexPath.item {
+                case 0:
+                                   
+                    // ARViewController로 화면 전환
+                    if let arViewController = storyboard?.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
+                        
+                        navigationController?.pushViewController(arViewController, animated: true)
+                    }
+                default:
+                    print(indexPath.item)
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        
         
        
         

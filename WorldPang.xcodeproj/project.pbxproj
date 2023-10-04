@@ -36,6 +36,8 @@
 		B5BF5B6E2ABEC491008C53F4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B6D2ABEC491008C53F4 /* HomeViewController.swift */; };
 		B5BF5B702ABEC526008C53F4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */; };
 		B5BF5B722ABEF703008C53F4 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */; };
+		B5BF5B842ACD8EF8008C53F4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B5BF5B832ACD8EF8008C53F4 /* art.scnassets */; };
+		B5BF5B862ACDBB47008C53F4 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BF5B852ACDBB47008C53F4 /* ARKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		B5BF5B6D2ABEC491008C53F4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
+		B5BF5B832ACD8EF8008C53F4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		B5BF5B852ACDBB47008C53F4 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
 		CB6E894BBE345D15837E3220 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23DB73F9A80A0079F54CEC2 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BF5B862ACDBB47008C53F4 /* ARKit.framework in Frameworks */,
 				A02F1C5BA456EC81229B09C4 /* Pods_WorldPang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +134,7 @@
 		02F22207C9B8DB29A2FA32BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5BF5B852ACDBB47008C53F4 /* ARKit.framework */,
 				632E01D0F254E3AE5B24E07D /* Pods_WorldPang.framework */,
 				973A795AC7EAA98C88C2FEC8 /* Pods_WorldPang_WorldPangUITests.framework */,
 				D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */,
@@ -170,6 +176,7 @@
 		B52E445D2AC0465D001135BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B5BF5B832ACD8EF8008C53F4 /* art.scnassets */,
 				B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */,
 				B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */,
 				B5BF5B372ABDC455008C53F4 /* Main.storyboard */,
@@ -411,6 +418,7 @@
 			files = (
 				B5BF5B3E2ABDC456008C53F4 /* LaunchScreen.storyboard in Resources */,
 				B5BF5B692ABDC61D008C53F4 /* Color.xcassets in Resources */,
+				B5BF5B842ACD8EF8008C53F4 /* art.scnassets in Resources */,
 				B5BF5B3B2ABDC456008C53F4 /* Assets.xcassets in Resources */,
 				B5BF5B392ABDC455008C53F4 /* Main.storyboard in Resources */,
 			);
