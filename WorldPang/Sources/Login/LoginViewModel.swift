@@ -39,8 +39,8 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
             UserApi.shared.rx.loginWithKakaoTalk()
                 .subscribe(onNext: {(oauthToken) in
                     print("kakao Acccount login Success")
-                    
-                    _ = oauthToken
+                    let result = LoginResult.success(token: oauthToken.accessToken)
+                    self.kakaoLoginResult.onNext(result)
                 }, onError: { error in
                     print(error)
                 })
@@ -49,17 +49,13 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
             UserApi.shared.rx.loginWithKakaoAccount()
                 .subscribe(onNext: {(oauthToken) in
                     print("kakao Acccount login Success")
-                    
-                    _ = oauthToken
+                    let result = LoginResult.success(token: oauthToken.accessToken)
+                    self.kakaoLoginResult.onNext(result)
                 }, onError: { error in
                     print(error)
                 })
                 .disposed(by: disposeBag)
         }
-    }
-    
-    public func setupUser() {
-        
     }
     
     func appleLogin() {
@@ -73,6 +69,14 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
+    }
+    
+    func handleLoginSuccess() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let sceneDelegate = windowScene.delegate as? SceneDelegate,
+           let tabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbar") as? UITabBarController {
+            sceneDelegate.window?.rootViewController = tabBarController
+        }
     }
     
     

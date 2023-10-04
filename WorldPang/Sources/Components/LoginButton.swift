@@ -14,6 +14,7 @@ class LoginButton: UIView  {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(blurEffectView)
+        self.addSubview(button)
         self.backgroundColor = UIColor.white.withAlphaComponent(0.3)
         self.layer.cornerRadius = 30
         self.layer.borderColor = UIColor.white.cgColor
@@ -32,6 +33,9 @@ class LoginButton: UIView  {
             $0.leading.equalTo(imageView.snp.trailing).offset(40)
             $0.trailing.equalTo(self.snp.trailing).inset(15)
             $0.centerY.equalTo(self)
+        }
+        button.snp.makeConstraints {
+            $0.leading.trailing.top.bottom.equalTo(self)
         }
         
     }
@@ -55,5 +59,11 @@ class LoginButton: UIView  {
         let view = UIVisualEffectView(effect: blurEffect)
         view.frame = self.bounds
         return view
+    }()
+    
+    lazy var button: UIButton = {
+        let view = UIButton()
+        view.backgroundColor = .clear
+        return view 
     }()
 }

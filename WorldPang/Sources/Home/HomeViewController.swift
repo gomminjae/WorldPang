@@ -10,9 +10,12 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
+
 class HomeViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
+    private let viewModel = HomeViewModel()
+    
     
     
 
@@ -83,6 +86,9 @@ class HomeViewController: BaseViewController {
     
     override func bindRX() {
         
+        
+       
+        
     }
     
     //MARK: UI
@@ -152,10 +158,10 @@ extension HomeViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PagerCell.reusableIdentifier, for: indexPath)
         
         if indexPath.item == 0 {
-            //cell.backgroundColor = .systemOrange
+            cell.backgroundColor = .systemOrange
             cell.setShadow()
         }else {
-            //cell.backgroundColor = .mainBlack
+            cell.backgroundColor = .mainBlack
             cell.setShadow()
         }
         return cell

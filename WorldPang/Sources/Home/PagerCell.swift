@@ -40,7 +40,7 @@ class PagerCell: UICollectionViewCell {
     
     lazy var imageView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "ar.png")
+        //view.image = UIImage(named: "ar.png")
         return view
     }()
     

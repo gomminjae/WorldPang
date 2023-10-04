@@ -23,16 +23,11 @@ class LoginViewController: UIViewController {
         setupView()
         setupLayout()
         
-        gesture.addTarget(self, action: #selector(tapped))
+        bindRx()
         
         
-
-    
     }
     
-    @objc func tapped() {
-        viewModel.kakaoLogin()
-    }
     
     private func setupView() {
         view.addSubview(loginImageView)
@@ -82,7 +77,55 @@ class LoginViewController: UIViewController {
         }
     }
     
-    let gesture: UITapGestureRecognizer = UITapGestureRecognizer()
+    private func bindRx() {
+        kakaoLoginButton.button.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.kakaoLogin()
+            })
+            .disposed(by: disposeBag)
+        
+        
+        appleLoginButton.button.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.appleLogin()
+            })
+            .disposed(by: disposeBag)
+        
+        
+        viewModel.kakaoLoginResult
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(_):
+                    print("kakao Login Success")
+                    self?.viewModel.handleLoginSuccess()
+                    //self?.setupInitialVC()
+                case .failure(_):
+                    print("kakao Login fail")
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.appleLoginResult
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .success(_):
+                    print("apple login success")
+                    self?.viewModel.handleLoginSuccess()
+                case .failure(_):
+                    print("apple login fail")
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupInitialVC() {
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyBoard.instantiateViewController(identifier: "tabbar")
+        let vc = CustomTabbarController()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .coverVertical
+        self.present(vc, animated: true)
+    }
     
     
     //MARK: UI
@@ -130,7 +173,6 @@ class LoginViewController: UIViewController {
         let button = LoginButton()
         button.titleLabel.text = "Sign With Kakao"
         button.imageView.image = UIImage(named: "kakaologin.png")
-        button.addGestureRecognizer(gesture)
         return button
     }()
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwt-xk-gFa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -49,7 +49,7 @@
         <!--Custom Tabbar Controller-->
         <scene sceneID="VEZ-si-4eP">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nwt-xk-gFa" customClass="CustomTabbarController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbar" automaticallyAdjustsScrollViewInsets="NO" id="nwt-xk-gFa" customClass="CustomTabbarController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JP1-xb-BEG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -148,6 +148,9 @@
                             <constraint firstItem="gv0-bi-KB5" firstAttribute="top" secondItem="6VI-JB-SaQ" secondAttribute="top" id="uNr-tT-9dn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="gv0-bi-KB5" id="een-qq-J8v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfe-cA-uUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

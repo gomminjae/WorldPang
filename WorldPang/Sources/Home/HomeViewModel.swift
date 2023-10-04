@@ -17,6 +17,23 @@ protocol ViewModelType {
     
     func transform(_ input: Input)
     
+}
+enum Stage {
+    case virtual
+    case reality
+    case space
+}
+
+class HomeViewModel {
+    
+    
+    private var disposeBag: DisposeBag = DisposeBag()
+    
+    
+    let dummyData = ["AR", "MAP", "SPACE","CITY"]
+    
+    
+    
     
 }
 
