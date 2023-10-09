@@ -51,6 +51,9 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
                     print("kakao Acccount login Success")
                     let result = LoginResult.success(token: oauthToken.accessToken)
                     self.kakaoLoginResult.onNext(result)
+                    
+                    
+                    
                 }, onError: { error in
                     print(error)
                 })
@@ -78,7 +81,6 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
             sceneDelegate.window?.rootViewController = tabBarController
         }
     }
-    
     
 }
 

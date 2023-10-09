@@ -16,9 +16,9 @@ class HomeViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     private let viewModel = HomeViewModel()
     
+    var userInfoOb: Observable<User>?
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         pagerCollectionView.dataSource = self

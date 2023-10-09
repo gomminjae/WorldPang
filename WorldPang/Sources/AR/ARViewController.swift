@@ -18,7 +18,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sceneView.delegate = self 
+        sceneView.delegate = self
+        
+        self.tabBarController?.tabBar.isHidden = true
 
         // Do any additional setup after loading the view.
     }
@@ -42,15 +44,29 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     
     
+    
+    
     //MARK: UI
     
     let stopButton: UIView = {
         let view = UIView()
         let button = UIButton(frame: view.bounds)
         button.backgroundColor = .clear
-        
         return view
     }()
+    
+    lazy var toolBox: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    
+    
+    
+    
+    
+    
+    
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         DispatchQueue.main.async {
@@ -58,11 +74,4 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    
-    
-    
-    
-
-    
-
 }
