@@ -9,6 +9,7 @@ import UIKit
 import SceneKit
 import ARKit
 import Vision
+import SnapKit
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
@@ -21,6 +22,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         self.tabBarController?.tabBar.isHidden = true
+        
+        setupView()
 
         // Do any additional setup after loading the view.
     }
@@ -38,15 +41,31 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillDisappear(animated)
         
         sceneView.session.pause()
+        self.tabBarController?.tabBar.isHidden = false
         
         
     }
     
-    
-    
-    
+    private func setupView() {
+        sceneView.addSubview(aimView)
+        
+        aimView.snp.makeConstraints {
+            $0.centerX.equalTo(sceneView)
+            $0.centerY.equalTo(sceneView)
+            $0.width.equalTo(100)
+            $0.height.equalTo(100)
+        }
+    }
     
     //MARK: UI
+    let aimView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        view.layer.borderColor = UIColor.yellow.cgColor
+        view.layer.borderWidth = 1
+        return view
+    }()
+    
     
     let stopButton: UIView = {
         let view = UIView()
@@ -55,14 +74,21 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         return view
     }()
     
+    let stackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 20.0
+        stack.alignment = .fill
+        stack.distribution = .fillEqually
+        
+        return stack
+    }()
+    
+    
     lazy var toolBox: UIView = {
         let view = UIView()
         return view
     }()
-    
-    
-    
-    
     
     
     

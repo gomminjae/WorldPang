@@ -85,7 +85,7 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
 }
 
 extension LoginViewModel: ASAuthorizationControllerDelegate {
-
+    
     
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {

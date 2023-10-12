@@ -38,6 +38,8 @@
 		B5BF5B722ABEF703008C53F4 /* CustomTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */; };
 		B5BF5B842ACD8EF8008C53F4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B5BF5B832ACD8EF8008C53F4 /* art.scnassets */; };
 		B5BF5B862ACDBB47008C53F4 /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BF5B852ACDBB47008C53F4 /* ARKit.framework */; };
+		B5BF5B882AD6DCA3008C53F4 /* ParticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B872AD6DCA3008C53F4 /* ParticleViewController.swift */; };
+		B5BF5B8A2AD84867008C53F4 /* SpaceARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B892AD84867008C53F4 /* SpaceARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarController.swift; sourceTree = "<group>"; };
 		B5BF5B832ACD8EF8008C53F4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		B5BF5B852ACDBB47008C53F4 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		B5BF5B872AD6DCA3008C53F4 /* ParticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleViewController.swift; sourceTree = "<group>"; };
+		B5BF5B892AD84867008C53F4 /* SpaceARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceARViewController.swift; sourceTree = "<group>"; };
 		CB6E894BBE345D15837E3220 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23DB73F9A80A0079F54CEC2 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				B52E44502ABFEAAC001135BC /* ARViewController.swift */,
+				B5BF5B872AD6DCA3008C53F4 /* ParticleViewController.swift */,
+				B5BF5B892AD84867008C53F4 /* SpaceARViewController.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -554,6 +560,7 @@
 				B52E44542AC0229A001135BC /* PagerCell.swift in Sources */,
 				B5BF5B6C2ABDD459008C53F4 /* Gradient+UIView.swift in Sources */,
 				B5BF5B722ABEF703008C53F4 /* CustomTabbarController.swift in Sources */,
+				B5BF5B882AD6DCA3008C53F4 /* ParticleViewController.swift in Sources */,
 				B52E44682AC71274001135BC /* ProfileViewController.swift in Sources */,
 				B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */,
 				B52E445B2AC044C2001135BC /* TTSManager.swift in Sources */,
@@ -566,6 +573,7 @@
 				B5BF5B702ABEC526008C53F4 /* BaseViewController.swift in Sources */,
 				B5BF5B6E2ABEC491008C53F4 /* HomeViewController.swift in Sources */,
 				B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */,
+				B5BF5B8A2AD84867008C53F4 /* SpaceARViewController.swift in Sources */,
 				B52E446C2AC712D0001135BC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

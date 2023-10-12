@@ -37,6 +37,10 @@ class HomeViewController: BaseViewController {
         view.addSubview(pagerCollectionView)
         
         userCurrentStateView.addSubview(middleSideBar)
+        userCurrentStateView.addSubview(todayVocaState)
+        userCurrentStateView.addSubview(vocaNumberLabel)
+        userCurrentStateView.addSubview(pointLabel)
+        userCurrentStateView.addSubview(pointTitleLabel)
         
         
     }
@@ -81,6 +85,29 @@ class HomeViewController: BaseViewController {
             $0.bottom.equalTo(userCurrentStateView.snp.bottom).inset(20)
             $0.width.equalTo(2)
             $0.centerX.equalTo(userCurrentStateView)
+        }
+        
+        
+        todayVocaState.snp.makeConstraints {
+            $0.top.equalTo(userCurrentStateView).inset(20)
+            
+            $0.leading.equalTo(middleSideBar).offset(25)
+        }
+        
+        vocaNumberLabel.snp.makeConstraints {
+            $0.top.equalTo(todayVocaState).offset(30)
+            $0.leading.trailing.equalTo(todayVocaState)
+            
+        }
+        
+        pointTitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(userCurrentStateView).inset(70)
+            $0.top.equalTo(userCurrentStateView).inset(20)
+            //$0.trailing.equalTo(middleSideBar).offset(25)
+        }
+        pointLabel.snp.makeConstraints {
+            $0.top.equalTo(pointTitleLabel).offset(30)
+            $0.leading.trailing.equalTo(pointTitleLabel)
         }
     }
     
@@ -163,6 +190,42 @@ class HomeViewController: BaseViewController {
         return label
     }()
     
+    lazy var todayVocaState: UILabel = {
+        let label = UILabel()
+        label.text = "오늘 문제 맞힌 수"
+        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        return label
+    }()
+    
+    lazy var vocaNumberLabel: UILabel = {
+        let label = UILabel()
+        label.text = "150"
+        label.textAlignment = .center
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+        return label
+    }()
+    
+    lazy var pointTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Point"
+        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        return label
+    }()
+    
+    lazy var pointLabel: UILabel = {
+        let label = UILabel()
+        label.text = "0/150"
+        label.textAlignment = .center
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+        return label
+    }()
+    
+    
+    
     
 
 }
@@ -181,10 +244,10 @@ extension HomeViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PagerCell.reusableIdentifier, for: indexPath)
         
         if indexPath.item == 0 {
-            cell.backgroundColor = .systemOrange
+            cell.backgroundColor = .mainYellow
             cell.setShadow()
         }else {
-            cell.backgroundColor = .mainBlack
+            cell.backgroundColor = .subYellow
             cell.setShadow()
         }
         return cell

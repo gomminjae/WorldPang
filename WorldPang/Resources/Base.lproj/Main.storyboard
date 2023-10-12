@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwt-xk-gFa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -71,9 +71,9 @@
         <scene sceneID="bD5-G2-Fri">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Td3-e7-IbV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="oof-jX-s0D">
+                    <tabBarItem key="tabBarItem" title="" springLoaded="YES" id="oof-jX-s0D">
                         <imageReference key="image" image="house.fill" catalog="system" symbolScale="large" renderingMode="original"/>
-                        <color key="badgeColor" name="mainBackground"/>
+                        <color key="badgeColor" name="AccentColor"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -156,11 +156,43 @@
             </objects>
             <point key="canvasLocation" x="2301.5267175572517" y="1632.3943661971832"/>
         </scene>
+        <!--SpaceAR View Controller-->
+        <scene sceneID="f7Q-xF-ma4">
+            <objects>
+                <viewController id="Ox0-CZ-aDr" customClass="SpaceARViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T5X-Tg-pmp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC2-dH-yav">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GmB-rp-gCb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GmB-rp-gCb" firstAttribute="bottom" secondItem="sC2-dH-yav" secondAttribute="bottom" constant="-34" id="DBs-fS-2gT"/>
+                            <constraint firstItem="sC2-dH-yav" firstAttribute="leading" secondItem="GmB-rp-gCb" secondAttribute="leading" id="MLt-ku-QP5"/>
+                            <constraint firstItem="sC2-dH-yav" firstAttribute="trailing" secondItem="GmB-rp-gCb" secondAttribute="trailing" id="dhK-MK-Khe"/>
+                            <constraint firstItem="sC2-dH-yav" firstAttribute="top" secondItem="T5X-Tg-pmp" secondAttribute="top" id="vhP-zc-KJ2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="sC2-dH-yav" id="QJ9-PK-4vC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="um4-2B-sxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3304.5801526717555" y="1641.549295774648"/>
+        </scene>
     </scenes>
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mainBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
