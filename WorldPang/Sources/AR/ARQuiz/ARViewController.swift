@@ -19,6 +19,9 @@ class ARViewController: UIViewController {
     var visionRequests = [VNRequest]()
     let dispatchQueueForML = DispatchQueue(label: "mobilenet")
     
+    var predictedObjectName = PublishSubject<String>()
+    var objectName: String = "_"
+    
     
     
     
@@ -26,7 +29,6 @@ class ARViewController: UIViewController {
         super.viewDidLoad()
         sceneView.delegate = self
         
-        self.tabBarController?.tabBar.isHidden = true
         
         setupView()
         bindRX()
@@ -40,6 +42,7 @@ class ARViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
+        
         
         sceneView.session.run(configuration)
     
@@ -69,7 +72,7 @@ class ARViewController: UIViewController {
         }
         
         toolBox.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.top.equalTo(view)
             $0.trailing.equalTo(sceneView)
             $0.width.equalTo(100)
             $0.height.equalTo(200)
@@ -83,7 +86,32 @@ class ARViewController: UIViewController {
                 self?.navigationController?.popToViewController(HomeViewController(), animated: true)
             })
             .disposed(by: disposeBag)
+        
+        aimView.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.aimViewTapped()
+            })
+            .disposed(by: disposeBag)
+        
+        predictedObjectName
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] objectName in
+                self?.objectName = objectName
+            })
+            .disposed(by: disposeBag)
+        
+        exitButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.changeAllNode()
+            })
+            .disposed(by: disposeBag)
+        
     }
+    
+    
+    
+    
+    
     func runCorML() {
         dispatchQueueForML.async {
             self.updateImageForCoreML()
@@ -122,14 +150,12 @@ class ARViewController: UIViewController {
             .map({ "\($0.identifier) \(String(format:"- %.2f", $0.confidence))" })
             .joined(separator: "\n")
         
-        print(classifications)
+        let objectName: String = classifications.components(separatedBy: "-")[0].components(separatedBy: ",")[0]
         
+        predictedObjectName.onNext(objectName)
         
        
     }
-    
-    
-    
     
     func updateImageForCoreML() {
         let pixelBuff: CVPixelBuffer? = (sceneView.session.currentFrame?.capturedImage)
@@ -150,22 +176,83 @@ class ARViewController: UIViewController {
     func aimViewTapped() {
         let screenCenter: CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
         
+        let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint]) // Alternatively, we could use '.existingPlaneUsingExtent' for more grounded hit-test-points.
         
+        if let closestResult = arHitTestResults.first {
+            // Get Coordinates of HitTest
+            let transform : matrix_float4x4 = closestResult.worldTransform
+            let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+            
+            // Create 3D Text
+            let node : SCNNode = createNewBubbleParentNode(objectName)
+            sceneView.scene.rootNode.addChildNode(node)
+            node.position = worldCoord
+        }
         
         
     }
     
-//    
-//    func createBubbleNode(_ text: String) -> SCNNode {
-//        
-//    }
-//    
-//    
+    
+    
+    func createNewBubbleParentNode(_ text : String) -> SCNNode {
+        // Warning: Creating 3D Text is susceptible to crashing. To reduce chances of crashing; reduce number of polygons, letters, smoothness, etc.
+        
+        // TEXT BILLBOARD CONSTRAINT
+        let billboardConstraint = SCNBillboardConstraint()
+        billboardConstraint.freeAxes = SCNBillboardAxis.Y
+        
+        // BUBBLE-TEXT
+        let bubble = SCNText(string: text, extrusionDepth: CGFloat(0.01))
+        var font = UIFont(name: "Futura", size: 0.15)
+        font = font?.withTraits(traits: .traitBold)
+        bubble.font = font
+        bubble.firstMaterial?.diffuse.contents = UIColor.green
+        bubble.firstMaterial?.specular.contents = UIColor.white
+        bubble.firstMaterial?.isDoubleSided = true
+        // bubble.flatness // setting this too low can cause crashes.
+        bubble.chamferRadius = CGFloat(0.1)
+        
+        // BUBBLE NODE
+        let (minBound, maxBound) = bubble.boundingBox
+        let bubbleNode = SCNNode(geometry: bubble)
+        // Centre Node - to Centre-Bottom point
+        bubbleNode.pivot = SCNMatrix4MakeTranslation( (maxBound.x - minBound.x)/2, minBound.y, 0.1/2)
+        // Reduce default text size
+        bubbleNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
+        
+        // CENTRE POINT NODE
+        let sphere = SCNSphere(radius: 0.005)
+        sphere.firstMaterial?.diffuse.contents = UIColor.subYellow
+        let sphereNode = SCNNode(geometry: sphere)
+        
+        // BUBBLE PARENT NODE
+        let bubbleNodeParent = SCNNode()
+        bubbleNodeParent.addChildNode(bubbleNode)
+        bubbleNodeParent.addChildNode(sphereNode)
+        bubbleNodeParent.constraints = [billboardConstraint]
+        
+        return bubbleNodeParent
+    }
+    
+    func changeAllNode() {
+        let allTextNodes = sceneView.scene.rootNode.childNodes(passingTest: { (node, _) in
+            return node.geometry is SCNText
+        })
+        
+        for textNode in allTextNodes {
+            if let textGeometry = textNode.geometry as? SCNText {
+                textGeometry.string = "?"
+            }
+        }
+                                                                               
+        
+    }
+    
     
     
     //MARK: UI
-    let aimView: UIView = {
-        let view = UIView()
+    let aimView: UIButton = {
+        let view = UIButton()
         view.backgroundColor = .clear
         view.layer.borderColor = UIColor.yellow.cgColor
         view.layer.borderWidth = 1
@@ -216,5 +303,13 @@ extension ARViewController: ARSCNViewDelegate {
         DispatchQueue.main.async {
             // Do any desired updates to SceneKit here.
         }
+    }
+}
+
+extension UIFont {
+    // Based on: https://stackoverflow.com/questions/4713236/how-do-i-set-bold-and-italic-on-uilabel-of-iphone-ipad
+    func withTraits(traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
+        let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits))
+        return UIFont(descriptor: descriptor!, size: 0)
     }
 }

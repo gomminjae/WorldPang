@@ -132,6 +132,10 @@ class HomeViewController: BaseViewController {
                         
                         navigationController?.pushViewController(arViewController, animated: true)
                     }
+                case 1:
+                    if let arQuizVC = storyboard?.instantiateViewController(withIdentifier: "ARQuizViewController") as? ARQuizViewController {
+                        navigationController?.pushViewController(arQuizVC, animated: true)
+                    }
                 default:
                     print(indexPath.item)
                 }

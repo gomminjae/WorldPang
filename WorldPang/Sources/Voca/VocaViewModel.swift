@@ -13,4 +13,5 @@ import RxAlamofire
 
 class VocaViewModel {
     
+    
 }

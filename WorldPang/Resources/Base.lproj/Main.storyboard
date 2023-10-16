@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22129"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="2538.1679389312976" y="-19.014084507042256"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="lhp-yX-VZ1">
             <objects>
-                <viewController id="e0E-mP-uPb" sceneMemberID="viewController">
+                <viewController id="e0E-mP-uPb" customClass="ProfileViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="evk-fn-Vzz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,36 +154,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLR-Xp-eGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2301.5267175572517" y="1632.3943661971832"/>
+            <point key="canvasLocation" x="2332" y="1632"/>
         </scene>
-        <!--SpaceAR View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="f7Q-xF-ma4">
             <objects>
-                <viewController id="Ox0-CZ-aDr" customClass="SpaceARViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARQuizViewController" id="Ox0-CZ-aDr" customClass="ARQuizViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T5X-Tg-pmp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC2-dH-yav">
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jyt-Yp-vSy">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </arscnView>
+                            </arView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GmB-rp-gCb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GmB-rp-gCb" firstAttribute="bottom" secondItem="sC2-dH-yav" secondAttribute="bottom" constant="-34" id="DBs-fS-2gT"/>
-                            <constraint firstItem="sC2-dH-yav" firstAttribute="leading" secondItem="GmB-rp-gCb" secondAttribute="leading" id="MLt-ku-QP5"/>
-                            <constraint firstItem="sC2-dH-yav" firstAttribute="trailing" secondItem="GmB-rp-gCb" secondAttribute="trailing" id="dhK-MK-Khe"/>
-                            <constraint firstItem="sC2-dH-yav" firstAttribute="top" secondItem="T5X-Tg-pmp" secondAttribute="top" id="vhP-zc-KJ2"/>
+                            <constraint firstItem="Jyt-Yp-vSy" firstAttribute="leading" secondItem="GmB-rp-gCb" secondAttribute="leading" id="3Wh-FB-ZRA"/>
+                            <constraint firstAttribute="bottom" secondItem="Jyt-Yp-vSy" secondAttribute="bottom" id="7Hb-cp-bCh"/>
+                            <constraint firstItem="Jyt-Yp-vSy" firstAttribute="top" secondItem="T5X-Tg-pmp" secondAttribute="top" id="XSr-us-uYv"/>
+                            <constraint firstItem="Jyt-Yp-vSy" firstAttribute="trailing" secondItem="GmB-rp-gCb" secondAttribute="trailing" id="f9F-Q5-bjI"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sceneView" destination="sC2-dH-yav" id="QJ9-PK-4vC"/>
+                        <outlet property="arView" destination="Jyt-Yp-vSy" id="Bv4-k4-05D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="um4-2B-sxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3304.5801526717555" y="1641.549295774648"/>
+            <point key="canvasLocation" x="3399" y="1632"/>
         </scene>
     </scenes>
     <resources>

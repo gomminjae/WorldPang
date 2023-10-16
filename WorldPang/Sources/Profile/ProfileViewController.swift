@@ -19,7 +19,7 @@ class ProfileViewController: BaseViewController {
     }
     
     override func setupView() {
-        
+        view.backgroundColor = .mainYellow
     }
     
     override func setupLayout() {
@@ -34,6 +34,17 @@ class ProfileViewController: BaseViewController {
     
     
     //MARK: UI
+    lazy var baseView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    lazy var settingCollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return view
+    }()
+    
     
 
 }

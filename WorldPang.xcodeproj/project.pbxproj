@@ -15,6 +15,7 @@
 		B519FF422ADCCEB5000FACAB /* VocaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF412ADCCEB5000FACAB /* VocaViewModel.swift */; };
 		B519FF442ADCD841000FACAB /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF432ADCD841000FACAB /* FileManager.swift */; };
 		B519FF462ADCDBD9000FACAB /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF452ADCDBD9000FACAB /* DownloadManager.swift */; };
+		B519FF492ADD8905000FACAB /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF482ADD8905000FACAB /* QuizView.swift */; };
 		B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44502ABFEAAC001135BC /* ARViewController.swift */; };
 		B52E44542AC0229A001135BC /* PagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44532AC0229A001135BC /* PagerCell.swift */; };
 		B52E44562AC023A6001135BC /* reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44552AC023A6001135BC /* reusableIdentifier.swift */; };
@@ -76,6 +77,7 @@
 		B519FF412ADCCEB5000FACAB /* VocaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaViewModel.swift; sourceTree = "<group>"; };
 		B519FF432ADCD841000FACAB /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		B519FF452ADCDBD9000FACAB /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		B519FF482ADD8905000FACAB /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		B52E44502ABFEAAC001135BC /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		B52E44532AC0229A001135BC /* PagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerCell.swift; sourceTree = "<group>"; };
 		B52E44552AC023A6001135BC /* reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reusableIdentifier.swift; sourceTree = "<group>"; };
@@ -163,6 +165,15 @@
 				B519FF412ADCCEB5000FACAB /* VocaViewModel.swift */,
 			);
 			path = Voca;
+			sourceTree = "<group>";
+		};
+		B519FF472ADD88F3000FACAB /* ARQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				B52E44502ABFEAAC001135BC /* ARViewController.swift */,
+				B519FF482ADD8905000FACAB /* QuizView.swift */,
+			);
+			path = ARQuiz;
 			sourceTree = "<group>";
 		};
 		B52E44522AC01FF8001135BC /* Components */ = {
@@ -306,7 +317,7 @@
 		B5BF5B632ABDC52F008C53F4 /* AR */ = {
 			isa = PBXGroup;
 			children = (
-				B52E44502ABFEAAC001135BC /* ARViewController.swift */,
+				B519FF472ADD88F3000FACAB /* ARQuiz */,
 				B5BF5B872AD6DCA3008C53F4 /* ParticleViewController.swift */,
 				B5BF5B892AD84867008C53F4 /* SpaceARViewController.swift */,
 				B519FF3D2ADCCE92000FACAB /* ARQuizViewController.swift */,
@@ -579,6 +590,7 @@
 			files = (
 				B5BF5B652ABDC559008C53F4 /* LoginViewController.swift in Sources */,
 				B52E44582AC0336B001135BC /* LoginButton.swift in Sources */,
+				B519FF492ADD8905000FACAB /* QuizView.swift in Sources */,
 				B52E44652AC7058B001135BC /* HomeViewModel.swift in Sources */,
 				B52E44542AC0229A001135BC /* PagerCell.swift in Sources */,
 				B519FF3E2ADCCE92000FACAB /* ARQuizViewController.swift in Sources */,
@@ -790,6 +802,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorldPang/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application will use the camera for Augmented Reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -822,6 +835,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WorldPang/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application will use the camera for Augmented Reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
