@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "91247B77-7CF3-4468-B40E-C6FE797AED46"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "318FD0BA-74FD-4CF9-9054-B4747D7F3E3E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorldPang/Sources/AR/ARViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "setupMLModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "318FD0BA-74FD-4CF9-9054-B4747D7F3E3E - 59909ad92c960199"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIStackView in variable initialization expression of WorldPang.ARViewController.toolBox : __C.UIStackView"
+                  moduleName = "WorldPang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minjae/Desktop/WorldPang/WorldPang/Sources/AR/ARViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "318FD0BA-74FD-4CF9-9054-B4747D7F3E3E - 3bcd120899fc434f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorldPang.ARViewController.setupMLModel() -&gt; ()"
+                  moduleName = "WorldPang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minjae/Desktop/WorldPang/WorldPang/Sources/AR/ARViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

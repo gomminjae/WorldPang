@@ -19,10 +19,13 @@ class HomeViewController: BaseViewController {
     var userInfoOb: Observable<User>?
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pagerCollectionView.dataSource = self
 
+        
         // Do any additional setup after loading the view.
     }
     

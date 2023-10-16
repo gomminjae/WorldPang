@@ -1,16 +1,17 @@
 //
-//  ProfileViewController.swift
+//  ARQuizViewController.swift
 //  WorldPang
 //
-//  Created by 권민재 on 2023/09/29.
+//  Created by 권민재 on 2023/10/16.
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+import RealityKit
+import Vision
 import SnapKit
 
-class ProfileViewController: BaseViewController {
+
+class ARQuizViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +26,11 @@ class ProfileViewController: BaseViewController {
     override func setupLayout() {
         
     }
-    
     override func bindRX() {
-        
     }
     
     
     
-    
-    //MARK: UI
-    
 
+   
 }

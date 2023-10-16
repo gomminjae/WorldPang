@@ -1,20 +1,25 @@
-//
-//  ARViewController.swift
-//  WorldPang
-//
-//  Created by 권민재 on 2023/09/24.
-//
-
 import UIKit
 import SceneKit
 import ARKit
 import Vision
 import SnapKit
+import RxSwift
+import RxCocoa
 
-class ARViewController: UIViewController, ARSCNViewDelegate {
+
+
+class ARViewController: UIViewController {
     
     
     @IBOutlet weak var sceneView: ARSCNView!
+    
+    private let disposeBag = DisposeBag()
+    
+    
+    var visionRequests = [VNRequest]()
+    let dispatchQueueForML = DispatchQueue(label: "mobilenet")
+    
+    
     
     
     override func viewDidLoad() {
@@ -24,7 +29,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         self.tabBarController?.tabBar.isHidden = true
         
         setupView()
-
+        bindRX()
+        
+        setupMLModel()
+        
+        runCorML()
         // Do any additional setup after loading the view.
     }
     
@@ -48,6 +57,9 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     private func setupView() {
         sceneView.addSubview(aimView)
+        sceneView.addSubview(toolBox)
+        
+        toolBox.addArrangedSubview(exitButton)
         
         aimView.snp.makeConstraints {
             $0.centerX.equalTo(sceneView)
@@ -55,7 +67,101 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
             $0.width.equalTo(100)
             $0.height.equalTo(100)
         }
+        
+        toolBox.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.trailing.equalTo(sceneView)
+            $0.width.equalTo(100)
+            $0.height.equalTo(200)
+            
+        }
     }
+    
+    private func bindRX() {
+        exitButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.navigationController?.popToViewController(HomeViewController(), animated: true)
+            })
+            .disposed(by: disposeBag)
+    }
+    func runCorML() {
+        dispatchQueueForML.async {
+            self.updateImageForCoreML()
+            
+            self.runCorML()
+        }
+    }
+    
+    
+    
+    
+    
+    private func setupMLModel() {
+        guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
+        
+        let request = VNCoreMLRequest(model: model, completionHandler: classificationCompleteHandler)
+        request.imageCropAndScaleOption = .centerCrop
+        visionRequests = [request]
+    }
+    
+    
+    func classificationCompleteHandler(request: VNRequest, error: Error?) {
+        // Catch Errors
+        if error != nil {
+            print("Error: " + (error?.localizedDescription)!)
+            return
+        }
+        guard let observations = request.results else {
+            print("No results")
+            return
+        }
+        
+        // Get Classifications
+        let classifications = observations[0...1] // top 2 results
+            .compactMap({ $0 as? VNClassificationObservation })
+            .map({ "\($0.identifier) \(String(format:"- %.2f", $0.confidence))" })
+            .joined(separator: "\n")
+        
+        print(classifications)
+        
+        
+       
+    }
+    
+    
+    
+    
+    func updateImageForCoreML() {
+        let pixelBuff: CVPixelBuffer? = (sceneView.session.currentFrame?.capturedImage)
+        
+        if pixelBuff == nil { return }
+        
+        let ciImage: CIImage = CIImage(cvImageBuffer: pixelBuff!)
+        
+        let imageRequestHander = VNImageRequestHandler(ciImage: ciImage, options: [:])
+        
+        do {
+            try imageRequestHander.perform(self.visionRequests)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func aimViewTapped() {
+        let screenCenter: CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
+        
+        
+        
+        
+    }
+    
+//    
+//    func createBubbleNode(_ text: String) -> SCNNode {
+//        
+//    }
+//    
+//    
+    
     
     //MARK: UI
     let aimView: UIView = {
@@ -74,18 +180,28 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         return view
     }()
     
-    let stackView: UIStackView = {
+    let toolBox: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 20.0
         stack.alignment = .fill
         stack.distribution = .fillEqually
+        stack.layer.borderWidth = 1
+        stack.backgroundColor = .mainYellow
+        stack.alpha = 0.5
+        stack.layer.borderColor = UIColor.orange.cgColor
         
         return stack
     }()
     
     
-    lazy var toolBox: UIView = {
+    let exitButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("종료하기", for: .normal)
+        return button
+    }()
+    
+    let userStateView: UIView = {
         let view = UIView()
         return view
     }()
@@ -93,11 +209,12 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     
     
     
-    
+}
+
+extension ARViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         DispatchQueue.main.async {
             // Do any desired updates to SceneKit here.
         }
     }
-    
 }
