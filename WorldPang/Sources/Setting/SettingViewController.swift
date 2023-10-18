@@ -1,16 +1,15 @@
 //
-//  VocaTestViewController.swift
+//  SettingViewController.swift
 //  WorldPang
 //
-//  Created by 권민재 on 2023/10/16.
+//  Created by 권민재 on 2023/10/17.
 //
 
 import UIKit
-import VisionKit
-import Vision
+import RxSwift
+import RxCocoa
 
-
-class VocaTestViewController: UIViewController {
+class SettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +17,6 @@ class VocaTestViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    
 
+    
 }

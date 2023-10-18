@@ -1,16 +1,19 @@
 //
-//  VocaTestViewController.swift
+//  OCRViewController.swift
 //  WorldPang
 //
-//  Created by 권민재 on 2023/10/16.
+//  Created by 권민재 on 2023/10/17.
 //
 
 import UIKit
-import VisionKit
 import Vision
+import VisionKit
+import RxSwift
+import RxCocoa
+import NaturalLanguage
 
-
-class VocaTestViewController: UIViewController {
+class OCRViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +21,7 @@ class VocaTestViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
+
     
 
 }

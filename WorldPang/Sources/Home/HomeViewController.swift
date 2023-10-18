@@ -129,8 +129,8 @@ class HomeViewController: BaseViewController {
                                    
                     // ARViewController로 화면 전환
                     if let arViewController = storyboard?.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
-                        
-                        navigationController?.pushViewController(arViewController, animated: true)
+                        arViewController.modalPresentationStyle = .fullScreen
+                        present(arViewController,animated: true)
                     }
                 case 1:
                     if let arQuizVC = storyboard?.instantiateViewController(withIdentifier: "ARQuizViewController") as? ARQuizViewController {
@@ -149,7 +149,6 @@ class HomeViewController: BaseViewController {
     }
     
     //MARK: UI
-    
     
     lazy var pagerCollectionView: UICollectionView = {
         let layout = CardPagingLayout()

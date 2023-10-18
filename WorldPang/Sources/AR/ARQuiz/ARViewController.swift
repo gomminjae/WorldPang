@@ -7,7 +7,6 @@ import RxSwift
 import RxCocoa
 
 
-
 class ARViewController: UIViewController {
     
     
@@ -63,6 +62,7 @@ class ARViewController: UIViewController {
         sceneView.addSubview(toolBox)
         
         toolBox.addArrangedSubview(exitButton)
+        toolBox.addArrangedSubview(startButton)
         
         aimView.snp.makeConstraints {
             $0.centerX.equalTo(sceneView)
@@ -101,17 +101,22 @@ class ARViewController: UIViewController {
             .disposed(by: disposeBag)
         
         exitButton.rx.tap
+            .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
+                self?.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        startButton.rx.tap
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                self?.aimView.isHidden = true
                 self?.changeAllNode()
             })
             .disposed(by: disposeBag)
         
     }
-    
-    
-    
-    
-    
+
     func runCorML() {
         dispatchQueueForML.async {
             self.updateImageForCoreML()
@@ -119,11 +124,6 @@ class ARViewController: UIViewController {
             self.runCorML()
         }
     }
-    
-    
-    
-    
-    
     private func setupMLModel() {
         guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
         
@@ -188,10 +188,7 @@ class ARViewController: UIViewController {
             sceneView.scene.rootNode.addChildNode(node)
             node.position = worldCoord
         }
-        
-        
     }
-    
     
     
     func createNewBubbleParentNode(_ text : String) -> SCNNode {
@@ -221,14 +218,14 @@ class ARViewController: UIViewController {
         bubbleNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
         
         // CENTRE POINT NODE
-        let sphere = SCNSphere(radius: 0.005)
-        sphere.firstMaterial?.diffuse.contents = UIColor.subYellow
-        let sphereNode = SCNNode(geometry: sphere)
+//        let sphere = SCNSphere(radius: 0.005)
+//        sphere.firstMaterial?.diffuse.contents = UIColor.subYellow
+//        let sphereNode = SCNNode(geometry: sphere)
         
         // BUBBLE PARENT NODE
         let bubbleNodeParent = SCNNode()
         bubbleNodeParent.addChildNode(bubbleNode)
-        bubbleNodeParent.addChildNode(sphereNode)
+        //bubbleNodeParent.addChildNode(sphereNode)
         bubbleNodeParent.constraints = [billboardConstraint]
         
         return bubbleNodeParent
@@ -244,8 +241,7 @@ class ARViewController: UIViewController {
                 textGeometry.string = "?"
             }
         }
-                                                                               
-        
+                                                                        
     }
     
     
@@ -288,6 +284,12 @@ class ARViewController: UIViewController {
         return button
     }()
     
+    let startButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("시작하기", for: .normal)
+        return button
+    }()
+
     let userStateView: UIView = {
         let view = UIView()
         return view
