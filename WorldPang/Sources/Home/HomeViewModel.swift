@@ -7,7 +7,7 @@
 
 import Foundation
 import RxSwift
-import RxAlamofire
+import RxCocoa
 
 protocol ViewModelType {
     associatedtype Input
@@ -29,6 +29,7 @@ class HomeViewModel {
     
     private var disposeBag: DisposeBag = DisposeBag()
     
+  
     
     let dummyData = ["AR", "MAP", "SPACE","CITY"]
     

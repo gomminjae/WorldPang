@@ -6,11 +6,11 @@
 //
 
 import UIKit
-import VisionKit
-import Vision
+import RxSwift
+import RxCocoa
+import SnapKit
 
-
-class VocaTestViewController: UIViewController {
+class VocaTestViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,27 @@ class VocaTestViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func setupView() {
+        
+    }
+    
+    override func setupLayout() {
+        
+    }
+    
+    override func bindRX() {
+        
+    }
+    
+    
+    //MARK: UI
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewLayout()
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return view
+    }()
+    
+     
     
     
     

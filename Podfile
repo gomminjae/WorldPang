@@ -13,6 +13,8 @@ target 'WorldPang' do
   pod 'RxKakaoSDKCommon'
   pod 'RxKakaoSDKUser'
   pod 'RxKakaoSDKAuth'
+  pod 'RxDataSources'
+  pod 'RxGesture'
   # Pods for WorldPang
 
   target 'WorldPangTests' do

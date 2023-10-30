@@ -61,6 +61,22 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
         }
     }
     
+    public func setUserInfo() {
+        UserApi.shared.me() { (user,error) in
+            if let error = error {
+                print(error)
+            }
+            
+            else {
+                print("user load success")
+                let userDefaults = UserDefaults.standard
+                
+            }
+        }
+    }
+    
+    
+    
     func appleLogin() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()

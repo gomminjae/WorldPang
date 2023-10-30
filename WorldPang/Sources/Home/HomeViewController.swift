@@ -9,6 +9,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import RxDataSources
+
+
+struct MultipleSection {
+    
+}
+
+
 
 
 class HomeViewController: BaseViewController {
@@ -19,19 +27,14 @@ class HomeViewController: BaseViewController {
     var userInfoOb: Observable<User>?
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         pagerCollectionView.dataSource = self
 
-        
-        // Do any additional setup after loading the view.
     }
     
     override func setupView() {
         view.addSubview(titleLabel)
-        
         view.addSubview(cloudImage)
         
         view.addSubview(baseView)
@@ -235,6 +238,17 @@ class HomeViewController: BaseViewController {
     
 
 }
+extension HomeViewController {
+    
+    
+    
+}
+
+
+
+
+
+
 
 extension HomeViewController: UIScrollViewDelegate {
     

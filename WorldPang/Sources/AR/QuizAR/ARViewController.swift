@@ -5,6 +5,7 @@ import Vision
 import SnapKit
 import RxSwift
 import RxCocoa
+import RxGesture
 
 
 class ARViewController: UIViewController {
@@ -13,6 +14,8 @@ class ARViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
     
     private let disposeBag = DisposeBag()
+    private let arViewModel = ARViewModel()
+    
     
     
     var visionRequests = [VNRequest]()
@@ -21,7 +24,7 @@ class ARViewController: UIViewController {
     var predictedObjectName = PublishSubject<String>()
     var objectName: String = "_"
     
-    
+    let tapGesture = UITapGestureRecognizer()
     
     
     override func viewDidLoad() {
@@ -58,6 +61,10 @@ class ARViewController: UIViewController {
     }
     
     private func setupView() {
+        sceneView.addGestureRecognizer(tapGesture)
+        
+        
+        
         sceneView.addSubview(aimView)
         sceneView.addSubview(toolBox)
         
@@ -78,6 +85,7 @@ class ARViewController: UIViewController {
             $0.height.equalTo(200)
             
         }
+        
     }
     
     private func bindRX() {
@@ -114,6 +122,32 @@ class ARViewController: UIViewController {
                 self?.changeAllNode()
             })
             .disposed(by: disposeBag)
+        
+        tapGesture.rx.event
+            .subscribe(onNext: { [weak self] gesture in
+                guard let self = self else { return }
+                
+                let location = gesture.location(in: self.sceneView)
+                let hitResult = self.sceneView.hitTest(location, options: nil)
+                
+                guard let hitedNode = hitResult.first?.node else {
+                    print("not exist node")
+                    return
+                }
+                
+                if let textGeometry = hitedNode.geometry as? SCNText {
+                    if let textName = getTextNodeData(for: hitedNode)  {
+                        arViewModel.updateTextNode(textName)
+                        arViewModel.sentToQuizViewModel(textName)
+                    }
+                }
+                if let quizVC = storyboard?.instantiateViewController(withIdentifier: "QuizVC") as? QuizViewController {
+                    present(quizVC,animated: true)
+                }
+                
+            })
+            .disposed(by: disposeBag)
+        
         
     }
 
@@ -153,8 +187,6 @@ class ARViewController: UIViewController {
         let objectName: String = classifications.components(separatedBy: "-")[0].components(separatedBy: ",")[0]
         
         predictedObjectName.onNext(objectName)
-        
-       
     }
     
     func updateImageForCoreML() {
@@ -176,7 +208,7 @@ class ARViewController: UIViewController {
     func aimViewTapped() {
         let screenCenter: CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
         
-        let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint]) // Alternatively, we could use '.existingPlaneUsingExtent' for more grounded hit-test-points.
+        let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint]) //
         
         if let closestResult = arHitTestResults.first {
             // Get Coordinates of HitTest
@@ -192,9 +224,7 @@ class ARViewController: UIViewController {
     
     
     func createNewBubbleParentNode(_ text : String) -> SCNNode {
-        // Warning: Creating 3D Text is susceptible to crashing. To reduce chances of crashing; reduce number of polygons, letters, smoothness, etc.
-        
-        // TEXT BILLBOARD CONSTRAINT
+       
         let billboardConstraint = SCNBillboardConstraint()
         billboardConstraint.freeAxes = SCNBillboardAxis.Y
         
@@ -217,33 +247,36 @@ class ARViewController: UIViewController {
         // Reduce default text size
         bubbleNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
         
-        // CENTRE POINT NODE
-//        let sphere = SCNSphere(radius: 0.005)
-//        sphere.firstMaterial?.diffuse.contents = UIColor.subYellow
-//        let sphereNode = SCNNode(geometry: sphere)
-        
-        // BUBBLE PARENT NODE
+
         let bubbleNodeParent = SCNNode()
         bubbleNodeParent.addChildNode(bubbleNode)
-        //bubbleNodeParent.addChildNode(sphereNode)
         bubbleNodeParent.constraints = [billboardConstraint]
         
         return bubbleNodeParent
     }
     
-    func changeAllNode() {
+    private func changeAllNode() {
         let allTextNodes = sceneView.scene.rootNode.childNodes(passingTest: { (node, _) in
             return node.geometry is SCNText
         })
         
         for textNode in allTextNodes {
             if let textGeometry = textNode.geometry as? SCNText {
-                textGeometry.string = "?"
+                textGeometry.setValue(textGeometry.string, forKey: "name")
+                textGeometry.string = "    ?"
             }
         }
-                                                                        
     }
     
+    private func getTextNodeData(for textNode: SCNNode) -> String? {
+        if let textGeometry = textNode.geometry as? SCNText {
+            return textGeometry.value(forKey: "name") as? String
+        }
+        
+        return nil
+    }
+    
+
     
     
     //MARK: UI

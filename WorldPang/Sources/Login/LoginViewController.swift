@@ -127,7 +127,6 @@ class LoginViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-    
     //MARK: UI
     lazy var titleLabel: UILabel = {
         let label = UILabel()

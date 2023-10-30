@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwt-xk-gFa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwt-xk-gFa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="2548.8549618320608" y="760.56338028169023"/>
         </scene>
-        <!--View Controller-->
+        <!--Voca Test View Controller-->
         <scene sceneID="IJD-ki-1Ef">
             <objects>
-                <viewController id="Nna-8X-o6C" sceneMemberID="viewController">
+                <viewController id="Nna-8X-o6C" customClass="VocaTestViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUm-eT-xBO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLR-Xp-eGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-36" y="2732"/>
+            <point key="canvasLocation" x="120" y="2623"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="f7Q-xF-ma4">
@@ -217,7 +217,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="um4-2B-sxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="569" y="2732"/>
+            <point key="canvasLocation" x="860" y="2623"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="l89-JM-QLm">
+            <objects>
+                <viewController storyboardIdentifier="QuizVC" id="5Ei-UX-Dsh" customClass="QuizViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L3x-Cu-NWB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QY7-C7-Ud6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUH-7D-aHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="3703"/>
         </scene>
         <!--Item-->
         <scene sceneID="lNR-38-cXs">
