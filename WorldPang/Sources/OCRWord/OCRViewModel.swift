@@ -9,8 +9,13 @@ import Foundation
 import Vision
 import VisionKit
 import NaturalLanguage
+import RxSwift
+import RxCocoa
 
 class OCRViewModel {
+    
+    private let disposeBag = DisposeBag()
+    
     
     let removedWord = ["the", "she","he","i", "a","an", "we", "they","us","him","am","to","of","in","at", ]
     let text = "The ripe taste of cheese improves with age."

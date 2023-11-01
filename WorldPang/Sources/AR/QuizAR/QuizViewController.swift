@@ -60,7 +60,7 @@ class QuizViewController: BaseViewController {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewLayout()
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         view.register(QuizCell.self, forCellWithReuseIdentifier: QuizCell.reusableIdentifier)
         return view
     }()

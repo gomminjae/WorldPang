@@ -135,10 +135,6 @@ class HomeViewController: BaseViewController {
                         arViewController.modalPresentationStyle = .fullScreen
                         present(arViewController,animated: true)
                     }
-                case 1:
-                    if let arQuizVC = storyboard?.instantiateViewController(withIdentifier: "ARQuizViewController") as? ARQuizViewController {
-                        navigationController?.pushViewController(arQuizVC, animated: true)
-                    }
                 default:
                     print(indexPath.item)
                 }

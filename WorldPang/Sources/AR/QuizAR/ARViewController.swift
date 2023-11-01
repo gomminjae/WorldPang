@@ -37,7 +37,6 @@ class ARViewController: UIViewController {
         
         setupMLModel()
         
-        runCorML()
         // Do any additional setup after loading the view.
     }
     
@@ -151,13 +150,13 @@ class ARViewController: UIViewController {
         
     }
 
-    func runCorML() {
-        dispatchQueueForML.async {
-            self.updateImageForCoreML()
-            
-            self.runCorML()
-        }
-    }
+//    func runCorML() {
+//        dispatchQueueForML.async {
+//            self.updateImageForCoreML()
+//            
+//            self.runCorML()
+//        }
+//    }
     private func setupMLModel() {
         guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
         
@@ -206,6 +205,10 @@ class ARViewController: UIViewController {
     }
     
     func aimViewTapped() {
+        
+        updateImageForCoreML()
+        
+        
         let screenCenter: CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
         
         let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint]) //
