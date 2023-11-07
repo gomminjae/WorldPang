@@ -8,6 +8,11 @@ import RxCocoa
 import RxGesture
 
 
+protocol TextNodeDataDelegate {
+    func sendTextNodeString(_ text: String)
+}
+
+
 class ARViewController: UIViewController {
     
     
@@ -15,6 +20,7 @@ class ARViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     private let arViewModel = ARViewModel()
+    
     
     
     
@@ -134,16 +140,14 @@ class ARViewController: UIViewController {
                     return
                 }
                 
-                if let textGeometry = hitedNode.geometry as? SCNText {
-                    if let textName = getTextNodeData(for: hitedNode)  {
-                        arViewModel.updateTextNode(textName)
-                        arViewModel.sentToQuizViewModel(textName)
+                if let quizVC = self.storyboard?.instantiateViewController(withIdentifier: "QuizVC") as? QuizViewController {
+                    if let textGeometry = hitedNode.geometry as? SCNText,
+                       let textName = self.getTextNodeData(for: hitedNode)  {
+                        print(textName)
+                        quizVC.textNodeString = textName
                     }
+                    self.present(quizVC, animated: true)
                 }
-                if let quizVC = storyboard?.instantiateViewController(withIdentifier: "QuizVC") as? QuizViewController {
-                    present(quizVC,animated: true)
-                }
-                
             })
             .disposed(by: disposeBag)
         
@@ -231,7 +235,6 @@ class ARViewController: UIViewController {
         let billboardConstraint = SCNBillboardConstraint()
         billboardConstraint.freeAxes = SCNBillboardAxis.Y
         
-        // BUBBLE-TEXT
         let bubble = SCNText(string: text, extrusionDepth: CGFloat(0.01))
         var font = UIFont(name: "Futura", size: 0.15)
         font = font?.withTraits(traits: .traitBold)

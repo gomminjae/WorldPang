@@ -13,18 +13,14 @@
 		B50EBDE02AEFB496007E8D6A /* Voca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDDF2AEFB496007E8D6A /* Voca.swift */; };
 		B50EBDE32AEFB54D007E8D6A /* BasicVoca.json in Resources */ = {isa = PBXBuildFile; fileRef = B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */; };
 		B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */; };
-		B50EBDE72AEFDA02007E8D6A /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE62AEFDA02007E8D6A /* QuizViewModel.swift */; };
 		B50EBDE92AEFDA4E007E8D6A /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */; };
 		B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */; };
 		B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */; };
-		B50EBDF42AF16040007E8D6A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDF32AF16040007E8D6A /* TestViewController.swift */; };
-		B50EBDF62AF16060007E8D6A /* ObjectDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDF52AF16060007E8D6A /* ObjectDetectionService.swift */; };
 		B50EBDF82AF1625D007E8D6A /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDF72AF1625D007E8D6A /* UIDevice+Extension.swift */; };
 		B50EBDFE2AF28E31007E8D6A /* Solar System Proj Completed.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDFD2AF28E31007E8D6A /* Solar System Proj Completed.rcproject */; };
 		B519FF402ADCCEAD000FACAB /* VocaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF3F2ADCCEAD000FACAB /* VocaListViewController.swift */; };
 		B519FF422ADCCEB5000FACAB /* VocaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF412ADCCEB5000FACAB /* VocaListViewModel.swift */; };
 		B519FF442ADCD841000FACAB /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF432ADCD841000FACAB /* FileManager.swift */; };
-		B519FF462ADCDBD9000FACAB /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF452ADCDBD9000FACAB /* DownloadManager.swift */; };
 		B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44502ABFEAAC001135BC /* ARViewController.swift */; };
 		B52E44542AC0229A001135BC /* PagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44532AC0229A001135BC /* PagerCell.swift */; };
 		B52E44562AC023A6001135BC /* reusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44552AC023A6001135BC /* reusableIdentifier.swift */; };
@@ -36,6 +32,9 @@
 		B52E446A2AC712B4001135BC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44692AC712B4001135BC /* ProfileViewModel.swift */; };
 		B52E446C2AC712D0001135BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E446B2AC712D0001135BC /* User.swift */; };
 		B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */; };
+		B596FCFF2AF5F725003B56C2 /* Aquariu,ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FCFE2AF5F725003B56C2 /* Aquariu,ViewController.swift */; };
+		B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD002AF5F781003B56C2 /* SpaceViewController.swift */; };
+		B596FD032AF8851C003B56C2 /* VocaParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */; };
 		B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */; };
 		B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */; };
 		B5BF5B392ABDC455008C53F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5BF5B372ABDC455008C53F4 /* Main.storyboard */; };
@@ -85,18 +84,14 @@
 		B50EBDDF2AEFB496007E8D6A /* Voca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voca.swift; sourceTree = "<group>"; };
 		B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BasicVoca.json; path = ../../../../../../Downloads/BasicVoca.json; sourceTree = "<group>"; };
 		B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		B50EBDE62AEFDA02007E8D6A /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 		B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
 		B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		B50EBDF32AF16040007E8D6A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		B50EBDF52AF16060007E8D6A /* ObjectDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionService.swift; sourceTree = "<group>"; };
 		B50EBDF72AF1625D007E8D6A /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extension.swift"; path = "../../../Downloads/CoreML-in-ARKit-master 2/CoreML-in-ARKit/Extension/UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		B50EBDFD2AF28E31007E8D6A /* Solar System Proj Completed.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = "Solar System Proj Completed.rcproject"; path = "../../../Downloads/Solar System Proj Completed.rcproject"; sourceTree = "<group>"; };
 		B519FF3F2ADCCEAD000FACAB /* VocaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaListViewController.swift; sourceTree = "<group>"; };
 		B519FF412ADCCEB5000FACAB /* VocaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaListViewModel.swift; sourceTree = "<group>"; };
 		B519FF432ADCD841000FACAB /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
-		B519FF452ADCDBD9000FACAB /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		B52E44502ABFEAAC001135BC /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		B52E44532AC0229A001135BC /* PagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerCell.swift; sourceTree = "<group>"; };
 		B52E44552AC023A6001135BC /* reusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reusableIdentifier.swift; sourceTree = "<group>"; };
@@ -109,6 +104,9 @@
 		B52E446B2AC712D0001135BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B52E446E2ACC5A0D001135BC /* WorldPang.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorldPang.entitlements; sourceTree = "<group>"; };
 		B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		B596FCFE2AF5F725003B56C2 /* Aquariu,ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aquariu,ViewController.swift"; sourceTree = "<group>"; };
+		B596FD002AF5F781003B56C2 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
+		B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaParsingManager.swift; sourceTree = "<group>"; };
 		B5BF5B2E2ABDC455008C53F4 /* WorldPang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldPang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +195,7 @@
 		B50EBDEA2AEFEA77007E8D6A /* SpaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				B596FD002AF5F781003B56C2 /* SpaceViewController.swift */,
 			);
 			path = SpaceAR;
 			sourceTree = "<group>";
@@ -216,7 +215,6 @@
 				B52E44502ABFEAAC001135BC /* ARViewController.swift */,
 				B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */,
 				B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */,
-				B50EBDE62AEFDA02007E8D6A /* QuizViewModel.swift */,
 				B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */,
 			);
 			path = QuizAR;
@@ -236,8 +234,7 @@
 			children = (
 				B52E445A2AC044C2001135BC /* TTSManager.swift */,
 				B519FF432ADCD841000FACAB /* FileManager.swift */,
-				B519FF452ADCDBD9000FACAB /* DownloadManager.swift */,
-				B50EBDF52AF16060007E8D6A /* ObjectDetectionService.swift */,
+				B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */,
 			);
 			path = "Service ";
 			sourceTree = "<group>";
@@ -292,6 +289,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		B596FCFD2AF5F6FD003B56C2 /* Aquarium */ = {
+			isa = PBXGroup;
+			children = (
+				B596FCFE2AF5F725003B56C2 /* Aquariu,ViewController.swift */,
+			);
+			path = Aquarium;
+			sourceTree = "<group>";
+		};
 		B5BF5B252ABDC455008C53F4 = {
 			isa = PBXGroup;
 			children = (
@@ -317,13 +322,14 @@
 		B5BF5B302ABDC455008C53F4 /* WorldPang */ = {
 			isa = PBXGroup;
 			children = (
-				B5F994EF2AF2B4EB00F2208B /* MLModels */,
 				B52E446E2ACC5A0D001135BC /* WorldPang.entitlements */,
 				B50EBDFD2AF28E31007E8D6A /* Solar System Proj Completed.rcproject */,
 				B5BF5B6A2ABDD449008C53F4 /* Extension */,
 				B52E445D2AC0465D001135BC /* Resources */,
 				B52E445C2AC04658001135BC /* Sources */,
 				B5BF5B3F2ABDC456008C53F4 /* Info.plist */,
+				B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */,
+				B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */,
 				B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */,
 				B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */,
 			);
@@ -370,9 +376,9 @@
 		B5BF5B632ABDC52F008C53F4 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				B596FCFD2AF5F6FD003B56C2 /* Aquarium */,
 				B50EBDEA2AEFEA77007E8D6A /* SpaceAR */,
 				B519FF472ADD88F3000FACAB /* QuizAR */,
-				B50EBDF32AF16040007E8D6A /* TestViewController.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -403,15 +409,6 @@
 				B5BF5B912ADECD62008C53F4 /* SettingViewController.swift */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		B5F994EF2AF2B4EB00F2208B /* MLModels */ = {
-			isa = PBXGroup;
-			children = (
-				B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */,
-				B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */,
-			);
-			path = MLModels;
 			sourceTree = "<group>";
 		};
 		EC25CF44E84E94143B3E3265 /* Pods */ = {
@@ -669,21 +666,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */,
 				B5BF5B652ABDC559008C53F4 /* LoginViewController.swift in Sources */,
 				B50EBDFE2AF28E31007E8D6A /* Solar System Proj Completed.rcproject in Sources */,
 				B52E44582AC0336B001135BC /* LoginButton.swift in Sources */,
-				B50EBDF42AF16040007E8D6A /* TestViewController.swift in Sources */,
 				B52E44652AC7058B001135BC /* HomeViewModel.swift in Sources */,
-				B50EBDE72AEFDA02007E8D6A /* QuizViewModel.swift in Sources */,
 				B52E44542AC0229A001135BC /* PagerCell.swift in Sources */,
 				B5BF5B922ADECD62008C53F4 /* SettingViewController.swift in Sources */,
 				B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */,
 				B5BF5B6C2ABDD459008C53F4 /* Gradient+UIView.swift in Sources */,
 				B5BF5B722ABEF703008C53F4 /* CustomTabbarController.swift in Sources */,
+				B596FCFF2AF5F725003B56C2 /* Aquariu,ViewController.swift in Sources */,
 				B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */,
 				B52E44682AC71274001135BC /* ProfileViewController.swift in Sources */,
-				B50EBDF62AF16060007E8D6A /* ObjectDetectionService.swift in Sources */,
 				B50EBDF82AF1625D007E8D6A /* UIDevice+Extension.swift in Sources */,
+				B596FD032AF8851C003B56C2 /* VocaParsingManager.swift in Sources */,
 				B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */,
 				B5BF5B8F2ADECA2C008C53F4 /* OCRViewController.swift in Sources */,
 				B519FF442ADCD841000FACAB /* FileManager.swift in Sources */,
@@ -692,7 +689,6 @@
 				B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */,
 				B5BF5B672ABDC5AA008C53F4 /* LoginViewModel.swift in Sources */,
 				B52E446A2AC712B4001135BC /* ProfileViewModel.swift in Sources */,
-				B519FF462ADCDBD9000FACAB /* DownloadManager.swift in Sources */,
 				B519FF402ADCCEAD000FACAB /* VocaListViewController.swift in Sources */,
 				B50EBDE02AEFB496007E8D6A /* Voca.swift in Sources */,
 				B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */,

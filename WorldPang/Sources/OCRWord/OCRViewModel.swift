@@ -11,6 +11,7 @@ import VisionKit
 import NaturalLanguage
 import RxSwift
 import RxCocoa
+import AVFoundation
 
 class OCRViewModel {
     
@@ -22,4 +23,6 @@ class OCRViewModel {
     
     func recognizeText(image: UIImage) {
     }
+    
+    
 }

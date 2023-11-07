@@ -59,10 +59,10 @@
                         <color key="barTintColor" name="mainBackground"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Td3-e7-IbV" kind="relationship" relationship="viewControllers" id="2Qm-mq-brx"/>
-                        <segue destination="5O4-Ph-WaD" kind="relationship" relationship="viewControllers" id="4p5-Fh-rCT"/>
-                        <segue destination="I34-9W-OWz" kind="relationship" relationship="viewControllers" id="P3s-1h-Jfn"/>
-                        <segue destination="093-Sm-n7I" kind="relationship" relationship="viewControllers" id="wvn-qB-Q0v"/>
+                        <segue destination="Td3-e7-IbV" kind="relationship" relationship="viewControllers" id="oOl-0g-gKf"/>
+                        <segue destination="5O4-Ph-WaD" kind="relationship" relationship="viewControllers" id="z5F-gz-g8G"/>
+                        <segue destination="I34-9W-OWz" kind="relationship" relationship="viewControllers" id="gWJ-yL-ArF"/>
+                        <segue destination="093-Sm-n7I" kind="relationship" relationship="viewControllers" id="DXn-8g-87y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoV-L6-Ez7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -92,13 +92,34 @@
             </objects>
             <point key="canvasLocation" x="2538.1679389312976" y="-19.014084507042256"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--View Controller-->
         <scene sceneID="lhp-yX-VZ1">
             <objects>
-                <viewController id="e0E-mP-uPb" customClass="ProfileViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e0E-mP-uPb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="evk-fn-Vzz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text Recognition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khY-bR-nJJ">
+                                <rect key="frame" x="43" y="103" width="306" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ar" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-VF-9mz">
+                                <rect key="frame" x="43" y="192" width="306" height="344"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-8d-qvq">
+                                <rect key="frame" x="43" y="600" width="306" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="subYellow"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recognition"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lpF-0F-fUK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -113,7 +134,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5O4-Ph-WaD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="weV-ab-WDD">
-                        <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="camera.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dq2-3g-3AS">
@@ -145,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="3472.5190839694656" y="1646.4788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="mum-5O-IWR">
             <objects>
-                <viewController id="eSa-xO-uZa" sceneMemberID="viewController">
+                <viewController id="eSa-xO-uZa" customClass="SettingViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bZu-XJ-8oL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,7 +295,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="ar" width="250" height="250"/>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <namedColor name="AccentColor">
@@ -285,6 +307,9 @@
         </namedColor>
         <namedColor name="subIndigo">
             <color red="0.35686274509803922" green="0.50980392156862742" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="subYellow">
+            <color red="1" green="0.65098039215686276" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

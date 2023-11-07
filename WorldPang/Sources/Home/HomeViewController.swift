@@ -34,6 +34,7 @@ class HomeViewController: BaseViewController {
     }
     
     override func setupView() {
+        view.setGradient(color1: .mainYellow, color2: .subYellow)
         view.addSubview(titleLabel)
         view.addSubview(cloudImage)
         
@@ -239,11 +240,6 @@ extension HomeViewController {
     
     
 }
-
-
-
-
-
 
 
 extension HomeViewController: UIScrollViewDelegate {

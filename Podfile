@@ -15,6 +15,7 @@ target 'WorldPang' do
   pod 'RxKakaoSDKAuth'
   pod 'RxDataSources'
   pod 'RxGesture'
+  pod 'SwiftSoup'
   # Pods for WorldPang
 
   target 'WorldPangTests' do

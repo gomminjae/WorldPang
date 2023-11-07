@@ -10,10 +10,6 @@ import RxSwift
 import RxCocoa
 
 
-protocol TextNodeDataDelegate {
-    func sendTextNodeString(_ text: String)
-}
-
 
 class ARViewModel {
     
@@ -21,7 +17,6 @@ class ARViewModel {
     
     private let textSubject = BehaviorRelay<String>(value: "")
     
-    var textNodeDelegate: TextNodeDataDelegate?
     
     var textNodeObservable: Observable<String> {
         return textSubject.asObservable()
@@ -31,9 +26,6 @@ class ARViewModel {
         textSubject.accept(newValue)
     }
     
-    func sentToQuizViewModel(_ text: String) {
-        textNodeDelegate?.sendTextNodeString(text)
-    }
     
     
     

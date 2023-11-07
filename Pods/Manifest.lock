@@ -48,6 +48,7 @@ PODS:
     - RxSwift (= 6.6.0)
   - RxSwift (6.6.0)
   - SnapKit (5.6.0)
+  - SwiftSoup (2.6.1)
 
 DEPENDENCIES:
   - KakaoSDKAuth
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - RxKakaoSDKUser
   - RxSwift
   - SnapKit
+  - SwiftSoup
 
 SPEC REPOS:
   trunk:
@@ -79,6 +81,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SnapKit
+    - SwiftSoup
 
 SPEC CHECKSUMS:
   Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
@@ -96,7 +99,8 @@ SPEC CHECKSUMS:
   RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
   RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftSoup: 5dd2c1b06afc964f30d99894af6ede22ede627aa
 
-PODFILE CHECKSUM: d75c5569c27988cad9b943e56922b91b43faf384
+PODFILE CHECKSUM: 55ede0e7bbc42e30418cbfab04710aa308edf4ff
 
 COCOAPODS: 1.11.3

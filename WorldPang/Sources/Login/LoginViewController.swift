@@ -10,7 +10,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
     private let viewModel = LoginViewModel()
@@ -20,16 +20,12 @@ class LoginViewController: UIViewController {
         
         view.setGradient(color1: .mainYellow, color2: .subYellow)
         
-        setupView()
-        setupLayout()
-        
-        bindRx()
-        
+    
         
     }
     
     
-    private func setupView() {
+    override func setupView() {
         view.addSubview(loginImageView)
         view.addSubview(loginBaseView)
         loginBaseView.addSubview(blurEffectView)
@@ -40,7 +36,7 @@ class LoginViewController: UIViewController {
         loginBaseView.addSubview(centerLineLabel)
     }
     
-    private func setupLayout() {
+    override func setupLayout() {
         
         loginBaseView.snp.makeConstraints {
             $0.leading.equalTo(view).inset(20)
@@ -77,7 +73,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func bindRx() {
+    override func bindRX() {
         kakaoLoginButton.button.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.viewModel.kakaoLogin()

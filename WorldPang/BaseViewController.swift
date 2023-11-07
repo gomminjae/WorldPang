@@ -11,14 +11,12 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradient(color1: .mainYellow, color2: .subYellow)
         setupView()
         setupLayout()
         bindRX()
 
         // Do any additional setup after loading the view.
     }
-    
     
     func setupView(){}
     func setupLayout(){}

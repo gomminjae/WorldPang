@@ -7,13 +7,8 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
+import RxDataSources
 
-
-
-protocol VocaViewmodelBindable {
-    func loadVocaJson()
-}
 
 class VocaListViewModel {
     

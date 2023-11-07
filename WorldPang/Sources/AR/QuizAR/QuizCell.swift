@@ -22,17 +22,27 @@ class QuizCell: UICollectionViewCell {
     
     func setupView() {
         addSubview(letterLabel)
+        self.layer.cornerRadius = 15
+        self.backgroundColor = .red
         
         letterLabel.snp.makeConstraints {
             $0.centerX.equalTo(self)
             $0.centerY.equalTo(self)
         }
+        
     }
     
     
     let letterLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
+        label.layer.cornerRadius = 15
         return label
+    }()
+    
+    let letterButton: UIButton = {
+        let button = UIButton()
+        
+        return button
     }()
 }
