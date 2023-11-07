@@ -26,6 +26,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +39,24 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     override func setupView() {
         view.addSubview(baseView)
+        view.backgroundColor = UIColor.init(_colorLiteralRed: 0, green: 0, blue: 0, alpha: 0)
+           view.isOpaque = false
         
         baseView.addSubview(titleLabel)
         baseView.addSubview(collectionView)
         //collectionView.dataSource = self
         collectionView.register(QuizCell.self, forCellWithReuseIdentifier: QuizCell.reusableIdentifier)
+        
+        baseView.addSubview(summitButton)
+        summitButton.layer.cornerRadius = 20
+        
+        view.addSubview(boardTextField)
+        
     }
     
     override func setupLayout() {
+        
+        
         
         baseView.snp.makeConstraints {
             $0.leading.equalTo(view)
@@ -64,7 +75,20 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
             $0.top.equalTo(titleLabel.snp.bottom)
             $0.leading.equalTo(baseView)
             $0.trailing.equalTo(baseView)
-            $0.bottom.equalTo(baseView)
+            $0.bottom.equalTo(summitButton.snp.top)
+        }
+        
+        summitButton.snp.makeConstraints {
+            $0.bottom.equalTo(baseView.snp.bottom).inset(20)
+            $0.width.equalTo(100)
+            $0.height.equalTo(50)
+            $0.centerX.equalTo(baseView)
+        }
+        
+        boardTextField.snp.makeConstraints {
+            $0.bottom.equalTo(baseView.snp.top)
+            $0.leading.trailing.equalTo(view)
+            $0.centerX.equalTo(view)
         }
     }
     
@@ -85,24 +109,50 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
             .disposed(by: disposeBag)
         
         collectionView.rx.itemSelected
+            .asObservable()
             .subscribe(onNext: { [weak self] indexPath in
-                if let cell = self?.collectionView.cellForItem(at: indexPath) as? QuizCell {
-                    if let text = cell.letterLabel.text {
-                        self?.inputTextObservable
-                            .scan("") { acc,newValue in
-                                return acc + newValue
-                            }
-                            .subscribe(onNext: { acc in
-                                print("=====>Text: \(acc)")
-                            })
-                            .dispose()
-                    }
+                guard let self = self else { return }
+                
+                if let cell = self.collectionView.cellForItem(at: indexPath) as? QuizCell,
+                   let selectedText = cell.letterLabel.text {
+                    self.boardTextField.text?.append(selectedText)
+                    cell.backgroundColor = .lightGray
+                    cell.isUserInteractionEnabled = false
+                    
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        summitButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                if self?.boardTextField.text == self?.textNodeString.replacingOccurrences(of: " ", with: "") {
+                    print("success")
+                    self?.dismiss(animated: true)
+                }
+                else {
+                    self?.resetAllCells()
+                    print("fail")
                 }
             })
             .disposed(by: disposeBag)
        
     }
-
+    
+    private func resetAllCells() {
+        // 모든 선택된 셀을 초기화
+        if let selectedIndexPaths = collectionView.indexPathsForSelectedItems {
+            print(selectedIndexPaths)
+            for indexPath in selectedIndexPaths {
+                if let cell = collectionView.cellForItem(at: indexPath) as? QuizCell {
+                    cell.backgroundColor = UIColor.random()
+                    cell.isUserInteractionEnabled = true
+                    boardTextField.text = ""
+                    collectionView.deselectItem(at: indexPath, animated: false)
+                }
+            }
+            
+        }
+    }
     //MARK: UI
     lazy var baseView: UIView = {
         let view = UIView()
@@ -128,8 +178,20 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     lazy var summitButton: UIButton = {
         let button = UIButton()
+        button.backgroundColor = .subYellow
+        button.setTitle("제출", for: .normal)
         return button
     }()
+    
+    lazy var boardTextField: UITextField = {
+        let tf = UITextField()
+        tf.textColor = .systemGreen
+        tf.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+        tf.textAlignment = .center
+        tf.placeholder = "정답을 써주세요!"
+        return tf
+    }() 
+    
     
 }
 

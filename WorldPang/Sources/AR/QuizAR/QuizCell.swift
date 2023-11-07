@@ -37,12 +37,7 @@ class QuizCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = .black
         label.layer.cornerRadius = 15
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return label
-    }()
-    
-    let letterButton: UIButton = {
-        let button = UIButton()
-        
-        return button
     }()
 }
