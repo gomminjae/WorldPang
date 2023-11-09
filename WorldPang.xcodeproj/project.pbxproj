@@ -214,8 +214,6 @@
 			children = (
 				B52E44502ABFEAAC001135BC /* ARViewController.swift */,
 				B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */,
-				B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */,
-				B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */,
 			);
 			path = QuizAR;
 			sourceTree = "<group>";
@@ -287,6 +285,15 @@
 				B52E44692AC712B4001135BC /* ProfileViewModel.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		B57FA79F2AFAA52800C5A7AE /* QuizSystem */ = {
+			isa = PBXGroup;
+			children = (
+				B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */,
+				B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */,
+			);
+			path = QuizSystem;
 			sourceTree = "<group>";
 		};
 		B596FCFD2AF5F6FD003B56C2 /* Aquarium */ = {
@@ -376,6 +383,7 @@
 		B5BF5B632ABDC52F008C53F4 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				B57FA79F2AFAA52800C5A7AE /* QuizSystem */,
 				B596FCFD2AF5F6FD003B56C2 /* Aquarium */,
 				B50EBDEA2AEFEA77007E8D6A /* SpaceAR */,
 				B519FF472ADD88F3000FACAB /* QuizAR */,

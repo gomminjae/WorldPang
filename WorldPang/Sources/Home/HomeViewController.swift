@@ -136,6 +136,11 @@ class HomeViewController: BaseViewController {
                         arViewController.modalPresentationStyle = .fullScreen
                         present(arViewController,animated: true)
                     }
+                case 1:
+                    if let spaceViewController = storyboard?.instantiateViewController(withIdentifier: "SpaceVC") as? SpaceViewController {
+                        spaceViewController.modalPresentationStyle = .fullScreen
+                        present(spaceViewController,animated: true)
+                    }
                 default:
                     print(indexPath.item)
                 }
