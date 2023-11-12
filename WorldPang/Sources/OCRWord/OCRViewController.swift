@@ -22,6 +22,10 @@ class OCRViewController: BaseViewController {
     
     let picker = UIImagePickerController() 
     
+    @IBOutlet weak var actionButton: UIButton!
+    
+    @IBOutlet weak var selectedImageView: UIImageView!
+    private let viewModel = OCRViewModel()
     private let disposeBag = DisposeBag()
     
 
@@ -44,29 +48,48 @@ class OCRViewController: BaseViewController {
     
     override func bindRX() {
         
-        recognitionButton.rx.tap
-            .subscribe(onDisposed:  { [weak self] in
-                self?.setupAuthAlert()
+        actionButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.openImagePicker()
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.selectedImageSubject
+            .subscribe(onNext: { [weak self] image in
+                if let image = image {
+                    self!.selectedImageView.image = image
+                } else { }
             })
             .disposed(by: disposeBag)
         
     }
     
-    func setupAuthAlert() {
-        if let appName = Bundle.main.infoDictionary!["CFBundleName"] as? String {
-            let alert = UIAlertController(title: "설정", message: "\(appName)", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-            
-            let confirmAction = UIAlertAction(title: "확인", style: .default) { action in
-            }
-            
-            alert.addAction(cancelAction)
-            alert.addAction(confirmAction)
-            self.present(alert, animated: true)
-        } else {
-             
+    func openImagePicker() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
+        let alertController = UIAlertController(title: "Select Image Source", message: nil, preferredStyle: .actionSheet)
+        
+        let cameraAction = UIAlertAction(title: "카메라", style: .default) { [weak self] _ in
+            imagePicker.sourceType = .camera
+            self?.present(imagePicker, animated: true, completion: nil)
         }
+        
+        let albumAction = UIAlertAction(title: "앨범", style: .default) { [weak self] _ in
+            self?.present(imagePicker, animated: true, completion: nil)
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(cameraAction)
+        alertController.addAction(albumAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
+    
     
 
     func setupCamera() {
@@ -82,24 +105,6 @@ class OCRViewController: BaseViewController {
             print(error)
         }
     }
-    
-    private func recognizeText(_ image: UIImage?) {
-        guard let cgImage = image?.cgImage else { return }
-        
-        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-        let request = VNDetectTextRectanglesRequest { request, error in
-            guard let observation = request.results as? [VNRecognizedTextObservation],
-                  error == nil else {
-                return
-            }
-            
-            let resultText = observation.compactMap({
-                $0.topCandidates(1).first?.string
-            }).joined(separator: ", ")
-            
-        }
-    }
-    
     
     
     
@@ -123,5 +128,21 @@ class OCRViewController: BaseViewController {
 
 }
 extension OCRViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage {
+            viewModel.selectedImageSubject.onNext(editedImage)
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            viewModel.selectedImageSubject.onNext(originalImage)
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    // 이미지 선택이 취소되었을 때 호출되는 메서드
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        viewModel.selectedImageSubject.onNext(nil)
+        picker.dismiss(animated: true, completion: nil)
+    }
     
 }

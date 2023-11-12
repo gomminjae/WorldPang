@@ -95,7 +95,7 @@
         <!--View Controller-->
         <scene sceneID="lhp-yX-VZ1">
             <objects>
-                <viewController id="e0E-mP-uPb" sceneMemberID="viewController">
+                <viewController id="e0E-mP-uPb" customClass="OCRViewController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="evk-fn-Vzz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,6 +124,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vmy-oK-MUK"/>
+                    <connections>
+                        <outlet property="actionButton" destination="1Ii-8d-qvq" id="Qo3-0s-WmH"/>
+                        <outlet property="selectedImageView" destination="OLP-VF-9mz" id="bIx-J3-muy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnx-yU-BcK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
