@@ -7,11 +7,14 @@
 
 import Foundation
 import Vision
-import VisionKit
 import NaturalLanguage
 import RxSwift
 import RxCocoa
 import AVFoundation
+
+protocol OCRViewModelBindable {
+    
+}
 
 class OCRViewModel {
     
@@ -23,6 +26,8 @@ class OCRViewModel {
     
     func recognizeText(image: UIImage) {
     }
+    
+    
     
     
 }

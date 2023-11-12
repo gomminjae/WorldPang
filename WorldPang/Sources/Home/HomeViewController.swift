@@ -16,20 +16,19 @@ struct MultipleSection {
     
 }
 
-
-
-
 class HomeViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
     private let viewModel = HomeViewModel()
     
-    var userInfoOb: Observable<User>?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Hello")
         pagerCollectionView.dataSource = self
+        
 
     }
     
@@ -119,6 +118,8 @@ class HomeViewController: BaseViewController {
     }
     
     override func bindRX() {
+    
+        
         
         pagerCollectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
@@ -148,9 +149,20 @@ class HomeViewController: BaseViewController {
             .disposed(by: disposeBag)
         
         
+        viewModel.userInfo
+            .compactMap { $0 }
+            .subscribe(onNext: { [weak self] user in
+                self?.updateUserData(with: user)
+            })
+            .disposed(by: disposeBag)
+        
         
        
         
+    }
+    
+    private func updateUserData(with user: User) {
+        titleLabel.text = user.nickname
     }
     
     //MARK: UI
@@ -195,7 +207,7 @@ class HomeViewController: BaseViewController {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Let's Play"
+        label.text = "Hello"
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 35, weight: .heavy)
         return label

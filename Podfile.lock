@@ -12,6 +12,11 @@ PODS:
     - KakaoSDKCommon/Common (= 2.17.0)
   - KakaoSDKUser (2.17.0):
     - KakaoSDKAuth (= 2.17.0)
+  - Realm (10.44.0):
+    - Realm/Headers (= 10.44.0)
+  - Realm/Headers (10.44.0)
+  - RealmSwift (10.44.0):
+    - Realm (= 10.44.0)
   - RxAlamofire (6.1.1):
     - RxAlamofire/Core (= 6.1.1)
   - RxAlamofire/Core (6.1.1):
@@ -54,6 +59,7 @@ DEPENDENCIES:
   - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKUser
+  - RealmSwift (~> 10)
   - RxCocoa
   - RxDataSources
   - RxGesture
@@ -71,6 +77,8 @@ SPEC REPOS:
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
+    - Realm
+    - RealmSwift
     - RxAlamofire
     - RxCocoa
     - RxDataSources
@@ -89,6 +97,8 @@ SPEC CHECKSUMS:
   KakaoSDKAuth: 85c1d89f16b8be3bf266a0c77dff8b5438696b43
   KakaoSDKCommon: 194ccea3710f30036ee63d79cf524ed7ae6c1595
   KakaoSDKUser: f37e67aebf9061698462eabcb6860c1e750d3b35
+  Realm: 0419a32457873acb720df25bf1d658df36967cf2
+  RealmSwift: 352f85c018b4d0efe961974bfa95bf7a30e079f6
   RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
   RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
@@ -101,6 +111,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftSoup: 5dd2c1b06afc964f30d99894af6ede22ede627aa
 
-PODFILE CHECKSUM: 55ede0e7bbc42e30418cbfab04710aa308edf4ff
+PODFILE CHECKSUM: 2077f6649e9dbd799eaf99ce4bd4e3e986e3ecab
 
 COCOAPODS: 1.11.3

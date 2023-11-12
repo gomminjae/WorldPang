@@ -18,6 +18,7 @@ class OCRViewController: BaseViewController {
     private lazy var captureDevice = AVCaptureDevice.default(for: .video)
     private var session: AVCaptureSession?
     private var output = AVCapturePhotoOutput()
+    private var photoSetting: AVCapturePhotoSettings?
     
     let picker = UIImagePickerController() 
     
@@ -81,6 +82,26 @@ class OCRViewController: BaseViewController {
             print(error)
         }
     }
+    
+    private func recognizeText(_ image: UIImage?) {
+        guard let cgImage = image?.cgImage else { return }
+        
+        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        let request = VNDetectTextRectanglesRequest { request, error in
+            guard let observation = request.results as? [VNRecognizedTextObservation],
+                  error == nil else {
+                return
+            }
+            
+            let resultText = observation.compactMap({
+                $0.topCandidates(1).first?.string
+            }).joined(separator: ", ")
+            
+        }
+    }
+    
+    
+    
     
     
     //MARK: UI

@@ -10,7 +10,8 @@ import Foundation
 
 struct User {
     
-    var id: String
-    var name: String
+    var nickname: String
+    var email: String
+    var profileImageURL: URL
     
 }

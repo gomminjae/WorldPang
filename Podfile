@@ -16,6 +16,7 @@ target 'WorldPang' do
   pod 'RxDataSources'
   pod 'RxGesture'
   pod 'SwiftSoup'
+  pod 'RealmSwift', '~>10'
   # Pods for WorldPang
 
   target 'WorldPangTests' do

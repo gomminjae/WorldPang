@@ -29,9 +29,21 @@ class HomeViewModel {
     
     private var disposeBag: DisposeBag = DisposeBag()
     
+    var userInfo =  PublishSubject<User>()
+    
+    var nickname = ""
   
     
     let dummyData = ["AR", "MAP", "SPACE","CITY"]
+    
+  
+    
+    
+    func debug(_ user: User) {
+        print("디버깅: ----  \(user.nickname)")
+        userInfo.onNext(user)
+    }
+
     
     
     

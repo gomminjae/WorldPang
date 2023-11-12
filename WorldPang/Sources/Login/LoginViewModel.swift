@@ -33,12 +33,17 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
     let kakaoLoginResult: PublishSubject<LoginResult> = PublishSubject()
     let appleLoginResult: PublishSubject<LoginResult> = PublishSubject()
     
+    let homeViewModel = HomeViewModel()
+    
+    
+   
     public func kakaoLogin() {
         
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.rx.loginWithKakaoTalk()
                 .subscribe(onNext: {(oauthToken) in
                     print("kakao Acccount login Success")
+                    self.fetchKakaoUserInfo()
                     let result = LoginResult.success(token: oauthToken.accessToken)
                     self.kakaoLoginResult.onNext(result)
                 }, onError: { error in
@@ -48,10 +53,10 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
         } else {
             UserApi.shared.rx.loginWithKakaoAccount()
                 .subscribe(onNext: {(oauthToken) in
+                    self.fetchKakaoUserInfo()
                     print("kakao Acccount login Success")
                     let result = LoginResult.success(token: oauthToken.accessToken)
                     self.kakaoLoginResult.onNext(result)
-                    
                     
                     
                 }, onError: { error in
@@ -61,17 +66,28 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
         }
     }
     
-    public func setUserInfo() {
-        UserApi.shared.me() { (user,error) in
+    public func fetchKakaoUserInfo() {
+        UserApi.shared.me() { user,error in
             if let error = error {
                 print(error)
-            }
-            
-            else {
-                print("user load success")
-                let userDefaults = UserDefaults.standard
+            } else {
+                print("get user succeess")
+                if let nickname = user?.kakaoAccount?.profile?.nickname,
+                   let profileImage = user?.kakaoAccount?.profile?.profileImageUrl,
+                   let email = user?.kakaoAccount?.email {
+                    
+                    print("\(nickname),,, \(email)")
+                    
+                    let userInfo = User(nickname: nickname, email: email, profileImageURL: profileImage)
+                    
+                    self.homeViewModel.userInfo.onNext(userInfo)
+                    self.homeViewModel.debug(userInfo)
+                } else {
+                    print("Some user information is nil")
+                }
                 
             }
+            
         }
     }
     
