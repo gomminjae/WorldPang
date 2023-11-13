@@ -7,18 +7,12 @@
 
 import UIKit
 import Vision
-import VisionKit
 import RxSwift
 import RxCocoa
 import NaturalLanguage
-import AVFoundation
 
 class OCRViewController: BaseViewController {
     
-    private lazy var captureDevice = AVCaptureDevice.default(for: .video)
-    private var session: AVCaptureSession?
-    private var output = AVCapturePhotoOutput()
-    private var photoSetting: AVCapturePhotoSettings?
     
     let picker = UIImagePickerController() 
     
@@ -28,7 +22,8 @@ class OCRViewController: BaseViewController {
     private let viewModel = OCRViewModel()
     private let disposeBag = DisposeBag()
     
-
+    
+    @IBOutlet weak var resultTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .mainYellow
@@ -58,8 +53,13 @@ class OCRViewController: BaseViewController {
             .subscribe(onNext: { [weak self] image in
                 if let image = image {
                     self!.selectedImageView.image = image
+                    self!.viewModel.recognizeedText(on: image)
                 } else { }
             })
+            .disposed(by: disposeBag)
+        
+        viewModel.recognizedTextSubject
+            .bind(to: resultTextView.rx.text)
             .disposed(by: disposeBag)
         
     }
@@ -89,24 +89,6 @@ class OCRViewController: BaseViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-    
-    
-
-    func setupCamera() {
-        guard let captureDevice = captureDevice else { return }
-        
-        do {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-            session = AVCaptureSession()
-            session?.sessionPreset = .photo
-            session?.addInput(input)
-            session?.addOutput(output)
-        } catch {
-            print(error)
-        }
-    }
-    
-    
     
     
     //MARK: UI
