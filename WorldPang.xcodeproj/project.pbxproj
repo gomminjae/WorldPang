@@ -55,6 +55,7 @@
 		B5BF5B922ADECD62008C53F4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B912ADECD62008C53F4 /* SettingViewController.swift */; };
 		B5F7FAE32B0136DE0027403D /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE22B0136DE0027403D /* TranslationService.swift */; };
 		B5F7FAE52B013ACE0027403D /* PlanetCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */; };
+		B5F7FAE72B01BCB50027403D /* OCRResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE62B01BCB50027403D /* OCRResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		B5BF5B912ADECD62008C53F4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B5F7FAE22B0136DE0027403D /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCardViewController.swift; sourceTree = "<group>"; };
+		B5F7FAE62B01BCB50027403D /* OCRResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultViewController.swift; sourceTree = "<group>"; };
 		B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		CB6E894BBE345D15837E3220 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +409,7 @@
 			children = (
 				B5BF5B8C2ADEC99F008C53F4 /* OCRViewModel.swift */,
 				B5BF5B8E2ADECA2C008C53F4 /* OCRViewController.swift */,
+				B5F7FAE62B01BCB50027403D /* OCRResultViewController.swift */,
 			);
 			path = OCRWord;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */,
 				B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */,
 				B5BF5B8D2ADEC99F008C53F4 /* OCRViewModel.swift in Sources */,
+				B5F7FAE72B01BCB50027403D /* OCRResultViewController.swift in Sources */,
 				B52E446C2AC712D0001135BC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

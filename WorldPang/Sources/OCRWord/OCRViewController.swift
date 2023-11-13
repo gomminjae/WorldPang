@@ -23,6 +23,9 @@ class OCRViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     
     
+    //Papago
+    
+    
     @IBOutlet weak var resultTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +56,7 @@ class OCRViewController: BaseViewController {
             .subscribe(onNext: { [weak self] image in
                 if let image = image {
                     self!.selectedImageView.image = image
-                    self!.viewModel.recognizeedText(on: image)
+                    self?.viewModel.recognizedText(on: image)
                 } else { }
             })
             .disposed(by: disposeBag)
@@ -61,6 +64,13 @@ class OCRViewController: BaseViewController {
         viewModel.recognizedTextSubject
             .bind(to: resultTextView.rx.text)
             .disposed(by: disposeBag)
+        
+        viewModel.recognizedTextSubject
+            .subscribe(onNext: { [weak self] text in
+                self?.viewModel.translation(with: text ?? "")
+            })
+            .disposed(by: disposeBag)
+    
         
     }
     

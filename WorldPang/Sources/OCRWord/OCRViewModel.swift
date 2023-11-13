@@ -13,6 +13,7 @@ import RxCocoa
 protocol OCRViewModelBindable {
     var selectedImageSubject: PublishSubject<UIImage?> { get set }
     var recognizedTextSubject: PublishSubject<String?> { get set }
+    var translatedTextSubject: PublishSubject<String?> { get set }
     
     func recognizedText(on image: UIImage)
 }
@@ -21,9 +22,12 @@ class OCRViewModel: OCRViewModelBindable {
     
     var selectedImageSubject: PublishSubject<UIImage?> = PublishSubject<UIImage?>()
     var recognizedTextSubject: PublishSubject<String?> = PublishSubject<String?>()
+    var translatedTextSubject: PublishSubject<String?> = PublishSubject<String?>()
     
     
     private let disposeBag = DisposeBag()
+    
+    private let papagoService = TranslationService.shared
 
     
     //UIImage -> CIImage -> VNRequsr coreml방식이랑 비슷함
@@ -52,7 +56,17 @@ class OCRViewModel: OCRViewModelBindable {
         } catch {
             recognizedTextSubject.onNext(nil)
         }
+    }
+    
+    func translation(with text: String) {
         
-        
+        papagoService.translateText(text) { result in
+            switch result {
+            case .success(let translatedText):
+                self.translatedTextSubject.onNext(translatedText)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
