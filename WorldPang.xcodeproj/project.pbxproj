@@ -56,6 +56,7 @@
 		B5F7FAE32B0136DE0027403D /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE22B0136DE0027403D /* TranslationService.swift */; };
 		B5F7FAE52B013ACE0027403D /* PlanetCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */; };
 		B5F7FAE72B01BCB50027403D /* OCRResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE62B01BCB50027403D /* OCRResultViewController.swift */; };
+		B5F7FAE92B02520B0027403D /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE82B02520B0027403D /* QuizViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		B5F7FAE22B0136DE0027403D /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCardViewController.swift; sourceTree = "<group>"; };
 		B5F7FAE62B01BCB50027403D /* OCRResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultViewController.swift; sourceTree = "<group>"; };
+		B5F7FAE82B02520B0027403D /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		CB6E894BBE345D15837E3220 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +297,7 @@
 			children = (
 				B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */,
 				B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */,
+				B5F7FAE82B02520B0027403D /* QuizViewModel.swift */,
 			);
 			path = QuizSystem;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				B52E445F2AC27AB0001135BC /* CardPagingLayout.swift in Sources */,
 				B5BF5B702ABEC526008C53F4 /* BaseViewController.swift in Sources */,
 				B519FF422ADCCEB5000FACAB /* VocaListViewModel.swift in Sources */,
+				B5F7FAE92B02520B0027403D /* QuizViewModel.swift in Sources */,
 				B5BF5B6E2ABEC491008C53F4 /* HomeViewController.swift in Sources */,
 				B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */,
 				B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */,

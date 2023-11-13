@@ -19,14 +19,19 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
             bindableTextNodeString.onNext(alphabetArr)
         }
     }
+    
+    private var viewModel: QuizViewModel?
+    
+    
+    var selectedArr = [IndexPath]()
+    
+    
     var bindableTextNodeString = BehaviorSubject<[String]>(value: [])
     var inputTextObservable = PublishSubject<String>()
     
     private let disposeBag = DisposeBag()
     
-    
-    
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +48,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
            view.isOpaque = false
         
         baseView.addSubview(titleLabel)
+        baseView.addSubview(deleteButton)
         baseView.addSubview(collectionView)
         //collectionView.dataSource = self
         collectionView.register(QuizCell.self, forCellWithReuseIdentifier: QuizCell.reusableIdentifier)
@@ -56,8 +62,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     override func setupLayout() {
         
-        
-        
+
         baseView.snp.makeConstraints {
             $0.leading.equalTo(view)
             $0.trailing.equalTo(view)
@@ -68,6 +73,14 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(baseView.snp.top)
             $0.centerX.equalTo(baseView)
+        }
+        
+        deleteButton.snp.makeConstraints {
+            $0.trailing.equalTo(baseView.snp.trailing)
+            $0.top.equalTo(baseView)
+            $0.width.equalTo(50)
+            $0.bottom.equalTo(titleLabel.snp.bottom)
+            
         }
         
         
@@ -94,6 +107,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     override func bindRX() {
         
+        
         collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
         
@@ -118,41 +132,99 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
                     self.boardTextField.text?.append(selectedText)
                     cell.backgroundColor = .lightGray
                     cell.isUserInteractionEnabled = false
-                    
+                    selectedArr.append(indexPath)
                 }
             })
             .disposed(by: disposeBag)
         
         summitButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                if self?.boardTextField.text == self?.textNodeString.replacingOccurrences(of: " ", with: "") {
+                if  self?.boardTextField.text == self?.textNodeString.replacingOccurrences(of: " ", with: "") {
                     print("success")
-                    self?.dismiss(animated: true)
+                    self?.showAnswerView(isCorrect: true)
+                    //self?.dismiss(animated: true)
                 }
                 else {
+                    self?.showAnswerView(isCorrect: false)
                     self?.resetAllCells()
                     print("fail")
                 }
             })
             .disposed(by: disposeBag)
-       
+        
+        deleteButton.rx.tap
+            .observe(on: MainScheduler.instance)
+            .filter { return self.selectedArr.isEmpty == false  }
+            .subscribe(onNext: { [weak self] in
+                guard let targetIndexPath = self?.selectedArr.popLast() else { return }
+                if let cell = self?.collectionView.cellForItem(at: targetIndexPath) as? QuizCell  {
+                    cell.isSelected = false
+                    cell.isUserInteractionEnabled = true
+                    cell.backgroundColor = UIColor.random()
+                    self?.boardTextField.text?.removeLast()
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        
     }
     
     private func resetAllCells() {
         // 모든 선택된 셀을 초기화
-        if let selectedIndexPaths = collectionView.indexPathsForSelectedItems {
-            print(selectedIndexPaths)
-            for indexPath in selectedIndexPaths {
+            for indexPath in selectedArr {
                 if let cell = collectionView.cellForItem(at: indexPath) as? QuizCell {
                     cell.backgroundColor = UIColor.random()
                     cell.isUserInteractionEnabled = true
-                    boardTextField.text = ""
-                    collectionView.deselectItem(at: indexPath, animated: false)
+                    cell.isSelected = false
                 }
             }
-            
-        }
+            // 선택된 셀들 deselect
+            boardTextField.text = ""
+
     }
+    
+    private func showAnswerView(isCorrect: Bool) {
+        let answerView = UIView()
+        answerView.backgroundColor = .subYellow
+        answerView.alpha = 0.3
+        answerView.layer.cornerRadius = 20
+        
+        let label = UILabel()
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        
+        answerView.addSubview(label)
+        
+        view.addSubview(answerView)
+        answerView.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.centerY.equalTo(view)
+            $0.width.equalTo(250)
+            $0.height.equalTo(200)
+        }
+        
+        label.snp.makeConstraints {
+            $0.centerX.equalTo(answerView)
+            $0.centerY.equalTo(answerView)
+        }
+        
+        
+        if isCorrect {
+            label.text = "Correct!"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                answerView.removeFromSuperview()
+                self.dismiss(animated: true)
+            }
+        } else {
+            label.text = "다시 한번 풀어보세요!"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                answerView.removeFromSuperview()
+            }
+        }
+        
+        
+    }
+    
     //MARK: UI
     lazy var baseView: UIView = {
         let view = UIView()
@@ -189,8 +261,17 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
         tf.font = UIFont.systemFont(ofSize: 40, weight: .bold)
         tf.textAlignment = .center
         tf.placeholder = "정답을 써주세요!"
+        tf.isUserInteractionEnabled = false
         return tf
     }() 
+    
+    lazy var deleteButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .subYellow
+        button.setTitle("삭제", for: .normal
+        )
+        return button
+    }()
     
     
 }

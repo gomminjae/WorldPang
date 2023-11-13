@@ -113,15 +113,6 @@ class LoginViewController: BaseViewController {
             .disposed(by: disposeBag)
     }
     
-    private func setupInitialVC() {
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyBoard.instantiateViewController(identifier: "tabbar")
-        let vc = CustomTabbarController()
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .coverVertical
-        self.present(vc, animated: true)
-    }
-    
     //MARK: UI
     lazy var titleLabel: UILabel = {
         let label = UILabel()

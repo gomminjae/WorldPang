@@ -74,6 +74,10 @@ class OCRViewController: BaseViewController {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     func openImagePicker() {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
