@@ -67,7 +67,8 @@ class OCRViewController: BaseViewController {
         
         viewModel.recognizedTextSubject
             .subscribe(onNext: { [weak self] text in
-                self?.viewModel.translation(with: text ?? "")
+                self?.viewModel.translation(with: text?.removeNewLines() ?? "")
+                print(text?.removeNewLines())
             })
             .disposed(by: disposeBag)
     

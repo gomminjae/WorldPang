@@ -84,7 +84,7 @@ class ARViewController: UIViewController {
         }
         
         toolBox.snp.makeConstraints {
-            $0.top.equalTo(view)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.trailing.equalTo(sceneView)
             $0.width.equalTo(100)
             $0.height.equalTo(200)
@@ -320,12 +320,14 @@ class ARViewController: UIViewController {
     let exitButton: UIButton = {
         let button = UIButton()
         button.setTitle("종료하기", for: .normal)
+        button.titleLabel?.textColor = .black
         return button
     }()
     
     let startButton: UIButton = {
         let button = UIButton()
         button.setTitle("시작하기", for: .normal)
+        button.titleLabel?.textColor = .black 
         return button
     }()
 
@@ -333,6 +335,17 @@ class ARViewController: UIViewController {
         let view = UIView()
         return view
     }()
+    
+    let userQuizStateView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    let correntScoreLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
     
     
     

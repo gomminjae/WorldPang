@@ -1,23 +1,14 @@
 //
-//  Voca.swift
+//  voca.swift
 //  WorldPang
 //
-//  Created by 권민재 on 2023/10/30.
+//  Created by 권민재 on 2023/11/15.
 //
 
 import Foundation
 
-
-
-struct Voca: Codable {
+struct Voca {
     
-    let id: String?
-    let word: String?
-    let sentence: String?
-    let meaning: String?
-    let translation: String?
-    
-    private enum CodingKeys: String, CodingKey {
-        case id, word, sentence, meaning, translation
-    }
+    let word: String
+    let mean: String
 }

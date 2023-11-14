@@ -186,7 +186,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     private func showAnswerView(isCorrect: Bool) {
         let answerView = UIView()
         answerView.backgroundColor = .subYellow
-        answerView.alpha = 0.3
+        answerView.alpha = 0.8
         answerView.layer.cornerRadius = 20
         
         let label = UILabel()

@@ -10,7 +10,7 @@
 		13A095FB4AB82DD40E8B6566 /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973A795AC7EAA98C88C2FEC8 /* Pods_WorldPang_WorldPangUITests.framework */; };
 		A02F1C5BA456EC81229B09C4 /* Pods_WorldPang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632E01D0F254E3AE5B24E07D /* Pods_WorldPang.framework */; };
 		A4F2DBE5806E4EC8FA29511B /* Pods_WorldPangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */; };
-		B50EBDE02AEFB496007E8D6A /* Voca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDDF2AEFB496007E8D6A /* Voca.swift */; };
+		B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */; };
 		B50EBDE32AEFB54D007E8D6A /* BasicVoca.json in Resources */ = {isa = PBXBuildFile; fileRef = B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */; };
 		B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */; };
 		B50EBDE92AEFDA4E007E8D6A /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */; };
@@ -57,6 +57,10 @@
 		B5F7FAE52B013ACE0027403D /* PlanetCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */; };
 		B5F7FAE72B01BCB50027403D /* OCRResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE62B01BCB50027403D /* OCRResultViewController.swift */; };
 		B5F7FAE92B02520B0027403D /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE82B02520B0027403D /* QuizViewModel.swift */; };
+		B5F7FAEC2B03B0E00027403D /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAEB2B03B0E00027403D /* WordCell.swift */; };
+		B5F7FAEE2B03BFE70027403D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAED2B03BFE70027403D /* String+Extension.swift */; };
+		B5F7FAF02B03C4CC0027403D /* Voca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAEF2B03C4CC0027403D /* Voca.swift */; };
+		B5F7FAF22B03DBAF0027403D /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAF12B03DBAF0027403D /* TranslationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +87,7 @@
 		632E01D0F254E3AE5B24E07D /* Pods_WorldPang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF9080F5DF366FAA0A01FA8 /* Pods-WorldPang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.release.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.release.xcconfig"; sourceTree = "<group>"; };
 		973A795AC7EAA98C88C2FEC8 /* Pods_WorldPang_WorldPangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang_WorldPangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B50EBDDF2AEFB496007E8D6A /* Voca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voca.swift; sourceTree = "<group>"; };
+		B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetail.swift; sourceTree = "<group>"; };
 		B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BasicVoca.json; path = ../../../../../../Downloads/BasicVoca.json; sourceTree = "<group>"; };
 		B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
@@ -135,6 +139,10 @@
 		B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCardViewController.swift; sourceTree = "<group>"; };
 		B5F7FAE62B01BCB50027403D /* OCRResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRResultViewController.swift; sourceTree = "<group>"; };
 		B5F7FAE82B02520B0027403D /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		B5F7FAEB2B03B0E00027403D /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		B5F7FAED2B03BFE70027403D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B5F7FAEF2B03C4CC0027403D /* Voca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voca.swift; sourceTree = "<group>"; };
+		B5F7FAF12B03DBAF0027403D /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
 		CB6E894BBE345D15837E3220 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,7 +286,8 @@
 			children = (
 				B50EBDE12AEFB534007E8D6A /* VocaData */,
 				B52E446B2AC712D0001135BC /* User.swift */,
-				B50EBDDF2AEFB496007E8D6A /* Voca.swift */,
+				B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */,
+				B5F7FAEF2B03C4CC0027403D /* Voca.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -403,6 +412,7 @@
 				B5BF5B6B2ABDD459008C53F4 /* Gradient+UIView.swift */,
 				B52E44552AC023A6001135BC /* reusableIdentifier.swift */,
 				B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */,
+				B5F7FAED2B03BFE70027403D /* String+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -410,9 +420,11 @@
 		B5BF5B8B2ADEC983008C53F4 /* OCRWord */ = {
 			isa = PBXGroup;
 			children = (
+				B5F7FAEA2B03B0D40027403D /* Cells */,
 				B5BF5B8C2ADEC99F008C53F4 /* OCRViewModel.swift */,
 				B5BF5B8E2ADECA2C008C53F4 /* OCRViewController.swift */,
 				B5F7FAE62B01BCB50027403D /* OCRResultViewController.swift */,
+				B5F7FAF12B03DBAF0027403D /* TranslationView.swift */,
 			);
 			path = OCRWord;
 			sourceTree = "<group>";
@@ -423,6 +435,14 @@
 				B5BF5B912ADECD62008C53F4 /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		B5F7FAEA2B03B0D40027403D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B5F7FAEB2B03B0E00027403D /* WordCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		EC25CF44E84E94143B3E3265 /* Pods */ = {
@@ -684,6 +704,7 @@
 				B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */,
 				B5BF5B652ABDC559008C53F4 /* LoginViewController.swift in Sources */,
 				B52E44582AC0336B001135BC /* LoginButton.swift in Sources */,
+				B5F7FAF22B03DBAF0027403D /* TranslationView.swift in Sources */,
 				B52E44652AC7058B001135BC /* HomeViewModel.swift in Sources */,
 				B52E44542AC0229A001135BC /* PagerCell.swift in Sources */,
 				B5BF5B922ADECD62008C53F4 /* SettingViewController.swift in Sources */,
@@ -699,16 +720,19 @@
 				B5BF5B8F2ADECA2C008C53F4 /* OCRViewController.swift in Sources */,
 				B52E445B2AC044C2001135BC /* TTSManager.swift in Sources */,
 				B50EBDE92AEFDA4E007E8D6A /* ARViewModel.swift in Sources */,
+				B5F7FAEE2B03BFE70027403D /* String+Extension.swift in Sources */,
 				B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */,
 				B5BF5B672ABDC5AA008C53F4 /* LoginViewModel.swift in Sources */,
 				B52E446A2AC712B4001135BC /* ProfileViewModel.swift in Sources */,
 				B519FF402ADCCEAD000FACAB /* VocaListViewController.swift in Sources */,
-				B50EBDE02AEFB496007E8D6A /* Voca.swift in Sources */,
+				B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */,
 				B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */,
 				B52E44562AC023A6001135BC /* reusableIdentifier.swift in Sources */,
 				B5F7FAE32B0136DE0027403D /* TranslationService.swift in Sources */,
 				B52E445F2AC27AB0001135BC /* CardPagingLayout.swift in Sources */,
 				B5BF5B702ABEC526008C53F4 /* BaseViewController.swift in Sources */,
+				B5F7FAF02B03C4CC0027403D /* Voca.swift in Sources */,
+				B5F7FAEC2B03B0E00027403D /* WordCell.swift in Sources */,
 				B519FF422ADCCEB5000FACAB /* VocaListViewModel.swift in Sources */,
 				B5F7FAE92B02520B0027403D /* QuizViewModel.swift in Sources */,
 				B5BF5B6E2ABEC491008C53F4 /* HomeViewController.swift in Sources */,
