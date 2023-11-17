@@ -30,7 +30,7 @@
 		B52E446A2AC712B4001135BC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44692AC712B4001135BC /* ProfileViewModel.swift */; };
 		B52E446C2AC712D0001135BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E446B2AC712D0001135BC /* User.swift */; };
 		B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */; };
-		B596FCFF2AF5F725003B56C2 /* Aquariu,ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FCFE2AF5F725003B56C2 /* Aquariu,ViewController.swift */; };
+		B5389D742B05E3CA00EDC878 /* PapagoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389D732B05E3CA00EDC878 /* PapagoResponse.swift */; };
 		B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD002AF5F781003B56C2 /* SpaceViewController.swift */; };
 		B596FD032AF8851C003B56C2 /* VocaParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */; };
 		B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */; };
@@ -108,7 +108,8 @@
 		B52E446B2AC712D0001135BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B52E446E2ACC5A0D001135BC /* WorldPang.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorldPang.entitlements; sourceTree = "<group>"; };
 		B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
-		B596FCFE2AF5F725003B56C2 /* Aquariu,ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Aquariu,ViewController.swift"; sourceTree = "<group>"; };
+		B5389D732B05E3CA00EDC878 /* PapagoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoResponse.swift; sourceTree = "<group>"; };
+		B5389D772B0649E400EDC878 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		B596FD002AF5F781003B56C2 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaParsingManager.swift; sourceTree = "<group>"; };
 		B5BF5B2E2ABDC455008C53F4 /* WorldPang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldPang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +289,7 @@
 				B52E446B2AC712D0001135BC /* User.swift */,
 				B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */,
 				B5F7FAEF2B03C4CC0027403D /* Voca.swift */,
+				B5389D732B05E3CA00EDC878 /* PapagoResponse.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -309,14 +311,6 @@
 				B5F7FAE82B02520B0027403D /* QuizViewModel.swift */,
 			);
 			path = QuizSystem;
-			sourceTree = "<group>";
-		};
-		B596FCFD2AF5F6FD003B56C2 /* Aquarium */ = {
-			isa = PBXGroup;
-			children = (
-				B596FCFE2AF5F725003B56C2 /* Aquariu,ViewController.swift */,
-			);
-			path = Aquarium;
 			sourceTree = "<group>";
 		};
 		B5BF5B252ABDC455008C53F4 = {
@@ -349,6 +343,7 @@
 				B52E445D2AC0465D001135BC /* Resources */,
 				B52E445C2AC04658001135BC /* Sources */,
 				B5BF5B3F2ABDC456008C53F4 /* Info.plist */,
+				B5389D772B0649E400EDC878 /* GoogleService-Info (1).plist */,
 				B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */,
 				B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */,
 				B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */,
@@ -397,10 +392,9 @@
 		B5BF5B632ABDC52F008C53F4 /* AR */ = {
 			isa = PBXGroup;
 			children = (
-				B57FA79F2AFAA52800C5A7AE /* QuizSystem */,
-				B596FCFD2AF5F6FD003B56C2 /* Aquarium */,
-				B50EBDEA2AEFEA77007E8D6A /* SpaceAR */,
 				B519FF472ADD88F3000FACAB /* QuizAR */,
+				B57FA79F2AFAA52800C5A7AE /* QuizSystem */,
+				B50EBDEA2AEFEA77007E8D6A /* SpaceAR */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -469,7 +463,7 @@
 				B5BF5B2A2ABDC455008C53F4 /* Sources */,
 				B5BF5B2B2ABDC455008C53F4 /* Frameworks */,
 				B5BF5B2C2ABDC455008C53F4 /* Resources */,
-				1848360CB7B550185173582E /* [CP] Embed Pods Frameworks */,
+				2E455C1CFBB31C968C49BB0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -507,7 +501,7 @@
 				B5BF5B4A2ABDC457008C53F4 /* Sources */,
 				B5BF5B4B2ABDC457008C53F4 /* Frameworks */,
 				B5BF5B4C2ABDC457008C53F4 /* Resources */,
-				EB5E7BC0D80AD519B643851B /* [CP] Embed Pods Frameworks */,
+				60AF71396D49A950FF746CDD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -593,7 +587,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1848360CB7B550185173582E /* [CP] Embed Pods Frameworks */ = {
+		2E455C1CFBB31C968C49BB0F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -654,6 +648,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		60AF71396D49A950FF746CDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BCDBD2AB0CCCF89FA028892F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -676,23 +687,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB5E7BC0D80AD519B643851B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -711,7 +705,6 @@
 				B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */,
 				B5BF5B6C2ABDD459008C53F4 /* Gradient+UIView.swift in Sources */,
 				B5BF5B722ABEF703008C53F4 /* CustomTabbarController.swift in Sources */,
-				B596FCFF2AF5F725003B56C2 /* Aquariu,ViewController.swift in Sources */,
 				B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */,
 				B52E44682AC71274001135BC /* ProfileViewController.swift in Sources */,
 				B50EBDF82AF1625D007E8D6A /* UIDevice+Extension.swift in Sources */,
@@ -732,6 +725,7 @@
 				B52E445F2AC27AB0001135BC /* CardPagingLayout.swift in Sources */,
 				B5BF5B702ABEC526008C53F4 /* BaseViewController.swift in Sources */,
 				B5F7FAF02B03C4CC0027403D /* Voca.swift in Sources */,
+				B5389D742B05E3CA00EDC878 /* PapagoResponse.swift in Sources */,
 				B5F7FAEC2B03B0E00027403D /* WordCell.swift in Sources */,
 				B519FF422ADCCEB5000FACAB /* VocaListViewModel.swift in Sources */,
 				B5F7FAE92B02520B0027403D /* QuizViewModel.swift in Sources */,

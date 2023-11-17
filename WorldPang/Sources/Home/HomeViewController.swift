@@ -12,10 +12,6 @@ import SnapKit
 import RxDataSources
 
 
-struct MultipleSection {
-    
-}
-
 class HomeViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
@@ -47,6 +43,13 @@ class HomeViewController: BaseViewController {
         userCurrentStateView.addSubview(vocaNumberLabel)
         userCurrentStateView.addSubview(pointLabel)
         userCurrentStateView.addSubview(pointTitleLabel)
+        
+        
+        userProfileImageButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        userProfileImageButton.layer.cornerRadius = userProfileImageButton.frame.width / 2
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: userProfileImageButton)
         
         
     }
@@ -128,33 +131,60 @@ class HomeViewController: BaseViewController {
         
         pagerCollectionView.rx.itemSelected
             .subscribe(onNext: { [unowned self] indexPath in
-                
+                let arViewModel = ARViewModel()
                 switch indexPath.item {
                 case 0:
-                                   
+                    arViewModel.arCategory = .normal
                     // ARViewController로 화면 전환
                     if let arViewController = storyboard?.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
                         arViewController.modalPresentationStyle = .fullScreen
                         present(arViewController,animated: true)
                     }
                 case 1:
+                    arViewModel.arCategory = .space
                     if let spaceViewController = storyboard?.instantiateViewController(withIdentifier: "SpaceVC") as? SpaceViewController {
                         spaceViewController.modalPresentationStyle = .fullScreen
                         present(spaceViewController,animated: true)
                     }
                 default:
-                    print(indexPath.item)
+                    arViewModel.arCategory = .aquarium
+                    if let arViewController = storyboard?.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
+                        arViewController.modalPresentationStyle = .fullScreen
+                        present(arViewController,animated: true)
+                    }
                 }
             })
             .disposed(by: disposeBag)
         
         
         viewModel.userInfo
-            .compactMap { $0 }
             .subscribe(onNext: { [weak self] user in
-                self?.updateUserData(with: user)
+                self?.titleLabel.text = user?.nickname
+                
+                if let imageURL = user?.profileImageURL {
+                    self?.viewModel.loadProfileImage(urlString: imageURL) { [weak self] image in
+                        DispatchQueue.main.async {
+                            self?.userProfileImageButton.setImage(image, for: .normal)
+                        }
+                    }
+                }
             })
             .disposed(by: disposeBag)
+        
+        
+        viewModel.userInfo
+            .subscribe(onNext: { [weak self] user in
+                if let user = user {
+                    self?.updateUserData(with: user)
+                    self?.updateUserProfileImage(with: user.profileImageURL!)
+                    
+                } else {
+                    print("유저정보가 없음")
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        
         
         
        
@@ -163,6 +193,14 @@ class HomeViewController: BaseViewController {
     
     private func updateUserData(with user: User) {
         titleLabel.text = user.nickname
+    }
+    
+    private func updateUserProfileImage(with url: URL) {
+        viewModel.loadProfileImage(urlString: url) { image in
+            DispatchQueue.main.async {
+                self.userProfileImageButton.setImage(image, for: .normal)
+            }
+        }
     }
     
     //MARK: UI
@@ -247,6 +285,11 @@ class HomeViewController: BaseViewController {
         return label
     }()
     
+    lazy var userProfileImageButton: UIButton = {
+        let button = UIButton()
+        button.clipsToBounds = true
+        return button
+    }()
     
     
     
@@ -266,7 +309,7 @@ extension HomeViewController: UIScrollViewDelegate {
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

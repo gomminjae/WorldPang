@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Alamofire
 
 protocol ViewModelType {
     associatedtype Input
@@ -26,23 +27,54 @@ enum Stage {
 
 class HomeViewModel {
     
+    var userInfo: BehaviorSubject<User?> = BehaviorSubject(value: nil)
+    
     
     private var disposeBag: DisposeBag = DisposeBag()
     
-    var userInfo =  PublishSubject<User>()
     
     var nickname = ""
   
-    
     let dummyData = ["AR", "MAP", "SPACE","CITY"]
     
-  
     
-    
-    func debug(_ user: User) {
-        print("디버깅: ----  \(user.nickname)")
-        userInfo.onNext(user)
+    init() {
+        loadUserInfo()
     }
+    
+    
+    private func loadUserInfo() {
+        if let userInfo = UserDefaults.standard.data(forKey: "User"),
+           let user = try? JSONDecoder().decode(User.self, from: userInfo) {
+            self.userInfo.onNext(user)
+            
+        }
+    }
+    
+    func loadProfileImage(urlString: URL?, completion: @escaping (UIImage?) -> Void) {
+        if let url = urlString {
+            URLSession.shared.dataTask(with: url) { data,_,error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    completion(nil)
+                    return
+                }
+                
+                if let data = data,
+                   let image = UIImage(data: data) {
+                    completion(image)
+                } else {
+                    completion(nil)
+                }
+            }
+            .resume()
+        } else {
+            completion(nil)
+        }
+    }
+    
+  
+
 
     
     

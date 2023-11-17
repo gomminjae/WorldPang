@@ -16,6 +16,11 @@ import RxKakaoSDKAuth
 import RxKakaoSDKCommon
 import AuthenticationServices
 
+enum SocialLogin {
+    case kakao
+    case apple
+}
+
 enum LoginResult {
     case success(token: String)
     case failure(error: Error)
@@ -35,6 +40,7 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
     
     let homeViewModel = HomeViewModel()
     
+    private var userInfo: User?
     
    
     public func kakaoLogin() {
@@ -79,9 +85,8 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
                     print("\(nickname),,, \(email)")
                     
                     let userInfo = User(nickname: nickname, email: email, profileImageURL: profileImage)
-                    
+                    self.saveUserData(user: userInfo,loginType: .kakao)
                     self.homeViewModel.userInfo.onNext(userInfo)
-                    self.homeViewModel.debug(userInfo)
                 } else {
                     print("Some user information is nil")
                 }
@@ -114,6 +119,41 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
         }
     }
     
+    func saveUserData(user: User, loginType: SocialLogin) {
+        
+        if loginType == .kakao {
+            if let userInfo = try? JSONEncoder().encode(user) {
+                UserDefaults.standard.set(userInfo, forKey: "User")
+            }
+        }
+        else {
+            if let userInfo = try? JSONEncoder().encode(user) {
+                UserDefaults.standard.set(userInfo, forKey: "AppleUser")
+            }
+        }
+    
+    }
+    
+    func loadUserData(loginType: SocialLogin) -> User? {
+        
+        if loginType == .kakao {
+            if let userInfo = UserDefaults.standard.data(forKey: "User"),
+               let user = try? JSONDecoder().decode(User.self, from: userInfo) {
+                return user
+            }
+        } else {
+            if let userInfo = UserDefaults.standard.data(forKey: "AppleUser"),
+               let user = try? JSONDecoder().decode(User.self, from: userInfo) {
+                return user
+            }
+        }
+        return nil
+    }
+    
+    
+    
+    
+    
 }
 
 extension LoginViewModel: ASAuthorizationControllerDelegate {
@@ -126,6 +166,12 @@ extension LoginViewModel: ASAuthorizationControllerDelegate {
             let token = appleIDCredential.identityToken?.base64EncodedString() ?? ""
             let result = LoginResult.success(token: token)
             appleLoginResult.onNext(result)
+            
+            guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential else { return }
+            
+            let user = User(nickname: credential.fullName?.givenName ?? "", email: credential.email ?? "")
+            
+            self.saveUserData(user: user, loginType: .apple)
         }
     }
     

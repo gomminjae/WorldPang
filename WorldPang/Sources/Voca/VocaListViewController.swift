@@ -14,7 +14,7 @@ import AVFoundation
 
 class VocaListViewController: BaseViewController {
     
-    private let viewModel = VocaListViewModel()
+    //private let viewModel = VocaListViewModel()
     private let disposeBag = DisposeBag()
     
 

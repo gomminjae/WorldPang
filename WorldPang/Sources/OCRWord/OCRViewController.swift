@@ -67,8 +67,8 @@ class OCRViewController: BaseViewController {
         
         viewModel.recognizedTextSubject
             .subscribe(onNext: { [weak self] text in
-                self?.viewModel.translation(with: text?.removeNewLines() ?? "")
-                print(text?.removeNewLines())
+                self?.viewModel.translation(with: text ?? "")
+                print(text ?? "")
             })
             .disposed(by: disposeBag)
     
@@ -133,7 +133,11 @@ extension OCRViewController: UIImagePickerControllerDelegate, UINavigationContro
             viewModel.selectedImageSubject.onNext(originalImage)
         }
         
-        picker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true) {
+            guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? OCRResultViewController else { return }
+            self.present(resultVC, animated: true)
+        }
+        
     }
     
     // 이미지 선택이 취소되었을 때 호출되는 메서드

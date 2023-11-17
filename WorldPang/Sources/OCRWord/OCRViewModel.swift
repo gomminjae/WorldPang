@@ -28,6 +28,17 @@ class OCRViewModel: OCRViewModelBindable {
     private let disposeBag = DisposeBag()
     
     private let papagoService = TranslationService.shared
+    
+    
+    var dummyData = [
+        Voca(word: "Hello", mean: "안녕"),
+        Voca(word: "Hello", mean: "안녕"),
+        Voca(word: "Hello", mean: "안녕"),
+        Voca(word: "Hello", mean: "안녕"),
+        Voca(word: "Hello", mean:  "안녕")
+    ]
+    
+    
 
     
     //UIImage -> CIImage -> VNRequsr coreml방식이랑 비슷함
@@ -48,6 +59,17 @@ class OCRViewModel: OCRViewModelBindable {
             }.joined(separator: "\n")
             
             self?.recognizedTextSubject.onNext(recognizedText)
+            
+            self?.papagoService.translateText(recognizedText) { result in
+                switch result {
+                case .success(let text):
+                    print("=====>\(text)")
+                    self?.recognizedTextSubject.onNext(text)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            
         }
         
         let textRecognitionRequestHandler = VNImageRequestHandler(ciImage: ciImage, options: [:])

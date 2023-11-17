@@ -14,6 +14,8 @@ import RxDataSources
 
 class OCRResultViewController: BaseViewController {
     
+    
+    
     private let disposeBag = DisposeBag()
     private let viewModel = OCRViewModel()
     
@@ -25,27 +27,73 @@ class OCRResultViewController: BaseViewController {
     }
     
     override func setupView() {
-        view.addSubview(translatedWordsTableView)
+        view.addSubview(collectionView)
+        collectionView.backgroundColor = .white
+        
         
     }
     
     override func setupLayout() {
         
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(view)
+            $0.leading.trailing.equalTo(view)
+            $0.bottom.equalTo(view)
+        }
+        
+
     }
     
     override func bindRX() {
         
+        collectionView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+        
+        let dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, Voca>>(configureCell: { [self]_, collectionView, indexPath, item in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WordCell.reusableIdentifier, for: indexPath) as? WordCell else { return UICollectionViewCell() }
+            
+            self.viewModel.recognizedTextSubject
+                .subscribe(onNext: { newText in
+                    cell.wordLabel.text = newText
+                })
+                .disposed(by: disposeBag)
+            return cell
+        },configureSupplementaryView: { (datasource, collectionView, kind, indexPath) -> UICollectionReusableView in
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: TranslationView.reusableIdentifier, for: indexPath)
+                return header
+        
+        })
+        
+        
+        Observable.of(viewModel.dummyData)
+            .map { [SectionModel(model: "", items: $0)] }
+            .bind(to: collectionView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+        
+        
+//        translatedWordsTableView.rx.contentOffset
+//            .map { $0.y }
+//            .bind(to: headerView.rx.stretchableHeader())
+//            .disposed(by: disposeBag)
+        
+        viewModel.recognizedTextSubject
+            .subscribe(onNext: { [weak self] text in
+                self?.originalTextLabel.text = text
+                self?.viewModel.translation(with: text ?? "")
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.translatedTextSubject
+            .bind(to: translationLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        
+        
+        
     }
     
-//    private func configureTableView() {
-//        let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Voca>>(
-//            configureCell: { (_, tableView, indexPath, item) in
-//                guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? WordCell else { return UITableViewCell() }
-//                cell.wordLabel.text = item.word
-//                cell.meanLabel.text = item.mean
-//                return cell
-//            }
-//    }
+
     
     //MARK: UI
     let titleLabel: UILabel = {
@@ -67,10 +115,19 @@ class OCRResultViewController: BaseViewController {
         return label
     }()
     
-    let translatedWordsTableView: UITableView = {
-        let view = UITableView()
-        view.backgroundColor = .blue
-        view.register(WordCell.self, forCellReuseIdentifier: WordCell.reusableIdentifier)
-        return view
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 80)
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.register(WordCell.self, forCellWithReuseIdentifier: WordCell.reusableIdentifier)
+        cv.register(TranslationView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TranslationView.reusableIdentifier)
+        
+        return cv
     }()
+}
+
+extension OCRResultViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+           return CGSize(width: collectionView.bounds.width, height: 300)
+       }
 }

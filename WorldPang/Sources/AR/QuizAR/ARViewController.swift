@@ -8,8 +8,10 @@ import RxCocoa
 import RxGesture
 
 
-protocol TextNodeDataDelegate {
-    func sendTextNodeString(_ text: String)
+enum ARCategory {
+    case normal
+    case aquarium
+    case space
 }
 
 

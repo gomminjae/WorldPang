@@ -17,6 +17,7 @@ class ARViewModel {
     
     private let textSubject = BehaviorRelay<String>(value: "")
     
+    var arCategory: ARCategory?
     
     var textNodeObservable: Observable<String> {
         return textSubject.asObservable()

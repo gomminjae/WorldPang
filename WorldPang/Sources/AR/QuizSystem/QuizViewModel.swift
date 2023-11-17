@@ -22,6 +22,7 @@ protocol QuizViewModelBindable {
 class QuizViewModel: QuizViewModelBindable {
     
     
+    
     var selectedIndexPath: PublishSubject<IndexPath> = PublishSubject<IndexPath>()
     var summitButtonTapped: PublishSubject<Void> = PublishSubject<Void>()
     

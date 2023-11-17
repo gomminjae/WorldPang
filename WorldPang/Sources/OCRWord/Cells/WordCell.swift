@@ -8,10 +8,10 @@
 import UIKit
 import SnapKit
 
-class WordCell: UITableViewCell {
+class WordCell: UICollectionViewCell {
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupView()
     }
     
@@ -39,11 +39,13 @@ class WordCell: UITableViewCell {
     let wordLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        label.textColor = .black
         return label
     }()
     
     let meanLabel: UILabel = {
         let label = UILabel()
+        label.textColor = .black
         return label
     }()
     

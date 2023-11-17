@@ -10,20 +10,11 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-
-extension Reactive where Base: UIView {
-    func stretchableHeader() -> Binder<CGFloat> {
-        return Binder(self.base) { view, offset in
-            view.frame.size.height = max(200 - offset,100)
-        }
-    }
-}
-
-
-class TranslationView: UIView {
+class TranslationView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .red
         setupView()
     }
     
@@ -82,12 +73,14 @@ class TranslationView: UIView {
     
     let originalTextLabel: UILabel = {
         let label = UILabel()
+        label.text = "ㅇㅁㄴㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㄹㅁㅇ"
         label.sizeToFit()
         return label
     }()
     let translatedTextLabel: UILabel = {
         let label = UILabel()
         label.sizeToFit()
+        label.text = "sdㄹㅁㄴㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹ"
         return label
     }()
     
