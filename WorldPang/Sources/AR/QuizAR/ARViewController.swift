@@ -51,7 +51,7 @@ class ARViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
-        
+        configuration.planeDetection = [.vertical,.horizontal]
         
         sceneView.session.run(configuration)
     

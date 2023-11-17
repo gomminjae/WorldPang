@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 import ARKit
 import SceneKit
 
@@ -18,15 +19,18 @@ class SpaceViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     
+    let nodeTapGesture = UITapGestureRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
+        configuration.planeDetection = [.horizontal,.vertical]
         
         sceneView.session.run(configuration)
         sceneView.automaticallyUpdatesLighting = true
         sceneView.scene.background.contents = UIImage(named: "art.scnassets/background.jpeg")
+        sceneView.addGestureRecognizer(nodeTapGesture)
         
         addSun()
         addMercury()
@@ -34,7 +38,32 @@ class SpaceViewController: UIViewController {
         addEarthSystem()
         addMars()
         
+        
+        bindRx()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    private func bindRx() {
+        
+        nodeTapGesture.rx
+            .event
+            .subscribe(onNext: { [weak self] gesture in
+                guard let self = self else { return }
+                
+                let location = gesture.location(in: self.sceneView)
+                let hitResult = self.sceneView.hitTest(location, options: nil)
+                
+                guard let hitedNode = hitResult.first?.node else { return }
+                
+                
+                if let textGeometry = hitedNode.geometry {
+                    let nodeName = textGeometry.value(forKey: "planet")
+                    print(nodeName)
+                }
+                self.animateNodeAndPresentView(node: hitedNode)
+            })
+            .disposed(by: disposeBag)
     }
     
     func addSun() {
@@ -46,6 +75,7 @@ class SpaceViewController: UIViewController {
         let nodeSun = SCNNode()
         nodeSun.position = SCNVector3(0, 0, -1)
         nodeSun.geometry = sun
+        nodeSun.geometry?.setValue("sun", forKey: "planet")
         sceneView.scene.rootNode.addChildNode(nodeSun)
         
     }
@@ -68,6 +98,7 @@ class SpaceViewController: UIViewController {
         let nodeMercury = SCNNode()
         nodeMercury.position = SCNVector3(x: 0.5, y: 0, z: 0)
         nodeMercury.geometry = mercury
+        nodeMercury.geometry?.setValue("mercury", forKey: "planet")
         
         parentNode.addChildNode(nodeMercury)
         
@@ -90,6 +121,7 @@ class SpaceViewController: UIViewController {
         let nodeVenus = SCNNode()
         nodeVenus.position = SCNVector3(x: 1, y: 0, z: 0)
         nodeVenus.geometry = venus
+        nodeVenus.setValue("venus", forKey: "planet")
         
         parentNode.addChildNode(nodeVenus)
         
@@ -114,6 +146,7 @@ class SpaceViewController: UIViewController {
         let nodeEarth = SCNNode()
         nodeEarth.position = SCNVector3(1.5, 0, 0)
         nodeEarth.geometry = earth
+        nodeEarth.geometry?.setValue("earth", forKey: "planet")
         let earthRotaion = SCNAction.rotateBy(x: 0, y: 2 * .pi, z: 0, duration: 8)
         let earthRotaionRepeat = SCNAction.repeatForever(earthRotaion)
         nodeEarth.runAction(earthRotaionRepeat)
@@ -133,6 +166,7 @@ class SpaceViewController: UIViewController {
         let nodeMoon = SCNNode()
         nodeMoon.position = SCNVector3(0, 0, -0.3)
         nodeMoon.geometry = moon
+        nodeMoon.geometry?.setValue("moon", forKey: "planet")
         let moonRotaion = SCNAction.rotateBy(x: 0, y: 2 * .pi, z: 0, duration: 8)
         let moonRotaionRepeat = SCNAction.repeatForever(moonRotaion)
         nodeMoon.runAction(moonRotaionRepeat)
@@ -159,15 +193,62 @@ class SpaceViewController: UIViewController {
         let nodeMars = SCNNode()
         nodeMars.position = SCNVector3(x: 2, y: 0, z: 0)
         nodeMars.geometry = mars
+        nodeMars.geometry?.setValue("Mars", forKey: "planet")
         
         parentNode.addChildNode(nodeMars)
         
     }
     
+    private func animateNodeAndPresentView(node: SCNNode) {
+        guard let pointOfView = sceneView.pointOfView else { return }
+
+        // Find the intersection between the screen center and the AR scene
+        let screenCenter = CGPoint(x: sceneView.bounds.midX, y: sceneView.bounds.midY)
+        let hitTestResults = sceneView.hitTest(screenCenter, options: nil)
+
+        if let hitResult = hitTestResults.first {
+            // Get the world coordinates from the SCNHitTestResult
+            let destinationPosition = hitResult.worldCoordinates
+
+            // Save the original position
+            let originalPosition = node.position
+
+            // Move the node to the intersection point
+            let moveAction = SCNAction.move(to: destinationPosition, duration: 1.0)
+
+            // Rotate the node
+            let rotateAction = SCNAction.rotateBy(x: 0, y: 2 * .pi, z: 0, duration: 1.0)
+
+            // Group actions to run simultaneously
+            let groupAction = SCNAction.group([moveAction, rotateAction])
+
+            // Run the group action
+            node.runAction(groupAction) {
+                // After animation completes, present a new view
+                self.presentNewView(for: node)
+
+                // Return the node to its original position
+                let returnAction = SCNAction.move(to: originalPosition, duration: 1.0)
+                node.runAction(returnAction)
+            }
+        }
+    }
+    private func presentNewView(for node: SCNNode) {
+        DispatchQueue.main.async {
+            let newViewController = PlanetCardViewController()
+            self.present(newViewController, animated: true, completion: nil)
+        }
+    }
+    
+    
     
     
     //MARK: UI
-    
+    let showPlanetListButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("행성 목록 보기", for: .normal)
+        return button
+    }()
     
   
 }

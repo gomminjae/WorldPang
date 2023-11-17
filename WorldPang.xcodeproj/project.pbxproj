@@ -33,6 +33,11 @@
 		B5389D742B05E3CA00EDC878 /* PapagoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389D732B05E3CA00EDC878 /* PapagoResponse.swift */; };
 		B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD002AF5F781003B56C2 /* SpaceViewController.swift */; };
 		B596FD032AF8851C003B56C2 /* VocaParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */; };
+		B59C48D52B07AC8900680645 /* SpaceARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */; };
+		B59C48D72B07CE5F00680645 /* PlanetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */; };
+		B59C48D92B07CE7A00680645 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48D82B07CE7A00680645 /* Planet.swift */; };
+		B59C48DC2B07D39A00680645 /* PlanetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48DB2B07D39A00680645 /* PlanetListCell.swift */; };
+		B59C48DE2B07D83F00680645 /* PlanetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48DD2B07D83F00680645 /* PlanetListViewModel.swift */; };
 		B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */; };
 		B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */; };
 		B5BF5B392ABDC455008C53F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5BF5B372ABDC455008C53F4 /* Main.storyboard */; };
@@ -112,6 +117,11 @@
 		B5389D772B0649E400EDC878 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		B596FD002AF5F781003B56C2 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaParsingManager.swift; sourceTree = "<group>"; };
+		B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceARViewModel.swift; sourceTree = "<group>"; };
+		B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListViewController.swift; sourceTree = "<group>"; };
+		B59C48D82B07CE7A00680645 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		B59C48DB2B07D39A00680645 /* PlanetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListCell.swift; sourceTree = "<group>"; };
+		B59C48DD2B07D83F00680645 /* PlanetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListViewModel.swift; sourceTree = "<group>"; };
 		B5BF5B2E2ABDC455008C53F4 /* WorldPang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldPang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,8 +218,11 @@
 		B50EBDEA2AEFEA77007E8D6A /* SpaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				B59C48DF2B07E0B800680645 /* ViewModels */,
+				B59C48DA2B07CFA600680645 /* Cells */,
 				B596FD002AF5F781003B56C2 /* SpaceViewController.swift */,
 				B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */,
+				B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */,
 			);
 			path = SpaceAR;
 			sourceTree = "<group>";
@@ -290,6 +303,7 @@
 				B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */,
 				B5F7FAEF2B03C4CC0027403D /* Voca.swift */,
 				B5389D732B05E3CA00EDC878 /* PapagoResponse.swift */,
+				B59C48D82B07CE7A00680645 /* Planet.swift */,
 			);
 			path = "Model ";
 			sourceTree = "<group>";
@@ -311,6 +325,23 @@
 				B5F7FAE82B02520B0027403D /* QuizViewModel.swift */,
 			);
 			path = QuizSystem;
+			sourceTree = "<group>";
+		};
+		B59C48DA2B07CFA600680645 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B59C48DB2B07D39A00680645 /* PlanetListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B59C48DF2B07E0B800680645 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B59C48DD2B07D83F00680645 /* PlanetListViewModel.swift */,
+				B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		B5BF5B252ABDC455008C53F4 = {
@@ -702,6 +733,9 @@
 				B52E44652AC7058B001135BC /* HomeViewModel.swift in Sources */,
 				B52E44542AC0229A001135BC /* PagerCell.swift in Sources */,
 				B5BF5B922ADECD62008C53F4 /* SettingViewController.swift in Sources */,
+				B59C48D52B07AC8900680645 /* SpaceARViewModel.swift in Sources */,
+				B59C48D72B07CE5F00680645 /* PlanetListViewController.swift in Sources */,
+				B59C48DE2B07D83F00680645 /* PlanetListViewModel.swift in Sources */,
 				B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */,
 				B5BF5B6C2ABDD459008C53F4 /* Gradient+UIView.swift in Sources */,
 				B5BF5B722ABEF703008C53F4 /* CustomTabbarController.swift in Sources */,
@@ -713,12 +747,14 @@
 				B5BF5B8F2ADECA2C008C53F4 /* OCRViewController.swift in Sources */,
 				B52E445B2AC044C2001135BC /* TTSManager.swift in Sources */,
 				B50EBDE92AEFDA4E007E8D6A /* ARViewModel.swift in Sources */,
+				B59C48DC2B07D39A00680645 /* PlanetListCell.swift in Sources */,
 				B5F7FAEE2B03BFE70027403D /* String+Extension.swift in Sources */,
 				B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */,
 				B5BF5B672ABDC5AA008C53F4 /* LoginViewModel.swift in Sources */,
 				B52E446A2AC712B4001135BC /* ProfileViewModel.swift in Sources */,
 				B519FF402ADCCEAD000FACAB /* VocaListViewController.swift in Sources */,
 				B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */,
+				B59C48D92B07CE7A00680645 /* Planet.swift in Sources */,
 				B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */,
 				B52E44562AC023A6001135BC /* reusableIdentifier.swift in Sources */,
 				B5F7FAE32B0136DE0027403D /* TranslationService.swift in Sources */,
