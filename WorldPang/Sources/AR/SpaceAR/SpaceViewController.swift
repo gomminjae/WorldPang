@@ -11,9 +11,10 @@ import RxCocoa
 import RxGesture
 import ARKit
 import SceneKit
+import SnapKit
 
 
-class SpaceViewController: UIViewController {
+class SpaceViewController: BaseViewController {
     @IBOutlet weak var sceneView: ARSCNView!
     
     private let disposeBag = DisposeBag()
@@ -31,20 +32,43 @@ class SpaceViewController: UIViewController {
         sceneView.automaticallyUpdatesLighting = true
         sceneView.scene.background.contents = UIImage(named: "art.scnassets/background.jpeg")
         sceneView.addGestureRecognizer(nodeTapGesture)
+    
         
+        // Do any additional setup after loading the view.
+    }
+    
+    override func setupView() {
         addSun()
         addMercury()
         addVenus()
         addEarthSystem()
         addMars()
         
+        view.addSubview(stackView)
         
-        bindRx()
+        stackView.addArrangedSubview(showPlanetListButton)
+        stackView.addArrangedSubview(dismissButton)
         
-        // Do any additional setup after loading the view.
+        
     }
     
-    private func bindRx() {
+    override func setupLayout() {
+        
+        
+        stackView.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.width.equalTo(200)
+            $0.bottom.equalTo(view.snp.bottom).inset(40)
+            $0.height.equalTo(90)
+        }
+        
+        
+        
+        
+    }
+
+    
+    override func bindRX() {
         
         nodeTapGesture.rx
             .event
@@ -62,6 +86,19 @@ class SpaceViewController: UIViewController {
                     print(nodeName)
                 }
                 self.animateNodeAndPresentView(node: hitedNode)
+            })
+            .disposed(by: disposeBag)
+        
+        showPlanetListButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                let vc = PlanetListViewController()
+                self?.present(vc,animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        dismissButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
     }
@@ -243,12 +280,34 @@ class SpaceViewController: UIViewController {
     
     
     
-    //MARK: UI
+    //MARK: UI`
+    
+    let stackView: UIStackView = {
+        let view = UIStackView()
+        view.distribution = .fillProportionally
+        view.spacing = 5
+        view.axis = .horizontal
+        view.backgroundColor?.withAlphaComponent(0.7)
+        return view
+    }()
+    
+    
     let showPlanetListButton: UIButton = {
         let button = UIButton()
         button.setTitle("행성 목록 보기", for: .normal)
+        button.layer.cornerRadius = 20
+        button.backgroundColor = .subYellow
         return button
     }()
+    
+    let dismissButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("나가기", for: .normal)
+        button.layer.cornerRadius = 20
+        button.backgroundColor = .subYellow
+        return button
+    }()
+    
     
   
 }

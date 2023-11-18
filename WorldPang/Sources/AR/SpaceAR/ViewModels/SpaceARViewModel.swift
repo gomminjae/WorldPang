@@ -14,7 +14,5 @@ class SpaceARViewModel {
     private let disposeBag = DisposeBag()
     
     init() {}
-    
-    
 
 }

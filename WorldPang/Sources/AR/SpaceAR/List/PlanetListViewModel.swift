@@ -14,7 +14,6 @@ import ARKit
 
 class PlanetListViewModel {
     
-    private let disposeBag = DisposeBag()
     
     var planetObservable: Observable<[Planet]> {
         return Observable.of(planetList)
@@ -26,7 +25,6 @@ class PlanetListViewModel {
         Planet(title: "Venus(금성)", content: "nil", planetImage: UIImage(named: "venus.png")),
         Planet(title: "Earth(지구)", content: "nil", planetImage: UIImage(named: "earth.png")),
         Planet(title: "Moon(달)", content: "nil", planetImage: UIImage(named: "moon.png"))
-        
     ]
     
 }

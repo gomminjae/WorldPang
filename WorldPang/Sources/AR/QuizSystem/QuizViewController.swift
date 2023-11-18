@@ -35,8 +35,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     private let disposeBag = DisposeBag()
     
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("QuizVC=====>\(textNodeString)")
@@ -65,7 +64,6 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     }
     
     override func setupLayout() {
-        
 
         baseView.snp.makeConstraints {
             $0.leading.equalTo(view)
@@ -111,7 +109,6 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     override func bindRX() {
         
-        
         collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
         
@@ -140,7 +137,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
                 }
             })
             .disposed(by: disposeBag)
-        
+
         summitButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 if  self?.boardTextField.text == self?.textNodeString.replacingOccurrences(of: " ", with: "") {
@@ -169,7 +166,6 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
                 }
             })
             .disposed(by: disposeBag)
-        
         
     }
     
@@ -225,7 +221,6 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
                 answerView.removeFromSuperview()
             }
         }
-        
         
     }
     

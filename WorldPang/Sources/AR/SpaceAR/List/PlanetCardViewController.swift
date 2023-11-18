@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-class PlanetCardViewController: BaseViewController {
+class PlanetListViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
     private let planetViewModel = PlanetListViewModel()
@@ -23,6 +23,8 @@ class PlanetCardViewController: BaseViewController {
     
     override func setupView() {
         view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.register(PlanetListCell.self, forCellReuseIdentifier: PlanetListCell.reusableIdentifier)
     }
     
     override func setupLayout() {
@@ -44,13 +46,12 @@ class PlanetCardViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
     }
-    
-    
-    
-    
-    
     let tableView = UITableView()
-    
+}
 
-   
+extension PlanetListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 }

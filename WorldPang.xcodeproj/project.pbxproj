@@ -218,11 +218,11 @@
 		B50EBDEA2AEFEA77007E8D6A /* SpaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				B59C48E12B08A32000680645 /* List */,
+				B59C48E02B08865A00680645 /* Detail */,
 				B59C48DF2B07E0B800680645 /* ViewModels */,
 				B59C48DA2B07CFA600680645 /* Cells */,
 				B596FD002AF5F781003B56C2 /* SpaceViewController.swift */,
-				B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */,
-				B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */,
 			);
 			path = SpaceAR;
 			sourceTree = "<group>";
@@ -338,10 +338,26 @@
 		B59C48DF2B07E0B800680645 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B59C48DD2B07D83F00680645 /* PlanetListViewModel.swift */,
 				B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B59C48E02B08865A00680645 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B59C48E12B08A32000680645 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */,
+				B59C48DD2B07D83F00680645 /* PlanetListViewModel.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		B5BF5B252ABDC455008C53F4 = {
