@@ -11,11 +11,11 @@ import RxCocoa
 import SnapKit
 
 
-class VocaListViewController: BaseViewController {
+class VocaStageViewController: BaseViewController {
     
     //private let viewModel = VocaListViewModel()
     private let disposeBag = DisposeBag()
-    private let viewModel = VocaListViewModel()
+    private let viewModel = VocaStageViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +38,19 @@ class VocaListViewController: BaseViewController {
     
     override func bindRX() {
         
+        viewModel.listHomeSection
+            .bind(to: collectionView.rx.items(cellIdentifier: VocaStageCell.reusableIdentifier, cellType: VocaStageCell.self)) { row,item,cell in
+                cell.backgroundColor = .mainWhite
+                cell.titleLabel.text = "Stage \(row+1)"
+            }
+            .disposed(by: disposeBag)
         
-    
-        
-       
+        collectionView.rx.itemSelected
+            .subscribe(onNext: {  indexPath in
+                self.viewModel.loadwords(index: indexPath.item)
+                self.navigationController?.pushViewController(VocaDetailViewController(), animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     
@@ -54,8 +63,11 @@ class VocaListViewController: BaseViewController {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.frame.width-20, height: 100)
+        layout.scrollDirection = .vertical
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.register(VocaStageCell.self, forCellWithReuseIdentifier: VocaStageCell.reusableIdentifier)
+        view.backgroundColor = .blue
         return view
     }()
     
