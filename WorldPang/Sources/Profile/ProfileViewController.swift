@@ -20,7 +20,7 @@ class ProfileViewController: BaseViewController {
     }
     
     override func setupView() {
-        view.backgroundColor = .mainYellow
+        view.backgroundColor = .white
     }
     
     override func setupLayout() {

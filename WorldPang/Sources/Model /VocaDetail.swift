@@ -17,7 +17,5 @@ struct VocaDetail: Codable {
     let meaning: String?
     let translation: String?
     
-    private enum CodingKeys: String, CodingKey {
-        case id, word, sentence, meaning, translation
-    }
+    
 }

@@ -20,11 +20,11 @@ class PlanetListViewModel {
     }
     
     let planetList: [Planet] = [
-        Planet(title: "Sun(태양)", content: "nil", planetImage: UIImage(named: "sun.png")),
-        Planet(title: "Mecury(수성)", content: "nil", planetImage: UIImage(named: "mercury.png")),
-        Planet(title: "Venus(금성)", content: "nil", planetImage: UIImage(named: "venus.png")),
-        Planet(title: "Earth(지구)", content: "nil", planetImage: UIImage(named: "earth.png")),
-        Planet(title: "Moon(달)", content: "nil", planetImage: UIImage(named: "moon.png"))
+        Planet(key: "sun",title: "Sun(태양)", content: "nil", planetImage: UIImage(named: "sun.png")),
+        Planet(key: "mecury",title: "Mecury(수성)", content: "nil", planetImage: UIImage(named: "mercury.png")),
+        Planet(key: "venus",title: "Venus(금성)", content: "nil", planetImage: UIImage(named: "venus.png")),
+        Planet(key: "earth",title: "Earth(지구)", content: "nil", planetImage: UIImage(named: "earth.png")),
+        Planet(key: "moon",title: "Moon(달)", content: "nil", planetImage: UIImage(named: "moon.png"))
     ]
     
 }

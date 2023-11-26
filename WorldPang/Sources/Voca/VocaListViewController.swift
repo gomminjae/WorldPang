@@ -9,31 +9,44 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
-import AVFoundation
 
 
 class VocaListViewController: BaseViewController {
     
     //private let viewModel = VocaListViewModel()
     private let disposeBag = DisposeBag()
+    private let viewModel = VocaListViewModel()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     override func setupView() {
-        
+        view.addSubview(collectionView)
     }
     
     override func setupLayout() {
-        
+        collectionView.snp.makeConstraints {
+            $0.leading.equalTo(view)
+            $0.trailing.equalTo(view)
+            $0.bottom.equalTo(view)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+        }
     }
     
     override func bindRX() {
         
+        Observable.just(viewModel.ListHomeSection)
+            .bind(to: collectionView.rx.items(cellIdentifier: VocaStageCell.reusableIdentifier, cellType:VocaStageCell.self) { _,item,cell in'
+                cell.backgroundColor = .red
+                
+            })
+            .disposed(by: disposeBag)
+    
+        
+       
     }
     
     
@@ -44,25 +57,12 @@ class VocaListViewController: BaseViewController {
         return label
     }()
     
-    lazy var imageView: UIImageView = {
-        let view = UIImageView()
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.register(VocaListCell.self, forCellWithReuseIdentifier: VocaListCell.reusableIdentifier)
         return view
     }()
     
-    lazy var contentLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
     
-    lazy var cameraButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("카메라", for: .normal)
-        return button
-    }()
-    
-    lazy var albumButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("앨범", for: .normal)
-        return button
-    }()
 }

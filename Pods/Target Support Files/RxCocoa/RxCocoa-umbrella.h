@@ -11,10 +11,6 @@
 #endif
 
 #import "RxCocoaRuntime.h"
-#import "_RX.h"
-#import "_RXDelegateProxy.h"
-#import "_RXKVOObserver.h"
-#import "_RXObjCRuntime.h"
 #import "RxCocoa.h"
 
 FOUNDATION_EXPORT double RxCocoaVersionNumber;

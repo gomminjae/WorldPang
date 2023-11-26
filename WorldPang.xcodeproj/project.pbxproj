@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13A095FB4AB82DD40E8B6566 /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973A795AC7EAA98C88C2FEC8 /* Pods_WorldPang_WorldPangUITests.framework */; };
-		A02F1C5BA456EC81229B09C4 /* Pods_WorldPang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632E01D0F254E3AE5B24E07D /* Pods_WorldPang.framework */; };
-		A4F2DBE5806E4EC8FA29511B /* Pods_WorldPangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */; };
+		302D88670DAB20E705EFF33A /* Pods_WorldPang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490E1CD002C581752BE759 /* Pods_WorldPang.framework */; };
+		A99B7C40BD2CBC6A8C9263FA /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1335835666D6C927A8321D /* Pods_WorldPang_WorldPangUITests.framework */; };
 		B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */; };
 		B50EBDE32AEFB54D007E8D6A /* BasicVoca.json in Resources */ = {isa = PBXBuildFile; fileRef = B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */; };
 		B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */; };
@@ -31,6 +30,9 @@
 		B52E446C2AC712D0001135BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E446B2AC712D0001135BC /* User.swift */; };
 		B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */; };
 		B5389D742B05E3CA00EDC878 /* PapagoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389D732B05E3CA00EDC878 /* PapagoResponse.swift */; };
+		B54E55E62B0D0D0500855330 /* VocaListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54E55E52B0D0D0500855330 /* VocaListCell.swift */; };
+		B54E55EB2B13162D00855330 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B54E55EA2B13162D00855330 /* GoogleService-Info.plist */; };
+		B54E55ED2B131A1D00855330 /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54E55EC2B131A1D00855330 /* WordManager.swift */; };
 		B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD002AF5F781003B56C2 /* SpaceViewController.swift */; };
 		B596FD032AF8851C003B56C2 /* VocaParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */; };
 		B59C48D52B07AC8900680645 /* SpaceARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */; };
@@ -38,6 +40,7 @@
 		B59C48D92B07CE7A00680645 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48D82B07CE7A00680645 /* Planet.swift */; };
 		B59C48DC2B07D39A00680645 /* PlanetListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48DB2B07D39A00680645 /* PlanetListCell.swift */; };
 		B59C48DE2B07D83F00680645 /* PlanetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48DD2B07D83F00680645 /* PlanetListViewModel.swift */; };
+		B59C48E32B08E4BF00680645 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48E22B08E4BF00680645 /* Stage.swift */; };
 		B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */; };
 		B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */; };
 		B5BF5B392ABDC455008C53F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5BF5B372ABDC455008C53F4 /* Main.storyboard */; };
@@ -66,6 +69,7 @@
 		B5F7FAEE2B03BFE70027403D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAED2B03BFE70027403D /* String+Extension.swift */; };
 		B5F7FAF02B03C4CC0027403D /* Voca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAEF2B03C4CC0027403D /* Voca.swift */; };
 		B5F7FAF22B03DBAF0027403D /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAF12B03DBAF0027403D /* TranslationView.swift */; };
+		CE9D38344FFC6D0194054FF1 /* Pods_WorldPangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D3666D9EB012D8E20CCAFD /* Pods_WorldPangTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,12 +90,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0023D9D14C554245FB086889 /* Pods-WorldPang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.debug.xcconfig"; sourceTree = "<group>"; };
-		21C1DFD36964F471BF6E4A33 /* Pods-WorldPangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPangTests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPangTests/Pods-WorldPangTests.debug.xcconfig"; sourceTree = "<group>"; };
-		23FE8BB215476BC341C4A3E3 /* Pods-WorldPangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPangTests.release.xcconfig"; path = "Target Support Files/Pods-WorldPangTests/Pods-WorldPangTests.release.xcconfig"; sourceTree = "<group>"; };
-		632E01D0F254E3AE5B24E07D /* Pods_WorldPang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AF9080F5DF366FAA0A01FA8 /* Pods-WorldPang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.release.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.release.xcconfig"; sourceTree = "<group>"; };
-		973A795AC7EAA98C88C2FEC8 /* Pods_WorldPang_WorldPangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang_WorldPangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01490E1CD002C581752BE759 /* Pods_WorldPang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16B6C1FDAA116D82F456A4AB /* Pods-WorldPangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPangTests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPangTests/Pods-WorldPangTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BD20B1C20D28C6608636E76 /* Pods-WorldPangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPangTests.release.xcconfig"; path = "Target Support Files/Pods-WorldPangTests/Pods-WorldPangTests.release.xcconfig"; sourceTree = "<group>"; };
+		6B1335835666D6C927A8321D /* Pods_WorldPang_WorldPangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang_WorldPangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		813AF5106219D49162A82E90 /* Pods-WorldPang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.release.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.release.xcconfig"; sourceTree = "<group>"; };
+		87E3851C6A6E27B75D0F30B8 /* Pods-WorldPang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.debug.xcconfig"; sourceTree = "<group>"; };
 		B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetail.swift; sourceTree = "<group>"; };
 		B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BasicVoca.json; path = ../../../../../../Downloads/BasicVoca.json; sourceTree = "<group>"; };
 		B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +118,10 @@
 		B52E446E2ACC5A0D001135BC /* WorldPang.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WorldPang.entitlements; sourceTree = "<group>"; };
 		B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		B5389D732B05E3CA00EDC878 /* PapagoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoResponse.swift; sourceTree = "<group>"; };
-		B5389D772B0649E400EDC878 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		B54E55E52B0D0D0500855330 /* VocaListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaListCell.swift; sourceTree = "<group>"; };
+		B54E55EA2B13162D00855330 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B54E55EC2B131A1D00855330 /* WordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordManager.swift; sourceTree = "<group>"; };
+		B54E55EE2B131B6400855330 /* BasicVoca.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicVoca.json; sourceTree = "<group>"; };
 		B596FD002AF5F781003B56C2 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaParsingManager.swift; sourceTree = "<group>"; };
 		B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceARViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +129,7 @@
 		B59C48D82B07CE7A00680645 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		B59C48DB2B07D39A00680645 /* PlanetListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListCell.swift; sourceTree = "<group>"; };
 		B59C48DD2B07D83F00680645 /* PlanetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListViewModel.swift; sourceTree = "<group>"; };
+		B59C48E22B08E4BF00680645 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		B5BF5B2E2ABDC455008C53F4 /* WorldPang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldPang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5BF5B312ABDC455008C53F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5BF5B332ABDC455008C53F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,9 +163,9 @@
 		B5F7FAEF2B03C4CC0027403D /* Voca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voca.swift; sourceTree = "<group>"; };
 		B5F7FAF12B03DBAF0027403D /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
-		CB6E894BBE345D15837E3220 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D23DB73F9A80A0079F54CEC2 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE6703D65F2C87AA9A5CFBC7 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F4D3666D9EB012D8E20CCAFD /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC8B24F486190CF41E4286E9 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5BF5B862ACDBB47008C53F4 /* ARKit.framework in Frameworks */,
-				A02F1C5BA456EC81229B09C4 /* Pods_WorldPang.framework in Frameworks */,
+				302D88670DAB20E705EFF33A /* Pods_WorldPang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4F2DBE5806E4EC8FA29511B /* Pods_WorldPangTests.framework in Frameworks */,
+				CE9D38344FFC6D0194054FF1 /* Pods_WorldPangTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13A095FB4AB82DD40E8B6566 /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */,
+				A99B7C40BD2CBC6A8C9263FA /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,9 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				B5BF5B852ACDBB47008C53F4 /* ARKit.framework */,
-				632E01D0F254E3AE5B24E07D /* Pods_WorldPang.framework */,
-				973A795AC7EAA98C88C2FEC8 /* Pods_WorldPang_WorldPangUITests.framework */,
-				D1E6EE99A6DCFBC0E911354D /* Pods_WorldPangTests.framework */,
+				01490E1CD002C581752BE759 /* Pods_WorldPang.framework */,
+				6B1335835666D6C927A8321D /* Pods_WorldPang_WorldPangUITests.framework */,
+				F4D3666D9EB012D8E20CCAFD /* Pods_WorldPangTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 			children = (
 				B519FF3F2ADCCEAD000FACAB /* VocaListViewController.swift */,
 				B519FF412ADCCEB5000FACAB /* VocaListViewModel.swift */,
+				B54E55E52B0D0D0500855330 /* VocaListCell.swift */,
 			);
 			path = Voca;
 			sourceTree = "<group>";
@@ -260,6 +269,7 @@
 				B52E445A2AC044C2001135BC /* TTSManager.swift */,
 				B596FD022AF8851C003B56C2 /* VocaParsingManager.swift */,
 				B5F7FAE22B0136DE0027403D /* TranslationService.swift */,
+				B54E55EC2B131A1D00855330 /* WordManager.swift */,
 			);
 			path = "Service ";
 			sourceTree = "<group>";
@@ -338,6 +348,7 @@
 		B59C48DF2B07E0B800680645 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */,
 				B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */,
 			);
 			path = ViewModels;
@@ -354,7 +365,6 @@
 		B59C48E12B08A32000680645 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */,
 				B59C48DD2B07D83F00680645 /* PlanetListViewModel.swift */,
 			);
 			path = List;
@@ -390,11 +400,12 @@
 				B52E445D2AC0465D001135BC /* Resources */,
 				B52E445C2AC04658001135BC /* Sources */,
 				B5BF5B3F2ABDC456008C53F4 /* Info.plist */,
-				B5389D772B0649E400EDC878 /* GoogleService-Info (1).plist */,
+				B54E55EE2B131B6400855330 /* BasicVoca.json */,
 				B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */,
 				B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */,
 				B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */,
 				B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */,
+				B54E55EA2B13162D00855330 /* GoogleService-Info.plist */,
 			);
 			path = WorldPang;
 			sourceTree = "<group>";
@@ -430,6 +441,7 @@
 			children = (
 				B5BF5B6D2ABEC491008C53F4 /* HomeViewController.swift */,
 				B52E44642AC7058B001135BC /* HomeViewModel.swift */,
+				B59C48E22B08E4BF00680645 /* Stage.swift */,
 				B50EBDDE2AEB7B58007E8D6A /* Cells */,
 				B52E44532AC0229A001135BC /* PagerCell.swift */,
 			);
@@ -489,12 +501,12 @@
 		EC25CF44E84E94143B3E3265 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0023D9D14C554245FB086889 /* Pods-WorldPang.debug.xcconfig */,
-				6AF9080F5DF366FAA0A01FA8 /* Pods-WorldPang.release.xcconfig */,
-				D23DB73F9A80A0079F54CEC2 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */,
-				CB6E894BBE345D15837E3220 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */,
-				21C1DFD36964F471BF6E4A33 /* Pods-WorldPangTests.debug.xcconfig */,
-				23FE8BB215476BC341C4A3E3 /* Pods-WorldPangTests.release.xcconfig */,
+				87E3851C6A6E27B75D0F30B8 /* Pods-WorldPang.debug.xcconfig */,
+				813AF5106219D49162A82E90 /* Pods-WorldPang.release.xcconfig */,
+				EE6703D65F2C87AA9A5CFBC7 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */,
+				FC8B24F486190CF41E4286E9 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */,
+				16B6C1FDAA116D82F456A4AB /* Pods-WorldPangTests.debug.xcconfig */,
+				5BD20B1C20D28C6608636E76 /* Pods-WorldPangTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -506,11 +518,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5BF5B582ABDC457008C53F4 /* Build configuration list for PBXNativeTarget "WorldPang" */;
 			buildPhases = (
-				326ABEA673B4179303ECBBED /* [CP] Check Pods Manifest.lock */,
+				2E7F7EC67A99A1B55656B915 /* [CP] Check Pods Manifest.lock */,
 				B5BF5B2A2ABDC455008C53F4 /* Sources */,
 				B5BF5B2B2ABDC455008C53F4 /* Frameworks */,
 				B5BF5B2C2ABDC455008C53F4 /* Resources */,
-				2E455C1CFBB31C968C49BB0F /* [CP] Embed Pods Frameworks */,
+				1893055313F3593D8FAC8717 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -525,7 +537,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5BF5B5B2ABDC457008C53F4 /* Build configuration list for PBXNativeTarget "WorldPangTests" */;
 			buildPhases = (
-				5BD39B8A157835E60930FC2F /* [CP] Check Pods Manifest.lock */,
+				74D300A6F9FE740CB190BB50 /* [CP] Check Pods Manifest.lock */,
 				B5BF5B402ABDC457008C53F4 /* Sources */,
 				B5BF5B412ABDC457008C53F4 /* Frameworks */,
 				B5BF5B422ABDC457008C53F4 /* Resources */,
@@ -544,11 +556,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5BF5B5E2ABDC457008C53F4 /* Build configuration list for PBXNativeTarget "WorldPangUITests" */;
 			buildPhases = (
-				BCDBD2AB0CCCF89FA028892F /* [CP] Check Pods Manifest.lock */,
+				4D89234308EABF3621972432 /* [CP] Check Pods Manifest.lock */,
 				B5BF5B4A2ABDC457008C53F4 /* Sources */,
 				B5BF5B4B2ABDC457008C53F4 /* Frameworks */,
 				B5BF5B4C2ABDC457008C53F4 /* Resources */,
-				60AF71396D49A950FF746CDD /* [CP] Embed Pods Frameworks */,
+				597E96BEF353499F0A403F5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -614,6 +626,7 @@
 				B50EBDE32AEFB54D007E8D6A /* BasicVoca.json in Resources */,
 				B5BF5B3B2ABDC456008C53F4 /* Assets.xcassets in Resources */,
 				B5BF5B392ABDC455008C53F4 /* Main.storyboard in Resources */,
+				B54E55EB2B13162D00855330 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +647,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E455C1CFBB31C968C49BB0F /* [CP] Embed Pods Frameworks */ = {
+		1893055313F3593D8FAC8717 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -651,7 +664,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldPang/Pods-WorldPang-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		326ABEA673B4179303ECBBED /* [CP] Check Pods Manifest.lock */ = {
+		2E7F7EC67A99A1B55656B915 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -673,46 +686,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5BD39B8A157835E60930FC2F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WorldPangTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		60AF71396D49A950FF746CDD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BCDBD2AB0CCCF89FA028892F /* [CP] Check Pods Manifest.lock */ = {
+		4D89234308EABF3621972432 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -734,6 +708,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		597E96BEF353499F0A403F5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74D300A6F9FE740CB190BB50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorldPangTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -746,18 +759,21 @@
 				B5BF5B652ABDC559008C53F4 /* LoginViewController.swift in Sources */,
 				B52E44582AC0336B001135BC /* LoginButton.swift in Sources */,
 				B5F7FAF22B03DBAF0027403D /* TranslationView.swift in Sources */,
+				B59C48E32B08E4BF00680645 /* Stage.swift in Sources */,
 				B52E44652AC7058B001135BC /* HomeViewModel.swift in Sources */,
 				B52E44542AC0229A001135BC /* PagerCell.swift in Sources */,
 				B5BF5B922ADECD62008C53F4 /* SettingViewController.swift in Sources */,
 				B59C48D52B07AC8900680645 /* SpaceARViewModel.swift in Sources */,
 				B59C48D72B07CE5F00680645 /* PlanetListViewController.swift in Sources */,
 				B59C48DE2B07D83F00680645 /* PlanetListViewModel.swift in Sources */,
+				B54E55ED2B131A1D00855330 /* WordManager.swift in Sources */,
 				B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */,
 				B5BF5B6C2ABDD459008C53F4 /* Gradient+UIView.swift in Sources */,
 				B5BF5B722ABEF703008C53F4 /* CustomTabbarController.swift in Sources */,
 				B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */,
 				B52E44682AC71274001135BC /* ProfileViewController.swift in Sources */,
 				B50EBDF82AF1625D007E8D6A /* UIDevice+Extension.swift in Sources */,
+				B54E55E62B0D0D0500855330 /* VocaListCell.swift in Sources */,
 				B596FD032AF8851C003B56C2 /* VocaParsingManager.swift in Sources */,
 				B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */,
 				B5BF5B8F2ADECA2C008C53F4 /* OCRViewController.swift in Sources */,
@@ -963,7 +979,7 @@
 		};
 		B5BF5B592ABDC457008C53F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0023D9D14C554245FB086889 /* Pods-WorldPang.debug.xcconfig */;
+			baseConfigurationReference = 87E3851C6A6E27B75D0F30B8 /* Pods-WorldPang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -996,7 +1012,7 @@
 		};
 		B5BF5B5A2ABDC457008C53F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AF9080F5DF366FAA0A01FA8 /* Pods-WorldPang.release.xcconfig */;
+			baseConfigurationReference = 813AF5106219D49162A82E90 /* Pods-WorldPang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1029,7 +1045,7 @@
 		};
 		B5BF5B5C2ABDC457008C53F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21C1DFD36964F471BF6E4A33 /* Pods-WorldPangTests.debug.xcconfig */;
+			baseConfigurationReference = 16B6C1FDAA116D82F456A4AB /* Pods-WorldPangTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1050,7 +1066,7 @@
 		};
 		B5BF5B5D2ABDC457008C53F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23FE8BB215476BC341C4A3E3 /* Pods-WorldPangTests.release.xcconfig */;
+			baseConfigurationReference = 5BD20B1C20D28C6608636E76 /* Pods-WorldPangTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1071,7 +1087,7 @@
 		};
 		B5BF5B5F2ABDC457008C53F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D23DB73F9A80A0079F54CEC2 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */;
+			baseConfigurationReference = EE6703D65F2C87AA9A5CFBC7 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1090,7 +1106,7 @@
 		};
 		B5BF5B602ABDC457008C53F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB6E894BBE345D15837E3220 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */;
+			baseConfigurationReference = FC8B24F486190CF41E4286E9 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwt-xk-gFa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -54,9 +54,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JP1-xb-BEG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="subIndigo"/>
-                        <color key="tintColor" name="mainBackground"/>
-                        <color key="barTintColor" name="mainBackground"/>
+                        <color key="backgroundColor" name="mainBackground"/>
+                        <color key="tintColor" name="mainBlack"/>
+                        <color key="barTintColor" name="mainText"/>
+                        <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="Td3-e7-IbV" kind="relationship" relationship="viewControllers" id="oOl-0g-gKf"/>
@@ -69,13 +70,13 @@
             </objects>
             <point key="canvasLocation" x="1611.4503816793892" y="-19.014084507042256"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="bD5-G2-Fri">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Td3-e7-IbV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" springLoaded="YES" id="oof-jX-s0D">
+                    <tabBarItem key="tabBarItem" title="Home" springLoaded="YES" id="oof-jX-s0D">
                         <imageReference key="image" image="house.fill" catalog="system" symbolScale="large" renderingMode="original"/>
-                        <color key="badgeColor" name="AccentColor"/>
+                        <color key="badgeColor" systemColor="systemIndigoColor"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -100,29 +101,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ar" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-VF-9mz">
+                                <rect key="frame" x="71" y="211" width="250" height="335"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Recognition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khY-bR-nJJ">
-                                <rect key="frame" x="43" y="103" width="306" height="47"/>
+                                <rect key="frame" x="76.000000000000014" y="132" width="241.33333333333337" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="sgD-tn-je3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ar" translatesAutoresizingMaskIntoConstraints="NO" id="OLP-VF-9mz">
-                                <rect key="frame" x="43" y="192" width="306" height="344"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T8W-lo-tF5">
-                                <rect key="frame" x="43" y="621" width="306" height="203"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-8d-qvq">
-                                <rect key="frame" x="43" y="554" width="306" height="51"/>
-                                <color key="backgroundColor" name="subYellow"/>
+                                <rect key="frame" x="71" y="593" width="250" height="51"/>
+                                <color key="backgroundColor" name="subIndigo"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="cZG-Qk-6r2"/>
                                 </constraints>
@@ -134,26 +127,21 @@
                         <viewLayoutGuide key="safeArea" id="lpF-0F-fUK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OLP-VF-9mz" firstAttribute="top" secondItem="khY-bR-nJJ" secondAttribute="bottom" constant="42" id="26d-QA-5I3"/>
-                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="trailing" secondItem="OLP-VF-9mz" secondAttribute="trailing" id="69c-tL-9pU"/>
-                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="leading" secondItem="khY-bR-nJJ" secondAttribute="leading" id="8cE-xa-Mbp"/>
-                            <constraint firstItem="khY-bR-nJJ" firstAttribute="top" secondItem="lpF-0F-fUK" secondAttribute="top" id="FRC-w7-m5g"/>
-                            <constraint firstItem="T8W-lo-tF5" firstAttribute="top" secondItem="1Ii-8d-qvq" secondAttribute="bottom" constant="16" id="FuY-Rc-64n"/>
-                            <constraint firstAttribute="bottom" secondItem="1Ii-8d-qvq" secondAttribute="bottom" constant="247" id="GAe-bH-cdf"/>
-                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="leading" secondItem="T8W-lo-tF5" secondAttribute="leading" id="Ocb-qi-ifI"/>
-                            <constraint firstItem="T8W-lo-tF5" firstAttribute="leading" secondItem="lpF-0F-fUK" secondAttribute="leading" constant="43" id="Qnp-ws-3GC"/>
-                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="top" secondItem="OLP-VF-9mz" secondAttribute="bottom" constant="18" id="aPp-xp-1Lj"/>
-                            <constraint firstItem="lpF-0F-fUK" firstAttribute="trailing" secondItem="T8W-lo-tF5" secondAttribute="trailing" constant="44" id="mEb-bc-eNB"/>
-                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="trailing" secondItem="khY-bR-nJJ" secondAttribute="trailing" id="nRR-Na-YIU"/>
-                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="trailing" secondItem="T8W-lo-tF5" secondAttribute="trailing" id="uzV-It-zpV"/>
-                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="leading" secondItem="OLP-VF-9mz" secondAttribute="leading" id="vIp-Q4-zqZ"/>
-                            <constraint firstAttribute="bottom" secondItem="T8W-lo-tF5" secondAttribute="bottom" constant="28" id="xvD-hi-7Qk"/>
+                            <constraint firstItem="OLP-VF-9mz" firstAttribute="leading" secondItem="lpF-0F-fUK" secondAttribute="leading" constant="71" id="9ts-7t-DQ3"/>
+                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="leading" secondItem="lpF-0F-fUK" secondAttribute="leading" constant="71" id="BYI-Lo-oGn"/>
+                            <constraint firstItem="1Ii-8d-qvq" firstAttribute="top" secondItem="OLP-VF-9mz" secondAttribute="bottom" constant="47" id="BYZ-WW-0Oh"/>
+                            <constraint firstItem="khY-bR-nJJ" firstAttribute="top" secondItem="lpF-0F-fUK" secondAttribute="top" constant="29" id="F0P-6z-c1x"/>
+                            <constraint firstItem="lpF-0F-fUK" firstAttribute="trailing" secondItem="khY-bR-nJJ" secondAttribute="trailing" constant="75.666666666666629" id="IG5-DD-5Oy"/>
+                            <constraint firstItem="lpF-0F-fUK" firstAttribute="trailing" secondItem="OLP-VF-9mz" secondAttribute="trailing" constant="72" id="Jgp-X8-MlN"/>
+                            <constraint firstItem="khY-bR-nJJ" firstAttribute="leading" secondItem="lpF-0F-fUK" secondAttribute="leading" constant="76.000000000000014" id="RVH-F6-YHl"/>
+                            <constraint firstItem="OLP-VF-9mz" firstAttribute="top" secondItem="khY-bR-nJJ" secondAttribute="bottom" constant="32" id="Tws-Ha-vT6"/>
+                            <constraint firstItem="lpF-0F-fUK" firstAttribute="trailing" secondItem="1Ii-8d-qvq" secondAttribute="trailing" constant="72" id="UEy-iB-gz3"/>
+                            <constraint firstItem="lpF-0F-fUK" firstAttribute="bottom" secondItem="1Ii-8d-qvq" secondAttribute="bottom" constant="125" id="s5z-Et-dTz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vmy-oK-MUK"/>
                     <connections>
                         <outlet property="actionButton" destination="1Ii-8d-qvq" id="Qo3-0s-WmH"/>
-                        <outlet property="resultTextView" destination="T8W-lo-tF5" id="uMl-l9-HES"/>
                         <outlet property="selectedImageView" destination="OLP-VF-9mz" id="bIx-J3-muy"/>
                     </connections>
                 </viewController>
@@ -176,12 +164,13 @@
             </objects>
             <point key="canvasLocation" x="4152" y="767"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Recongize-->
         <scene sceneID="37H-cD-g0G">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5O4-Ph-WaD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="weV-ab-WDD">
+                    <tabBarItem key="tabBarItem" title="Recongize" springLoaded="YES" id="weV-ab-WDD">
                         <imageReference key="image" image="camera.fill" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" systemColor="systemIndigoColor"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dq2-3g-3AS">
@@ -302,11 +291,11 @@
             </objects>
             <point key="canvasLocation" x="1219" y="3703"/>
         </scene>
-        <!--Item-->
+        <!--단어장-->
         <scene sceneID="lNR-38-cXs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I34-9W-OWz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aeI-w2-45b"/>
+                    <tabBarItem key="tabBarItem" title="단어장" image="folder.fill" catalog="system" id="aeI-w2-45b"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GTi-fB-dDB">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -321,11 +310,11 @@
             </objects>
             <point key="canvasLocation" x="2545.801526717557" y="1646.4788732394368"/>
         </scene>
-        <!--Item-->
+        <!--설정-->
         <scene sceneID="0YY-Zw-wkl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="093-Sm-n7I" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nAS-g4-dke"/>
+                    <tabBarItem key="tabBarItem" title="설정" image="gear.circle.fill" catalog="system" id="nAS-g4-dke"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vaO-sk-8AM">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -344,25 +333,27 @@
     <resources>
         <image name="ar" width="250" height="250"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <image name="folder.fill" catalog="system" width="128" height="96"/>
+        <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="mainBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainBlack">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainText">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="subIndigo">
             <color red="0.35686274509803922" green="0.50980392156862742" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="subYellow">
-            <color red="1" green="0.65098039215686276" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

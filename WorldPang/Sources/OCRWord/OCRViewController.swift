@@ -29,13 +29,12 @@ class OCRViewController: BaseViewController {
     @IBOutlet weak var resultTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .mainYellow
 
         // Do any additional setup after loading the view.
     }
     
     override func setupView() {
-        view.backgroundColor = .mainYellow
+        view.backgroundColor = .white
         view.addSubview(titleLabel)
         
     }
@@ -61,9 +60,6 @@ class OCRViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
         
-        viewModel.recognizedTextSubject
-            .bind(to: resultTextView.rx.text)
-            .disposed(by: disposeBag)
         
         viewModel.recognizedTextSubject
             .subscribe(onNext: { [weak self] text in
@@ -116,7 +112,7 @@ class OCRViewController: BaseViewController {
     lazy var recognitionButton: UIButton = {
         let button = UIButton()
         button.setTitle("인식하기", for: .normal)
-        button.backgroundColor = .mainYellow
+        button.backgroundColor = .systemIndigo
         return button
     }()
     

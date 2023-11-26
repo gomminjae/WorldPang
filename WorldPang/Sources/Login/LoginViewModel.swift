@@ -3,7 +3,7 @@
 //  WorldPang
 //
 //  Created by 권민재 on 2023/09/22.
-//
+
 
 import Foundation
 import RxSwift
@@ -46,7 +46,7 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
     public func kakaoLogin() {
         
         if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.rx.loginWithKakaoTalk()
+            UserApi.shared.loginWithKakaoTalk()
                 .subscribe(onNext: {(oauthToken) in
                     print("kakao Acccount login Success")
                     self.fetchKakaoUserInfo()

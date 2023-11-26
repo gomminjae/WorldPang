@@ -30,17 +30,13 @@ class OCRViewModel: OCRViewModelBindable {
     private let papagoService = TranslationService.shared
     
     
-    var dummyData = [
-        Voca(word: "Hello", mean: "안녕"),
-        Voca(word: "Hello", mean: "안녕"),
-        Voca(word: "Hello", mean: "안녕"),
-        Voca(word: "Hello", mean: "안녕"),
-        Voca(word: "Hello", mean:  "안녕")
-    ]
-    
-    
-
-    
+//    var dummyData = [
+//        Voca(word: "Hello", mean: "안녕"),
+//        Voca(word: "Hello", mean: "안녕"),
+//        Voca(word: "Hello", mean: "안녕"),
+//        Voca(word: "Hello", mean: "안녕"),
+//        Voca(word: "Hello", mean:  "안녕")
+//    ]
     //UIImage -> CIImage -> VNRequsr coreml방식이랑 비슷함
     func recognizedText(on image: UIImage) {
         guard let ciImage = CIImage(image: image) else {

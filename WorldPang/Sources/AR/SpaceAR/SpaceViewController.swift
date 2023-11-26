@@ -67,7 +67,6 @@ class SpaceViewController: BaseViewController {
         
     }
 
-    
     override func bindRX() {
         
         nodeTapGesture.rx
@@ -296,7 +295,7 @@ class SpaceViewController: BaseViewController {
         let button = UIButton()
         button.setTitle("행성 목록 보기", for: .normal)
         button.layer.cornerRadius = 20
-        button.backgroundColor = .subYellow
+        button.backgroundColor = .mainBlue
         return button
     }()
     
@@ -304,7 +303,7 @@ class SpaceViewController: BaseViewController {
         let button = UIButton()
         button.setTitle("나가기", for: .normal)
         button.layer.cornerRadius = 20
-        button.backgroundColor = .subYellow
+        button.backgroundColor = .mainBlue
         return button
     }()
     

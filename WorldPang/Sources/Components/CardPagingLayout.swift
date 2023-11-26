@@ -44,8 +44,8 @@ class CardPagingLayout: UICollectionViewLayout {
         cv.decelerationRate = .fast
         cv.contentInset = contentInsets
         itemCount = cv.numberOfItems(inSection: 0)
-        itemSize = CGSize(width: cv.bounds.width - (interitemSpace * 2.0),
-                          height: cv.bounds.height - (contentInsets.top + contentInsets.bottom))
+        itemSize = CGSize(width: cv.bounds.width - (interitemSpace * 2.5),
+                          height: cv.bounds.height - 70 - (contentInsets.top + contentInsets.bottom))
 
         // Pre-variables
         layoutAttributes = []

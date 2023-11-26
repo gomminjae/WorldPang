@@ -15,14 +15,8 @@ protocol ViewModelType {
     associatedtype Output
     
     var disposeBag: DisposeBag { get set }
-    
     func transform(_ input: Input)
     
-}
-enum Stage {
-    case virtual
-    case reality
-    case space
 }
 
 class HomeViewModel {
@@ -34,9 +28,17 @@ class HomeViewModel {
     
     
     var nickname = ""
-  
     let dummyData = ["AR", "MAP", "SPACE","CITY"]
     
+    var stageObservable: Observable<[Stage]> {
+        return Observable.of([
+            Stage(title: "Ar 단어 공부", content: "물건을 촬영하여\n영어단어를 학습하세요!", stageType: .normal),
+            
+            Stage(title: "AR Solar System", content: "AR환경에서 \n느끼는 태양계!", stageType: .space),
+            
+            Stage(title: "AR Aquarium 단어 공부", content: "아쿠아리움에서, \n특별한 단어 공부!!", stageType: .aquarium)
+        ])
+    }
     
     init() {
         loadUserInfo()
@@ -72,13 +74,6 @@ class HomeViewModel {
             completion(nil)
         }
     }
-    
-  
-
-
-    
-    
-    
     
 }
 

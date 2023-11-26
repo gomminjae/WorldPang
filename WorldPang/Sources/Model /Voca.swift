@@ -9,6 +9,6 @@ import Foundation
 
 struct Voca {
     
-    let word: String
-    let mean: String
+    let title: String
+    let vocaList: [VocaDetail]
 }

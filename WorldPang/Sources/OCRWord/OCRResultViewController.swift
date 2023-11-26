@@ -65,10 +65,10 @@ class OCRResultViewController: BaseViewController {
         })
         
         
-        Observable.of(viewModel.dummyData)
-            .map { [SectionModel(model: "", items: $0)] }
-            .bind(to: collectionView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
+//        Observable.of(viewModel.dummyData)
+//            .map { [SectionModel(model: "", items: $0)] }
+//            .bind(to: collectionView.rx.items(dataSource: dataSource))
+//            .disposed(by: disposeBag)
         
         
         

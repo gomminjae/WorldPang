@@ -23,17 +23,16 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         
         print("Hello")
-        pagerCollectionView.dataSource = self
-        
 
     }
     
     override func setupView() {
-        view.setGradient(color1: .mainYellow, color2: .subYellow)
+       // view.setGradient(color1: .mainYellow, color2: .subYellow)
+        view.backgroundColor = .mainBlue
         view.addSubview(titleLabel)
-        view.addSubview(cloudImage)
         
         view.addSubview(baseView)
+        baseView.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
         baseView.addSubview(userCurrentStateView)
         
         view.addSubview(pagerCollectionView)
@@ -45,11 +44,8 @@ class HomeViewController: BaseViewController {
         userCurrentStateView.addSubview(pointTitleLabel)
         
         
-        userProfileImageButton.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        userProfileImageButton.layer.cornerRadius = userProfileImageButton.frame.width / 2
         
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: userProfileImageButton)
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(customView: userProfileImageButton)
         
         
     }
@@ -57,21 +53,15 @@ class HomeViewController: BaseViewController {
     override func setupLayout() {
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(40)
+            $0.top.equalTo(view.safeAreaLayoutGuide).inset(20)
             $0.leading.equalTo(view).inset(30)
-        }
-        cloudImage.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.leading.equalTo(titleLabel.snp.trailing)
-            $0.trailing.equalTo(view)
-            $0.height.equalTo(120)
         }
         
         
         baseView.snp.makeConstraints {
             $0.leading.equalTo(view)
             $0.trailing.equalTo(view)
-            $0.top.equalTo(titleLabel.snp.bottom).offset(80)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(20)
             $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(10)
         }
         userCurrentStateView.snp.makeConstraints {
@@ -122,6 +112,28 @@ class HomeViewController: BaseViewController {
     
     override func bindRX() {
     
+        
+        viewModel.stageObservable
+            .bind(to: pagerCollectionView.rx.items(cellIdentifier: PagerCell.reusableIdentifier, cellType: PagerCell.self)) { index, stage, cell in
+                
+                switch index {
+                case 0:
+                    cell.titleLabel.text = stage.content
+                    cell.imageView.image = UIImage(named: "ar")
+                case 1:
+                    cell.titleLabel.text = stage.content
+                    cell.imageView.image = UIImage(named: "planet")
+                default:
+                    cell.titleLabel.text = stage.content
+                    cell.imageView.image = UIImage(named: "aquarium")
+                }
+                cell.layer.borderColor = UIColor.mainBlue.cgColor
+                cell.layer.borderWidth = 18
+               
+                //cell.backgroundColor = UIColor.random()
+            }
+            .disposed(by: disposeBag)
+        
         
         
         pagerCollectionView.rx.setDelegate(self)
@@ -184,20 +196,16 @@ class HomeViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
         
-        
-        
-        
-       
-        
     }
     
     private func updateUserData(with user: User) {
-        titleLabel.text = user.nickname
+        titleLabel.text = "Hello \(user.nickname),"
     }
     
     private func updateUserProfileImage(with url: URL) {
         viewModel.loadProfileImage(urlString: url) { image in
             DispatchQueue.main.async {
+
                 self.userProfileImageButton.setImage(image, for: .normal)
             }
         }
@@ -213,12 +221,6 @@ class HomeViewController: BaseViewController {
         return view
     }()
     
-    lazy var cloudImage: UIImageView = {
-        let view = UIImageView()
-        //view.backgroundColor = .red
-        view.image = UIImage(named: "cloud.png")
-        return view
-    }()
     
     lazy var middleSideBar: UIView = {
         let view = UIView()
@@ -228,7 +230,7 @@ class HomeViewController: BaseViewController {
     
     lazy var baseView: UIView = {
         let view = UIView()
-        view.backgroundColor = .mainBackground
+        view.backgroundColor = .mainWhite
         view.layer.cornerRadius = 40
         view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         return view
@@ -236,7 +238,7 @@ class HomeViewController: BaseViewController {
     
     lazy var userCurrentStateView: UIView = {
         let view = UIView()
-        view.backgroundColor = .mainBackground
+        view.backgroundColor = .mainWhite
         view.layer.borderWidth = 0.1
         view.layer.cornerRadius = 20
         view.setShadow()
@@ -246,8 +248,9 @@ class HomeViewController: BaseViewController {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Hello"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 35, weight: .heavy)
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
+        label.numberOfLines = 2
         return label
     }()
     
@@ -288,41 +291,16 @@ class HomeViewController: BaseViewController {
     lazy var userProfileImageButton: UIButton = {
         let button = UIButton()
         button.clipsToBounds = true
+        button.layer.cornerRadius = button.frame.width / 2
         return button
     }()
     
-    
+
     
 
-}
-extension HomeViewController {
-    
-    
-    
 }
 
 
 extension HomeViewController: UIScrollViewDelegate {
     
 }
-
-extension HomeViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PagerCell.reusableIdentifier, for: indexPath)
-        
-        if indexPath.item == 0 {
-            cell.backgroundColor = .mainYellow
-            cell.setShadow()
-        }else {
-            cell.backgroundColor = .subYellow
-            cell.setShadow()
-        }
-        return cell
-    }
-}
-

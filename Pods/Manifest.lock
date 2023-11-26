@@ -85,11 +85,13 @@ DEPENDENCIES:
   - KakaoSDKAuth
   - KakaoSDKUser
   - RealmSwift (~> 10)
+  - RxCocoa
   - RxDataSources
   - RxGesture
   - RxKakaoSDKAuth
   - RxKakaoSDKCommon
   - RxKakaoSDKUser
+  - RxSwift
   - SnapKit
   - SwiftSoup
 
@@ -152,6 +154,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftSoup: 5dd2c1b06afc964f30d99894af6ede22ede627aa
 
-PODFILE CHECKSUM: 7b50c68cfc1f1655386b6d81124411ba52f9e51d
+PODFILE CHECKSUM: ea4395c679ce5969ef9d3cdd1cd80915c1c94a68
 
 COCOAPODS: 1.14.2

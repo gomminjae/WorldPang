@@ -185,7 +185,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     private func showAnswerView(isCorrect: Bool) {
         let answerView = UIView()
-        answerView.backgroundColor = .subYellow
+        answerView.backgroundColor = .mainBlue
         answerView.alpha = 0.8
         answerView.layer.cornerRadius = 20
         
@@ -249,7 +249,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     lazy var summitButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .subYellow
+        button.backgroundColor = .mainBlue
         button.setTitle("제출", for: .normal)
         return button
     }()
@@ -266,9 +266,8 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     lazy var deleteButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .subYellow
-        button.setTitle("삭제", for: .normal
-        )
+        button.backgroundColor = .mainBlue
+        button.setImage(UIImage(systemName: "delete.backward.fill"), for: .normal)
         return button
     }()
     

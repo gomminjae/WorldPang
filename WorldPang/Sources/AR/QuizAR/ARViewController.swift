@@ -23,8 +23,7 @@ class ARViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private let arViewModel = ARViewModel()
     
-    
-    
+
     
     var visionRequests = [VNRequest]()
     let dispatchQueueForML = DispatchQueue(label: "mobilenet")
@@ -38,7 +37,6 @@ class ARViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
-        
         
         setupView()
         bindRX()
@@ -156,13 +154,6 @@ class ARViewController: UIViewController {
         
     }
 
-//    func runCorML() {
-//        dispatchQueueForML.async {
-//            self.updateImageForCoreML()
-//            
-//            self.runCorML()
-//        }
-//    }
     private func setupMLModel() {
         guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
         
@@ -217,7 +208,7 @@ class ARViewController: UIViewController {
         
         let screenCenter: CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
         
-        let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint]) //
+        let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint])
         
         if let closestResult = arHitTestResults.first {
             // Get Coordinates of HitTest
@@ -244,15 +235,11 @@ class ARViewController: UIViewController {
         bubble.firstMaterial?.diffuse.contents = UIColor.green
         bubble.firstMaterial?.specular.contents = UIColor.white
         bubble.firstMaterial?.isDoubleSided = true
-        // bubble.flatness // setting this too low can cause crashes.
         bubble.chamferRadius = CGFloat(0.1)
         
-        // BUBBLE NODE
         let (minBound, maxBound) = bubble.boundingBox
         let bubbleNode = SCNNode(geometry: bubble)
-        // Centre Node - to Centre-Bottom point
         bubbleNode.pivot = SCNMatrix4MakeTranslation( (maxBound.x - minBound.x)/2, minBound.y, 0.1/2)
-        // Reduce default text size
         bubbleNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
         
 
@@ -311,7 +298,7 @@ class ARViewController: UIViewController {
         stack.alignment = .fill
         stack.distribution = .fillEqually
         stack.layer.borderWidth = 1
-        stack.backgroundColor = .mainYellow
+        stack.backgroundColor = .white
         stack.alpha = 0.5
         stack.layer.borderColor = UIColor.orange.cgColor
         

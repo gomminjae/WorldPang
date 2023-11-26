@@ -24,7 +24,7 @@ class LoginViewController: BaseViewController {
     
     
     override func setupView() {
-        view.setGradient(color1: .mainYellow, color2: .subYellow)
+        //view.setGradient(color1: .mainYellow, color2: .subYellow)
         view.addSubview(loginImageView)
         view.addSubview(loginBaseView)
         loginBaseView.addSubview(blurEffectView)
