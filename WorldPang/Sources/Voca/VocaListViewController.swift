@@ -38,12 +38,7 @@ class VocaListViewController: BaseViewController {
     
     override func bindRX() {
         
-        Observable.just(viewModel.ListHomeSection)
-            .bind(to: collectionView.rx.items(cellIdentifier: VocaStageCell.reusableIdentifier, cellType:VocaStageCell.self) { _,item,cell in'
-                cell.backgroundColor = .red
-                
-            })
-            .disposed(by: disposeBag)
+        
     
         
        
@@ -60,7 +55,7 @@ class VocaListViewController: BaseViewController {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.register(VocaListCell.self, forCellWithReuseIdentifier: VocaListCell.reusableIdentifier)
+        view.register(VocaStageCell.self, forCellWithReuseIdentifier: VocaStageCell.reusableIdentifier)
         return view
     }()
     

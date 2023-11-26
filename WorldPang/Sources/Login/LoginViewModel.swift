@@ -46,7 +46,7 @@ class LoginViewModel: NSObject, LoginViewModelBindable {
     public func kakaoLogin() {
         
         if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk()
+            UserApi.shared.rx.loginWithKakaoTalk()
                 .subscribe(onNext: {(oauthToken) in
                     print("kakao Acccount login Success")
                     self.fetchKakaoUserInfo()

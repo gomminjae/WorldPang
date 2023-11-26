@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		302D88670DAB20E705EFF33A /* Pods_WorldPang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01490E1CD002C581752BE759 /* Pods_WorldPang.framework */; };
-		A99B7C40BD2CBC6A8C9263FA /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B1335835666D6C927A8321D /* Pods_WorldPang_WorldPangUITests.framework */; };
+		2999A906BCEE7D7187581F2E /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5362A337A13AE7E2F587BFFD /* Pods_WorldPang_WorldPangUITests.framework */; };
+		3D54A1E197034C4316D31932 /* Pods_WorldPang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600BB4794EEBBA33A037E911 /* Pods_WorldPang.framework */; };
+		7815BCA5D05EB9ABDD19C77D /* Pods_WorldPangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C348DAC10279E123B6700E /* Pods_WorldPangTests.framework */; };
 		B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */; };
 		B50EBDE32AEFB54D007E8D6A /* BasicVoca.json in Resources */ = {isa = PBXBuildFile; fileRef = B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */; };
 		B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */; };
@@ -69,7 +70,6 @@
 		B5F7FAEE2B03BFE70027403D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAED2B03BFE70027403D /* String+Extension.swift */; };
 		B5F7FAF02B03C4CC0027403D /* Voca.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAEF2B03C4CC0027403D /* Voca.swift */; };
 		B5F7FAF22B03DBAF0027403D /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAF12B03DBAF0027403D /* TranslationView.swift */; };
-		CE9D38344FFC6D0194054FF1 /* Pods_WorldPangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D3666D9EB012D8E20CCAFD /* Pods_WorldPangTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,12 +90,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01490E1CD002C581752BE759 /* Pods_WorldPang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		16B6C1FDAA116D82F456A4AB /* Pods-WorldPangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPangTests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPangTests/Pods-WorldPangTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5BD20B1C20D28C6608636E76 /* Pods-WorldPangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPangTests.release.xcconfig"; path = "Target Support Files/Pods-WorldPangTests/Pods-WorldPangTests.release.xcconfig"; sourceTree = "<group>"; };
-		6B1335835666D6C927A8321D /* Pods_WorldPang_WorldPangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang_WorldPangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		813AF5106219D49162A82E90 /* Pods-WorldPang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.release.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.release.xcconfig"; sourceTree = "<group>"; };
-		87E3851C6A6E27B75D0F30B8 /* Pods-WorldPang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.debug.xcconfig"; sourceTree = "<group>"; };
+		1C84DA2DAEEB2B6315F26B3C /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5362A337A13AE7E2F587BFFD /* Pods_WorldPang_WorldPangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang_WorldPangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A38395098B4B79BE4CEB05 /* Pods-WorldPangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPangTests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPangTests/Pods-WorldPangTests.debug.xcconfig"; sourceTree = "<group>"; };
+		600BB4794EEBBA33A037E911 /* Pods_WorldPang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F2D8D7D9BE5F6E2AFBF8C11 /* Pods-WorldPangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPangTests.release.xcconfig"; path = "Target Support Files/Pods-WorldPangTests/Pods-WorldPangTests.release.xcconfig"; sourceTree = "<group>"; };
 		B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetail.swift; sourceTree = "<group>"; };
 		B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BasicVoca.json; path = ../../../../../../Downloads/BasicVoca.json; sourceTree = "<group>"; };
 		B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -163,9 +162,10 @@
 		B5F7FAEF2B03C4CC0027403D /* Voca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voca.swift; sourceTree = "<group>"; };
 		B5F7FAF12B03DBAF0027403D /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlmodel; sourceTree = "<group>"; };
-		EE6703D65F2C87AA9A5CFBC7 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F4D3666D9EB012D8E20CCAFD /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC8B24F486190CF41E4286E9 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B9C348DAC10279E123B6700E /* Pods_WorldPangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E2E8499FCC5D870722E53B /* Pods-WorldPang-WorldPangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang-WorldPangUITests.release.xcconfig"; path = "Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F15AFDD9B3501F9811B960C1 /* Pods-WorldPang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.release.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.release.xcconfig"; sourceTree = "<group>"; };
+		FBBD5AAB7A39064F658D9BFA /* Pods-WorldPang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.debug.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5BF5B862ACDBB47008C53F4 /* ARKit.framework in Frameworks */,
-				302D88670DAB20E705EFF33A /* Pods_WorldPang.framework in Frameworks */,
+				3D54A1E197034C4316D31932 /* Pods_WorldPang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9D38344FFC6D0194054FF1 /* Pods_WorldPangTests.framework in Frameworks */,
+				7815BCA5D05EB9ABDD19C77D /* Pods_WorldPangTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A99B7C40BD2CBC6A8C9263FA /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */,
+				2999A906BCEE7D7187581F2E /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,9 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				B5BF5B852ACDBB47008C53F4 /* ARKit.framework */,
-				01490E1CD002C581752BE759 /* Pods_WorldPang.framework */,
-				6B1335835666D6C927A8321D /* Pods_WorldPang_WorldPangUITests.framework */,
-				F4D3666D9EB012D8E20CCAFD /* Pods_WorldPangTests.framework */,
+				600BB4794EEBBA33A037E911 /* Pods_WorldPang.framework */,
+				5362A337A13AE7E2F587BFFD /* Pods_WorldPang_WorldPangUITests.framework */,
+				B9C348DAC10279E123B6700E /* Pods_WorldPangTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -501,12 +501,12 @@
 		EC25CF44E84E94143B3E3265 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				87E3851C6A6E27B75D0F30B8 /* Pods-WorldPang.debug.xcconfig */,
-				813AF5106219D49162A82E90 /* Pods-WorldPang.release.xcconfig */,
-				EE6703D65F2C87AA9A5CFBC7 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */,
-				FC8B24F486190CF41E4286E9 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */,
-				16B6C1FDAA116D82F456A4AB /* Pods-WorldPangTests.debug.xcconfig */,
-				5BD20B1C20D28C6608636E76 /* Pods-WorldPangTests.release.xcconfig */,
+				FBBD5AAB7A39064F658D9BFA /* Pods-WorldPang.debug.xcconfig */,
+				F15AFDD9B3501F9811B960C1 /* Pods-WorldPang.release.xcconfig */,
+				1C84DA2DAEEB2B6315F26B3C /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */,
+				D2E2E8499FCC5D870722E53B /* Pods-WorldPang-WorldPangUITests.release.xcconfig */,
+				55A38395098B4B79BE4CEB05 /* Pods-WorldPangTests.debug.xcconfig */,
+				7F2D8D7D9BE5F6E2AFBF8C11 /* Pods-WorldPangTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -518,11 +518,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5BF5B582ABDC457008C53F4 /* Build configuration list for PBXNativeTarget "WorldPang" */;
 			buildPhases = (
-				2E7F7EC67A99A1B55656B915 /* [CP] Check Pods Manifest.lock */,
+				FA57755A42F22EAEDC5175BE /* [CP] Check Pods Manifest.lock */,
 				B5BF5B2A2ABDC455008C53F4 /* Sources */,
 				B5BF5B2B2ABDC455008C53F4 /* Frameworks */,
 				B5BF5B2C2ABDC455008C53F4 /* Resources */,
-				1893055313F3593D8FAC8717 /* [CP] Embed Pods Frameworks */,
+				4221050B7A3D6574540125C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -537,7 +537,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5BF5B5B2ABDC457008C53F4 /* Build configuration list for PBXNativeTarget "WorldPangTests" */;
 			buildPhases = (
-				74D300A6F9FE740CB190BB50 /* [CP] Check Pods Manifest.lock */,
+				2CA60FB299DC81145CD2AF89 /* [CP] Check Pods Manifest.lock */,
 				B5BF5B402ABDC457008C53F4 /* Sources */,
 				B5BF5B412ABDC457008C53F4 /* Frameworks */,
 				B5BF5B422ABDC457008C53F4 /* Resources */,
@@ -556,11 +556,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5BF5B5E2ABDC457008C53F4 /* Build configuration list for PBXNativeTarget "WorldPangUITests" */;
 			buildPhases = (
-				4D89234308EABF3621972432 /* [CP] Check Pods Manifest.lock */,
+				2E5F10138CDD2CB479EBED02 /* [CP] Check Pods Manifest.lock */,
 				B5BF5B4A2ABDC457008C53F4 /* Sources */,
 				B5BF5B4B2ABDC457008C53F4 /* Frameworks */,
 				B5BF5B4C2ABDC457008C53F4 /* Resources */,
-				597E96BEF353499F0A403F5A /* [CP] Embed Pods Frameworks */,
+				81E8717139F75A635EC448D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -647,24 +647,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1893055313F3593D8FAC8717 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldPang/Pods-WorldPang-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WorldPang/Pods-WorldPang-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldPang/Pods-WorldPang-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2E7F7EC67A99A1B55656B915 /* [CP] Check Pods Manifest.lock */ = {
+		2CA60FB299DC81145CD2AF89 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -679,14 +662,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WorldPang-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WorldPangTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4D89234308EABF3621972432 /* [CP] Check Pods Manifest.lock */ = {
+		2E5F10138CDD2CB479EBED02 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -708,7 +691,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		597E96BEF353499F0A403F5A /* [CP] Embed Pods Frameworks */ = {
+		4221050B7A3D6574540125C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldPang/Pods-WorldPang-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldPang/Pods-WorldPang-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldPang/Pods-WorldPang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81E8717139F75A635EC448D5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -725,7 +725,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldPang-WorldPangUITests/Pods-WorldPang-WorldPangUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		74D300A6F9FE740CB190BB50 /* [CP] Check Pods Manifest.lock */ = {
+		FA57755A42F22EAEDC5175BE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -740,7 +740,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WorldPangTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WorldPang-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -979,7 +979,7 @@
 		};
 		B5BF5B592ABDC457008C53F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87E3851C6A6E27B75D0F30B8 /* Pods-WorldPang.debug.xcconfig */;
+			baseConfigurationReference = FBBD5AAB7A39064F658D9BFA /* Pods-WorldPang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1012,7 +1012,7 @@
 		};
 		B5BF5B5A2ABDC457008C53F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 813AF5106219D49162A82E90 /* Pods-WorldPang.release.xcconfig */;
+			baseConfigurationReference = F15AFDD9B3501F9811B960C1 /* Pods-WorldPang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1045,7 +1045,7 @@
 		};
 		B5BF5B5C2ABDC457008C53F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16B6C1FDAA116D82F456A4AB /* Pods-WorldPangTests.debug.xcconfig */;
+			baseConfigurationReference = 55A38395098B4B79BE4CEB05 /* Pods-WorldPangTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1066,7 +1066,7 @@
 		};
 		B5BF5B5D2ABDC457008C53F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BD20B1C20D28C6608636E76 /* Pods-WorldPangTests.release.xcconfig */;
+			baseConfigurationReference = 7F2D8D7D9BE5F6E2AFBF8C11 /* Pods-WorldPangTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1087,7 +1087,7 @@
 		};
 		B5BF5B5F2ABDC457008C53F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE6703D65F2C87AA9A5CFBC7 /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */;
+			baseConfigurationReference = 1C84DA2DAEEB2B6315F26B3C /* Pods-WorldPang-WorldPangUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1106,7 +1106,7 @@
 		};
 		B5BF5B602ABDC457008C53F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC8B24F486190CF41E4286E9 /* Pods-WorldPang-WorldPangUITests.release.xcconfig */;
+			baseConfigurationReference = D2E2E8499FCC5D870722E53B /* Pods-WorldPang-WorldPangUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
