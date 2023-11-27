@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 
 //struct PapagoResponse: Codable {
@@ -19,13 +20,16 @@ import Foundation
 //        case tarLangType
 //    }
 //}
-struct TranslationResponse: Codable {
-    let message: Result
-    
-    struct Result: Codable {
-//        let srcLangType: String
-//        let tarLangType: String
-        let translatedText: String
-        //let engineType: String
+import Foundation
+
+class TranslationResponse: Codable {
+    var message: Message?
+
+    class Message: Codable {
+        var result: Result?
+
+        class Result: Codable {
+            var translatedText: String?
+        }
     }
 }

@@ -38,7 +38,7 @@ class OCRResultViewController: BaseViewController {
         view.addSubview(translatedTextSection)
         
         originalTextSection.addSubview(originalTextLabel)
-        
+        translatedTextSection.addSubview(translationLabel)
         
     }
     
@@ -59,14 +59,29 @@ class OCRResultViewController: BaseViewController {
             $0.centerX.centerY.equalTo(originalTextSection)
         }
         
+        translationLabel.snp.makeConstraints {
+            $0.centerY.centerX.equalTo(translatedTextSection)
+        }
+        
         
 
     }
     
     override func bindRX() {
         
+//        viewModel.recognizedText(on: ocrImage)
+//            .bind(to: originalTextLabel.rx.text)
+//            .disposed(by: disposeBag)
+        
         viewModel.recognizedText(on: ocrImage)
-            .bind(to: originalTextLabel.rx.text)
+            .subscribe(onNext: { [weak self] translatedText in
+                self?.originalTextLabel.text = translatedText
+                self?.viewModel.translation(with: translatedText)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.translatedTextSubject
+            .bind(to: translationLabel.rx.text)
             .disposed(by: disposeBag)
 
     }
