@@ -25,7 +25,7 @@ class WordManager {
         let startId = (period - 1) * 100 + 1
         let endId = period * 100
 
-        let query = database.child("https://worldpang-22dc8-default-rtdb.firebaseio.com/").queryOrdered(byChild: "id").queryStarting(atValue: startId).queryEnding(atValue: endId)
+        let query = database.child("words").queryOrdered(byChild: "id").queryStarting(atValue: startId).queryEnding(atValue: endId)
 
         query.observeSingleEvent(of: .value) { snapshot in
             guard let value = snapshot.value as? [[String: Any]] else {

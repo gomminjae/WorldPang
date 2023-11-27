@@ -15,9 +15,13 @@ import RxDataSources
 class OCRResultViewController: BaseViewController {
     
     
-    
+    var ocrImage = UIImage()
+        
     private let disposeBag = DisposeBag()
     private let viewModel = OCRViewModel()
+    
+    
+
     
 
     override func viewDidLoad() {
@@ -27,75 +31,62 @@ class OCRResultViewController: BaseViewController {
     }
     
     override func setupView() {
-        view.addSubview(collectionView)
-        collectionView.backgroundColor = .white
+        
+        view.backgroundColor = .white
+        
+        view.addSubview(originalTextSection)
+        view.addSubview(translatedTextSection)
+        
+        originalTextSection.addSubview(originalTextLabel)
         
         
     }
     
     override func setupLayout() {
-        
-        collectionView.snp.makeConstraints {
-            $0.top.equalTo(view)
+        originalTextSection.snp.makeConstraints {
             $0.leading.trailing.equalTo(view)
-            $0.bottom.equalTo(view)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.height.equalTo(100)
         }
+        
+        translatedTextSection.snp.makeConstraints {
+            $0.top.equalTo(originalTextSection.snp.bottom)
+            $0.leading.trailing.equalTo(view)
+            $0.height.equalTo(100)
+        }
+        
+        originalTextLabel.snp.makeConstraints {
+            $0.centerX.centerY.equalTo(originalTextSection)
+        }
+        
         
 
     }
     
     override func bindRX() {
         
-        collectionView.rx.setDelegate(self)
+        viewModel.recognizedText(on: ocrImage)
+            .bind(to: originalTextLabel.rx.text)
             .disposed(by: disposeBag)
-        
-        let dataSource = RxCollectionViewSectionedReloadDataSource<SectionModel<String, Voca>>(configureCell: { [self]_, collectionView, indexPath, item in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WordCell.reusableIdentifier, for: indexPath) as? WordCell else { return UICollectionViewCell() }
-            
-            self.viewModel.recognizedTextSubject
-                .subscribe(onNext: { newText in
-                    cell.wordLabel.text = newText
-                })
-                .disposed(by: disposeBag)
-            return cell
-        },configureSupplementaryView: { (datasource, collectionView, kind, indexPath) -> UICollectionReusableView in
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: TranslationView.reusableIdentifier, for: indexPath)
-                return header
-        
-        })
-        
-        
-//        Observable.of(viewModel.dummyData)
-//            .map { [SectionModel(model: "", items: $0)] }
-//            .bind(to: collectionView.rx.items(dataSource: dataSource))
-//            .disposed(by: disposeBag)
-        
-        
-        
-//        translatedWordsTableView.rx.contentOffset
-//            .map { $0.y }
-//            .bind(to: headerView.rx.stretchableHeader())
-//            .disposed(by: disposeBag)
-        
-        viewModel.recognizedTextSubject
-            .subscribe(onNext: { [weak self] text in
-                self?.originalTextLabel.text = text
-                self?.viewModel.translation(with: text ?? "")
-            })
-            .disposed(by: disposeBag)
-        
-        viewModel.translatedTextSubject
-            .bind(to: translationLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        
-        
-        
+
     }
     
 
     
     //MARK: UI
+    
+    let originalTextSection: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGray
+        return view
+    }()
+    let translatedTextSection: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        return view
+    }()
+    
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Recognized Text"
@@ -106,6 +97,7 @@ class OCRResultViewController: BaseViewController {
     let originalTextLabel: UILabel = {
         let label = UILabel()
         label.sizeToFit()
+        //label.text = "Heool"
         return label
     }() 
     

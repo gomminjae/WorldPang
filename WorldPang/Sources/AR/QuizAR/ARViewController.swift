@@ -79,8 +79,8 @@ class ARViewController: UIViewController {
         aimView.snp.makeConstraints {
             $0.centerX.equalTo(sceneView)
             $0.centerY.equalTo(sceneView)
-            $0.width.equalTo(100)
-            $0.height.equalTo(100)
+            $0.width.equalTo(250)
+            $0.height.equalTo(250)
         }
         
         toolBox.snp.makeConstraints {
@@ -298,9 +298,9 @@ class ARViewController: UIViewController {
         stack.alignment = .fill
         stack.distribution = .fillEqually
         stack.layer.borderWidth = 1
-        stack.backgroundColor = .white
-        stack.alpha = 0.5
-        stack.layer.borderColor = UIColor.orange.cgColor
+        stack.backgroundColor = .black
+        stack.alpha = 0.4
+        //stack.layer.borderColor = UIColor.orange.cgColor
         
         return stack
     }()

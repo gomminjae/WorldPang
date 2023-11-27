@@ -10,9 +10,6 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-protocol TextNodeDataDelegate: AnyObject {
-    func sendTextNodeString(_ text: String)
-}
 
 class QuizViewController: BaseViewController, UICollectionViewDelegate {
     

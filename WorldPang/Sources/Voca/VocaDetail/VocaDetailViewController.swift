@@ -18,7 +18,7 @@ class VocaDetailViewController: BaseViewController {
         super.viewDidLoad()
         
         viewModel.vocaDetailRelay
-            .subscribe(onNext: { [weak self] voca in
+            .subscribe(onNext: { voca in
                 print(voca)
             })
             .disposed(by: disposeBag)

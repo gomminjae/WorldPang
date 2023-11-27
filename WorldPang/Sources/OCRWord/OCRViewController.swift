@@ -13,13 +13,13 @@ import NaturalLanguage
 
 class OCRViewController: BaseViewController {
     
-    
-    let picker = UIImagePickerController() 
+
+    let picker = UIImagePickerController()
     
     @IBOutlet weak var actionButton: UIButton!
     
     @IBOutlet weak var selectedImageView: UIImageView!
-    private let viewModel = OCRViewModel()
+    
     private let disposeBag = DisposeBag()
     
     
@@ -51,22 +51,6 @@ class OCRViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
         
-        viewModel.selectedImageSubject
-            .subscribe(onNext: { [weak self] image in
-                if let image = image {
-                    self!.selectedImageView.image = image
-                    self?.viewModel.recognizedText(on: image)
-                } else { }
-            })
-            .disposed(by: disposeBag)
-        
-        
-        viewModel.recognizedTextSubject
-            .subscribe(onNext: { [weak self] text in
-                self?.viewModel.translation(with: text ?? "")
-                print(text ?? "")
-            })
-            .disposed(by: disposeBag)
     
         
     }
@@ -123,22 +107,21 @@ class OCRViewController: BaseViewController {
 extension OCRViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? OCRResultViewController else { return }
         if let editedImage = info[.editedImage] as? UIImage {
-            viewModel.selectedImageSubject.onNext(editedImage)
+            resultVC.ocrImage = editedImage
         } else if let originalImage = info[.originalImage] as? UIImage {
-            viewModel.selectedImageSubject.onNext(originalImage)
+            resultVC.ocrImage = originalImage
         }
         
         picker.dismiss(animated: true) {
-            guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? OCRResultViewController else { return }
-            self.present(resultVC, animated: true)
+            self.navigationController?.pushViewController(resultVC, animated: true)
         }
         
     }
     
     // 이미지 선택이 취소되었을 때 호출되는 메서드
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        viewModel.selectedImageSubject.onNext(nil)
         picker.dismiss(animated: true, completion: nil)
     }
     
