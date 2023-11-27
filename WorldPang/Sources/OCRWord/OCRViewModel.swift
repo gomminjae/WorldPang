@@ -25,6 +25,8 @@ class OCRViewModel: OCRViewModelBindable {
     var recognizedTextSubject: PublishSubject<String?> = PublishSubject<String?>()
     var translatedTextSubject: PublishSubject<String?> = PublishSubject<String?>()
     
+    var translatedString = ""
+    
     
     private let disposeBag = DisposeBag()
     
