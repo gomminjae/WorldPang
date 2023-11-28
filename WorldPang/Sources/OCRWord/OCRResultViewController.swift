@@ -21,85 +21,91 @@ class OCRResultViewController: BaseViewController {
     private let viewModel = OCRViewModel()
     private let ttsManager = TTSManager()
     
-    let parsing = DaumDictionaryService.shared
 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        parsing.searchDaumDictionary(queryKeyword: "do") { results,a  in
-            // Handle the results array here
-            print(results,a)
-        }
+        
+//        let arr = ["danger", "do", "not", "enter"]
+//        let dispatchGroup = DispatchGroup()
+//
+//        for word in arr {
+//            dispatchGroup.enter()
+//
+//            DaumDictionaryService.shared.searchDaumDictionary(queryKeyword: word) { result, means in
+//                // 여기에서 결과를 처리하거나 저장
+//                print(result, means)
+//
+//                // 해당 비동기 작업이 완료되었음을 DispatchGroup에 알림
+//                dispatchGroup.leave()
+//            }
+//        }
+        
 
         // Do any additional setup after loading the view.
     }
     
     override func setupView() {
         
-        view.backgroundColor = .white
+        view.backgroundColor = .mainWhite
+        view.addSubview(baseView)
+        baseView.layer.cornerRadius = 20
         
-        view.addSubview(originalTextSection)
-        view.addSubview(translatedTextSection)
-        
-        originalTextSection.addSubview(originalTextLabel)
-        originalTextSection.addSubview(speakerButton)
-        
-        
-        translatedTextSection.addSubview(translationLabel)
-        
+        view.addSubview(collectionView)
+
         
         
     }
     
     override func setupLayout() {
-        originalTextSection.snp.makeConstraints {
-            $0.leading.trailing.equalTo(view)
+        
+        baseView.snp.makeConstraints {
+            $0.leading.trailing.equalTo(view).inset(20)
             $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(100)
+            $0.height.equalTo(200)
         }
         
-        translatedTextSection.snp.makeConstraints {
-            $0.top.equalTo(originalTextSection.snp.bottom)
-            $0.leading.trailing.equalTo(view)
-            $0.height.equalTo(100)
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(baseView.snp.bottom).offset(20)
+            $0.leading.trailing.equalTo(view).inset(20)
+            $0.bottom.equalTo(view).inset(20)
         }
         
-        originalTextLabel.snp.makeConstraints {
-            $0.centerX.centerY.equalTo(originalTextSection)
-        }
-        speakerButton.snp.makeConstraints {
-            $0.width.height.equalTo(50)
-            $0.top.leading.equalTo(originalTextSection)
-        }
-        
-        translationLabel.snp.makeConstraints {
-            $0.centerY.centerX.equalTo(translatedTextSection)
-        }
-        
+
         
 
     }
     
+    
     override func bindRX() {
+        
         
         viewModel.recognizedText(on: ocrImage)
             .subscribe(onNext: { [weak self] recognizedText in
-                self?.originalTextLabel.text = recognizedText
-                //self?.viewModel.translation(with: translatedText)
-                self?.viewModel.translatedString = recognizedText
-                
+                self?.viewModel.recognizedString = recognizedText
+                self?.baseView.originalTextLabel.text = recognizedText
+                self?.viewModel.translation(with: recognizedText)
+                self?.viewModel.ttsString = recognizedText
+                self?.viewModel.getParseVocaList(with: recognizedText)
             })
             .disposed(by: disposeBag)
         
         viewModel.translatedTextSubject
-            .bind(to: translationLabel.rx.text)
+            .bind(to: baseView.translatedTextLabel.rx.text)
             .disposed(by: disposeBag)
         
-        speakerButton.rx.tap
+        baseView.speakerEnButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.ttsManager.play(self?.viewModel.translatedString ?? "")
+                self?.ttsManager.play(self?.viewModel.ttsString ?? "")
             })
+            .disposed(by: disposeBag)
+        
+        
+        viewModel.getRelatedWords(viewModel.recognizedString)
+            .bind(to: collectionView.rx.items(cellIdentifier: WordCell.reusableIdentifier, cellType: WordCell.self)) { _,word,cell in
+                cell.wordLabel.text = word
+            }
             .disposed(by: disposeBag)
 
     }
@@ -107,58 +113,17 @@ class OCRResultViewController: BaseViewController {
 
     
     //MARK: UI
-    let originalTextSection: UIView = {
-        let view = UIView()
-        view.backgroundColor = .lightGray
-        return view
-    }()
-    let translatedTextSection: UIView = {
-        let view = UIView()
-        view.backgroundColor = .red
-        return view
-    }()
-    
-    
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Recognized Text"
-        return label
-    }()
-    
-    let originalTextLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Hello"
-        label.sizeToFit()
-        //label.text = "Heool"
-        return label
-    }() 
-    
-    let translationLabel: UILabel = {
-        let label = UILabel()
-        label.text = "안녕하세요"
-        label.sizeToFit()
-        return label
-    }()
-    
-    let speakerButton: UIButton = {
-        let button = UIButton()
-        button.setImage(UIImage(systemName: "speaker.wave.3.fill"), for: .normal)
-        return button
-    }()
+    let baseView = TranslationView()
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width, height: 80)
+        layout.sectionInset = UIEdgeInsets(top: 30, left: 30, bottom: 30, right: 30)
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(WordCell.self, forCellWithReuseIdentifier: WordCell.reusableIdentifier)
-        cv.register(TranslationView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TranslationView.reusableIdentifier)
-        
+        cv.backgroundColor = .white
+        cv.layer.cornerRadius = 20
         return cv
     }()
 }
 
-extension OCRResultViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-           return CGSize(width: collectionView.bounds.width, height: 300)
-       }
-}

@@ -22,16 +22,12 @@ class WordCell: UICollectionViewCell {
     
     func setupView() {
         addSubview(wordLabel)
-        addSubview(meanLabel)
         
         wordLabel.snp.makeConstraints {
-            $0.leading.equalTo(self).inset(20)
-            
+            $0.leading.equalTo(self).inset(40)
+            $0.centerY.equalTo(self)
         }
-        meanLabel.snp.makeConstraints {
-            $0.leading.equalTo(wordLabel.snp.leading)
-            $0.top.equalTo(wordLabel.snp.bottom).offset(6)
-        }
+       
     }
     
     //MARK: UI

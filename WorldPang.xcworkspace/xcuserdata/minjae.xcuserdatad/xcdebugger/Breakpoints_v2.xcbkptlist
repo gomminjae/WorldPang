@@ -30,8 +30,8 @@
             filePath = "WorldPang/Sources/OCRWord/OCRResultViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "OCRResultViewController"
             landmarkType = "3">
             <Locations>
@@ -79,6 +79,54 @@
                   startingLineNumber = "70"
                   endingLineNumber = "70"
                   offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58A8793F-FFA4-49E6-A0AF-96926453A6BA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WorldPang/Sources/OCRWord/TranslationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "koreanLabel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "58A8793F-FFA4-49E6-A0AF-96926453A6BA - 9e2dc7db335a69af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorldPang.TranslationView.init(frame: __C.CGRect) -&gt; WorldPang.TranslationView"
+                  moduleName = "WorldPang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minjae/Desktop/WorldPang/WorldPang/Sources/OCRWord/TranslationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "58A8793F-FFA4-49E6-A0AF-96926453A6BA - a454cd7fc6aec123"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorldPang.TranslationView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WorldPang.TranslationView&gt;"
+                  moduleName = "WorldPang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minjae/Desktop/WorldPang/WorldPang/Sources/OCRWord/TranslationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "212">
                </Location>
             </Locations>
          </BreakpointContent>

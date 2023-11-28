@@ -10,11 +10,11 @@ import SnapKit
 import RxSwift
 import RxCocoa
 
-class TranslationView: UICollectionReusableView {
+class TranslationView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .red
+        self.backgroundColor = .white
         setupView()
     }
     
@@ -25,35 +25,42 @@ class TranslationView: UICollectionReusableView {
     private func setupView() {
         addSubview(englishLabel)
         addSubview(originalTextLabel)
-        addSubview(speakerButton)
+        addSubview(speakerEnButton)
         
-        englishLabel.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide)
-            $0.leading.equalTo(self).inset(15)
-        }
-        originalTextLabel.snp.makeConstraints {
-            $0.top.equalTo(englishLabel.snp.bottom).offset(19)
-            $0.leading.equalTo(englishLabel)
-            $0.trailing.equalTo(self.snp.trailing).inset(15)
-        }
         
-        speakerButton.snp.makeConstraints {
-            $0.top.equalTo(originalTextLabel.snp.bottom).offset(10)
-            $0.leading.equalTo(englishLabel)
-            $0.width.height.equalTo(70)
-        }
-        
+        addSubview(speakerKrButton)
         addSubview(koreanLabel)
         addSubview(translatedTextLabel)
         
+        speakerEnButton.snp.makeConstraints {
+            $0.top.equalTo(self).inset(10)
+            $0.leading.equalTo(self).inset(5)
+            $0.width.height.equalTo(40)
+        }
+        
+        englishLabel.snp.makeConstraints {
+            $0.leading.equalTo(speakerKrButton.snp.trailing).offset(8)
+            $0.top.bottom.equalTo(speakerEnButton)
+        }
+        
+        originalTextLabel.snp.makeConstraints {
+            $0.top.equalTo(speakerEnButton.snp.bottom)
+            $0.leading.equalTo(speakerEnButton.snp.leading).offset(10)
+            
+        }
+        
+        speakerKrButton.snp.makeConstraints {
+            $0.leading.equalTo(speakerEnButton)
+            $0.top.equalTo(originalTextLabel.snp.bottom).offset(40)
+            $0.width.height.equalTo(40)
+        }
         koreanLabel.snp.makeConstraints {
-            $0.leading.equalTo(englishLabel)
-            $0.top.equalTo(speakerButton.snp.bottom).offset(20)
+            $0.leading.equalTo(speakerEnButton.snp.trailing).offset(8)
+            $0.top.bottom.equalTo(speakerKrButton)
         }
         translatedTextLabel.snp.makeConstraints {
-            $0.top.equalTo(koreanLabel.snp.bottom)
-            $0.leading.equalTo(koreanLabel)
-            $0.trailing.equalTo(originalTextLabel.snp.trailing)
+            $0.top.equalTo(speakerKrButton.snp.bottom)
+            $0.leading.equalTo(speakerKrButton.snp.leading).offset(10)
         }
     }
     
@@ -74,6 +81,7 @@ class TranslationView: UICollectionReusableView {
     let originalTextLabel: UILabel = {
         let label = UILabel()
         label.text = "ㅇㅁㄴㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㄹㅁㅇ"
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.sizeToFit()
         return label
     }()
@@ -81,12 +89,20 @@ class TranslationView: UICollectionReusableView {
         let label = UILabel()
         label.sizeToFit()
         label.text = "sdㄹㅁㄴㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹ"
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return label
     }()
     
-    let speakerButton: UIButton = {
+    let speakerEnButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "speaker.wave.2"), for: .normal)
+        button.setImage(UIImage(systemName: "speaker.wave.2.fill"), for: .normal)
+        button.tintColor = .mainBlue
+        return button
+    }()
+    let speakerKrButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "speaker.wave.2.fill"), for: .normal)
+        button.tintColor = .mainBlue
         return button
     }()
     

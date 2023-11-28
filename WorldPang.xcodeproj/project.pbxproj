@@ -32,18 +32,15 @@
 		B54E55E62B0D0D0500855330 /* VocaStageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54E55E52B0D0D0500855330 /* VocaStageCell.swift */; };
 		B54E55EB2B13162D00855330 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B54E55EA2B13162D00855330 /* GoogleService-Info.plist */; };
 		B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD002AF5F781003B56C2 /* SpaceViewController.swift */; };
-		B59C08382B1439DE00E96593 /* ParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* ParsingManager.swift */; };
-		B59C08392B1439DE00E96593 /* ParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* ParsingManager.swift */; };
-		B59C083A2B1439DE00E96593 /* ParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* ParsingManager.swift */; };
+		B59C08382B1439DE00E96593 /* DaumDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */; };
+		B59C08392B1439DE00E96593 /* DaumDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */; };
+		B59C083A2B1439DE00E96593 /* DaumDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */; };
 		B59C083C2B1439E600E96593 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083B2B1439E600E96593 /* TranslationService.swift */; };
 		B59C083D2B1439E600E96593 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083B2B1439E600E96593 /* TranslationService.swift */; };
 		B59C083E2B1439E600E96593 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083B2B1439E600E96593 /* TranslationService.swift */; };
 		B59C08402B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
 		B59C08412B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
 		B59C08422B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
-		B59C08442B1439F200E96593 /* VocaParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08432B1439F200E96593 /* VocaParsingManager.swift */; };
-		B59C08452B1439F200E96593 /* VocaParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08432B1439F200E96593 /* VocaParsingManager.swift */; };
-		B59C08462B1439F200E96593 /* VocaParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08432B1439F200E96593 /* VocaParsingManager.swift */; };
 		B59C08482B1439F500E96593 /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08472B1439F500E96593 /* WordManager.swift */; };
 		B59C08492B1439F500E96593 /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08472B1439F500E96593 /* WordManager.swift */; };
 		B59C084A2B1439F500E96593 /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08472B1439F500E96593 /* WordManager.swift */; };
@@ -137,10 +134,9 @@
 		B54E55EA2B13162D00855330 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B54E55EE2B131B6400855330 /* BasicVoca.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BasicVoca.json; sourceTree = "<group>"; };
 		B596FD002AF5F781003B56C2 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
-		B59C08372B1439DE00E96593 /* ParsingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsingManager.swift; sourceTree = "<group>"; };
+		B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaumDictionaryService.swift; sourceTree = "<group>"; };
 		B59C083B2B1439E600E96593 /* TranslationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		B59C083F2B1439ED00E96593 /* TTSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSManager.swift; sourceTree = "<group>"; };
-		B59C08432B1439F200E96593 /* VocaParsingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocaParsingManager.swift; sourceTree = "<group>"; };
 		B59C08472B1439F500E96593 /* WordManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordManager.swift; sourceTree = "<group>"; };
 		B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceARViewModel.swift; sourceTree = "<group>"; };
 		B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListViewController.swift; sourceTree = "<group>"; };
@@ -347,10 +343,9 @@
 			isa = PBXGroup;
 			children = (
 				B59C08472B1439F500E96593 /* WordManager.swift */,
-				B59C08432B1439F200E96593 /* VocaParsingManager.swift */,
 				B59C083F2B1439ED00E96593 /* TTSManager.swift */,
 				B59C083B2B1439E600E96593 /* TranslationService.swift */,
-				B59C08372B1439DE00E96593 /* ParsingManager.swift */,
+				B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -417,8 +412,8 @@
 				B5BF5B6A2ABDD449008C53F4 /* Extension */,
 				B52E445D2AC0465D001135BC /* Resources */,
 				B52E445C2AC04658001135BC /* Sources */,
-				B5BF5B3F2ABDC456008C53F4 /* Info.plist */,
 				B54E55EE2B131B6400855330 /* BasicVoca.json */,
+				B5BF5B3F2ABDC456008C53F4 /* Info.plist */,
 				B5F994F02AF2B4FE00F2208B /* YOLOv3Tiny.mlmodel */,
 				B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */,
 				B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */,
@@ -829,7 +824,7 @@
 				B52E446A2AC712B4001135BC /* ProfileViewModel.swift in Sources */,
 				B519FF402ADCCEAD000FACAB /* VocaStageViewController.swift in Sources */,
 				B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */,
-				B59C08382B1439DE00E96593 /* ParsingManager.swift in Sources */,
+				B59C08382B1439DE00E96593 /* DaumDictionaryService.swift in Sources */,
 				B59C48D92B07CE7A00680645 /* Planet.swift in Sources */,
 				B5BF5B342ABDC455008C53F4 /* SceneDelegate.swift in Sources */,
 				B52E44562AC023A6001135BC /* reusableIdentifier.swift in Sources */,
@@ -846,7 +841,6 @@
 				B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */,
 				B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */,
 				B5BF5B8D2ADEC99F008C53F4 /* OCRViewModel.swift in Sources */,
-				B59C08442B1439F200E96593 /* VocaParsingManager.swift in Sources */,
 				B5F7FAE72B01BCB50027403D /* OCRResultViewController.swift in Sources */,
 				B52E446C2AC712D0001135BC /* User.swift in Sources */,
 			);
@@ -856,8 +850,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59C08392B1439DE00E96593 /* ParsingManager.swift in Sources */,
-				B59C08452B1439F200E96593 /* VocaParsingManager.swift in Sources */,
+				B59C08392B1439DE00E96593 /* DaumDictionaryService.swift in Sources */,
 				B59C08412B1439ED00E96593 /* TTSManager.swift in Sources */,
 				B59C08492B1439F500E96593 /* WordManager.swift in Sources */,
 				B5BF5B492ABDC457008C53F4 /* WorldPangTests.swift in Sources */,
@@ -869,10 +862,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59C083A2B1439DE00E96593 /* ParsingManager.swift in Sources */,
+				B59C083A2B1439DE00E96593 /* DaumDictionaryService.swift in Sources */,
 				B5BF5B532ABDC457008C53F4 /* WorldPangUITests.swift in Sources */,
 				B59C08422B1439ED00E96593 /* TTSManager.swift in Sources */,
-				B59C08462B1439F200E96593 /* VocaParsingManager.swift in Sources */,
 				B5BF5B552ABDC457008C53F4 /* WorldPangUITestsLaunchTests.swift in Sources */,
 				B59C084A2B1439F500E96593 /* WordManager.swift in Sources */,
 				B59C083E2B1439E600E96593 /* TranslationService.swift in Sources */,
