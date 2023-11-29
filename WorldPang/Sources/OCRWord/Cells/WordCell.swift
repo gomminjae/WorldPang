@@ -34,6 +34,8 @@ class WordCell: UICollectionViewCell {
             $0.centerY.equalTo(wordLabel)
             $0.trailing.equalTo(self).inset(20)
         }
+        
+       
        
     }
     

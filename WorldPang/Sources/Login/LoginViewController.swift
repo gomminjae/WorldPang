@@ -17,7 +17,7 @@ class LoginViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .mainWhite
         
     
     }
@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
     
     override func setupView() {
         //view.setGradient(color1: .mainYellow, color2: .subYellow)
-        view.addSubview(loginImageView)
+        view.addSubview(titleLabel)
         view.addSubview(loginBaseView)
         loginBaseView.addSubview(blurEffectView)
         
@@ -37,6 +37,11 @@ class LoginViewController: BaseViewController {
     
     override func setupLayout() {
         
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).inset(55)
+            $0.leading.trailing.equalTo(view).inset(20)
+        }
+        
         loginBaseView.snp.makeConstraints {
             $0.leading.equalTo(view).inset(20)
             $0.trailing.equalTo(view).inset(20)
@@ -44,11 +49,7 @@ class LoginViewController: BaseViewController {
             $0.height.equalTo(240)
         }
         
-        loginImageView.snp.makeConstraints {
-            //$0.bottom.equalTo(loginBaseView.snp.top)
-            $0.centerX.equalTo(view)
-            $0.top.equalTo(view).inset(100)
-        }
+        
         
         appleLoginButton.snp.makeConstraints {
             $0.top.equalTo(loginBaseView.snp.top).inset(20)
@@ -116,7 +117,10 @@ class LoginViewController: BaseViewController {
     //MARK: UI
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "AR Quiz"
+        label.text = "WorldPang"
+        label.textColor = .mainBlue
+        label.font = UIFont.boldSystemFont(ofSize: 59)
+        label.textAlignment = .center
         return label
     }()
     
@@ -129,7 +133,7 @@ class LoginViewController: BaseViewController {
         let view = UIView()
         view.backgroundColor = UIColor.white.withAlphaComponent(0.3)
         view.layer.cornerRadius = 30
-        view.layer.borderColor = UIColor.white.cgColor
+        view.backgroundColor = .white
         view.layer.borderWidth = 1
         return view
     }()
@@ -141,16 +145,12 @@ class LoginViewController: BaseViewController {
         return view
     }()
     
-    lazy var loginImageView: UIImageView = {
-        let view = UIImageView()
-        view.image = UIImage(named: "title")
-        return view
-    }()
     
     lazy var appleLoginButton: LoginButton = {
         let button = LoginButton()
         button.titleLabel.text = "Sign With Apple"
         button.imageView.image = UIImage(named: "applelogin.png")
+        button.layer.borderWidth = 0.5
         return button
     }()
     
@@ -158,6 +158,7 @@ class LoginViewController: BaseViewController {
         let button = LoginButton()
         button.titleLabel.text = "Sign With Kakao"
         button.imageView.image = UIImage(named: "kakaologin.png")
+        button.layer.borderWidth = 0.9
         return button
     }()
     

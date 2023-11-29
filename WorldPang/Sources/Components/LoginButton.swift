@@ -17,7 +17,7 @@ class LoginButton: UIView  {
         self.addSubview(button)
         self.backgroundColor = UIColor.white.withAlphaComponent(0.3)
         self.layer.cornerRadius = 30
-        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.borderColor = UIColor.black.cgColor
         self.layer.borderWidth = 1
         addSubview(imageView)
         addSubview(titleLabel)

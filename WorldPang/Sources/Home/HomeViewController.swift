@@ -199,7 +199,7 @@ class HomeViewController: BaseViewController {
     }
     
     private func updateUserData(with user: User) {
-        titleLabel.text = "Hello \(user.nickname),"
+        titleLabel.text = "Welcome! \(user.nickname)"
     }
     
     private func updateUserProfileImage(with url: URL) {
@@ -247,7 +247,7 @@ class HomeViewController: BaseViewController {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Hello"
+        label.text = "Welcome!"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
         label.numberOfLines = 2
@@ -256,7 +256,7 @@ class HomeViewController: BaseViewController {
     
     lazy var todayVocaState: UILabel = {
         let label = UILabel()
-        label.text = "오늘 문제 맞힌 수"
+        label.text = "오늘 공부한 단어 수"
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         return label
@@ -264,7 +264,7 @@ class HomeViewController: BaseViewController {
     
     lazy var vocaNumberLabel: UILabel = {
         let label = UILabel()
-        label.text = "150"
+        label.text = "0"
         label.textAlignment = .center
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
