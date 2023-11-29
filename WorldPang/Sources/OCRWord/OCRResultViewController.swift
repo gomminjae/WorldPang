@@ -101,10 +101,10 @@ class OCRResultViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
         
-        
-        viewModel.getRelatedWords(viewModel.recognizedString)
-            .bind(to: collectionView.rx.items(cellIdentifier: WordCell.reusableIdentifier, cellType: WordCell.self)) { _,word,cell in
-                cell.wordLabel.text = word
+        viewModel.recognizedVocaList
+            .bind(to: collectionView.rx.items(cellIdentifier: WordCell.reusableIdentifier, cellType: WordCell.self)) { _, item, cell in
+                cell.wordLabel.text = item.key
+                cell.meanLabel.text = item.value
             }
             .disposed(by: disposeBag)
 

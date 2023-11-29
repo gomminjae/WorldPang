@@ -22,10 +22,17 @@ class WordCell: UICollectionViewCell {
     
     func setupView() {
         addSubview(wordLabel)
+        addSubview(meanLabel)
         
         wordLabel.snp.makeConstraints {
             $0.leading.equalTo(self).inset(40)
             $0.centerY.equalTo(self)
+        }
+        
+        meanLabel.snp.makeConstraints {
+            $0.leading.equalTo(wordLabel.snp.trailing).offset(15)
+            $0.centerY.equalTo(wordLabel)
+            $0.trailing.equalTo(self).inset(20)
         }
        
     }
@@ -34,14 +41,17 @@ class WordCell: UICollectionViewCell {
     
     let wordLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 23, weight: .semibold)
         label.textColor = .black
+        label.sizeToFit()
         return label
     }()
     
     let meanLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
+        //label.sizeToFit()
+        label.numberOfLines = 4
         return label
     }()
     

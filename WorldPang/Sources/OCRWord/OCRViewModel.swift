@@ -28,9 +28,12 @@ class OCRViewModel: OCRViewModelBindable {
     var ttsString = ""
     var recognizedString = ""
     
-    var recognizedVocaList: [String: [String]] = [String:[String]]()
+    //var recognizedVocaList: [String: String] = [String:String]()
     
-    
+    var recognizedVocaListSubject = BehaviorSubject<[String: String]>(value: [String: String]())
+    var recognizedVocaList: Observable<[String: String]> {
+        return recognizedVocaListSubject.asObservable()
+    }
     
     
     private let disposeBag = DisposeBag()
@@ -87,36 +90,56 @@ class OCRViewModel: OCRViewModelBindable {
         }
     }
     
-    func getRelatedWords(_ text: String) -> Observable<[String]> {
-        return Observable.create { observer in
-            var words = text.lowercased()
-            let regex = try! NSRegularExpression(pattern: "[^a-z ]", options: .caseInsensitive)
-            words = regex.stringByReplacingMatches(in: words, options: [], range: NSRange(location: 0, length: words.utf16.count), withTemplate: "")
-            let wordsList = words.components(separatedBy: " ")
-
-            observer.onNext(wordsList)
-            observer.onCompleted()
-
-            return Disposables.create()
-        }
-    }
-   
     func getParseVocaList(with text: String) {
         var words: String = text.lowercased()
         let regex = try! NSRegularExpression(pattern: "[^a-z ]", options: .caseInsensitive)
         words = regex.stringByReplacingMatches(in: words, options: [], range: NSRange(location: 0, length: words.utf16.count), withTemplate: "")
+        
         let wordsList = words.components(separatedBy: " ")
-        print("\(wordsList)\n")
-        
-        let test = ["hello","own","ready","show"]
-        
-        for word in wordsList {
-            print("=====>\(word)")
-            parsingService.searchDaumDictionary(queryKeyword: word) { word,means in
-                if means.count != 0 {
-                    print("----->\(word), \(means[0])\n")
+
+        // Search Daum Dictionary and update recognizedVocaList
+        searchDaumDictionaryObservable(words: wordsList)
+            .subscribe(onNext: { result in
+                var updatedVocaList = try! self.recognizedVocaListSubject.value()
+                for i in 0..<result.means.count {
+                    updatedVocaList[result.words[i]] = result.means[i]
                 }
+                self.recognizedVocaListSubject.onNext(updatedVocaList)
+            }, onError: { error in
+                // Handle errors
+                print("Error: \(error)")
+            })
+            .disposed(by: disposeBag)
+    }
+    func searchDaumDictionaryObservable(words: [String]) -> Observable<(words: [String], means: [String])> {
+        return Observable.create { [self] observer in
+            parsingService.searchDaumDictionary(queryKeyword: words.joined(separator: " ")) { words, means in
+                observer.onNext((words: words, means: means))
+                observer.onCompleted()
             }
+            return Disposables.create()
         }
     }
+   
+
+
+
+
+
+
+
+   
+    
+//    func getParseVocaList(with text: String) {
+//        var words: String = text.lowercased()
+//        let regex = try! NSRegularExpression(pattern: "[^a-z ]", options: .caseInsensitive)
+//        words = regex.stringByReplacingMatches(in: words, options: [], range: NSRange(location: 0, length: words.utf16.count), withTemplate: "")
+//        
+//        parsingService.searchDaumDictionary(queryKeyword: words) { words,means in
+//            for i in 0..<words.count {
+//                self.recognizedVocaList[words[i]] = means[i]
+//                //print("=======>vocaList\(self.recognizedVocaList)")
+//            }
+//        }
+//    }
 }
