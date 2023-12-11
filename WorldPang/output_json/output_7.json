@@ -1,0 +1,352 @@
+[
+  {
+    "id": 301,
+    "word": "farm",
+    "meaning": "농장",
+    "sentence": "He has a farm in the country.",
+    "translation": "그는 시골에 농장이 있다."
+  },
+  {
+    "id": 302,
+    "word": "fast",
+    "meaning": "빠른",
+    "sentence": "How fast time flies !",
+    "translation": "시간이 얼마나 빠른지."
+  },
+  {
+    "id": 303,
+    "word": "fat",
+    "meaning": "살찐",
+    "sentence": "The sky is high and the horse is fat in fall.",
+    "translation": "가을을 천고마비의 계절이라고 합니다."
+  },
+  {
+    "id": 304,
+    "word": "father",
+    "meaning": "아버지",
+    "sentence": "The baby looks like the father.",
+    "translation": "아기가 아버지를 꼭 닮았다."
+  },
+  {
+    "id": 305,
+    "word": "favorite",
+    "meaning": "마음에 드는",
+    "sentence": "Spicy dishes are my favorite.",
+    "translation": "나는 매콤한 요리를 가장 좋아한다."
+  },
+  {
+    "id": 306,
+    "word": "feel",
+    "meaning": "느끼다",
+    "sentence": "If you have any questions, please feel free to call.",
+    "translation": "궁금한 것이 있으면 언제든지 전화하세요."
+  },
+  {
+    "id": 307,
+    "word": "fever",
+    "meaning": "열",
+    "sentence": "I ran a fever when I had the flu.",
+    "translation": "독감에 걸렸을 때 나는 열이 났다."
+  },
+  {
+    "id": 308,
+    "word": "field",
+    "meaning": "들",
+    "sentence": "The airplane made an emergency landing in a field.",
+    "translation": "비행기가 들판에 불시착했다."
+  },
+  {
+    "id": 309,
+    "word": "fight",
+    "meaning": "싸움",
+    "sentence": "The children have a snowball fight.",
+    "translation": "아이들이 눈싸움을 한다."
+  },
+  {
+    "id": 310,
+    "word": "file",
+    "meaning": "파일,서류철",
+    "sentence": "The file has not been copied.",
+    "translation": "파일이 복사되지 않았습니다."
+  },
+  {
+    "id": 311,
+    "word": "fill",
+    "meaning": "가득 채우다",
+    "sentence": "The aroma of coffee filled the air.",
+    "translation": "커피 향이 공기 중에 퍼졌다."
+  },
+  {
+    "id": 312,
+    "word": "find",
+    "meaning": "발견하다",
+    "sentence": "The hope to find the treasure island was a mirage.",
+    "translation": "보물섬을 찾으려는 희망은 신기루였다."
+  },
+  {
+    "id": 313,
+    "word": "fine",
+    "meaning": "훌륭한",
+    "sentence": "That is a fine example of a social enterprise.",
+    "translation": "그것은 사회적 기업의 좋은 예이다."
+  },
+  {
+    "id": 314,
+    "word": "finger",
+    "meaning": "손가락, 손가락을 대다",
+    "sentence": "The chance has slipped through my fingers.",
+    "translation": "기회가 내게서 사라졌다."
+  },
+  {
+    "id": 315,
+    "word": "finish",
+    "meaning": "끝내다",
+    "sentence": "Mom, I finished my milk.",
+    "translation": "엄마, 우유를 다 마셨는데요."
+  },
+  {
+    "id": 316,
+    "word": "fire",
+    "meaning": "불",
+    "sentence": "The fire started in the basement.",
+    "translation": "불은 지하에서 시작했다."
+  },
+  {
+    "id": 317,
+    "word": "fish",
+    "meaning": "물고기",
+    "sentence": "That old man caught a large fish.",
+    "translation": "그 노인은 큰 물고기를 잡았다."
+  },
+  {
+    "id": 318,
+    "word": "fix",
+    "meaning": "고치다",
+    "sentence": "The computer needed to be fixed.",
+    "translation": "컴퓨터를 수리해야 했다."
+  },
+  {
+    "id": 319,
+    "word": "flag",
+    "meaning": "깃발",
+    "sentence": "The American flag is called the Stars and Stripes.",
+    "translation": "미국 국기는 성조기라고 불린다."
+  },
+  {
+    "id": 320,
+    "word": "floor",
+    "meaning": "마룻바닥",
+    "sentence": "The glass fell on the floor and went to pieces.",
+    "translation": "컵이 떨어져 산산이 조각났다."
+  },
+  {
+    "id": 321,
+    "word": "flower",
+    "meaning": "꽃",
+    "sentence": "Flowers don't tell, they show.",
+    "translation": "꽃은 말이 필요 없다. 보기만 해도 알 수 있다."
+  },
+  {
+    "id": 322,
+    "word": "fly",
+    "meaning": "날다",
+    "sentence": "Sparrows were flying about.",
+    "translation": "참새들이 날아다니고 있었다."
+  },
+  {
+    "id": 323,
+    "word": "focus",
+    "meaning": "초점",
+    "sentence": "The picture is out of focus.",
+    "translation": "화면의 초점이 맞지 않았다."
+  },
+  {
+    "id": 324,
+    "word": "fog",
+    "meaning": "안개",
+    "sentence": "The fog is a thing for which London is famous.",
+    "translation": "안개는 런던의 명물이다."
+  },
+  {
+    "id": 325,
+    "word": "food",
+    "meaning": "음식",
+    "sentence": "Thai food is hot and spicy.",
+    "translation": "태국 음식은 맵고 향이 강하다."
+  },
+  {
+    "id": 326,
+    "word": "fool",
+    "meaning": "바보",
+    "sentence": "There's a fine line between a genius and a fool.",
+    "translation": "천재와 바보는 종이 한 장 차이다."
+  },
+  {
+    "id": 327,
+    "word": "foot",
+    "meaning": "발",
+    "sentence": "The foot is below the knee.",
+    "translation": "발은 무릎 아래다."
+  },
+  {
+    "id": 328,
+    "word": "football",
+    "meaning": "축구",
+    "sentence": "The Korean football team beat off its old foe, Japan.",
+    "translation": "한국 축구팀은 숙적 일본을 물리쳤다."
+  },
+  {
+    "id": 329,
+    "word": "for",
+    "meaning": "위하여",
+    "sentence": "I'm saving up for a rainy day.",
+    "translation": "만일의 경우를 위해 저축하고 있어요."
+  },
+  {
+    "id": 330,
+    "word": "forest",
+    "meaning": "숲",
+    "sentence": "The road runs through the forest.",
+    "translation": "그 길은 숲속으로 통하고 있다."
+  },
+  {
+    "id": 331,
+    "word": "forever",
+    "meaning": "영원히",
+    "sentence": "I love you forever.",
+    "translation": "당신을 영원히 사랑해요."
+  },
+  {
+    "id": 332,
+    "word": "forget",
+    "meaning": "잊다",
+    "sentence": "The forget-me-not is a symbol of friendship.",
+    "translation": "물망초는 우정을 상징한다."
+  },
+  {
+    "id": 333,
+    "word": "form",
+    "meaning": "모양",
+    "sentence": "The book came in the form of a movie.",
+    "translation": "이 책은 영화로도 개봉했다."
+  },
+  {
+    "id": 334,
+    "word": "fox",
+    "meaning": "여우",
+    "sentence": "The fox was very sly and clever.",
+    "translation": "그 여우는 교활하고 영리했다."
+  },
+  {
+    "id": 335,
+    "word": "free",
+    "meaning": "자유로운",
+    "sentence": "The Han river is now free from ice.",
+    "translation": "한강이 해빙되었다."
+  },
+  {
+    "id": 336,
+    "word": "fresh",
+    "meaning": "새로운",
+    "sentence": "The grass and plants were fresh after a rainfall.",
+    "translation": "비가 오자 초목이 신선해졌다."
+  },
+  {
+    "id": 337,
+    "word": "friend",
+    "meaning": "친구",
+    "sentence": "As a matter of fact, I have no friends.",
+    "translation": "실은 저에게 친구가 없어요."
+  },
+  {
+    "id": 338,
+    "word": "frog",
+    "meaning": "개구리",
+    "sentence": "The frog changed into a handsome prince.",
+    "translation": "개구리는 잘생긴 왕자로 변했다."
+  },
+  {
+    "id": 339,
+    "word": "from",
+    "meaning": "부터",
+    "sentence": "Is there anybody here from Korea?",
+    "translation": "한국에서 오신 분 여기 계십니까?"
+  },
+  {
+    "id": 340,
+    "word": "front",
+    "meaning": "정면",
+    "sentence": "The building in front is the library.",
+    "translation": "정면에 보이는 건물이 도서관이다."
+  },
+  {
+    "id": 341,
+    "word": "fruit",
+    "meaning": "과일",
+    "sentence": "The banana is a common fruit in South Korea.",
+    "translation": "바나나는 한국에서 흔한 과일이다."
+  },
+  {
+    "id": 342,
+    "word": "fry",
+    "meaning": "기름으로 튀기다",
+    "sentence": "I was frying an egg.",
+    "translation": "내가 달걀 프라이를 만들었어요."
+  },
+  {
+    "id": 343,
+    "word": "full",
+    "meaning": "가득찬",
+    "sentence": "That politician is full of ambition.",
+    "translation": "그 정치인은 야망으로 가득 차 있다."
+  },
+  {
+    "id": 344,
+    "word": "fun",
+    "meaning": "재미",
+    "sentence": "Sounds like fun. Let's go.",
+    "translation": "재미있을 것 같네요. 갑시다."
+  },
+  {
+    "id": 345,
+    "word": "future",
+    "meaning": "미래",
+    "sentence": "The future isn't set in stone.",
+    "translation": "미래는 고정되어 있지 않다."
+  },
+  {
+    "id": 346,
+    "word": "garden",
+    "meaning": "뜰",
+    "sentence": "The garden is indeed beautiful.",
+    "translation": "그 정원은 정말로 아름답다."
+  },
+  {
+    "id": 347,
+    "word": "gate",
+    "meaning": "문,입구",
+    "sentence": "The airport is at the gate of Incheon.",
+    "translation": "공항은 인천 가까이에 있다."
+  },
+  {
+    "id": 348,
+    "word": "gentleman",
+    "meaning": "신사",
+    "sentence": "He has the air of a gentleman.",
+    "translation": "그는 점잖은 체하고 있다."
+  },
+  {
+    "id": 349,
+    "word": "gesture",
+    "meaning": "몸짓",
+    "sentence": "This is just a friendly gesture.",
+    "translation": "이건 그냥 친근한 몸짓일 뿐이야."
+  },
+  {
+    "id": 350,
+    "word": "get",
+    "meaning": "얻다",
+    "sentence": "What are you getting out of this?",
+    "translation": "이렇게 해서 얻는 게 뭡니까?"
+  }
+]

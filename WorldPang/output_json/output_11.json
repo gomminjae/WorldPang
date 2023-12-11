@@ -1,0 +1,352 @@
+[
+  {
+    "id": 501,
+    "word": "money",
+    "meaning": "돈",
+    "sentence": "Time is money.",
+    "translation": "시간은 돈이다."
+  },
+  {
+    "id": 502,
+    "word": "monkey",
+    "meaning": "원숭이",
+    "sentence": "Even monkey falls out of the tree once in a while.",
+    "translation": "원숭이도 나무에서 떨어질 때 있다."
+  },
+  {
+    "id": 503,
+    "word": "month",
+    "meaning": "월",
+    "sentence": "The first snow came a month earlier than usual.",
+    "translation": "예년보다 한 달 일찍 첫눈이 왔다."
+  },
+  {
+    "id": 504,
+    "word": "moon",
+    "meaning": "달",
+    "sentence": "There is also no wind on the moon.",
+    "translation": "달에는 바람도 없다."
+  },
+  {
+    "id": 505,
+    "word": "morning",
+    "meaning": "아침",
+    "sentence": "The morning and evening air has become pretty cold.",
+    "translation": "아침저녁으로 공기가 제법 차가워졌다."
+  },
+  {
+    "id": 506,
+    "word": "mother",
+    "meaning": "어머니",
+    "sentence": "Venus is called the mother planet.",
+    "translation": "금성은 어머니 행성으로 불린다."
+  },
+  {
+    "id": 507,
+    "word": "mountain",
+    "meaning": "산",
+    "sentence": "The tiger is a king in mountain.",
+    "translation": "호랑이는 산의 제왕이다."
+  },
+  {
+    "id": 508,
+    "word": "mouse",
+    "meaning": "쥐",
+    "sentence": "The cat is chasing a mouse.",
+    "translation": "고양이가 쥐를 뒤쫓고 있다."
+  },
+  {
+    "id": 509,
+    "word": "mouth",
+    "meaning": "입",
+    "sentence": "The bear felt his mouth water.",
+    "translation": "곰은 입에 침이 고이는 것을 느꼈다."
+  },
+  {
+    "id": 510,
+    "word": "move",
+    "meaning": "움직이다",
+    "sentence": "The baby ants moved around by themselves.",
+    "translation": "아기 개미들은 혼자서 돌아다녔다."
+  },
+  {
+    "id": 511,
+    "word": "movie",
+    "meaning": "영화",
+    "sentence": "Teenagers under 19 cannot see that movie.",
+    "translation": "그 영화는 미성년자 관람불가다."
+  },
+  {
+    "id": 512,
+    "word": "much",
+    "meaning": "많은",
+    "sentence": "Thank you very much for your kindness.",
+    "translation": "당신의 친절에 감사합니다."
+  },
+  {
+    "id": 513,
+    "word": "museum",
+    "meaning": "박물관",
+    "sentence": "The museum is closed on Mondays.",
+    "translation": "박물관이 월요일에는 문을 안 연다."
+  },
+  {
+    "id": 514,
+    "word": "music",
+    "meaning": "음악",
+    "sentence": "The birds make music all the day.",
+    "translation": "새는 종일 음악을 연주한다."
+  },
+  {
+    "id": 515,
+    "word": "must",
+    "meaning": "-해야 한다",
+    "sentence": "Spring must be just around the corner.",
+    "translation": "봄이 다가올 것이다."
+  },
+  {
+    "id": 516,
+    "word": "name",
+    "meaning": "이름",
+    "sentence": "Sorry, but I didn't catch the name.",
+    "translation": "실례지만, 성함을 못 알아들었어요."
+  },
+  {
+    "id": 517,
+    "word": "nation",
+    "meaning": "국가",
+    "sentence": "We are a nation of laws.",
+    "translation": "우리는 법치국가입니다."
+  },
+  {
+    "id": 518,
+    "word": "nature",
+    "meaning": "자연",
+    "sentence": "The snow acts as nature's blanket.",
+    "translation": "눈은 자연의 이불 역할을 한다."
+  },
+  {
+    "id": 519,
+    "word": "near",
+    "meaning": "근처의",
+    "sentence": "The end of the year is near at hand.",
+    "translation": "연말이 가까워지고 있다."
+  },
+  {
+    "id": 520,
+    "word": "neck",
+    "meaning": "목",
+    "sentence": "Vampire bites human's neck at night.",
+    "translation": "뱀파이어는 밤에 사람의 목을 문다."
+  },
+  {
+    "id": 521,
+    "word": "need",
+    "meaning": "필요하다",
+    "sentence": "Do you need any help?",
+    "translation": "도움이 필요하신가요?"
+  },
+  {
+    "id": 522,
+    "word": "never",
+    "meaning": "결코 -아니다",
+    "sentence": "Then you will never find the answer.",
+    "translation": "그러면 절대로 해답을 찾을 수 없다."
+  },
+  {
+    "id": 523,
+    "word": "new",
+    "meaning": "새로운",
+    "sentence": "The new car finally hit the market.",
+    "translation": "신차가 마침내 출시되었다."
+  },
+  {
+    "id": 524,
+    "word": "newspaper",
+    "meaning": "신문",
+    "sentence": "He can read English-language newspaper.",
+    "translation": "그는 영어 신문을 읽을 수 있다."
+  },
+  {
+    "id": 525,
+    "word": "next",
+    "meaning": "다음의",
+    "sentence": "The airport is the next stop.",
+    "translation": "다음 하차할 곳이 공항입니다."
+  },
+  {
+    "id": 526,
+    "word": "nice",
+    "meaning": "좋은",
+    "sentence": "Thanks. Have a nice day.",
+    "translation": "감사합니다. 좋은 하루 보내세요."
+  },
+  {
+    "id": 527,
+    "word": "night",
+    "meaning": "밤",
+    "sentence": "Thank you for coming. Good night.",
+    "translation": "와 주셔서 고마워요. 편히 주무세요."
+  },
+  {
+    "id": 528,
+    "word": "no",
+    "meaning": "하나도 없는",
+    "sentence": "This is no time for chatting.",
+    "translation": "지금은 잡담 시간이 아닙니다."
+  },
+  {
+    "id": 529,
+    "word": "noon",
+    "meaning": "정오",
+    "sentence": "The train gets in at noon.",
+    "translation": "기차는 정오에 도착한다."
+  },
+  {
+    "id": 530,
+    "word": "north",
+    "meaning": "북",
+    "sentence": "The north wind is blowing.",
+    "translation": "북풍이 불고 있다."
+  },
+  {
+    "id": 531,
+    "word": "nose",
+    "meaning": "코",
+    "sentence": "What a long nose the elephant has!",
+    "translation": "코끼리는 참 긴 코를 가지고 있구나!"
+  },
+  {
+    "id": 532,
+    "word": "not",
+    "meaning": "아니다",
+    "sentence": "I'm sorry he is not here.",
+    "translation": "지금 안 계십니다."
+  },
+  {
+    "id": 533,
+    "word": "note",
+    "meaning": "공책",
+    "sentence": "Take out your note for a dictation.",
+    "translation": "받아쓰기를 하게 노트를 꺼내세요."
+  },
+  {
+    "id": 534,
+    "word": "nothing",
+    "meaning": "아무것도 …없다",
+    "sentence": "We have nothing in common.",
+    "translation": "우리에게는 공통점이 없어요."
+  },
+  {
+    "id": 535,
+    "word": "now",
+    "meaning": "지금",
+    "sentence": "Are you free now ?",
+    "translation": "지금 시간 있으세요?"
+  },
+  {
+    "id": 536,
+    "word": "number",
+    "meaning": "숫자",
+    "sentence": "The number of elderly people is growing.",
+    "translation": "노인들의 수가 증가하고 있다."
+  },
+  {
+    "id": 537,
+    "word": "nurse",
+    "meaning": "간호사",
+    "sentence": "The nurse stuck a needle in my arm.",
+    "translation": "간호사가 내 팔에 주삿바늘을 꽂았다."
+  },
+  {
+    "id": 538,
+    "word": "ocean",
+    "meaning": "바다",
+    "sentence": "The boat is in the ocean.",
+    "translation": "배가 바다 한 가운데에 떠 있다."
+  },
+  {
+    "id": 539,
+    "word": "of",
+    "meaning": "~의",
+    "sentence": "It's nice of you to say so.",
+    "translation": "그렇게 말씀해 주시니 감사합니다."
+  },
+  {
+    "id": 540,
+    "word": "off",
+    "meaning": "떨어져",
+    "sentence": "This is off limits.",
+    "translation": "이곳은 출입금지 지역입니다."
+  },
+  {
+    "id": 541,
+    "word": "office",
+    "meaning": "사무실",
+    "sentence": "Where is the ticket office?",
+    "translation": "매표소가 어디 있습니까?"
+  },
+  {
+    "id": 542,
+    "word": "often",
+    "meaning": "자주",
+    "sentence": "How often is there a flight to New York?",
+    "translation": "뉴욕행 비행기는 얼마나 자주 있나요?"
+  },
+  {
+    "id": 543,
+    "word": "oil",
+    "meaning": "기름",
+    "sentence": "The cost of oil is less than that of coal.",
+    "translation": "석유값은 석탄값보다 싸다."
+  },
+  {
+    "id": 544,
+    "word": "old",
+    "meaning": "늙은",
+    "sentence": "This is good exercise for the old.",
+    "translation": "이건 노인들에게 좋은 운동입니다."
+  },
+  {
+    "id": 545,
+    "word": "on",
+    "meaning": "위에",
+    "sentence": "I'm on a diet.",
+    "translation": "지금 다이어트 중이에요."
+  },
+  {
+    "id": 546,
+    "word": "one",
+    "meaning": "하나",
+    "sentence": "Can I just make one telephone call?",
+    "translation": "전화 한 통화 할 수 있을까요?"
+  },
+  {
+    "id": 547,
+    "word": "only",
+    "meaning": "유일한",
+    "sentence": "You are the only friend I have.",
+    "translation": "당신이 저의 유일한 친구입니다."
+  },
+  {
+    "id": 548,
+    "word": "open",
+    "meaning": "열다",
+    "sentence": "We're open twenty four hours a day.",
+    "translation": "하루 24시간 엽니다."
+  },
+  {
+    "id": 549,
+    "word": "or",
+    "meaning": "혹은",
+    "sentence": "It's life or death.",
+    "translation": "생사가 달린 문제입니다."
+  },
+  {
+    "id": 550,
+    "word": "out",
+    "meaning": "밖으로",
+    "sentence": "You are out of your mind.",
+    "translation": "당신 제 정신이 아니군요."
+  }
+]

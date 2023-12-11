@@ -1,0 +1,352 @@
+[
+  {
+    "id": 351,
+    "word": "ghost",
+    "meaning": "유령",
+    "sentence": "There are no such things as ghosts.",
+    "translation": "유령 따위는 없다."
+  },
+  {
+    "id": 352,
+    "word": "giant",
+    "meaning": "거인",
+    "sentence": "The giant panda is a fascinating animal.",
+    "translation": "자이언트 팬더는 매혹적인 동물이다."
+  },
+  {
+    "id": 353,
+    "word": "gift",
+    "meaning": "선물",
+    "sentence": "Thank you for such a heart- warming gift.",
+    "translation": "마음이 담긴 선물이 고마워요."
+  },
+  {
+    "id": 354,
+    "word": "giraffe",
+    "meaning": "기린",
+    "sentence": "The giraffe has a long neck.",
+    "translation": "기린은 목이 길다."
+  },
+  {
+    "id": 355,
+    "word": "girl",
+    "meaning": "소녀",
+    "sentence": "The girl always wears a smile.",
+    "translation": "그 소녀는 늘 미소를 띠고 있다."
+  },
+  {
+    "id": 356,
+    "word": "give",
+    "meaning": "주다",
+    "sentence": "Pleae give me a window seat.",
+    "translation": "창문 옆 좌석을 주세요."
+  },
+  {
+    "id": 357,
+    "word": "glad",
+    "meaning": "기쁜",
+    "sentence": "Well, I'm glad you think so.",
+    "translation": "음, 그렇게 생각하신다니 기뻐요."
+  },
+  {
+    "id": 358,
+    "word": "glass",
+    "meaning": "유리",
+    "sentence": "The glasses are full of water.",
+    "translation": "유리잔들에 물이 가득 차 있다."
+  },
+  {
+    "id": 359,
+    "word": "glove",
+    "meaning": "장갑",
+    "sentence": "The gloves fit perfectly on his hands!",
+    "translation": "장갑이 그의 손에 꼭 맞습니다."
+  },
+  {
+    "id": 360,
+    "word": "glue",
+    "meaning": "아교",
+    "sentence": "Sue put glue on the paper.",
+    "translation": "Sue는 종이에 풀칠을 했다."
+  },
+  {
+    "id": 361,
+    "word": "go",
+    "meaning": "가다",
+    "sentence": "Will you go along with me?",
+    "translation": "저랑 같이 가시겠습니까?"
+  },
+  {
+    "id": 362,
+    "word": "goal",
+    "meaning": "목표,골",
+    "sentence": "The goal of any business is to make profit.",
+    "translation": "기업은 영리 추구를 목적으로 한다."
+  },
+  {
+    "id": 363,
+    "word": "god",
+    "meaning": "신",
+    "sentence": "Do you think god will forgive us?",
+    "translation": "신이 우리를 용서할 거라고 생각하니?"
+  },
+  {
+    "id": 364,
+    "word": "gold",
+    "meaning": "금",
+    "sentence": "The archery team managed four gold medals.",
+    "translation": "양궁팀은 네 개의 금메달을 따냈다."
+  },
+  {
+    "id": 365,
+    "word": "good",
+    "meaning": "좋은",
+    "sentence": "No news is good news.",
+    "translation": "무소식이 희소식입니다."
+  },
+  {
+    "id": 366,
+    "word": "goodbye",
+    "meaning": "안녕히 가세요",
+    "sentence": "I forgot how to say goodbye.",
+    "translation": "나는 작별 인사를 하는 법을 잊었다."
+  },
+  {
+    "id": 367,
+    "word": "grandfather",
+    "meaning": "할아버지",
+    "sentence": "I lost my grandfather to cancer this year.",
+    "translation": "올해 할아버지가 암으로 돌아가셨다."
+  },
+  {
+    "id": 368,
+    "word": "grape",
+    "meaning": "포도",
+    "sentence": "Wine is made from grapes.",
+    "translation": "포도주는 포도로 만들어진다."
+  },
+  {
+    "id": 369,
+    "word": "grass",
+    "meaning": "풀밭",
+    "sentence": "Cows feed on grass.",
+    "translation": "소는 풀을 먹고 산다."
+  },
+  {
+    "id": 370,
+    "word": "great",
+    "meaning": "커다란",
+    "sentence": "You've been a great help.",
+    "translation": "큰 도움이 되었어요."
+  },
+  {
+    "id": 371,
+    "word": "green",
+    "meaning": "초록색",
+    "sentence": "The grass is always greener on the other side of the fence.",
+    "translation": "남의 떡이 더 커 보인다."
+  },
+  {
+    "id": 372,
+    "word": "grey",
+    "meaning": "회색의",
+    "sentence": "His hair was touched with grey.",
+    "translation": "그의 머리는 희끗희끗한 기미가 보였다."
+  },
+  {
+    "id": 373,
+    "word": "ground",
+    "meaning": "땅",
+    "sentence": "The dog was lying on the ground.",
+    "translation": "개는 땅에 누워 있었다."
+  },
+  {
+    "id": 374,
+    "word": "group",
+    "meaning": "집단",
+    "sentence": "The pigeons are a special group of birds.",
+    "translation": "비둘기들은 새들의 특별한 무리이다."
+  },
+  {
+    "id": 375,
+    "word": "grow",
+    "meaning": "성장하다",
+    "sentence": "Sweetie, you're a grown man now.",
+    "translation": "얘야, 넌 이제 성인이야."
+  },
+  {
+    "id": 376,
+    "word": "guess",
+    "meaning": "예측하다",
+    "sentence": "That's tough to guess.",
+    "translation": "예측하기 힘든 데요."
+  },
+  {
+    "id": 377,
+    "word": "guide",
+    "meaning": "이끌다",
+    "sentence": "The blind man was guided by his dog.",
+    "translation": "그 시각장애인은 개의 안내를 받고 있었다."
+  },
+  {
+    "id": 378,
+    "word": "guy",
+    "meaning": "남자,녀석,놈",
+    "sentence": "The guy was getting married today.",
+    "translation": "그 남자는 오늘 결혼했다."
+  },
+  {
+    "id": 379,
+    "word": "habit",
+    "meaning": "습관",
+    "sentence": "You have to control your eating habits.",
+    "translation": "넌 식습관을 조절해야만 해."
+  },
+  {
+    "id": 380,
+    "word": "hair",
+    "meaning": "머리털",
+    "sentence": "That hair style is very becoming on you.",
+    "translation": "그 머리 스타일 당신에게 잘 어울려요."
+  },
+  {
+    "id": 381,
+    "word": "hand",
+    "meaning": "손",
+    "sentence": "The girls danced hand in hand.",
+    "translation": "그 소녀들은 손에 손을 잡고 춤췄다."
+  },
+  {
+    "id": 382,
+    "word": "handsome",
+    "meaning": "잘생긴",
+    "sentence": "The model is tall and handsome.",
+    "translation": "그 모델은 키가 크고 잘생겼다."
+  },
+  {
+    "id": 383,
+    "word": "hang",
+    "meaning": "걸다",
+    "sentence": "The birdhouse is hanging in the tree.",
+    "translation": "새집이 나무에 매달려 있다."
+  },
+  {
+    "id": 384,
+    "word": "happy",
+    "meaning": "행복한",
+    "sentence": "Thank you for making me happy.",
+    "translation": "나를 행복하게 해줘서 고마워."
+  },
+  {
+    "id": 385,
+    "word": "hard",
+    "meaning": "어려운",
+    "sentence": "It's hard to keep up.",
+    "translation": "따라가기가 힘듭니다."
+  },
+  {
+    "id": 386,
+    "word": "hat",
+    "meaning": "모자",
+    "sentence": "The old man's cowboy hat is red.",
+    "translation": "노인의 카우보이 모자는 빨간색이다."
+  },
+  {
+    "id": 387,
+    "word": "hate",
+    "meaning": "미워하다",
+    "sentence": "Do you think I hate you?",
+    "translation": "내가 당신을 미워한다고 생각해요?"
+  },
+  {
+    "id": 388,
+    "word": "have",
+    "meaning": "가지다",
+    "sentence": "Do you have any evidence?",
+    "translation": "증거가 있으십니까?"
+  },
+  {
+    "id": 389,
+    "word": "he",
+    "meaning": "그",
+    "sentence": "Speak of the devil and he appears.",
+    "translation": "호랑이도 제 말하면 온다."
+  },
+  {
+    "id": 390,
+    "word": "head",
+    "meaning": "머리",
+    "sentence": "The baby can't hold his head up yet.",
+    "translation": "아기는 아직 목을 가누지 못한다."
+  },
+  {
+    "id": 391,
+    "word": "headache",
+    "meaning": "두통",
+    "sentence": "I have a headache when I sit at my desk.",
+    "translation": "책상에 앉으면 머리가 아파요."
+  },
+  {
+    "id": 392,
+    "word": "heart",
+    "meaning": "마음",
+    "sentence": "Tears are words the heart can't say.",
+    "translation": "눈물은 마음으로 할 수 없는 말이다."
+  },
+  {
+    "id": 393,
+    "word": "heat",
+    "meaning": "열,열을 가하다",
+    "sentence": "When you heat ice it turns to water.",
+    "translation": "얼음을 가열하면 물로 된다."
+  },
+  {
+    "id": 394,
+    "word": "heaven",
+    "meaning": "하늘",
+    "sentence": "Sounds like a match made in heaven.",
+    "translation": "천생연분 같아요."
+  },
+  {
+    "id": 395,
+    "word": "heavy",
+    "meaning": "무거운,엄청난",
+    "sentence": "A heavy rain began to fall.",
+    "translation": "폭우가 내리기 시작했다."
+  },
+  {
+    "id": 396,
+    "word": "helicopter",
+    "meaning": "헬리콥터",
+    "sentence": "A drone is a small remote-control helicopter.",
+    "translation": "드론은 작은 원격 조정의 헬리콥터야."
+  },
+  {
+    "id": 397,
+    "word": "hello",
+    "meaning": "안녕",
+    "sentence": "I just came by to say hello.",
+    "translation": "그저 안부 인사나 할까 해서 들렸어."
+  },
+  {
+    "id": 398,
+    "word": "help",
+    "meaning": "돕다",
+    "sentence": "Nobody helped me.",
+    "translation": "아무도 나를 도와주지 않았어요."
+  },
+  {
+    "id": 399,
+    "word": "here",
+    "meaning": "여기에",
+    "sentence": "It's only a five minute walk from here.",
+    "translation": "여기서 걸어서 5분 거리예요."
+  },
+  {
+    "id": 400,
+    "word": "hero",
+    "meaning": "영웅",
+    "sentence": "Stay-at-home mothers are nameless heroes.",
+    "translation": "전업주부들은 이름 없는 영웅이다."
+  }
+]

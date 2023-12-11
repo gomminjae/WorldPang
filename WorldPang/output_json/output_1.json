@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "word": "a",
+    "meaning": "하나의",
+    "sentence": "There's a telephone call for you.",
+    "translation": "당신에게 온 전화가 하나 있어요."
+  },
+  {
+    "id": 2,
+    "word": "about",
+    "meaning": "-에 대하여",
+    "sentence": "I do not know about for Japan.",
+    "translation": "나는 일본에 대하여 모른다."
+  },
+  {
+    "id": 3,
+    "word": "above",
+    "meaning": "-보다 위에",
+    "sentence": "The moon is riding above the clouds.",
+    "translation": "달이 구름 위에 걸려있다."
+  },
+  {
+    "id": 4,
+    "word": "academy",
+    "meaning": "학원",
+    "sentence": "Which do you think is better, school or academy?",
+    "translation": "학교랑 학원 중 어느 게 더 좋다고 생각해?"
+  },
+  {
+    "id": 5,
+    "word": "accent",
+    "meaning": "말투",
+    "sentence": "The transfer student spoke in a Seoul accent.",
+    "translation": "전학 온 아이는 서울말을 썼다."
+  },
+  {
+    "id": 6,
+    "word": "accident",
+    "meaning": "사건",
+    "sentence": "This is an accident rarely met with.",
+    "translation": "이것은 보기 드문 사건이다."
+  },
+  {
+    "id": 7,
+    "word": "across",
+    "meaning": "가로질러",
+    "sentence": "There's a way across the fields.",
+    "translation": "들판을 가로질러 길이 나 있다."
+  },
+  {
+    "id": 8,
+    "word": "act",
+    "meaning": "행동하다",
+    "sentence": "Try and act like an adult.",
+    "translation": "어른처럼 도전하고 행동하라."
+  },
+  {
+    "id": 9,
+    "word": "add",
+    "meaning": "추가하다",
+    "sentence": "Two added to four makes six.",
+    "translation": "4에 2를 더하면 6이 된다."
+  },
+  {
+    "id": 10,
+    "word": "address",
+    "meaning": "주소",
+    "sentence": "May I have your address?",
+    "translation": "주소 좀 가르쳐 주시겠어요?"
+  },
+  {
+    "id": 11,
+    "word": "adult",
+    "meaning": "어른",
+    "sentence": "The situation is the same for adults.",
+    "translation": "이런 상황은 성인 요금의 경우도 마찬가지다."
+  },
+  {
+    "id": 12,
+    "word": "adventure",
+    "meaning": "모험",
+    "sentence": "The three of them have a long adventure.",
+    "translation": "그들 셋은 긴 모험을 갖게 된다."
+  },
+  {
+    "id": 13,
+    "word": "advise",
+    "meaning": "충고하다",
+    "sentence": "I advise you as a doctor.",
+    "translation": "의사로서 충고한다."
+  },
+  {
+    "id": 14,
+    "word": "afraid",
+    "meaning": "두려워하여",
+    "sentence": "They are not afraid to die.",
+    "translation": "그들은 죽음을 두려워하지 않았다."
+  },
+  {
+    "id": 15,
+    "word": "after",
+    "meaning": "나중에",
+    "sentence": "It's an after school thing.",
+    "translation": "그것은 방과 후에 하는 거예요."
+  },
+  {
+    "id": 16,
+    "word": "afternoon",
+    "meaning": "오후",
+    "sentence": "Are you free tomorrow afternoon?",
+    "translation": "내일 오후에 시간 있어요?"
+  },
+  {
+    "id": 17,
+    "word": "again",
+    "meaning": "다시",
+    "sentence": "I'd like to try again.",
+    "translation": "다시 도전해 보고 싶어요."
+  },
+  {
+    "id": 18,
+    "word": "against",
+    "meaning": "…에 반대하여",
+    "sentence": "They are not against us.",
+    "translation": "그들은 우리를 반대하지는 않는다."
+  },
+  {
+    "id": 19,
+    "word": "age",
+    "meaning": "나이",
+    "sentence": "You look young for your age.",
+    "translation": "나이에 비해 젊어 보이시는군요."
+  },
+  {
+    "id": 20,
+    "word": "ago",
+    "meaning": "이전에",
+    "sentence": "This was the way it was a generation ago.",
+    "translation": "이것은 한 세대 이전에 존재하던 방식이다."
+  },
+  {
+    "id": 21,
+    "word": "agree",
+    "meaning": "동의하다",
+    "sentence": "Sorry but I don't agree with this.",
+    "translation": "죄송하지만 저는 이것에 동의하지 않습니다."
+  },
+  {
+    "id": 22,
+    "word": "ahead",
+    "meaning": "전방에",
+    "sentence": "There's roadwork going on 500 meters ahead.",
+    "translation": "500미터 전방에서 공사 중입니다."
+  },
+  {
+    "id": 23,
+    "word": "air",
+    "meaning": "공기",
+    "sentence": "The night air is cool and refreshing.",
+    "translation": "밤공기가 시원하고 상쾌하다."
+  },
+  {
+    "id": 24,
+    "word": "airplane",
+    "meaning": "비행기",
+    "sentence": "Then, I can fly a real airplane.",
+    "translation": "그러면, 진짜 비행기를 날릴 수 있어요."
+  },
+  {
+    "id": 25,
+    "word": "airline",
+    "meaning": "항공사",
+    "sentence": "What's the cheapest airline?",
+    "translation": "가장 싼 항공사는 어디입니까?"
+  },
+  {
+    "id": 26,
+    "word": "airport",
+    "meaning": "공항",
+    "sentence": "The airport is at the gate of Incheon.",
+    "translation": "공항은 인천 가까이에 있다."
+  },
+  {
+    "id": 27,
+    "word": "all",
+    "meaning": "모든",
+    "sentence": "Thank you for all your help.",
+    "translation": "모든 도움에 감사드립니다."
+  },
+  {
+    "id": 28,
+    "word": "almost",
+    "meaning": "거의",
+    "sentence": "The building is almost finished.",
+    "translation": "건물은 거의 완성되었다."
+  },
+  {
+    "id": 29,
+    "word": "alone",
+    "meaning": "혼자",
+    "sentence": "Leave me alone.",
+    "translation": "저 혼자 내버려 둬요."
+  },
+  {
+    "id": 30,
+    "word": "along",
+    "meaning": "-을 따라",
+    "sentence": "The road runs along a river.",
+    "translation": "길은 강을 따라서 뻗어 있다."
+  },
+  {
+    "id": 31,
+    "word": "aloud",
+    "meaning": "큰 소리로",
+    "sentence": "He called aloud for help.",
+    "translation": "큰 소리로 도움을 요청했다."
+  },
+  {
+    "id": 32,
+    "word": "already",
+    "meaning": "이미",
+    "sentence": "I already ate lunch.",
+    "translation": "전 이미 점심 먹었어요."
+  },
+  {
+    "id": 33,
+    "word": "alright",
+    "meaning": "좋은",
+    "sentence": "I'm okay, alright.",
+    "translation": "나는 좋아, 아주 좋아."
+  },
+  {
+    "id": 34,
+    "word": "also",
+    "meaning": "또한",
+    "sentence": "The game was slow, and it was also boring.",
+    "translation": "게임은 느리고 또한 지루하기도 했다."
+  },
+  {
+    "id": 35,
+    "word": "always",
+    "meaning": "항상",
+    "sentence": "The song always makes me sad.",
+    "translation": "그 노래는 늘 날 슬프게 해."
+  },
+  {
+    "id": 36,
+    "word": "A.M.",
+    "meaning": "오전",
+    "sentence": "It's ten twenty A.M.",
+    "translation": "오전10시 20분입니다."
+  },
+  {
+    "id": 37,
+    "word": "and",
+    "meaning": "그리고",
+    "sentence": "This law is in effect in Busan and Incheon.",
+    "translation": "이 법령은 부산 및 인천에서 실시되고 있다."
+  },
+  {
+    "id": 38,
+    "word": "angel",
+    "meaning": "천사",
+    "sentence": "The angel is on a cloud.",
+    "translation": "천사가 구름 위에 있다."
+  },
+  {
+    "id": 39,
+    "word": "anger",
+    "meaning": "화난",
+    "sentence": "I'm crazy with anger.",
+    "translation": "화나서 미치겠다!"
+  },
+  {
+    "id": 40,
+    "word": "animal",
+    "meaning": "동물",
+    "sentence": "The animals are in a zoo.",
+    "translation": "동물들이 동물원에 있다."
+  },
+  {
+    "id": 41,
+    "word": "another",
+    "meaning": "또 하나",
+    "sentence": "There is another door above the window.",
+    "translation": "창 안쪽에 문이 또 하나 있다."
+  },
+  {
+    "id": 42,
+    "word": "answer",
+    "meaning": "대답하다",
+    "sentence": "Think twice before you answer.",
+    "translation": "잘 생각하시고 대답하세요."
+  },
+  {
+    "id": 43,
+    "word": "ant",
+    "meaning": "개미",
+    "sentence": "They worked hard just like ants.",
+    "translation": "그들은 마치 개미처럼 열심히 일했다."
+  },
+  {
+    "id": 44,
+    "word": "any",
+    "meaning": "어떤",
+    "sentence": "Do you have any diet problems?",
+    "translation": "식습관에 어떤 문제라도 있나요?"
+  },
+  {
+    "id": 45,
+    "word": "apple",
+    "meaning": "사과",
+    "sentence": "The apple is as small as a golf ball!",
+    "translation": "이 사과는 골프공만큼 작습니다!"
+  },
+  {
+    "id": 46,
+    "word": "area",
+    "meaning": "지역",
+    "sentence": "The area is a popular fishing spot.",
+    "translation": "이 지역은 인기 있는 낚시 장소입니다."
+  },
+  {
+    "id": 47,
+    "word": "arm",
+    "meaning": "팔",
+    "sentence": "A dog bit my arm.",
+    "translation": "개가 제 팔을 물었습니다."
+  },
+  {
+    "id": 48,
+    "word": "around",
+    "meaning": "약",
+    "sentence": "There are around 20,000 schools in Korea.",
+    "translation": "한국에는 약 2만 개의 학교가 있다."
+  },
+  {
+    "id": 49,
+    "word": "arrive",
+    "meaning": "도착하다",
+    "sentence": "The flight arrived on schedule.",
+    "translation": "비행편이 예정대로 도착했습니다."
+  },
+  {
+    "id": 50,
+    "word": "art",
+    "meaning": "예술",
+    "sentence": "Life is short, art is long.",
+    "translation": "인생은 짧고 예술은 길다."
+  }
+]

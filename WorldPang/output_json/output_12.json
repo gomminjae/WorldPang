@@ -1,0 +1,352 @@
+[
+  {
+    "id": 551,
+    "word": "over",
+    "meaning": "위쪽,끝난",
+    "sentence": "That's it. It's all over.",
+    "translation": "됐어요. 이제 다 끝났어요."
+  },
+  {
+    "id": 552,
+    "word": "paint",
+    "meaning": "도료,색칠하다",
+    "sentence": "The door was painted dark gray.",
+    "translation": "문은 어두운 회색으로 칠해졌다."
+  },
+  {
+    "id": 553,
+    "word": "palace",
+    "meaning": "궁전",
+    "sentence": "The old royal palaces are beautiful in the autumn.",
+    "translation": "가을의 고궁은 아름답다."
+  },
+  {
+    "id": 554,
+    "word": "pants",
+    "meaning": "바지",
+    "sentence": "These pants are too tight on me.",
+    "translation": "이 바지는 나에게 너무 작다."
+  },
+  {
+    "id": 555,
+    "word": "paper",
+    "meaning": "종이",
+    "sentence": "The copier has a paper jam.",
+    "translation": "복사기에 종이가 걸렸어요."
+  },
+  {
+    "id": 556,
+    "word": "parent",
+    "meaning": "부모",
+    "sentence": "The pupils' parents are on the first-class school kick.",
+    "translation": "학부모들은 일류병에 걸려 있다."
+  },
+  {
+    "id": 557,
+    "word": "park",
+    "meaning": "공원",
+    "sentence": "The amusement park has a zoo.",
+    "translation": "그 놀이공원에는 동물원이 있다."
+  },
+  {
+    "id": 558,
+    "word": "part",
+    "meaning": "부분",
+    "sentence": "Death is just a part of life.",
+    "translation": "죽음은 인생의 일부일 뿐입니다."
+  },
+  {
+    "id": 559,
+    "word": "pass",
+    "meaning": "지나가다",
+    "sentence": "His time is passed.",
+    "translation": "그의 전성기는 지나갔습니다."
+  },
+  {
+    "id": 560,
+    "word": "pay",
+    "meaning": "지불하다",
+    "sentence": "That's why we pay you.",
+    "translation": "그래서 월급을 주는 거죠."
+  },
+  {
+    "id": 561,
+    "word": "peace",
+    "meaning": "평화",
+    "sentence": "This peace is still ahead of us.",
+    "translation": "우리에게 평화는 아직 오지 않았다."
+  },
+  {
+    "id": 562,
+    "word": "pear",
+    "meaning": "배",
+    "sentence": "He ate as many as four pears.",
+    "translation": "그는 배를 4개나 먹었다."
+  },
+  {
+    "id": 563,
+    "word": "pencil",
+    "meaning": "연필",
+    "sentence": "Write your name with a pencil.",
+    "translation": "연필로 당신의 이름을 쓰세요."
+  },
+  {
+    "id": 564,
+    "word": "people",
+    "meaning": "사람들",
+    "sentence": "Successful people are action-oriented.",
+    "translation": "성공적인 사람들은 행동 지향적입니다."
+  },
+  {
+    "id": 565,
+    "word": "pick",
+    "meaning": "줍다,고르다",
+    "sentence": "The bird picked at the bread.",
+    "translation": "새가 빵을 쪼아 먹었다."
+  },
+  {
+    "id": 566,
+    "word": "picnic",
+    "meaning": "소풍",
+    "sentence": "Spring is a good time to go on a picnic.",
+    "translation": "봄은 소풍 가기 좋은 때 입니다."
+  },
+  {
+    "id": 567,
+    "word": "picture",
+    "meaning": "그림",
+    "sentence": "Take a look of the whole picture.",
+    "translation": "전체적인 그림을 보도록 하라."
+  },
+  {
+    "id": 568,
+    "word": "pig",
+    "meaning": "돼지",
+    "sentence": "We have a lot of pigs.",
+    "translation": "우리는 돼지를 많이 키워요."
+  },
+  {
+    "id": 569,
+    "word": "pink",
+    "meaning": "연분홍색",
+    "sentence": "I don't look good in pink.",
+    "translation": "나는 분홍색이 안 어울린다."
+  },
+  {
+    "id": 570,
+    "word": "place",
+    "meaning": "장소",
+    "sentence": "There are times and places with things.",
+    "translation": "다 때와 장소가 있는 법입니다."
+  },
+  {
+    "id": 571,
+    "word": "plan",
+    "meaning": "계획",
+    "sentence": "What's your plan for summer vacation?",
+    "translation": "여름 방학에 뭘 할 계획이에요?"
+  },
+  {
+    "id": 572,
+    "word": "play",
+    "meaning": "놀다",
+    "sentence": "This is not the time to play games!",
+    "translation": "지금은 장난 칠 때가 아니에요!"
+  },
+  {
+    "id": 573,
+    "word": "please",
+    "meaning": "제발 부탁합니다",
+    "sentence": "Call me back, please.",
+    "translation": "제게 전화 좀 부탁드립니다."
+  },
+  {
+    "id": 574,
+    "word": "P.M.",
+    "meaning": "오후",
+    "sentence": "I was dozing off at 2:00 P.M.",
+    "translation": "나는 오후 2시에 졸고 있었다."
+  },
+  {
+    "id": 575,
+    "word": "pocket",
+    "meaning": "포켓",
+    "sentence": "A pickpocket picked my pocket.",
+    "translation": "소매치기가 주머니를 털었다."
+  },
+  {
+    "id": 576,
+    "word": "point",
+    "meaning": "점",
+    "sentence": "That's a good point.",
+    "translation": "그것은 좋은 지적입니다."
+  },
+  {
+    "id": 577,
+    "word": "police",
+    "meaning": "경찰, 경비하다",
+    "sentence": "The police are after the murderer.",
+    "translation": "경찰이 그 살인범을 쫓고 있다."
+  },
+  {
+    "id": 578,
+    "word": "poor",
+    "meaning": "가난한",
+    "sentence": "The animals looked poor.",
+    "translation": "동물들이 불쌍해 보였다."
+  },
+  {
+    "id": 579,
+    "word": "potato",
+    "meaning": "감자",
+    "sentence": "I am a big-time fan of potatoes.",
+    "translation": "저는 감자를 매우 좋아합니다."
+  },
+  {
+    "id": 580,
+    "word": "power",
+    "meaning": "힘",
+    "sentence": "That's the power of the media.",
+    "translation": "그게 미디어의 힘이다."
+  },
+  {
+    "id": 581,
+    "word": "present",
+    "meaning": "현재",
+    "sentence": "But history is one thing, the present is another.",
+    "translation": "하지만 역사와 현재는 다른 것이다."
+  },
+  {
+    "id": 582,
+    "word": "pretty",
+    "meaning": "예쁜",
+    "sentence": "Thanks for the pretty flowers.",
+    "translation": "예쁜 꽃을 주셔서 고마워요."
+  },
+  {
+    "id": 583,
+    "word": "prince",
+    "meaning": "왕자",
+    "sentence": "He was the prince living in a small planet.",
+    "translation": "그는 작은 행성에 사는 왕자였습니다."
+  },
+  {
+    "id": 584,
+    "word": "print",
+    "meaning": "인쇄하다, 프린트하다",
+    "sentence": "You cannot print this document.",
+    "translation": "이 문서를 인쇄할 수 없습니다."
+  },
+  {
+    "id": 585,
+    "word": "prize",
+    "meaning": "상",
+    "sentence": "Who won the Nobel prize in literature this year?",
+    "translation": "올해 노벨 문학상은 누가 탔어?"
+  },
+  {
+    "id": 586,
+    "word": "problem",
+    "meaning": "문제",
+    "sentence": "The cash gifts are a problem on Teachers' Day.",
+    "translation": "현금 선물은 스승의 날의 문제이다."
+  },
+  {
+    "id": 587,
+    "word": "puppy",
+    "meaning": "강아지",
+    "sentence": "The old man and the puppy became friends.",
+    "translation": "노인과 강아지는 곧 친해졌다."
+  },
+  {
+    "id": 588,
+    "word": "push",
+    "meaning": "밀다",
+    "sentence": "Stop pushing and wait your turn.",
+    "translation": "밀지 말고 차례를 기다리시오."
+  },
+  {
+    "id": 589,
+    "word": "put",
+    "meaning": "놓다, 두다",
+    "sentence": "Please put your hand baggage under your seat.",
+    "translation": "손님의 짐을 의자 밑에 놓아주세요."
+  },
+  {
+    "id": 590,
+    "word": "puzzle",
+    "meaning": "퍼즐",
+    "sentence": "I don't want to do a puzzle.",
+    "translation": "나는 퍼즐을 하고 싶지 않다."
+  },
+  {
+    "id": 591,
+    "word": "queen",
+    "meaning": "여왕",
+    "sentence": "The queen wanted to kill Snow White.",
+    "translation": "왕비는 백설공주를 해치고 싶었다."
+  },
+  {
+    "id": 592,
+    "word": "question",
+    "meaning": "질문",
+    "sentence": "Mind if I ask you a question?",
+    "translation": "질문 하나 해도 될까요?"
+  },
+  {
+    "id": 593,
+    "word": "quick",
+    "meaning": "빠른",
+    "sentence": "We are quick to make judgment of others.",
+    "translation": "우리는 남을 비판하는데 빠르다."
+  },
+  {
+    "id": 594,
+    "word": "quiet",
+    "meaning": "조용한",
+    "sentence": "The market is quiet because it's still early.",
+    "translation": "아직 이른 시간이라 시장이 한산하다."
+  },
+  {
+    "id": 595,
+    "word": "rabbit",
+    "meaning": "토끼",
+    "sentence": "The rabbits are running a race.",
+    "translation": "토끼들이 경주하고 있다."
+  },
+  {
+    "id": 596,
+    "word": "race",
+    "meaning": "경주",
+    "sentence": "The turtle had won the race.",
+    "translation": "그 거북이가 경주에서 이겼다."
+  },
+  {
+    "id": 597,
+    "word": "rain",
+    "meaning": "비",
+    "sentence": "The heavy rain is a cause of a flood.",
+    "translation": "심한 비는 홍수의 원인이다."
+  },
+  {
+    "id": 598,
+    "word": "rainbow",
+    "meaning": "무지개",
+    "sentence": "Unfortunately, the rainbow was too small.",
+    "translation": "불행히도, 무지개가 너무 작았다."
+  },
+  {
+    "id": 599,
+    "word": "read",
+    "meaning": "읽다",
+    "sentence": "Then, read the following dialogue.",
+    "translation": "그리고 다음 대화를 읽으시오."
+  },
+  {
+    "id": 600,
+    "word": "ready",
+    "meaning": "준비된",
+    "sentence": "That's right. Are they ready?",
+    "translation": "맞습니다. 다 되었나요?"
+  }
+]

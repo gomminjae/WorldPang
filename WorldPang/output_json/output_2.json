@@ -1,0 +1,352 @@
+[
+  {
+    "id": 51,
+    "word": "as",
+    "meaning": "같이",
+    "sentence": "The moon is as bright as day.",
+    "translation": "달이 낮같이 밝다."
+  },
+  {
+    "id": 52,
+    "word": "ask",
+    "meaning": "부탁하다",
+    "sentence": "May I ask a favor of you?",
+    "translation": "부탁 좀 들어 주실래요?"
+  },
+  {
+    "id": 53,
+    "word": "at",
+    "meaning": "에",
+    "sentence": "I'll be there at five.",
+    "translation": "저는 다섯 시에 갈게요."
+  },
+  {
+    "id": 54,
+    "word": "aunt",
+    "meaning": "이모",
+    "sentence": "Your aunt looks very beautiful!",
+    "translation": "네 이모 정말 아름다우시구나!"
+  },
+  {
+    "id": 55,
+    "word": "away",
+    "meaning": "멀리",
+    "sentence": "Stay away from him.",
+    "translation": "그 사람을 멀리하세요."
+  },
+  {
+    "id": 56,
+    "word": "baby",
+    "meaning": "갓난아이",
+    "sentence": "That baby is crying.",
+    "translation": "그 아기는 울고 있다."
+  },
+  {
+    "id": 57,
+    "word": "back",
+    "meaning": "등",
+    "sentence": "Straighten your back up.",
+    "translation": "등을 곧게 펴세요."
+  },
+  {
+    "id": 58,
+    "word": "background",
+    "meaning": "배경",
+    "sentence": "Yellow is the background color of the living room.",
+    "translation": "노란색은 거실의 배경색이다."
+  },
+  {
+    "id": 59,
+    "word": "bad",
+    "meaning": "나쁜",
+    "sentence": "That doesn't sound so bad.",
+    "translation": "그렇게 나쁜 것 같지 않은데."
+  },
+  {
+    "id": 60,
+    "word": "bake",
+    "meaning": "굽다",
+    "sentence": "The bread is being baked.",
+    "translation": "빵을 굽고 있다."
+  },
+  {
+    "id": 61,
+    "word": "ball",
+    "meaning": "공",
+    "sentence": "The ball bounced off the goal post.",
+    "translation": "공은 골대를 맞고 튕겨 나왔다."
+  },
+  {
+    "id": 62,
+    "word": "balloon",
+    "meaning": "풍선",
+    "sentence": "The air balloon rose slowly into the sky.",
+    "translation": "풍선이 천천히 하늘로 올라갔다."
+  },
+  {
+    "id": 63,
+    "word": "band",
+    "meaning": "악단",
+    "sentence": "The band is marching through the street.",
+    "translation": "악단이 거리를 행진하고 있다."
+  },
+  {
+    "id": 64,
+    "word": "bank",
+    "meaning": "은행",
+    "sentence": "That bank keeps bars of gold in its safe.",
+    "translation": "그 은행은 금고에 금괴를 보관한다."
+  },
+  {
+    "id": 65,
+    "word": "base",
+    "meaning": "기초",
+    "sentence": "The result is at the base of the theory.",
+    "translation": "그 결과는 그 이론의 근거가 된다."
+  },
+  {
+    "id": 66,
+    "word": "baseball",
+    "meaning": "야구",
+    "sentence": "The baseball season is just around the corner.",
+    "translation": "야구 시즌이 다가왔어요."
+  },
+  {
+    "id": 67,
+    "word": "basic",
+    "meaning": "기본의",
+    "sentence": "The family is the basic unit of society.",
+    "translation": "가정은 사회의 기본 단위이다."
+  },
+  {
+    "id": 68,
+    "word": "basket",
+    "meaning": "바구니",
+    "sentence": "The basket is full of apples.",
+    "translation": "바구니에 사과가 하나 가득하다."
+  },
+  {
+    "id": 69,
+    "word": "basketball",
+    "meaning": "농구",
+    "sentence": "Sports that I like is basketball.",
+    "translation": "내가 좋아하는 스포츠는 농구이다."
+  },
+  {
+    "id": 70,
+    "word": "bat",
+    "meaning": "방망이",
+    "sentence": "Did you see the baseball bat in the living room?",
+    "translation": "거실에 있는 야구 방망이 봤니?"
+  },
+  {
+    "id": 71,
+    "word": "bath",
+    "meaning": "목욕",
+    "sentence": "Take a bath before bed.",
+    "translation": "잠자기 전에 목욕을 하세요."
+  },
+  {
+    "id": 72,
+    "word": "bathroom",
+    "meaning": "욕실",
+    "sentence": "Steam is clouding the bathroom mirror.",
+    "translation": "김 때문에 욕실 거울이 뿌옇게 되다."
+  },
+  {
+    "id": 73,
+    "word": "battery",
+    "meaning": "전지",
+    "sentence": "The battery went dead.",
+    "translation": "전지가 닳았다."
+  },
+  {
+    "id": 74,
+    "word": "battle",
+    "meaning": "전투",
+    "sentence": "Football is not war, nor is it a battle.",
+    "translation": "축구는 전쟁도, 전투도 아니다."
+  },
+  {
+    "id": 75,
+    "word": "be",
+    "meaning": "-이다",
+    "sentence": "Honesty is the best policy.",
+    "translation": "정직한 것이 최선의 방책이다."
+  },
+  {
+    "id": 76,
+    "word": "beach",
+    "meaning": "해안",
+    "sentence": "A man-eating shark appeared at the beach.",
+    "translation": "식인상어가 해안에 나타났다."
+  },
+  {
+    "id": 77,
+    "word": "bean",
+    "meaning": "콩",
+    "sentence": "Soy sauce is made from soy beans and salt.",
+    "translation": "간장은 메주콩과 소금으로 만든다."
+  },
+  {
+    "id": 78,
+    "word": "bear",
+    "meaning": "곰",
+    "sentence": "There is an old teddy bear.",
+    "translation": "낡은 곰 인형이 있어요."
+  },
+  {
+    "id": 79,
+    "word": "beauty",
+    "meaning": "아름다움",
+    "sentence": "It's inner beauty that counts.",
+    "translation": "중요한 건 내적 아름다움이죠."
+  },
+  {
+    "id": 80,
+    "word": "because",
+    "meaning": "왜냐하면",
+    "sentence": "That is because of South Korean culture.",
+    "translation": "그 이유는 한국의 문화 때문이다."
+  },
+  {
+    "id": 81,
+    "word": "become",
+    "meaning": "-이 되다",
+    "sentence": "Taekwondo has become a Korean national sport.",
+    "translation": "태권도는 한국의 국기가 되었다."
+  },
+  {
+    "id": 82,
+    "word": "bed",
+    "meaning": "침대",
+    "sentence": "The bed is really soft.",
+    "translation": "침대가 정말로 푹신푹신해요."
+  },
+  {
+    "id": 83,
+    "word": "bedroom",
+    "meaning": "침실",
+    "sentence": "The bedrooms are on the upper floor.",
+    "translation": "침실은 위층에 있습니다."
+  },
+  {
+    "id": 84,
+    "word": "bee",
+    "meaning": "꿀벌",
+    "sentence": "The bee is flying in the sky.",
+    "translation": "벌이 하늘을 날고 있다."
+  },
+  {
+    "id": 85,
+    "word": "beef",
+    "meaning": "쇠고기",
+    "sentence": "Which would you prefer, beef or fish?",
+    "translation": "쇠고기를 드실래요, 생선을 드실래요?"
+  },
+  {
+    "id": 86,
+    "word": "before",
+    "meaning": "앞에",
+    "sentence": "The chair is before the desk.",
+    "translation": "의자가 책상 앞에 있다."
+  },
+  {
+    "id": 87,
+    "word": "begin",
+    "meaning": "시작하다",
+    "sentence": "What time does the game begin?",
+    "translation": "게임은 몇 시에 시작됩니까?"
+  },
+  {
+    "id": 88,
+    "word": "behind",
+    "meaning": "뒤에",
+    "sentence": "The cat is behind the sofa.",
+    "translation": "고양이가 소파 뒤에 있다."
+  },
+  {
+    "id": 89,
+    "word": "believe",
+    "meaning": "믿다",
+    "sentence": "I still believe in you.",
+    "translation": "나는 아직도 당신을 믿어요."
+  },
+  {
+    "id": 90,
+    "word": "bell",
+    "meaning": "종",
+    "sentence": "The bell rang at the end of the class.",
+    "translation": "수업 종료를 알리는 종이 울렸다."
+  },
+  {
+    "id": 91,
+    "word": "below",
+    "meaning": "아래에",
+    "sentence": "The roots are below the ground.",
+    "translation": "뿌리는 땅 아래에 있다."
+  },
+  {
+    "id": 92,
+    "word": "beside",
+    "meaning": "-의 곁에",
+    "sentence": "The school is beside the park.",
+    "translation": "그 학교는 공원 옆에 있다."
+  },
+  {
+    "id": 93,
+    "word": "between",
+    "meaning": "사이에",
+    "sentence": "The nation is sandwiched in between the two great powers.",
+    "translation": "그 나라는 양 대국 사이에 끼어 있다."
+  },
+  {
+    "id": 94,
+    "word": "bicycle",
+    "meaning": "자전거",
+    "sentence": "The bicycle is being repaired.",
+    "translation": "자전거를 수리하고 있다."
+  },
+  {
+    "id": 95,
+    "word": "big",
+    "meaning": "큰",
+    "sentence": "Thanksgiving is a big holiday in America.",
+    "translation": "추수감사절은 미국에서 큰 휴일입니다."
+  },
+  {
+    "id": 96,
+    "word": "bill",
+    "meaning": "계산서",
+    "sentence": "Can we have the bill please?",
+    "translation": "계산서 좀 주시겠어요?"
+  },
+  {
+    "id": 97,
+    "word": "bird",
+    "meaning": "새",
+    "sentence": "The bird flew away into the distance.",
+    "translation": "새는 멀리 날아갔다."
+  },
+  {
+    "id": 98,
+    "word": "birth",
+    "meaning": "출생",
+    "sentence": "The birth rate is declining in Korea.",
+    "translation": "한국의 출생률은 줄어들고 있습니다."
+  },
+  {
+    "id": 99,
+    "word": "birthday",
+    "meaning": "생일",
+    "sentence": "The birthday party came around.",
+    "translation": "생일 파티가 다가왔다."
+  },
+  {
+    "id": 100,
+    "word": "bite",
+    "meaning": "물다",
+    "sentence": "The cat's bite hurt my hand.",
+    "translation": "고양이가 손을 물어서 아팠다."
+  }
+]

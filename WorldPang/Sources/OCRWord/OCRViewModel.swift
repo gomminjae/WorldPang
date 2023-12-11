@@ -14,7 +14,7 @@ protocol OCRViewModelBindable {
     var selectedImageSubject: PublishSubject<UIImage?> { get set }
     var recognizedTextSubject: PublishSubject<String?> { get set }
     var translatedTextSubject: PublishSubject<String?> { get set }
-    
+     
     //func recognizedText(on image: UIImage)
 }
 

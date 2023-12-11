@@ -1,0 +1,352 @@
+[
+  {
+    "id": 201,
+    "word": "cookie",
+    "meaning": "쿠키",
+    "sentence": "The child had a cookie in his hand.",
+    "translation": "아이는 손에 과자를 들고 있었다."
+  },
+  {
+    "id": 202,
+    "word": "cool",
+    "meaning": "서늘한",
+    "sentence": "Store the food in a cool place.",
+    "translation": "음식을 시원한 곳에 두어라."
+  },
+  {
+    "id": 203,
+    "word": "copy",
+    "meaning": "사본,복사",
+    "sentence": "The copy machine isn't working again.",
+    "translation": "복사기가 또 안 돼요."
+  },
+  {
+    "id": 204,
+    "word": "corner",
+    "meaning": "모퉁이",
+    "sentence": "The bicycle is turning the corner.",
+    "translation": "자전거가 모퉁이를 돌고 있다."
+  },
+  {
+    "id": 205,
+    "word": "cost",
+    "meaning": "가격",
+    "sentence": "I am sorry, how much is the cost?",
+    "translation": "미안합니다, 가격이 얼마라고요?"
+  },
+  {
+    "id": 206,
+    "word": "cotton",
+    "meaning": "목화",
+    "sentence": "T-shirts are mostly made of cotton.",
+    "translation": "티셔츠는 주로 목화로 만들어집니다."
+  },
+  {
+    "id": 207,
+    "word": "could",
+    "meaning": "할 수 있다",
+    "sentence": "How could you do this to me ?",
+    "translation": "너 어떻게 이럴 수가 있어?"
+  },
+  {
+    "id": 208,
+    "word": "country",
+    "meaning": "나라",
+    "sentence": "Which is the largest country in the world?",
+    "translation": "세계에서 가장 큰 나라가 어디죠?"
+  },
+  {
+    "id": 209,
+    "word": "countryside",
+    "meaning": "시골",
+    "sentence": "I visited my grandma in the countryside.",
+    "translation": "나는 시골에 있는 할머니를 방문했다."
+  },
+  {
+    "id": 210,
+    "word": "couple",
+    "meaning": "한 쌍",
+    "sentence": "What a lovely couple you make !",
+    "translation": "어울리는 한 쌍이군요 !"
+  },
+  {
+    "id": 211,
+    "word": "cousin",
+    "meaning": "사촌",
+    "sentence": "That pretty baby is my cousin.",
+    "translation": "저 아름다운 아기는 내 사촌이다."
+  },
+  {
+    "id": 212,
+    "word": "cover",
+    "meaning": "덮다",
+    "sentence": "The walls were covered all over with ivy.",
+    "translation": "벽은 온통 담쟁이로 덮여 있었다."
+  },
+  {
+    "id": 213,
+    "word": "cow",
+    "meaning": "암소",
+    "sentence": "The cow supplies us with milk.",
+    "translation": "암소는 우리에게 우유를 제공해 준다."
+  },
+  {
+    "id": 214,
+    "word": "crazy",
+    "meaning": "미친",
+    "sentence": "This is crazy, this is crazy.",
+    "translation": "이건 미쳤어, 이건 미친 거야."
+  },
+  {
+    "id": 215,
+    "word": "cross",
+    "meaning": "십자형",
+    "sentence": "A red cross has become a symbol of love.",
+    "translation": "적십자는 사랑의 상징이 되었다."
+  },
+  {
+    "id": 216,
+    "word": "crowd",
+    "meaning": "군중",
+    "sentence": "The actors were welcomed by large crowds.",
+    "translation": "배우들은 군중의 환영을 받았다."
+  },
+  {
+    "id": 217,
+    "word": "crown",
+    "meaning": "왕관",
+    "sentence": "The crown was set with gems.",
+    "translation": "그 왕관에는 보석이 박혀 있었다."
+  },
+  {
+    "id": 218,
+    "word": "cry",
+    "meaning": "소리치다",
+    "sentence": "The baby has been crying all day long.",
+    "translation": "아기가 하루종일 울어댔어요."
+  },
+  {
+    "id": 219,
+    "word": "culture",
+    "meaning": "문화",
+    "sentence": "I love Korean culture and food.",
+    "translation": "저는 한국 문화와 음식을 사랑해요."
+  },
+  {
+    "id": 220,
+    "word": "curious",
+    "meaning": "호기심 많은",
+    "sentence": "You are a curious thing, aren't you?",
+    "translation": "넌 호기심이 많구나. 그지?"
+  },
+  {
+    "id": 221,
+    "word": "curtain",
+    "meaning": "커어튼",
+    "sentence": "The curtain blocked out the light.",
+    "translation": "커튼이 햇빛을 막아 주었다."
+  },
+  {
+    "id": 222,
+    "word": "customer",
+    "meaning": "고객",
+    "sentence": "The customer is not always right.",
+    "translation": "고객이 항상 옳은 것은 아니다."
+  },
+  {
+    "id": 223,
+    "word": "cut",
+    "meaning": "베다",
+    "sentence": "Suddenly, the typhoon cut off the electricity.",
+    "translation": "갑자기, 태풍이 전기를 끊었다."
+  },
+  {
+    "id": 224,
+    "word": "cute",
+    "meaning": "귀여운",
+    "sentence": "Can you see the cute squirrel in the picture?",
+    "translation": "사진 속에 귀여운 다람쥐가 보이나요?"
+  },
+  {
+    "id": 225,
+    "word": "cycle",
+    "meaning": "순환",
+    "sentence": "The human life cycle is similar.",
+    "translation": "사람의 생활사는 비슷하다."
+  },
+  {
+    "id": 226,
+    "word": "dad",
+    "meaning": "아버지",
+    "sentence": "This is a picture of my dad!",
+    "translation": "이것은 나의 아빠의 사진이다!"
+  },
+  {
+    "id": 227,
+    "word": "dance",
+    "meaning": "춤",
+    "sentence": "Techno dance is popular these days.",
+    "translation": "요즘 테크노댄스 인기가 대단해요."
+  },
+  {
+    "id": 228,
+    "word": "danger",
+    "meaning": "위험",
+    "sentence": "Animals sense danger by instinct.",
+    "translation": "동물은 본능으로 위험을 알아차린다."
+  },
+  {
+    "id": 229,
+    "word": "dark",
+    "meaning": "어두운",
+    "sentence": "When I was young, I was afraid of the dark.",
+    "translation": "난 어렸을 때 어두운 걸 싫어했어."
+  },
+  {
+    "id": 230,
+    "word": "date",
+    "meaning": "날짜",
+    "sentence": "The date of the examination is near at hand.",
+    "translation": "시험 일자가 다가왔다."
+  },
+  {
+    "id": 231,
+    "word": "daughter",
+    "meaning": "딸",
+    "sentence": "The daughter believes in free love.",
+    "translation": "딸은 자유로운 사랑을 믿었다."
+  },
+  {
+    "id": 232,
+    "word": "day",
+    "meaning": "낮",
+    "sentence": "Thanksgiving day is in this week.",
+    "translation": "추수감사절은 이번 주다."
+  },
+  {
+    "id": 233,
+    "word": "dead",
+    "meaning": "죽은",
+    "sentence": "Dead men tell no tales.",
+    "translation": "죽은 자는 말이 없다."
+  },
+  {
+    "id": 234,
+    "word": "death",
+    "meaning": "죽음",
+    "sentence": "You really bore me to death.",
+    "translation": "당신은 정말 따분해 죽을 지경이다."
+  },
+  {
+    "id": 235,
+    "word": "decide",
+    "meaning": "결정하다",
+    "sentence": "Think it over before you decide.",
+    "translation": "결정하기 전에 곰곰이 생각하세요."
+  },
+  {
+    "id": 236,
+    "word": "deep",
+    "meaning": "깊은",
+    "sentence": "The origin of kimchi is deep-rooted.",
+    "translation": "김치는 그 유래가 깊은 식품이다."
+  },
+  {
+    "id": 237,
+    "word": "delicious",
+    "meaning": "맛있는",
+    "sentence": "It is delicious and I'm not kidding.",
+    "translation": "이거 진짜 맛있어, 장난 아냐."
+  },
+  {
+    "id": 238,
+    "word": "dentist",
+    "meaning": "치과의사",
+    "sentence": "I didn't even know you'd be a dentist.",
+    "translation": "난 네가 치과의사가 될 줄도 몰랐어."
+  },
+  {
+    "id": 239,
+    "word": "design",
+    "meaning": "설계",
+    "sentence": "This is a new design.",
+    "translation": "이건 새 디자인이에요."
+  },
+  {
+    "id": 240,
+    "word": "desk",
+    "meaning": "책상",
+    "sentence": "The desk is full of books.",
+    "translation": "그 책상은 책으로 가득하다."
+  },
+  {
+    "id": 241,
+    "word": "dialogue",
+    "meaning": "대화",
+    "sentence": "There is no music, no dialogue.",
+    "translation": "그곳에는 음악이 없고, 대화도 없다."
+  },
+  {
+    "id": 242,
+    "word": "diary",
+    "meaning": "일기",
+    "sentence": "Writing diary in English is too difficult.",
+    "translation": "영어로 일기 쓰는 건 너무 어렵다."
+  },
+  {
+    "id": 243,
+    "word": "die",
+    "meaning": "죽다",
+    "sentence": "The chicken really is to die for.",
+    "translation": "그 치킨은 정말 끝내주게 맛있어."
+  },
+  {
+    "id": 244,
+    "word": "different",
+    "meaning": "다른",
+    "sentence": "The Rose of Sharon comes in a few different colors.",
+    "translation": "무궁화는 몇 가지 다른 색을 띱니다."
+  },
+  {
+    "id": 245,
+    "word": "difficult",
+    "meaning": "곤란한",
+    "sentence": "It's difficult for me to take you seriously.",
+    "translation": "당신 말은 정말 믿기가 어려워요."
+  },
+  {
+    "id": 246,
+    "word": "dinner",
+    "meaning": "저녁",
+    "sentence": "We watched TV after dinner.",
+    "translation": "우리는 저녁 식사 후에 TV를 보았다."
+  },
+  {
+    "id": 247,
+    "word": "dirty",
+    "meaning": "더러운",
+    "sentence": "That is a dirty trick.",
+    "translation": "그것은 더러운 속임수다."
+  },
+  {
+    "id": 248,
+    "word": "discuss",
+    "meaning": "토론하다",
+    "sentence": "Let's discuss it over a beer.",
+    "translation": "맥주 한잔하면서 토의합시다."
+  },
+  {
+    "id": 249,
+    "word": "dish",
+    "meaning": "접시,음식",
+    "sentence": "Tempura is a deep-fried dish.",
+    "translation": "튀김은 기름에 튀긴 요리다."
+  },
+  {
+    "id": 250,
+    "word": "divide",
+    "meaning": "나누다",
+    "sentence": "The river divides into two branches here.",
+    "translation": "강은 이곳에서 두 줄기로 갈라진다."
+  }
+]

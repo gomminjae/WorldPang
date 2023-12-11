@@ -1,0 +1,352 @@
+[
+  {
+    "id": 401,
+    "word": "high",
+    "meaning": "높은",
+    "sentence": "The airplane rose high up into the sky.",
+    "translation": "비행기가 하늘 높이 솟아올랐다."
+  },
+  {
+    "id": 402,
+    "word": "hill",
+    "meaning": "언덕",
+    "sentence": "We mounted the hill on foot.",
+    "translation": "우리는 걸어서 언덕을 올랐다."
+  },
+  {
+    "id": 403,
+    "word": "history",
+    "meaning": "역사",
+    "sentence": "The Seokbinggo has a long history.",
+    "translation": "석빙고는 오랜 역사를 가지고 있다."
+  },
+  {
+    "id": 404,
+    "word": "hit",
+    "meaning": "치다",
+    "sentence": "The ball hit first base and bounced high into the air.",
+    "translation": "공은 1루 베이스를 맞고 높이 튀었다."
+  },
+  {
+    "id": 405,
+    "word": "hobby",
+    "meaning": "취미",
+    "sentence": "I have no hobby in particular.",
+    "translation": "특별한 취미는 없습니다."
+  },
+  {
+    "id": 406,
+    "word": "hold",
+    "meaning": "갖고 있다",
+    "sentence": "The stamps hold images of snakes.",
+    "translation": "그 우표는 뱀의 이미지를 담았다."
+  },
+  {
+    "id": 407,
+    "word": "holiday",
+    "meaning": "휴일",
+    "sentence": "There's nothing to do because tomorrow is a holiday.",
+    "translation": "내일은 휴일이기 때문에 할 일이 없다."
+  },
+  {
+    "id": 408,
+    "word": "home",
+    "meaning": "가정",
+    "sentence": "Give me a call when you get home.",
+    "translation": "집에 도착하면 전화해."
+  },
+  {
+    "id": 409,
+    "word": "homework",
+    "meaning": "숙제",
+    "sentence": "There is too much homework again today!",
+    "translation": "오늘도 숙제가 너무 많아."
+  },
+  {
+    "id": 410,
+    "word": "honest",
+    "meaning": "정직한",
+    "sentence": "There's no such thing as an honest thief.",
+    "translation": "세상에 정직한 도둑 같은 것은 없어."
+  },
+  {
+    "id": 411,
+    "word": "honey",
+    "meaning": "꿀",
+    "sentence": "Sugar has put down the use of honey.",
+    "translation": "설탕 때문에 꿀의 용도가 줄어들었다."
+  },
+  {
+    "id": 412,
+    "word": "hope",
+    "meaning": "희망",
+    "sentence": "There was no hope at all.",
+    "translation": "희망이 전혀 없습니다."
+  },
+  {
+    "id": 413,
+    "word": "horse",
+    "meaning": "말",
+    "sentence": "The boy is enjoying riding a horse.",
+    "translation": "소년이 말 타는 것을 즐기고 있다."
+  },
+  {
+    "id": 414,
+    "word": "hospital",
+    "meaning": "병원",
+    "sentence": "This is the hospital where I was born.",
+    "translation": "이곳은 제가 태어난 병원입니다."
+  },
+  {
+    "id": 415,
+    "word": "hot",
+    "meaning": "뜨거운",
+    "sentence": "Summer in Seoul is hot and humid.",
+    "translation": "서울의 여름은 덥고 습하다."
+  },
+  {
+    "id": 416,
+    "word": "hour",
+    "meaning": "시간",
+    "sentence": "The coffee shop are open 24 hours a day.",
+    "translation": "그 커피숍은 24시간 영업한다."
+  },
+  {
+    "id": 417,
+    "word": "house",
+    "meaning": "집",
+    "sentence": "The dog house was snowed under.",
+    "translation": "개집이 눈에 묻혔다."
+  },
+  {
+    "id": 418,
+    "word": "how",
+    "meaning": "어떻게",
+    "sentence": "Sure, I know how to ride the bicycle.",
+    "translation": "물론 나는 자전거 탈 줄 알아."
+  },
+  {
+    "id": 419,
+    "word": "however",
+    "meaning": "아무리,그러나",
+    "sentence": "The service is, however, not free of charge.",
+    "translation": "그러나 그 서비스는 무료가 아닙니다."
+  },
+  {
+    "id": 420,
+    "word": "human",
+    "meaning": "인간의",
+    "sentence": "The human life span is limited.",
+    "translation": "인간의 수명은 유한하다."
+  },
+  {
+    "id": 421,
+    "word": "humor",
+    "meaning": "유우머",
+    "sentence": "Your sense of humor is seriously lacking.",
+    "translation": "넌 정말 유머감각이 없구나."
+  },
+  {
+    "id": 422,
+    "word": "hundred",
+    "meaning": 100,
+    "sentence": "I got a hundred on the English test.",
+    "translation": "영어시험에서 100점을 받았습니다."
+  },
+  {
+    "id": 423,
+    "word": "hungry",
+    "meaning": "배고픈",
+    "sentence": "You must be hungry. Shall we go get some dinner?",
+    "translation": "배고플 텐데 저녁 먹으러 갈래?"
+  },
+  {
+    "id": 424,
+    "word": "hunt",
+    "meaning": "사냥하다",
+    "sentence": "The ancient people lived by hunting and gathering.",
+    "translation": "원시인들은 수렵과 채집 생활을 했다."
+  },
+  {
+    "id": 425,
+    "word": "hurry",
+    "meaning": "서두르다.바쁨",
+    "sentence": "Let's hurry so we won't be late.",
+    "translation": "지각하면 안 되니까 서두르자."
+  },
+  {
+    "id": 426,
+    "word": "husband",
+    "meaning": "남편",
+    "sentence": "The husband's income was insecure.",
+    "translation": "남편의 수입은 확실하지 않다."
+  },
+  {
+    "id": 427,
+    "word": "I",
+    "meaning": "나는, 내가",
+    "sentence": "I got some work I got to finish.",
+    "translation": "끝내야 할 일이 있어요."
+  },
+  {
+    "id": 428,
+    "word": "ice",
+    "meaning": "얼음",
+    "sentence": "What's your favorite ice cream?",
+    "translation": "가장 좋아하는 아이스크림이 뭐예요?"
+  },
+  {
+    "id": 429,
+    "word": "idea",
+    "meaning": "생각",
+    "sentence": "That sounds like a good idea.",
+    "translation": "좋은 생각이군요."
+  },
+  {
+    "id": 430,
+    "word": "if",
+    "meaning": "만일 -이라면",
+    "sentence": "Stay where you are if you want to stay alive.",
+    "translation": "목숨이 아깝거든 꼼짝 마라."
+  },
+  {
+    "id": 431,
+    "word": "important",
+    "meaning": "중요한",
+    "sentence": "That last one is very important.",
+    "translation": "마지막 것이 제일 중요한 거야."
+  },
+  {
+    "id": 432,
+    "word": "in",
+    "meaning": "-속에",
+    "sentence": "When did you first arrive in Korea?",
+    "translation": "한국은 언제 처음으로 오셨습니까?"
+  },
+  {
+    "id": 433,
+    "word": "inside",
+    "meaning": "안쪽",
+    "sentence": "The key to happiness is inside one's own heart.",
+    "translation": "행복의 열쇠는 자신의 마음속에 있다."
+  },
+  {
+    "id": 434,
+    "word": "into",
+    "meaning": "-안으로",
+    "sentence": "Television has come into wide use.",
+    "translation": "텔레비전이 널리 보급되었다."
+  },
+  {
+    "id": 435,
+    "word": "introduce",
+    "meaning": "안으로",
+    "sentence": "May I introduce myself?",
+    "translation": "제 소개를 할까요?"
+  },
+  {
+    "id": 436,
+    "word": "invite",
+    "meaning": "초대하다",
+    "sentence": "How wonderful to be invited to the White House!",
+    "translation": "백악관에 초대받다니 굉장하군."
+  },
+  {
+    "id": 437,
+    "word": "it",
+    "meaning": "그것은",
+    "sentence": "I'll do it myself.",
+    "translation": "전 그것을 스스로 할 수 있어요."
+  },
+  {
+    "id": 438,
+    "word": "jeans",
+    "meaning": "청바지",
+    "sentence": "I like to wear worn-out jeans.",
+    "translation": "닳은 청바지 입는 것을 좋아한다."
+  },
+  {
+    "id": 439,
+    "word": "job",
+    "meaning": "일",
+    "sentence": "Do you have a part time job?",
+    "translation": "아르바이트를 하고 있나요?"
+  },
+  {
+    "id": 440,
+    "word": "join",
+    "meaning": "같이하다",
+    "sentence": "We should join the cherry blossom festival in Jinhae.",
+    "translation": "우리 진해 군항제에 같이 참여하자."
+  },
+  {
+    "id": 441,
+    "word": "joy",
+    "meaning": "즐거움",
+    "sentence": "It stands for “the joy of love.”.",
+    "translation": "그것은 \"사랑의 기쁨\"을 상징합니다."
+  },
+  {
+    "id": 442,
+    "word": "just",
+    "meaning": "이제 막,단지",
+    "sentence": "That's just my point.",
+    "translation": "그게 바로 제 말의 요지입니다."
+  },
+  {
+    "id": 443,
+    "word": "keep",
+    "meaning": "계속하다",
+    "sentence": "Thanks. I'll keep in touch. Bye.",
+    "translation": "고마워. 계속 연락할게. 잘 지내."
+  },
+  {
+    "id": 444,
+    "word": "key",
+    "meaning": "열쇠",
+    "sentence": "Love is the key to understanding.",
+    "translation": "사랑은 이해의 열쇠입니다."
+  },
+  {
+    "id": 445,
+    "word": "kick",
+    "meaning": "걷어차다",
+    "sentence": "The football player kicked the ball.",
+    "translation": "축구선수가 공을 찼다."
+  },
+  {
+    "id": 446,
+    "word": "kid",
+    "meaning": "아이",
+    "sentence": "The kid talks like a grown-up.",
+    "translation": "저 아이는 어른스럽게 말한다."
+  },
+  {
+    "id": 447,
+    "word": "kill",
+    "meaning": "죽이다",
+    "sentence": "I kill plants all the time.",
+    "translation": "내가 키우는 식물은 항상 죽어."
+  },
+  {
+    "id": 448,
+    "word": "kind",
+    "meaning": "친절한",
+    "sentence": "He is kind even to strangers.",
+    "translation": "그는 낯선 사람에게도 친절하다."
+  },
+  {
+    "id": 449,
+    "word": "king",
+    "meaning": "왕",
+    "sentence": "In the country of the blind, the one-eyed man is king.",
+    "translation": "장님의 나라에서는 애꾸눈이 왕이다."
+  },
+  {
+    "id": 450,
+    "word": "kitchen",
+    "meaning": "부엌",
+    "sentence": "Get out of my kitchen!",
+    "translation": "주방에서 썩 나가시오!"
+  }
+]

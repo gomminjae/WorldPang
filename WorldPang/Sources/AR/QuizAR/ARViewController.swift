@@ -270,10 +270,7 @@ class ARViewController: UIViewController {
         
         return nil
     }
-    
 
-    
-    
     //MARK: UI
     let aimView: UIButton = {
         let view = UIButton()

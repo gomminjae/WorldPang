@@ -12,34 +12,6 @@ import SnapKit
 import RxDataSources
 
 
-class VocaStageHeaderView: UICollectionReusableView {
-    
-    // 헤더 뷰의 타이틀을 표시하는 레이블
-    lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        // 필요한 스타일 및 속성을 여기에 추가하세요.
-        return label
-    }()
-    
-    // 이곳에서 초기화 코드 및 레이아웃 설정을 추가할 수 있습니다.
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupSubviews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setupSubviews() {
-        addSubview(titleLabel)
-        titleLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20)
-            $0.centerY.equalToSuperview()
-        }
-    }
-}
-
 class VocaStageViewController: BaseViewController {
 
     private let disposeBag = DisposeBag()
@@ -77,7 +49,9 @@ class VocaStageViewController: BaseViewController {
         collectionView.rx.itemSelected
             .subscribe(onNext: {  indexPath in
                 self.viewModel.loadwords(index: indexPath.item)
-                self.navigationController?.pushViewController(VocaDetailViewController(), animated: true)
+                let vc = VocaDetailViewController()
+                
+                self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
     }

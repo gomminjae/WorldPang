@@ -1,0 +1,352 @@
+[
+  {
+    "id": 101,
+    "word": "black",
+    "meaning": "검은",
+    "sentence": "The black squid pasta is amazing.",
+    "translation": "검은 오징어 파스타는 환상적이다."
+  },
+  {
+    "id": 102,
+    "word": "block",
+    "meaning": "덩어리",
+    "sentence": "The bank is two blocks up that way.",
+    "translation": "은행은 저쪽으로 두 블록 지나서 있다."
+  },
+  {
+    "id": 103,
+    "word": "blood",
+    "meaning": "피",
+    "sentence": "The full moon became like blood.",
+    "translation": "그 보름달은 피 같았다."
+  },
+  {
+    "id": 104,
+    "word": "blue",
+    "meaning": "푸른",
+    "sentence": "He looked up at the blue sky.",
+    "translation": "그는 푸른 하늘을 쳐다보았다."
+  },
+  {
+    "id": 105,
+    "word": "board",
+    "meaning": "널빤지",
+    "sentence": "Teacher is writing on a board.",
+    "translation": "선생님이 칠판 위에 적고 있다."
+  },
+  {
+    "id": 106,
+    "word": "boat",
+    "meaning": "배",
+    "sentence": "The boat arrived at the dock.",
+    "translation": "배가 선착장에 도착했다."
+  },
+  {
+    "id": 107,
+    "word": "body",
+    "meaning": "신체",
+    "sentence": "Taekwondo is helpful in training one's body and spirit.",
+    "translation": "태권도는 심신 단련에 도움이 된다."
+  },
+  {
+    "id": 108,
+    "word": "bomb",
+    "meaning": "폭탄",
+    "sentence": "The bomb went off in front of the embassy.",
+    "translation": "폭탄은 대사관 앞에서 폭발했다."
+  },
+  {
+    "id": 109,
+    "word": "bone",
+    "meaning": "뼈",
+    "sentence": "The dog hides the bone in the ground.",
+    "translation": "그 개는 뼈다귀를 땅속에 숨긴다."
+  },
+  {
+    "id": 110,
+    "word": "book",
+    "meaning": "책",
+    "sentence": "This book is worth reading.",
+    "translation": "이 책은 읽을 만해요."
+  },
+  {
+    "id": 111,
+    "word": "boot",
+    "meaning": "장화",
+    "sentence": "The boots are on the chair.",
+    "translation": "장화가 의자 위에 있다."
+  },
+  {
+    "id": 112,
+    "word": "borrow",
+    "meaning": "빌다",
+    "sentence": "May I borrow some money?",
+    "translation": "돈을 좀 빌릴 수 있을까요?"
+  },
+  {
+    "id": 113,
+    "word": "boss",
+    "meaning": "사장",
+    "sentence": "I'll check with my boss.",
+    "translation": "제가 사장에게 확인해 보겠습니다."
+  },
+  {
+    "id": 114,
+    "word": "both",
+    "meaning": "쌍방의",
+    "sentence": "The nightingale sings both by night and in the day.",
+    "translation": "두견새는 하루에 두 번 밤낮으로 운다."
+  },
+  {
+    "id": 115,
+    "word": "bottle",
+    "meaning": "병",
+    "sentence": "The bottle is filled with water.",
+    "translation": "그 병은 물로 가득 차 있다."
+  },
+  {
+    "id": 116,
+    "word": "bottom",
+    "meaning": "밑바닥",
+    "sentence": "The oil price has hit bottom.",
+    "translation": "유가가 바닥으로 떨어졌다."
+  },
+  {
+    "id": 117,
+    "word": "bowl",
+    "meaning": "그릇",
+    "sentence": "The bowl is full of peanuts.",
+    "translation": "그릇에 땅콩이 가득해요."
+  },
+  {
+    "id": 118,
+    "word": "boy",
+    "meaning": "소년",
+    "sentence": "The boy became a great scientist.",
+    "translation": "그 소년은 위대한 과학자가 됐어요."
+  },
+  {
+    "id": 119,
+    "word": "brain",
+    "meaning": "뇌",
+    "sentence": "You have to be nice to your brain.",
+    "translation": "여러분은 두뇌를 좋게 해야만 합니다."
+  },
+  {
+    "id": 120,
+    "word": "brake",
+    "meaning": "브레이크",
+    "sentence": "The brake doesn't work.",
+    "translation": "브레이크가 작동하지 않아요."
+  },
+  {
+    "id": 121,
+    "word": "branch",
+    "meaning": "가지",
+    "sentence": "The branches are full of leaves.",
+    "translation": "나뭇가지에 잎이 많이 달려있다."
+  },
+  {
+    "id": 122,
+    "word": "brand",
+    "meaning": "상표",
+    "sentence": "That's the most popular brand.",
+    "translation": "그것은 제일 인기 있는 상표입니다."
+  },
+  {
+    "id": 123,
+    "word": "brave",
+    "meaning": "용감한",
+    "sentence": "The brave policeman caught the robber.",
+    "translation": "그 용감한 경찰이 강도를 잡았다."
+  },
+  {
+    "id": 124,
+    "word": "bread",
+    "meaning": "빵",
+    "sentence": "The birds fought each other over the bread.",
+    "translation": "새들이 빵을 먹으려고 서로 싸웠다."
+  },
+  {
+    "id": 125,
+    "word": "break",
+    "meaning": "중단,휴식",
+    "sentence": "Let's take a ten-minute break.",
+    "translation": "10분만 쉬도록 합시다."
+  },
+  {
+    "id": 126,
+    "word": "breakfast",
+    "meaning": "아침밥",
+    "sentence": "I just have a quick breakfast.",
+    "translation": "아침밥은 재빨리 먹어버려요."
+  },
+  {
+    "id": 127,
+    "word": "bridge",
+    "meaning": "다리",
+    "sentence": "The bridge is made of stone.",
+    "translation": "그 다리는 석재로 만들어졌다."
+  },
+  {
+    "id": 128,
+    "word": "bright",
+    "meaning": "밝은",
+    "sentence": "It's important to look on the bright side.",
+    "translation": "밝은 면을 보는 게 중요합니다."
+  },
+  {
+    "id": 129,
+    "word": "bring",
+    "meaning": "가져오다",
+    "sentence": "What brings you to Mississippi?",
+    "translation": "미시시피에는 왜 오셨습니까?"
+  },
+  {
+    "id": 130,
+    "word": "brother",
+    "meaning": "형제",
+    "sentence": "The Wright brothers invented the airplane.",
+    "translation": "라이트 형제는 비행기를 발명했다."
+  },
+  {
+    "id": 131,
+    "word": "brown",
+    "meaning": "갈색",
+    "sentence": "The leaves go brown in fall.",
+    "translation": "나뭇잎은 가을에 갈색이된다."
+  },
+  {
+    "id": 132,
+    "word": "brush",
+    "meaning": "솔,양치질하다",
+    "sentence": "The girl is brushing her teeth.",
+    "translation": "소녀가 양치질을 하고 있다."
+  },
+  {
+    "id": 133,
+    "word": "bubble",
+    "meaning": "거품,거품이 일다",
+    "sentence": "China is the next big financial bubble.",
+    "translation": "중국은 그다음으로 큰 금융버블이다."
+  },
+  {
+    "id": 134,
+    "word": "bug",
+    "meaning": "벌레",
+    "sentence": "There is a bug in my coffee!",
+    "translation": "커피에 벌레가 들어 있어요!"
+  },
+  {
+    "id": 135,
+    "word": "build",
+    "meaning": "짓다",
+    "sentence": "This desk build up into wood.",
+    "translation": "이 책상은 나무로 만들어졌다."
+  },
+  {
+    "id": 136,
+    "word": "burn",
+    "meaning": "불에 타다",
+    "sentence": "The fire is burning out of control.",
+    "translation": "불이 걷잡을 수 없이 타오르고 있다."
+  },
+  {
+    "id": 137,
+    "word": "business",
+    "meaning": "직업",
+    "sentence": "He's in the computer business.",
+    "translation": "그는 컴퓨터업계에서 일합니다."
+  },
+  {
+    "id": 138,
+    "word": "busy",
+    "meaning": "바쁜",
+    "sentence": "Today was a busy Saturday.",
+    "translation": "오늘은 바쁜 토요일이었다."
+  },
+  {
+    "id": 139,
+    "word": "but",
+    "meaning": "그러나 다만 (-을)제외하고",
+    "sentence": "It sounds weird, but it is delicious.",
+    "translation": "이상하게 들리겠지만, 맛은 있다."
+  },
+  {
+    "id": 140,
+    "word": "button",
+    "meaning": "단추 단추를 채우다 단추로 채워지다",
+    "sentence": "In other words, push this red button.",
+    "translation": "즉, 이 빨간 버튼을 누르세요."
+  },
+  {
+    "id": 141,
+    "word": "buy",
+    "meaning": "사다",
+    "sentence": "The ad makes me want to buy the car.",
+    "translation": "광고를 보니까 차를 사고 싶어지는군."
+  },
+  {
+    "id": 142,
+    "word": "by",
+    "meaning": "곁에, 의해",
+    "sentence": "It's run by the city.",
+    "translation": "그것은 시가 운영합니다."
+  },
+  {
+    "id": 143,
+    "word": "cage",
+    "meaning": "새장",
+    "sentence": "There is a parrot in the bird cage.",
+    "translation": "새장 속에 앵무새가 있다."
+  },
+  {
+    "id": 144,
+    "word": "calendar",
+    "meaning": "달력",
+    "sentence": "There is a small calendar on the monitor.",
+    "translation": "모니터 위에 작은 달력이 있다."
+  },
+  {
+    "id": 145,
+    "word": "call",
+    "meaning": "부르다",
+    "sentence": "Who‘s calling, please?",
+    "translation": "전화하시는 분이 누구시죠?"
+  },
+  {
+    "id": 146,
+    "word": "calm",
+    "meaning": "평온한",
+    "sentence": "The sea is as calm as a lake.",
+    "translation": "바다가 호수처럼 고요하다."
+  },
+  {
+    "id": 147,
+    "word": "can",
+    "meaning": "할 수 있다",
+    "sentence": "The polar bear can swim very well.",
+    "translation": "북극곰은 수영을 매우 잘한다."
+  },
+  {
+    "id": 148,
+    "word": "candy",
+    "meaning": "사탕과자",
+    "sentence": "That candy smells like chocolate.",
+    "translation": "저 사탕은 초콜릿 같은 냄새가 난다."
+  },
+  {
+    "id": 149,
+    "word": "cap",
+    "meaning": "모자",
+    "sentence": "The Pope wore a baseball cap last week.",
+    "translation": "지난주 교황이 야구 모자를 썼다."
+  },
+  {
+    "id": 150,
+    "word": "captain",
+    "meaning": "우두머리",
+    "sentence": "The Liverpool captain is not alone.",
+    "translation": "리버풀의 주장은 혼자가 아니었다."
+  }
+]

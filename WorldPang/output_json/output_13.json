@@ -1,0 +1,352 @@
+[
+  {
+    "id": 601,
+    "word": "red",
+    "meaning": "붉은",
+    "sentence": "Stop. The light is red.",
+    "translation": "멈춰요. 빨간 불이에요."
+  },
+  {
+    "id": 602,
+    "word": "remember",
+    "meaning": "기억하다",
+    "sentence": "Sorry for not remembering your birthday.",
+    "translation": "네 생일을 기억하지 못해서 미안해."
+  },
+  {
+    "id": 603,
+    "word": "restaurant",
+    "meaning": "식당",
+    "sentence": "That's right. It's a Chinese restaurant.",
+    "translation": "맞아요. 중국 식당이에요."
+  },
+  {
+    "id": 604,
+    "word": "restroom",
+    "meaning": "화장실",
+    "sentence": "Where is the restroom?",
+    "translation": "화장실이 어디죠?"
+  },
+  {
+    "id": 605,
+    "word": "return",
+    "meaning": "돌아가다",
+    "sentence": "When do you plan to return to your home country?",
+    "translation": "고국에 언제 돌아가실 계획입니까?"
+  },
+  {
+    "id": 606,
+    "word": "rich",
+    "meaning": "부유한",
+    "sentence": "The country is rich in natural resources.",
+    "translation": "그 나라는 천연자원이 풍부하다."
+  },
+  {
+    "id": 607,
+    "word": "right",
+    "meaning": "올바른",
+    "sentence": "You will come up with the right English.",
+    "translation": "당신은 바른 영어를 할 수 있게 될 겁니다."
+  },
+  {
+    "id": 608,
+    "word": "ring",
+    "meaning": "반지",
+    "sentence": "That your wedding ring was missing?",
+    "translation": "결혼반지를 잃어버렸다고?"
+  },
+  {
+    "id": 609,
+    "word": "river",
+    "meaning": "강",
+    "sentence": "The kangaroo is jumping across the river.",
+    "translation": "캥거루가 강을 폴짝 뛰어 넘고 있다."
+  },
+  {
+    "id": 610,
+    "word": "road",
+    "meaning": "길",
+    "sentence": "The road was blocked because of an accident.",
+    "translation": "교통사고로 도로가 막혔다."
+  },
+  {
+    "id": 611,
+    "word": "rock",
+    "meaning": "바위",
+    "sentence": "The bicycle is among the rocks.",
+    "translation": "자전거가 바위들 사이에 있다."
+  },
+  {
+    "id": 612,
+    "word": "roof",
+    "meaning": "지붕",
+    "sentence": "The ball flew over the roof.",
+    "translation": "공이 지붕 너머로 날아갔다."
+  },
+  {
+    "id": 613,
+    "word": "room",
+    "meaning": "방",
+    "sentence": "Do you have a room with an ocean view?",
+    "translation": "바다가 보이는 방이 있나요?"
+  },
+  {
+    "id": 614,
+    "word": "run",
+    "meaning": "달리다",
+    "sentence": "You can't run away from me.",
+    "translation": "당신이 내게서 도망갈 수 없어요."
+  },
+  {
+    "id": 615,
+    "word": "sad",
+    "meaning": "슬픈",
+    "sentence": "That may be sad, but it is probably true.",
+    "translation": "슬프지만, 사실일지도 모른다."
+  },
+  {
+    "id": 616,
+    "word": "safe",
+    "meaning": "안전한",
+    "sentence": "It's safe to changed the lock.",
+    "translation": "열쇠를 바꾸는 게 안전합니다."
+  },
+  {
+    "id": 617,
+    "word": "sale",
+    "meaning": "판매",
+    "sentence": "The latest model is on sale now.",
+    "translation": "최신 모델이 지금 판매되고 있다."
+  },
+  {
+    "id": 618,
+    "word": "salt",
+    "meaning": "소금",
+    "sentence": "I put in salt instead of sugar.",
+    "translation": "설탕 대신 소금을 넣었어요."
+  },
+  {
+    "id": 619,
+    "word": "same",
+    "meaning": "같은",
+    "sentence": "We are in the same boat.",
+    "translation": "우리는 같은 운명이에요."
+  },
+  {
+    "id": 620,
+    "word": "sand",
+    "meaning": "모래",
+    "sentence": "The beach is covered with fine sand.",
+    "translation": "해변은 고운 모래로 덮여 있다."
+  },
+  {
+    "id": 621,
+    "word": "save",
+    "meaning": "구하다",
+    "sentence": "Thanks. You saved my life.",
+    "translation": "감사합니다. 당신이 저를 구했어요."
+  },
+  {
+    "id": 622,
+    "word": "say",
+    "meaning": "말하다",
+    "sentence": "You keep on saying the same thing.",
+    "translation": "똑같은 말만 해대는군요."
+  },
+  {
+    "id": 623,
+    "word": "school",
+    "meaning": "학교",
+    "sentence": "Students come to school to learn.",
+    "translation": "학생들은 배우기 위해 학교에 옵니다."
+  },
+  {
+    "id": 624,
+    "word": "science",
+    "meaning": "과학",
+    "sentence": "We never know how far science can go.",
+    "translation": "과학은 발전을 거듭하고 있습니다."
+  },
+  {
+    "id": 625,
+    "word": "scissors",
+    "meaning": "가위",
+    "sentence": "The paper is being cut with a pair of scissors.",
+    "translation": "가위로 종이를 자르고 있다."
+  },
+  {
+    "id": 626,
+    "word": "score",
+    "meaning": "점수",
+    "sentence": "The score is 4 to 2 in favor of the Dodgers.",
+    "translation": "4:2로 다저스가 이기고 있다."
+  },
+  {
+    "id": 627,
+    "word": "sea",
+    "meaning": "바다",
+    "sentence": "The sea was as smooth as glass.",
+    "translation": "해면은 거울과 같았다."
+  },
+  {
+    "id": 628,
+    "word": "season",
+    "meaning": "계절",
+    "sentence": "Spring is the best season for fishing.",
+    "translation": "봄은 낚시하기에 가장 좋은 계절이다."
+  },
+  {
+    "id": 629,
+    "word": "see",
+    "meaning": "보다",
+    "sentence": "It's good to see you again.",
+    "translation": "다시 만나서 반갑습니다."
+  },
+  {
+    "id": 630,
+    "word": "sell",
+    "meaning": "팔다",
+    "sentence": "They sell everything at convenience stores.",
+    "translation": "편의점에서는 뭐든 판매합니다."
+  },
+  {
+    "id": 631,
+    "word": "send",
+    "meaning": "보내다",
+    "sentence": "Thank you so much for sending me snacks!",
+    "translation": "간식을 보내줘서 정말 고마워!"
+  },
+  {
+    "id": 632,
+    "word": "she",
+    "meaning": "그녀",
+    "sentence": "I hope she'll be very happy.",
+    "translation": "전 그녀가 매우 행복하길 바래요."
+  },
+  {
+    "id": 633,
+    "word": "ship",
+    "meaning": "배",
+    "sentence": "I get sick riding in a ship.",
+    "translation": "배를 타면 멀미를 해요."
+  },
+  {
+    "id": 634,
+    "word": "shock",
+    "meaning": "충격",
+    "sentence": "The news is a shock to us.",
+    "translation": "그 소식은 우리에게 충격적인 것이다."
+  },
+  {
+    "id": 635,
+    "word": "shoe",
+    "meaning": "구두",
+    "sentence": "The dog is wearing shoes, right?",
+    "translation": "개가 신발을 신고 있어요, 그렇죠?"
+  },
+  {
+    "id": 636,
+    "word": "shop",
+    "meaning": "상점",
+    "sentence": "The coffee shop opens at 7:30 in the morning.",
+    "translation": "커피숍은 아침 7:30에 연다."
+  },
+  {
+    "id": 637,
+    "word": "short",
+    "meaning": "짧은",
+    "sentence": "That dog has a short tail.",
+    "translation": "그 개는 짧은 꼬리를 가지고 있다."
+  },
+  {
+    "id": 638,
+    "word": "should",
+    "meaning": "해야한다",
+    "sentence": "What do you think I should do?",
+    "translation": "내가 어떻게 하는 게 좋겠어요?"
+  },
+  {
+    "id": 639,
+    "word": "show",
+    "meaning": "보이다",
+    "sentence": "I want to show you something.",
+    "translation": "보여줄 게 있어요."
+  },
+  {
+    "id": 640,
+    "word": "shy",
+    "meaning": "수줍은",
+    "sentence": "The panda is a shy creature.",
+    "translation": "판다는 겁이 많은 동물이다."
+  },
+  {
+    "id": 641,
+    "word": "sick",
+    "meaning": "병난",
+    "sentence": "The sick man lay in bed.",
+    "translation": "환자는 침대에 누워 있었다."
+  },
+  {
+    "id": 642,
+    "word": "side",
+    "meaning": "쪽",
+    "sentence": "Which side are you on?",
+    "translation": "당신은 어느 편입니까?"
+  },
+  {
+    "id": 643,
+    "word": "sing",
+    "meaning": "노래하다",
+    "sentence": "Let's sing along to the music.",
+    "translation": "음악에 맞춰 다 함께 노래합시다."
+  },
+  {
+    "id": 644,
+    "word": "sister",
+    "meaning": "자매",
+    "sentence": "They are brother and sister.",
+    "translation": "그들은 친남매 간이다."
+  },
+  {
+    "id": 645,
+    "word": "sit",
+    "meaning": "앉다",
+    "sentence": "The patient sit up in bed.",
+    "translation": "병자가 병상에 앉았다."
+  },
+  {
+    "id": 646,
+    "word": "size",
+    "meaning": "크기",
+    "sentence": "That's about the size of a piece of A4 paper!",
+    "translation": "A4용지 한 장 크기네요!"
+  },
+  {
+    "id": 647,
+    "word": "skin",
+    "meaning": "피부",
+    "sentence": "The snake cast off its skin.",
+    "translation": "뱀이 허물을 벗었다."
+  },
+  {
+    "id": 648,
+    "word": "skirt",
+    "meaning": "치마",
+    "sentence": "Long skirts are in fashion now.",
+    "translation": "요즈음은 긴 치마가 유행이다."
+  },
+  {
+    "id": 649,
+    "word": "sky",
+    "meaning": "하늘",
+    "sentence": "Stars were twinkling in the sky.",
+    "translation": "하늘에는 별이 초롱초롱했다."
+  },
+  {
+    "id": 650,
+    "word": "sleep",
+    "meaning": "잠,잠자다",
+    "sentence": "Sound sleep is essential for good health.",
+    "translation": "숙면은 건강에 아주 중요하다."
+  }
+]

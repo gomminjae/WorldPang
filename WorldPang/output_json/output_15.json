@@ -1,0 +1,352 @@
+[
+  {
+    "id": 701,
+    "word": "test",
+    "meaning": "시험",
+    "sentence": "I got a hundred on the English test.",
+    "translation": "영어시험에서 100점을 받았습니다."
+  },
+  {
+    "id": 702,
+    "word": "textbook",
+    "meaning": "교과서",
+    "sentence": "I am against digital textbooks.",
+    "translation": "전자 교과서에 반대한다."
+  },
+  {
+    "id": 703,
+    "word": "than",
+    "meaning": "-보다도",
+    "sentence": "Still, it's better than nothing.",
+    "translation": "그래도, 없는 것보다는 낫다."
+  },
+  {
+    "id": 704,
+    "word": "thank",
+    "meaning": "감사하다",
+    "sentence": "Thanks, but no thanks.",
+    "translation": "고맙지만 사양할게."
+  },
+  {
+    "id": 705,
+    "word": "that",
+    "meaning": "저것",
+    "sentence": "Well, you keep saying that.",
+    "translation": "당신은 그 말만 계속 하는군요."
+  },
+  {
+    "id": 706,
+    "word": "the",
+    "meaning": "그",
+    "sentence": "We can't miss the one.",
+    "translation": "이번 일을 그르치면 안 돼요."
+  },
+  {
+    "id": 707,
+    "word": "there",
+    "meaning": "거기에",
+    "sentence": "I have to get there on time.",
+    "translation": "전 시간에 맞춰 거기 가야 해요."
+  },
+  {
+    "id": 708,
+    "word": "they",
+    "meaning": "그들",
+    "sentence": "This is where they live.",
+    "translation": "여기가 그들이 사는 곳이에요."
+  },
+  {
+    "id": 709,
+    "word": "thing",
+    "meaning": "물건",
+    "sentence": "Such a thing happens once in a blue moon.",
+    "translation": "그런 일은 정말 드물게 일어난다."
+  },
+  {
+    "id": 710,
+    "word": "think",
+    "meaning": "생각하다",
+    "sentence": "Thanks for thinking of me.",
+    "translation": "생각해줘서 고마워."
+  },
+  {
+    "id": 711,
+    "word": "thirst",
+    "meaning": "갈증",
+    "sentence": "Thousands are dying of thirst.",
+    "translation": "수천 명이 마실 물이 부족하여 죽어 가고 있다."
+  },
+  {
+    "id": 712,
+    "word": "this",
+    "meaning": "이것",
+    "sentence": "That banana is long but this is short.",
+    "translation": "저 바나나는 길지만, 이것은 짧다."
+  },
+  {
+    "id": 713,
+    "word": "tiger",
+    "meaning": "호랑이",
+    "sentence": "The tiger hunts alone.",
+    "translation": "호랑이는 혼자서 사냥을 한다."
+  },
+  {
+    "id": 714,
+    "word": "time",
+    "meaning": "시간",
+    "sentence": "That's just wasting your time.",
+    "translation": "그건 단지 시간 낭비일 뿐이다."
+  },
+  {
+    "id": 715,
+    "word": "to",
+    "meaning": "-로",
+    "sentence": "The roads linked China to Rome.",
+    "translation": "그 길은 중국에서 로마로 이어졌다."
+  },
+  {
+    "id": 716,
+    "word": "today",
+    "meaning": "오늘",
+    "sentence": "What is the weather like today?",
+    "translation": "오늘 날씨가 어떻습니까?"
+  },
+  {
+    "id": 717,
+    "word": "together",
+    "meaning": "같이",
+    "sentence": "The two worked together for two years.",
+    "translation": "그 둘은 2년 동안 함께 일했다."
+  },
+  {
+    "id": 718,
+    "word": "tomorrow",
+    "meaning": "내일",
+    "sentence": "That matter can wait until tomorrow.",
+    "translation": "그 문제는 내일까지 미루어도 된다."
+  },
+  {
+    "id": 719,
+    "word": "tonight",
+    "meaning": "오늘밤",
+    "sentence": "There's a party at my house tonight.",
+    "translation": "오늘 밤에 우리집에서 파티가 있다."
+  },
+  {
+    "id": 720,
+    "word": "too",
+    "meaning": "너무",
+    "sentence": "I'm sorry, it's too bad.",
+    "translation": "유감입니다. 정말 안됐군요."
+  },
+  {
+    "id": 721,
+    "word": "tooth",
+    "meaning": "이",
+    "sentence": "The dentist pulled out the wrong tooth.",
+    "translation": "치과 의사는 엉뚱한 이를 뽑았다."
+  },
+  {
+    "id": 722,
+    "word": "top",
+    "meaning": "꼭대기",
+    "sentence": "The cat was sitting on the top of the house.",
+    "translation": "고양이가 집 꼭대기에 앉아 있다."
+  },
+  {
+    "id": 723,
+    "word": "touch",
+    "meaning": "닿다",
+    "sentence": "The lecture truly touched my heart.",
+    "translation": "정말 가슴에 와 닿는 강의였다."
+  },
+  {
+    "id": 724,
+    "word": "tour",
+    "meaning": "여행",
+    "sentence": "Do you have a city tour bus?",
+    "translation": "시내 관광버스가 있습니까?"
+  },
+  {
+    "id": 725,
+    "word": "tower",
+    "meaning": "탑",
+    "sentence": "We are going to build a sand tower on next Sunday.",
+    "translation": "다음 일요일에 모래 탑을 쌓을 거야."
+  },
+  {
+    "id": 726,
+    "word": "town",
+    "meaning": "도시",
+    "sentence": "He's out of town for the week.",
+    "translation": "그는 일주일 동안 다른 도시에 가 있었다."
+  },
+  {
+    "id": 727,
+    "word": "toy",
+    "meaning": "장난감",
+    "sentence": "The toy industry is in a slump.",
+    "translation": "장난감 산업이 불황이다."
+  },
+  {
+    "id": 728,
+    "word": "train",
+    "meaning": "기차",
+    "sentence": "The bus was hit by a train.",
+    "translation": "버스가 기차에 들이 받쳤다."
+  },
+  {
+    "id": 729,
+    "word": "travel",
+    "meaning": "여행하다,여행",
+    "sentence": "Space travel and time travel are connected.",
+    "translation": "우주여행과 시간여행은 관련이 있다."
+  },
+  {
+    "id": 730,
+    "word": "tree",
+    "meaning": "나무",
+    "sentence": "The bird is over the tree.",
+    "translation": "새가 나무 위에 있다."
+  },
+  {
+    "id": 731,
+    "word": "triangle",
+    "meaning": "삼각형",
+    "sentence": "The sum of all the angles of a triangle is 180 degrees.",
+    "translation": "삼각형 세 각의 총합은 180도이다."
+  },
+  {
+    "id": 732,
+    "word": "trip",
+    "meaning": "여행",
+    "sentence": "The end of the trip came all too soon.",
+    "translation": "여행의 끝이 너무나도 빨리 다가왔다."
+  },
+  {
+    "id": 733,
+    "word": true,
+    "meaning": "진실",
+    "sentence": "That couldn't be true!",
+    "translation": "그게 사실일리가 없어."
+  },
+  {
+    "id": 734,
+    "word": "try",
+    "meaning": "노력하다",
+    "sentence": "Thank you for trying to understand me.",
+    "translation": "저를 이해하려고 해주셔서 감사합니다."
+  },
+  {
+    "id": 735,
+    "word": "turn",
+    "meaning": "돌리다",
+    "sentence": "At the next corner, turn right.",
+    "translation": "다음 모퉁이에서, 우회전 하세요."
+  },
+  {
+    "id": 736,
+    "word": "twice",
+    "meaning": "두 번",
+    "sentence": "The subway is twice as fast as the bus.",
+    "translation": "지하철은 버스보다 2배 빠르다."
+  },
+  {
+    "id": 737,
+    "word": "type",
+    "meaning": "형태",
+    "sentence": "Spaghetti is a type of pasta.",
+    "translation": "스파게티는 파스타의 일종입니다."
+  },
+  {
+    "id": 738,
+    "word": "ugly",
+    "meaning": "추한",
+    "sentence": "I was like an ugly duckling.",
+    "translation": "나는 미운 오리 새끼 같았다."
+  },
+  {
+    "id": 739,
+    "word": "umbrella",
+    "meaning": "우산",
+    "sentence": "Take your umbrella in case it rains!",
+    "translation": "비가 올 경우를 대비해 우산 가져가!"
+  },
+  {
+    "id": 740,
+    "word": "uncle",
+    "meaning": "아저씨",
+    "sentence": "Do you have a rich uncle or something?",
+    "translation": "돈 많은 삼촌이라도 있니?"
+  },
+  {
+    "id": 741,
+    "word": "under",
+    "meaning": "-아래에",
+    "sentence": "Teenagers under 19 cannot see that movie.",
+    "translation": "그 영화는 미성년자 관람불가다."
+  },
+  {
+    "id": 742,
+    "word": "understand",
+    "meaning": "이해하다",
+    "sentence": "Sorry. I don't understand.",
+    "translation": "미안하지만 이해 못 하겠습니다."
+  },
+  {
+    "id": 743,
+    "word": "up",
+    "meaning": "위로",
+    "sentence": "The office is up on the top floor.",
+    "translation": "사무실은 맨 위층에 있다."
+  },
+  {
+    "id": 744,
+    "word": "use",
+    "meaning": "쓰다",
+    "sentence": "I could use a hot bath.",
+    "translation": "뜨거운 물로 목욕했으면 좋겠어요."
+  },
+  {
+    "id": 745,
+    "word": "vegetable",
+    "meaning": "채소",
+    "sentence": "This land is good for the vegetables.",
+    "translation": "이 땅은 야채 경작에 좋다."
+  },
+  {
+    "id": 746,
+    "word": "very",
+    "meaning": "매우",
+    "sentence": "I am very proud of you.",
+    "translation": "나는 당신이 자랑스럽습니다."
+  },
+  {
+    "id": 747,
+    "word": "visit",
+    "meaning": "방문하다",
+    "sentence": "That's was his first visit to Korea.",
+    "translation": "그것이 그의 첫 한국 방문이다."
+  },
+  {
+    "id": 748,
+    "word": "voice",
+    "meaning": "목소리",
+    "sentence": "The voice of people is the voice of God.",
+    "translation": "국민의 목소리가 하늘의 목소리다."
+  },
+  {
+    "id": 749,
+    "word": "wait",
+    "meaning": "기다리다",
+    "sentence": "We had to wait for an hour to ride a roller coaster.",
+    "translation": "롤러코스터를 타려면 한 시간을 기다려야 했다."
+  },
+  {
+    "id": 750,
+    "word": "wake",
+    "meaning": "잠깨다",
+    "sentence": "The best time to wake up is 5 a.m.",
+    "translation": "가장 좋은 시간은 새벽 5시다."
+  }
+]

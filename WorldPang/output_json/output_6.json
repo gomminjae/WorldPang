@@ -1,0 +1,352 @@
+[
+  {
+    "id": 251,
+    "word": "do",
+    "meaning": "하다",
+    "sentence": "I'll do my best, sir.",
+    "translation": "최선을 다하겠습니다. 선생님."
+  },
+  {
+    "id": 252,
+    "word": "doctor",
+    "meaning": "의사",
+    "sentence": "The crazy doctor gave a robot a brainwashing.",
+    "translation": "미친 과학자는 로봇을 세뇌시켰다."
+  },
+  {
+    "id": 253,
+    "word": "dog",
+    "meaning": "개",
+    "sentence": "The dog and the cat fight all the time.",
+    "translation": "개와 고양이는 늘 싸웁니다."
+  },
+  {
+    "id": 254,
+    "word": "doll",
+    "meaning": "인형",
+    "sentence": "I don't want a new doll.",
+    "translation": "나는 새 인형을 원하지 않아요."
+  },
+  {
+    "id": 255,
+    "word": "dolphin",
+    "meaning": "돌고래",
+    "sentence": "It is a true story about a friendship between a dolphin and a boy.",
+    "translation": "돌고래와 소년의 우정에 관한 실화이다."
+  },
+  {
+    "id": 256,
+    "word": "door",
+    "meaning": "문",
+    "sentence": "I don't have the key to that door.",
+    "translation": "저는 그 문 열쇠가 없어요."
+  },
+  {
+    "id": 257,
+    "word": "double",
+    "meaning": "2배의",
+    "sentence": "Technology is a double-edged sword, however.",
+    "translation": "그러나 기술은 양날의 칼이다."
+  },
+  {
+    "id": 258,
+    "word": "down",
+    "meaning": "아래로",
+    "sentence": "The weddings are one floor down.",
+    "translation": "결혼식은 한 층 아래에서 합니다."
+  },
+  {
+    "id": 259,
+    "word": "draw",
+    "meaning": "그리다,당기다",
+    "sentence": "Could you draw me a map?",
+    "translation": "약도를 좀 그려주시겠습니까?"
+  },
+  {
+    "id": 260,
+    "word": "dream",
+    "meaning": "꿈",
+    "sentence": "That is an impossible dream.",
+    "translation": "그건 불가능한 꿈이야."
+  },
+  {
+    "id": 261,
+    "word": "drink",
+    "meaning": "마시다",
+    "sentence": "Let me buy you a drink.",
+    "translation": "제가 한 잔 사겠습니다."
+  },
+  {
+    "id": 262,
+    "word": "drive",
+    "meaning": "운전하다",
+    "sentence": "We should drive within the speed limit.",
+    "translation": "제한 속도 이내로 운전해야 한다."
+  },
+  {
+    "id": 263,
+    "word": "drop",
+    "meaning": "방울",
+    "sentence": "I don't drink a drop of alcohol.",
+    "translation": "술은 한 방울도 안 마신다."
+  },
+  {
+    "id": 264,
+    "word": "dry",
+    "meaning": "마른",
+    "sentence": "The desert is a very hot and dry place.",
+    "translation": "사막은 매우 덥고 건조한 곳이에요."
+  },
+  {
+    "id": 265,
+    "word": "duck",
+    "meaning": "오리",
+    "sentence": "I think he was supposed to be a duck or a chicken.",
+    "translation": "나는 그가 오리 또는 닭이 되고 싶었던 것 같았다고 생각한다."
+  },
+  {
+    "id": 266,
+    "word": "during",
+    "meaning": "-동안에",
+    "sentence": "Stay cool during the hot summer days!",
+    "translation": "뜨거운 여름 동안 시원하게 지내세요!"
+  },
+  {
+    "id": 267,
+    "word": "ear",
+    "meaning": "귀",
+    "sentence": "The ear of the dog is long and curved.",
+    "translation": "개의 귀는 길고 휘어있다."
+  },
+  {
+    "id": 268,
+    "word": "early",
+    "meaning": "이른",
+    "sentence": "The cherry blossoms bloomed so early this year.",
+    "translation": "올해는 벚꽃이 매우 일찍 폈다."
+  },
+  {
+    "id": 269,
+    "word": "earth",
+    "meaning": "지구",
+    "sentence": "The earth turns around the sun.",
+    "translation": "지구는 태양의 둘레를 돈다."
+  },
+  {
+    "id": 270,
+    "word": "east",
+    "meaning": "동쪽",
+    "sentence": "The sun always rises in the east.",
+    "translation": "해는 언제나 동쪽에서 뜬다."
+  },
+  {
+    "id": 271,
+    "word": "easy",
+    "meaning": "쉬운",
+    "sentence": "It is easy to criticize other people.",
+    "translation": "남을 비판하기는 쉬운 일이다."
+  },
+  {
+    "id": 272,
+    "word": "eat",
+    "meaning": "먹다",
+    "sentence": "Let's eat first.",
+    "translation": "먹고 합시다."
+  },
+  {
+    "id": 273,
+    "word": "egg",
+    "meaning": "알",
+    "sentence": "The egg drops through the normal water.",
+    "translation": "보통 물에서는 달걀이 가라앉는다."
+  },
+  {
+    "id": 274,
+    "word": "elementary",
+    "meaning": "기본의",
+    "sentence": "I want to be a teacher of elementary school.",
+    "translation": "난 초등학교 선생님이 되고 싶다."
+  },
+  {
+    "id": 275,
+    "word": "elephant",
+    "meaning": "코끼리",
+    "sentence": "The elephant is bigger than the mouse.",
+    "translation": "코끼리는 쥐보다 크다."
+  },
+  {
+    "id": 276,
+    "word": "end",
+    "meaning": "끝",
+    "sentence": "The game ended in a tie.",
+    "translation": "경기는 무승부로 끝났습니다."
+  },
+  {
+    "id": 277,
+    "word": "engine",
+    "meaning": "엔진",
+    "sentence": "The engine is out of order.",
+    "translation": "엔진이 고장 났다."
+  },
+  {
+    "id": 278,
+    "word": "engineer",
+    "meaning": "기사",
+    "sentence": "I don't want to be an engineer.",
+    "translation": "나는 엔지니어가 되고 싶지 않다."
+  },
+  {
+    "id": 279,
+    "word": "enjoy",
+    "meaning": "즐기다",
+    "sentence": "I enjoy talk shows the most.",
+    "translation": "토크쇼를 가장 좋아합니다."
+  },
+  {
+    "id": 280,
+    "word": "enough",
+    "meaning": "충분한",
+    "sentence": "The world is not enough.",
+    "translation": "세상을 다 주어도 안 되지."
+  },
+  {
+    "id": 281,
+    "word": "enter",
+    "meaning": "들어가다",
+    "sentence": "I am going to enter the army.",
+    "translation": "나는 입대할 예정이다."
+  },
+  {
+    "id": 282,
+    "word": "eraser",
+    "meaning": "지우개",
+    "sentence": "The eraser is on the calculator.",
+    "translation": "지우개는 계산기 위에 있다."
+  },
+  {
+    "id": 283,
+    "word": "error",
+    "meaning": "잘못",
+    "sentence": "There's an error on my paycheck.",
+    "translation": "내 급여가 잘못된 것 같아요."
+  },
+  {
+    "id": 284,
+    "word": "evening",
+    "meaning": "저녁",
+    "sentence": "The evening is still young.",
+    "translation": "아직 초저녁입니다."
+  },
+  {
+    "id": 285,
+    "word": "every",
+    "meaning": "모든",
+    "sentence": "We are equal in every way.",
+    "translation": "우리는 모든 면에서 평등하다."
+  },
+  {
+    "id": 286,
+    "word": "exam",
+    "meaning": "시험",
+    "sentence": "Take your examination with confidence.",
+    "translation": "자신감을 가지고 시험을 치세요."
+  },
+  {
+    "id": 287,
+    "word": "example",
+    "meaning": "보기",
+    "sentence": "These examples are just the tip of the iceberg.",
+    "translation": "그 예들은 빙산의 일각일 뿐이야."
+  },
+  {
+    "id": 288,
+    "word": "exercise",
+    "meaning": "운동",
+    "sentence": "Taekwondo is an excellent exercise.",
+    "translation": "태권도는 훌륭한 운동입니다."
+  },
+  {
+    "id": 289,
+    "word": "exit",
+    "meaning": "출구",
+    "sentence": "Where is the exit for Deoksugung Palace?",
+    "translation": "덕수궁으로 나가는 출구가 어디입니까?"
+  },
+  {
+    "id": 290,
+    "word": "eye",
+    "meaning": "눈",
+    "sentence": "Stop eyeing my smart phone.",
+    "translation": "내 휴대 전화에 눈독 들이지 마."
+  },
+  {
+    "id": 291,
+    "word": "face",
+    "meaning": "얼굴",
+    "sentence": "The boxer had blood running down his face.",
+    "translation": "권투 선수 얼굴에 피가 흘러내렸다."
+  },
+  {
+    "id": 292,
+    "word": "fact",
+    "meaning": "사실",
+    "sentence": "That is a matter of historical fact.",
+    "translation": "그것은 역사적 사실의 문제이다."
+  },
+  {
+    "id": 293,
+    "word": "factory",
+    "meaning": "공장",
+    "sentence": "The factory is always open to visitors.",
+    "translation": "그 공장은 늘 개방되어 있다."
+  },
+  {
+    "id": 294,
+    "word": "fail",
+    "meaning": "실패하다",
+    "sentence": "You will fail if you are above yourself.",
+    "translation": "당신이 자만하면 실패할 것이다."
+  },
+  {
+    "id": 295,
+    "word": "fall",
+    "meaning": "떨어지다",
+    "sentence": "The acid rain was falling on the forests.",
+    "translation": "산성비가 숲에 내리고 있었다."
+  },
+  {
+    "id": 296,
+    "word": "family",
+    "meaning": "가족",
+    "sentence": "The basic unit of society is the family.",
+    "translation": "사회의 기본 구성 단위는 가족이다."
+  },
+  {
+    "id": 297,
+    "word": "famous",
+    "meaning": "유명한",
+    "sentence": "The Battle of Waterloo is a famous event.",
+    "translation": "워털루 전쟁은 유명한 사건이다."
+  },
+  {
+    "id": 298,
+    "word": "fan",
+    "meaning": "(영화 등의)팬",
+    "sentence": "Yes, I'm sure he's a big fan of LG Twins.",
+    "translation": "응. 나는 LG 트윈스 팬이야."
+  },
+  {
+    "id": 299,
+    "word": "fantastic",
+    "meaning": "환상적인",
+    "sentence": "Your new dress is fantastic!",
+    "translation": "새 원피스가 아주 멋지네!"
+  },
+  {
+    "id": 300,
+    "word": "far",
+    "meaning": "멀리",
+    "sentence": "The higher a bird flies, the farther it can see.",
+    "translation": "높이 나는 새가 멀리 본다."
+  }
+]

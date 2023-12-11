@@ -1,0 +1,352 @@
+[
+  {
+    "id": 751,
+    "word": "walk",
+    "meaning": "걷다",
+    "sentence": "Do you like walking in the rain?",
+    "translation": "빗속을 거닐기를 좋아하세요?"
+  },
+  {
+    "id": 752,
+    "word": "wall",
+    "meaning": "벽",
+    "sentence": "The children are painting the wall.",
+    "translation": "어린이들이 벽을 페인트칠하고 있다."
+  },
+  {
+    "id": 753,
+    "word": "want",
+    "meaning": "원하다",
+    "sentence": "What do you want for Christmas?",
+    "translation": "크리스마스 때 뭘 갖고 싶니?"
+  },
+  {
+    "id": 754,
+    "word": "war",
+    "meaning": "전쟁",
+    "sentence": "The war came to an end.",
+    "translation": "전쟁이 끝났습니다."
+  },
+  {
+    "id": 755,
+    "word": "warm",
+    "meaning": "따뜻한",
+    "sentence": "The warm air moves up to the sky.",
+    "translation": "따뜻한 공기는 하늘로 올라갑니다."
+  },
+  {
+    "id": 756,
+    "word": "wash",
+    "meaning": "씻다",
+    "sentence": "This car needs washing.",
+    "translation": "차를 좀 씻어야겠군요."
+  },
+  {
+    "id": 757,
+    "word": "watch",
+    "meaning": "보다",
+    "sentence": "I watched a gangster film last night.",
+    "translation": "나는 어젯밤 갱영화를 봤어요."
+  },
+  {
+    "id": 758,
+    "word": "water",
+    "meaning": "물",
+    "sentence": "Will you give me a glass of iced water?",
+    "translation": "찬물 한 컵 주시겠습니까?"
+  },
+  {
+    "id": 759,
+    "word": "watermelon",
+    "meaning": "수박",
+    "sentence": "There is a lot of water in a watermelon.",
+    "translation": "수박에는 매우 많은 물이 들어있어요."
+  },
+  {
+    "id": 760,
+    "word": "way",
+    "meaning": "길",
+    "sentence": "I got lost on the way.",
+    "translation": "가는 도중에 길을 잃었어요."
+  },
+  {
+    "id": 761,
+    "word": "we",
+    "meaning": "우리",
+    "sentence": "That is the world we seek.",
+    "translation": "그게 우리가 찾는 세상이지."
+  },
+  {
+    "id": 762,
+    "word": "wear",
+    "meaning": "입다",
+    "sentence": "The children are wearing diapers.",
+    "translation": "어린아이들이 기저귀를 차고 있다."
+  },
+  {
+    "id": 763,
+    "word": "weather",
+    "meaning": "날씨",
+    "sentence": "Spring weather is really changeable.",
+    "translation": "봄 날씨는 정말 변덕스럽다."
+  },
+  {
+    "id": 764,
+    "word": "wedding",
+    "meaning": "결혼",
+    "sentence": "Spring is a popular season for wedding.",
+    "translation": "봄은 결혼에 인기 있는 계절입니다."
+  },
+  {
+    "id": 765,
+    "word": "week",
+    "meaning": "일주일",
+    "sentence": "Spring frost is expected this week.",
+    "translation": "이번 주는 꽃샘추위가 예상된다."
+  },
+  {
+    "id": 766,
+    "word": "weekend",
+    "meaning": "주말",
+    "sentence": "The summer vacation started last weekend.",
+    "translation": "여름 방학은 지난주에 시작했다."
+  },
+  {
+    "id": 767,
+    "word": "weight",
+    "meaning": "무게",
+    "sentence": "The ice cracked under the weight.",
+    "translation": "무게 때문에 얼음이 깨졌다."
+  },
+  {
+    "id": 768,
+    "word": "welcome",
+    "meaning": "환영하다",
+    "sentence": "Thank you for a warm welcome.",
+    "translation": "따뜻한 환대에 감사드립니다."
+  },
+  {
+    "id": 769,
+    "word": "well",
+    "meaning": "잘",
+    "sentence": "That restaurant is well known in this city.",
+    "translation": "그 식당은 이 도시에서 유명하다."
+  },
+  {
+    "id": 770,
+    "word": "west",
+    "meaning": "서쪽",
+    "sentence": "China is the west of Korea.",
+    "translation": "중국은 한국의 서쪽에 위치해 있다."
+  },
+  {
+    "id": 771,
+    "word": "wet",
+    "meaning": "축축한",
+    "sentence": "The ground is wet from the rain.",
+    "translation": "비가 와서 지면이 젖어 있다."
+  },
+  {
+    "id": 772,
+    "word": "what",
+    "meaning": "무엇",
+    "sentence": "Do you know what basketball is?",
+    "translation": "농구가 뭔지 아세요?"
+  },
+  {
+    "id": 773,
+    "word": "when",
+    "meaning": "언제",
+    "sentence": "Switch off the lights when you leave.",
+    "translation": "나갈 때 불 좀 꺼줘."
+  },
+  {
+    "id": 774,
+    "word": "where",
+    "meaning": "어디에",
+    "sentence": "That's where I used to live when I was a child.",
+    "translation": "저곳이 내가 어렸을 때 살던 집이다."
+  },
+  {
+    "id": 775,
+    "word": "white",
+    "meaning": "하얀색",
+    "sentence": "There are only a few white tigers in the world.",
+    "translation": "세상에는 백호가 많지 않습니다."
+  },
+  {
+    "id": 776,
+    "word": "who",
+    "meaning": "누구",
+    "sentence": "The god appears only to those who believe.",
+    "translation": "신은 믿는 사람들에게만 나타난다."
+  },
+  {
+    "id": 777,
+    "word": "why",
+    "meaning": "왜",
+    "sentence": "That's why I bought a car.",
+    "translation": "내가 차를 산 이유가 그거예요."
+  },
+  {
+    "id": 778,
+    "word": "wife",
+    "meaning": "아내",
+    "sentence": "Give my wishes to your wife.",
+    "translation": "당신의 아내에게 안부 전해주세요."
+  },
+  {
+    "id": 779,
+    "word": "will",
+    "meaning": "~하다",
+    "sentence": "I will get you some coffee.",
+    "translation": "커피 좀 갖다 드릴게요."
+  },
+  {
+    "id": 780,
+    "word": "win",
+    "meaning": "이기다",
+    "sentence": "This time I'll win at any cost.",
+    "translation": "이번엔 꼭 이기고야 말겠다."
+  },
+  {
+    "id": 781,
+    "word": "wind",
+    "meaning": "바람",
+    "sentence": "Suddenly the wind changed direction.",
+    "translation": "갑자기 바람의 방향이 바뀌었다."
+  },
+  {
+    "id": 782,
+    "word": "window",
+    "meaning": "창",
+    "sentence": "The eyes are the window of the soul.",
+    "translation": "눈의 마음의 창이다."
+  },
+  {
+    "id": 783,
+    "word": "wish",
+    "meaning": "바라다",
+    "sentence": "We all wish you the best of luck.",
+    "translation": "우리 모두 너의 행운을 빌어."
+  },
+  {
+    "id": 784,
+    "word": "with",
+    "meaning": "함께",
+    "sentence": "Are you going with me?",
+    "translation": "함께 가시는 거죠?"
+  },
+  {
+    "id": 785,
+    "word": "woman",
+    "meaning": "여성",
+    "sentence": "The picture of the woman is Shin Saim-dang.",
+    "translation": "이 여성의 사진은 신사임당이다."
+  },
+  {
+    "id": 786,
+    "word": "wood",
+    "meaning": "나무",
+    "sentence": "The house is made out of wood.",
+    "translation": "그 집은 나무로 지어졌다."
+  },
+  {
+    "id": 787,
+    "word": "word",
+    "meaning": "단어",
+    "sentence": "What's the meaning of this word?",
+    "translation": "이 단어의 의미가 무엇인가요?"
+  },
+  {
+    "id": 788,
+    "word": "work",
+    "meaning": "일",
+    "sentence": "I can't take on any more work.",
+    "translation": "나는 더 이상 일을 맡지 못하겠어요."
+  },
+  {
+    "id": 789,
+    "word": "world",
+    "meaning": "세계",
+    "sentence": "The Beatles are by far the best band in the world.",
+    "translation": "비틀즈는 단연 세계 최고의 밴드이다."
+  },
+  {
+    "id": 790,
+    "word": "worry",
+    "meaning": "걱정하다",
+    "sentence": "Don't worry about the money.",
+    "translation": "돈 걱정은 하지 마세요."
+  },
+  {
+    "id": 791,
+    "word": "write",
+    "meaning": "쓰다",
+    "sentence": "This Chinese character is difficult to write.",
+    "translation": "이 한자는 쓰기 어렵다."
+  },
+  {
+    "id": 792,
+    "word": "wrong",
+    "meaning": "나쁜",
+    "sentence": "It went wrong from the start.",
+    "translation": "처음부터 잘못됐어요."
+  },
+  {
+    "id": 793,
+    "word": "year",
+    "meaning": "년",
+    "sentence": "Spring is a very busy time of the year.",
+    "translation": "봄은 한 해중 가장 바쁜 시기이다."
+  },
+  {
+    "id": 794,
+    "word": "yellow",
+    "meaning": "노란색",
+    "sentence": "Spinach is the king of green and yellow vegetables.",
+    "translation": "시금치는 녹황색 야채의 왕입니다."
+  },
+  {
+    "id": 795,
+    "word": "yes",
+    "meaning": "예",
+    "sentence": "Would you like to dance? Yes, OK.",
+    "translation": "춤 출래요? 네, 좋아요."
+  },
+  {
+    "id": 796,
+    "word": "yesterday",
+    "meaning": "어제",
+    "sentence": "The Christmas tree was lit up yesterday.",
+    "translation": "크리스마스 트리가 어제 점등되었다."
+  },
+  {
+    "id": 797,
+    "word": "you",
+    "meaning": "너",
+    "sentence": "Sure you won't have a strawberry?",
+    "translation": "정말 너 딸기 안 먹을 거야?"
+  },
+  {
+    "id": 798,
+    "word": "young",
+    "meaning": "젊은",
+    "sentence": "Many young men were killed in the battle.",
+    "translation": "그 전투에서 많은 젊은이가 죽었다."
+  },
+  {
+    "id": 799,
+    "word": "zebra",
+    "meaning": "얼룩말",
+    "sentence": "He's wearing a zebra-print shirt.",
+    "translation": "그는 얼룩무늬 셔츠를 입고 있다."
+  },
+  {
+    "id": 800,
+    "word": "zoo",
+    "meaning": "동물원",
+    "sentence": "We went to the zoo yesterday.",
+    "translation": "우리는 어제 동물원에 갔었어요."
+  }
+]

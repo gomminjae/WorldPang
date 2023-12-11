@@ -1,0 +1,352 @@
+[
+  {
+    "id": 651,
+    "word": "slow",
+    "meaning": "느린",
+    "sentence": "The clock in our house is always ten minutes slow.",
+    "translation": "우리 집 시계는 항상 10분 늦다."
+  },
+  {
+    "id": 652,
+    "word": "small",
+    "meaning": "작은",
+    "sentence": "The airplane landed on a small island.",
+    "translation": "비행기는 작은 섬에 착륙했다."
+  },
+  {
+    "id": 653,
+    "word": "smart",
+    "meaning": "재치있는",
+    "sentence": "The dog is smart and quick in action.",
+    "translation": "그 개는 똑똑하고 행동이 빠릅니다."
+  },
+  {
+    "id": 654,
+    "word": "smell",
+    "meaning": "냄새맡다",
+    "sentence": "The flower smells good.",
+    "translation": "이 꽃은 향기가 좋다."
+  },
+  {
+    "id": 655,
+    "word": "smile",
+    "meaning": "미소",
+    "sentence": "He answered me with a smile.",
+    "translation": "그는 내게 미소로 답을 했다."
+  },
+  {
+    "id": 656,
+    "word": "snow",
+    "meaning": "눈",
+    "sentence": "That mountain covered with snow is Mountain Halla.",
+    "translation": "저 눈 덮인 산은 한라산이다."
+  },
+  {
+    "id": 657,
+    "word": "so",
+    "meaning": "그와 같이",
+    "sentence": "Just so so.",
+    "translation": "그냥 그래."
+  },
+  {
+    "id": 658,
+    "word": "soccer",
+    "meaning": "축구",
+    "sentence": "The Korean soccer team made it to the finals.",
+    "translation": "한국 축구팀이 결승에 진출했다."
+  },
+  {
+    "id": 659,
+    "word": "sock",
+    "meaning": "짧은 양말",
+    "sentence": "The socks have holes in them.",
+    "translation": "양말에 구멍이 났다."
+  },
+  {
+    "id": 660,
+    "word": "soft",
+    "meaning": "부드러운",
+    "sentence": "The mattress is so soft.",
+    "translation": "이 매트리스는 매우 아늑해요."
+  },
+  {
+    "id": 661,
+    "word": "some",
+    "meaning": "조금",
+    "sentence": "We are expecting some rain.",
+    "translation": "비가 조금 올 것으로 예상됩니다."
+  },
+  {
+    "id": 662,
+    "word": "son",
+    "meaning": "아들",
+    "sentence": "Their son was painfully shy.",
+    "translation": "그들의 아들은 극도로 소심했다."
+  },
+  {
+    "id": 663,
+    "word": "song",
+    "meaning": "노래",
+    "sentence": "That song is popular these days.",
+    "translation": "요즘 그 노래가 유행이다."
+  },
+  {
+    "id": 664,
+    "word": "sorry",
+    "meaning": "미안한",
+    "sentence": "I'm terribly sorry.",
+    "translation": "대단히 미안합니다."
+  },
+  {
+    "id": 665,
+    "word": "sound",
+    "meaning": "소리",
+    "sentence": "That is the sound of success.",
+    "translation": "그것은 성공의 소리야."
+  },
+  {
+    "id": 666,
+    "word": "sour",
+    "meaning": "시큼한,상하다",
+    "sentence": "The hot weather will sour the milk.",
+    "translation": "날씨가 더워 우유가 상하겠다."
+  },
+  {
+    "id": 667,
+    "word": "south",
+    "meaning": "남쪽",
+    "sentence": "The birds flew to the south.",
+    "translation": "새들은 남쪽으로 날아갔다."
+  },
+  {
+    "id": 668,
+    "word": "space",
+    "meaning": "공간",
+    "sentence": "The living room is my space!",
+    "translation": "거실은 내 공간이야!"
+  },
+  {
+    "id": 669,
+    "word": "speak",
+    "meaning": "이야기하다",
+    "sentence": "She speaks fluent English.",
+    "translation": "그녀는 영어를 유창하게 합니다."
+  },
+  {
+    "id": 670,
+    "word": "speed",
+    "meaning": "속도",
+    "sentence": "The speed of the computer is very fast.",
+    "translation": "그 컴퓨터의 속도는 매우 빠르다."
+  },
+  {
+    "id": 671,
+    "word": "spoon",
+    "meaning": "숟가락",
+    "sentence": "We eat soup with a spoon.",
+    "translation": "우리는 숟가락으로 수프를 먹는다."
+  },
+  {
+    "id": 672,
+    "word": "stand",
+    "meaning": "서다",
+    "sentence": "Students are standing along the wall.",
+    "translation": "학생들은 벽에 나란히 서 있다."
+  },
+  {
+    "id": 673,
+    "word": "start",
+    "meaning": "시작하다",
+    "sentence": "Let's start again at the beginning.",
+    "translation": "우리 처음부터 다시 시작합시다."
+  },
+  {
+    "id": 674,
+    "word": "stay",
+    "meaning": "머무르다",
+    "sentence": "Thank you for staying late.",
+    "translation": "늦게까지 있어 줘서 고마워."
+  },
+  {
+    "id": 675,
+    "word": "stone",
+    "meaning": "돌",
+    "sentence": "We can kill two birds with one stone.",
+    "translation": "일석이조가 될 수 있어요."
+  },
+  {
+    "id": 676,
+    "word": "stop",
+    "meaning": "멈추다",
+    "sentence": "Thankfully, it has stopped raining.",
+    "translation": "감사하게도 비가 멈추었다."
+  },
+  {
+    "id": 677,
+    "word": "store",
+    "meaning": "가게",
+    "sentence": "The robbers cleaned out the store.",
+    "translation": "강도들은 가게를 싹쓸이 했다."
+  },
+  {
+    "id": 678,
+    "word": "story",
+    "meaning": "이야기",
+    "sentence": "She made up the story.",
+    "translation": "그녀는 이야기를 꾸며댔습니다."
+  },
+  {
+    "id": 679,
+    "word": "strawberry",
+    "meaning": "딸기",
+    "sentence": "Daddy, I want strawberry and vanilla.",
+    "translation": "아빠, 저는 딸기맛과 바닐라맛이요."
+  },
+  {
+    "id": 680,
+    "word": "street",
+    "meaning": "거리",
+    "sentence": "Teenagers are roaming the streets at night.",
+    "translation": "청소년들이 밤거리를 방황하고 있다."
+  },
+  {
+    "id": 681,
+    "word": "stress",
+    "meaning": "압박",
+    "sentence": "I guess I'm under a lot of stress.",
+    "translation": "나는 스트레스를 엄청 받는 것 같아."
+  },
+  {
+    "id": 682,
+    "word": "strong",
+    "meaning": "강한",
+    "sentence": "That coffee is strong, it has a real kick.",
+    "translation": "그 커피는 진하다. 정말 자극적이다."
+  },
+  {
+    "id": 683,
+    "word": "student",
+    "meaning": "학생",
+    "sentence": "The children in the picture are elementary school students.",
+    "translation": "사진 속의 어린이들은 초등학생들이다."
+  },
+  {
+    "id": 684,
+    "word": "study",
+    "meaning": "공부,공부하다",
+    "sentence": "This is a new way to study English.",
+    "translation": "이게 새로운 영어 학습법입니다."
+  },
+  {
+    "id": 685,
+    "word": "subway",
+    "meaning": "지하철",
+    "sentence": "The subway is more comfortable than the bus.",
+    "translation": "지하철이 버스보다 더 편하다."
+  },
+  {
+    "id": 686,
+    "word": "sugar",
+    "meaning": "설탕",
+    "sentence": "Will you pass me the cream and sugar?",
+    "translation": "크림과 설탕을 건네 주시겠습니까?"
+  },
+  {
+    "id": 687,
+    "word": "sun",
+    "meaning": "태양",
+    "sentence": "The blinds keep the sun out.",
+    "translation": "블라인드는 햇빛을 가린다."
+  },
+  {
+    "id": 688,
+    "word": "supper",
+    "meaning": "저녁식사",
+    "sentence": "I'll do my homework after supper.",
+    "translation": "난 저녁 먹은 후에 숙제할 거야."
+  },
+  {
+    "id": 689,
+    "word": "swim",
+    "meaning": "헤엄치다",
+    "sentence": "Sharks do not swim backwards.",
+    "translation": "상어는 뒤로 헤엄치지 않아요."
+  },
+  {
+    "id": 690,
+    "word": "table",
+    "meaning": "테이블",
+    "sentence": "We all sat around the dinner table.",
+    "translation": "모두 저녁 식탁에 둘러 앉았다."
+  },
+  {
+    "id": 691,
+    "word": "tail",
+    "meaning": "꼬리",
+    "sentence": "That dog wags its tail at everyone.",
+    "translation": "저 개는 아무에게나 꼬리를 흔든다."
+  },
+  {
+    "id": 692,
+    "word": "take",
+    "meaning": "잡다",
+    "sentence": "Let's take a taxi.",
+    "translation": "택시를 탑시다."
+  },
+  {
+    "id": 693,
+    "word": "talk",
+    "meaning": "말하다",
+    "sentence": "Now let's talk about something else.",
+    "translation": "자, 우리 다른 얘기 합시다."
+  },
+  {
+    "id": 694,
+    "word": "tall",
+    "meaning": "키큰",
+    "sentence": "There was a tall man in the music room.",
+    "translation": "음악실에 키가 큰 남자가 있었다."
+  },
+  {
+    "id": 695,
+    "word": "tape",
+    "meaning": "테이프",
+    "sentence": "This is double-faced tape.",
+    "translation": "이것은 양면 테이프에요."
+  },
+  {
+    "id": 696,
+    "word": "taste",
+    "meaning": "맛",
+    "sentence": "That picture appeals to my taste.",
+    "translation": "저 그림이 마음에 든다."
+  },
+  {
+    "id": 697,
+    "word": "teach",
+    "meaning": "가르치다",
+    "sentence": "To know is one thing, and to teach is another.",
+    "translation": "아는 것과 가르치는 것은 별개이다."
+  },
+  {
+    "id": 698,
+    "word": "teen",
+    "meaning": "10대",
+    "sentence": "I spent my teens in the country.",
+    "translation": "나는 십대를 시골에서 지냈다."
+  },
+  {
+    "id": 699,
+    "word": "telephone",
+    "meaning": "전화",
+    "sentence": "The telephone is a wonderful invention.",
+    "translation": "전화는 놀라운 발명품이다."
+  },
+  {
+    "id": 700,
+    "word": "tell",
+    "meaning": "말하다",
+    "sentence": "Would you tell me a little bit about yourself?",
+    "translation": "본인의 소개를 좀 해 보시겠어요?"
+  }
+]

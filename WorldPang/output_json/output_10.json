@@ -1,0 +1,352 @@
+[
+  {
+    "id": 451,
+    "word": "knife",
+    "meaning": "나이프",
+    "sentence": "You should be careful when you handle a knife.",
+    "translation": "칼을 다룰 때는 조심해야 한다."
+  },
+  {
+    "id": 452,
+    "word": "know",
+    "meaning": "알다",
+    "sentence": "I don't know the A.B.C. of politics.",
+    "translation": "나는 정치라고는 전혀 모릅니다."
+  },
+  {
+    "id": 453,
+    "word": "lady",
+    "meaning": "숙녀",
+    "sentence": "It is impolite to ask a lady her age.",
+    "translation": "숙녀에게 나이를 묻는 건 실례다."
+  },
+  {
+    "id": 454,
+    "word": "lake",
+    "meaning": "호수",
+    "sentence": "There are a lot of beautiful lakes in Chuncheon.",
+    "translation": "춘천에는 아름다운 호수가 많다."
+  },
+  {
+    "id": 455,
+    "word": "land",
+    "meaning": "땅",
+    "sentence": "The price of land is rising rapidly.",
+    "translation": "땅값이 급등하고 있다."
+  },
+  {
+    "id": 456,
+    "word": "large",
+    "meaning": "큰",
+    "sentence": "Switzerland has a large number of mountains and lakes.",
+    "translation": "스위스에는 산과 호수가 많습니다."
+  },
+  {
+    "id": 457,
+    "word": "last",
+    "meaning": "마지막의",
+    "sentence": "When was the last time we just looked at the stars?",
+    "translation": "마지막으로 별을 본 게 언제죠?"
+  },
+  {
+    "id": 458,
+    "word": "late",
+    "meaning": "늦은",
+    "sentence": "Sorry for being late.",
+    "translation": "늦어서 미안해요."
+  },
+  {
+    "id": 459,
+    "word": "lazy",
+    "meaning": "게으른",
+    "sentence": "I'm too lazy to go, frankly speaking.",
+    "translation": "솔직히 말해서 나는 너무 게을러요."
+  },
+  {
+    "id": 460,
+    "word": "leaf",
+    "meaning": "잎",
+    "sentence": "The Canadian flag has a maple leaf on it.",
+    "translation": "캐나다 국기에는 단풍잎이 하나 있다."
+  },
+  {
+    "id": 461,
+    "word": "learn",
+    "meaning": "배우다",
+    "sentence": "Teaching is learning.",
+    "translation": "가르치는 것이 곧 배우는 것이다."
+  },
+  {
+    "id": 462,
+    "word": "left",
+    "meaning": "왼쪽의",
+    "sentence": "The Japanese drive on the left-hand side of the road.",
+    "translation": "일본에서는 차가 길 왼쪽으로 다닌다."
+  },
+  {
+    "id": 463,
+    "word": "leg",
+    "meaning": "다리",
+    "sentence": "The dog bit him on the leg.",
+    "translation": "그 개는 그의 다리를 물었다."
+  },
+  {
+    "id": 464,
+    "word": "lesson",
+    "meaning": "수업",
+    "sentence": "I will skip my English lesson today.",
+    "translation": "나는 오늘 영어 수업 빠질 거야."
+  },
+  {
+    "id": 465,
+    "word": "letter",
+    "meaning": "편지",
+    "sentence": "The letter was short and to the point.",
+    "translation": "그 편지는 짧고 간단명료했다."
+  },
+  {
+    "id": 466,
+    "word": "library",
+    "meaning": "도서관",
+    "sentence": "The library is always very calm.",
+    "translation": "도서관은 항상 매우 고요하다."
+  },
+  {
+    "id": 467,
+    "word": "lie",
+    "meaning": "눕다",
+    "sentence": "The dog's master ordered it to lie down.",
+    "translation": "개 주인이 개에게 누우라고 명령했다."
+  },
+  {
+    "id": 468,
+    "word": "light",
+    "meaning": "빛",
+    "sentence": "Sound travels more slowly than light.",
+    "translation": "소리는 빛보다 더 느리게 이동한다."
+  },
+  {
+    "id": 469,
+    "word": "like",
+    "meaning": "좋아하다",
+    "sentence": "I liked it better when I was a student.",
+    "translation": "전 학생일 때가 더 좋았어요."
+  },
+  {
+    "id": 470,
+    "word": "line",
+    "meaning": "선,줄",
+    "sentence": "Don't cut in line.",
+    "translation": "새치기하지 마세요."
+  },
+  {
+    "id": 471,
+    "word": "lion",
+    "meaning": "사자",
+    "sentence": "The lion belongs to the cat family.",
+    "translation": "사자는 고양이과에 속한다."
+  },
+  {
+    "id": 472,
+    "word": "lip",
+    "meaning": "입술",
+    "sentence": "I put lipstick on my lips.",
+    "translation": "입술에 립스틱을 발랐다."
+  },
+  {
+    "id": 473,
+    "word": "listen",
+    "meaning": "듣다",
+    "sentence": "Though I disbelieve, I'll listen.",
+    "translation": "비록 내가 믿지는 않지만, 듣기는 할게."
+  },
+  {
+    "id": 474,
+    "word": "little",
+    "meaning": "작은",
+    "sentence": "The little mermaid is sitting on the rock.",
+    "translation": "작은 인어가 바위 위에 앉아 있다."
+  },
+  {
+    "id": 475,
+    "word": "live",
+    "meaning": "살다",
+    "sentence": "Generally speaking, women live longer than men.",
+    "translation": "일반적으로 여자가 남자보다 장수한다."
+  },
+  {
+    "id": 476,
+    "word": "livingroom",
+    "meaning": "거실",
+    "sentence": "A green carpet was laid in the living room.",
+    "translation": "녹색 카펫이 거실에 깔려 있었다."
+  },
+  {
+    "id": 477,
+    "word": "long",
+    "meaning": "긴",
+    "sentence": "I'm sorry to have kept you waiting so long.",
+    "translation": "오래 기다리게 해서 미안합니다."
+  },
+  {
+    "id": 478,
+    "word": "look",
+    "meaning": "보다",
+    "sentence": "You look upset.",
+    "translation": "당신 화나 보여요."
+  },
+  {
+    "id": 479,
+    "word": "love",
+    "meaning": "사랑",
+    "sentence": "South Koreans have fallen in love with baseball.",
+    "translation": "한국인들이 야구와 사랑에 빠졌다."
+  },
+  {
+    "id": 480,
+    "word": "low",
+    "meaning": "낮은",
+    "sentence": "South Korea has the lowest birth rate in the world.",
+    "translation": "한국은 세계에서 출산율이 가장 낮다."
+  },
+  {
+    "id": 481,
+    "word": "luck",
+    "meaning": "행운",
+    "sentence": "There is no such thing as luck.",
+    "translation": "행운 같은 것은 없어요."
+  },
+  {
+    "id": 482,
+    "word": "lunch",
+    "meaning": "점심",
+    "sentence": "Unfortunately, there's no such thing as a free lunch.",
+    "translation": "불행히도, 세상에 공짜 점심은 없다."
+  },
+  {
+    "id": 483,
+    "word": "mad",
+    "meaning": "미친",
+    "sentence": "I'm not afraid of mad cow disease at all.",
+    "translation": "광우병 따위 전혀 무섭지 않아."
+  },
+  {
+    "id": 484,
+    "word": "mail",
+    "meaning": "우편물",
+    "sentence": "I get dozens of spam mails a day.",
+    "translation": "하루에도 수십 통의 스팸메일을 받는다."
+  },
+  {
+    "id": 485,
+    "word": "make",
+    "meaning": "만들다",
+    "sentence": "That makes sense!",
+    "translation": "이해가 됩니다."
+  },
+  {
+    "id": 486,
+    "word": "man",
+    "meaning": "남자",
+    "sentence": "The saddest thing is a man without work.",
+    "translation": "가장 슬픈 것은 일없는 남자이다."
+  },
+  {
+    "id": 487,
+    "word": "many",
+    "meaning": "많은",
+    "sentence": "Students want to do many things.",
+    "translation": "학생들은 하고 싶은 일이 많다."
+  },
+  {
+    "id": 488,
+    "word": "map",
+    "meaning": "지도",
+    "sentence": "Can you give me a map of the subway?",
+    "translation": "지하철 안내 지도 한 장 주시겠어요?"
+  },
+  {
+    "id": 489,
+    "word": "marry",
+    "meaning": "결혼하다",
+    "sentence": "Who did the movie star marry?",
+    "translation": "그 영화배우가 누구와 결혼했죠?"
+  },
+  {
+    "id": 490,
+    "word": "mathematics",
+    "meaning": "수학",
+    "sentence": "I lost interest in mathematics.",
+    "translation": "나는 수학에 재미를 잃었다."
+  },
+  {
+    "id": 491,
+    "word": "may",
+    "meaning": "아마도 ~이다",
+    "sentence": "I think he may be late.",
+    "translation": "아마 그가 늦을 것 같습니다."
+  },
+  {
+    "id": 492,
+    "word": "meat",
+    "meaning": "고기",
+    "sentence": "The meat is a little tough.",
+    "translation": "고기가 조금 질기다."
+  },
+  {
+    "id": 493,
+    "word": "meet",
+    "meaning": "-을 만나다",
+    "sentence": "I'm pleased to meet you.",
+    "translation": "만나서 반갑습니다."
+  },
+  {
+    "id": 494,
+    "word": "memory",
+    "meaning": "기억",
+    "sentence": "The memory was out of mind.",
+    "translation": "기억이 사라졌다."
+  },
+  {
+    "id": 495,
+    "word": "middle",
+    "meaning": "한복판의",
+    "sentence": "I rank in the middle of my class.",
+    "translation": "난 우리 반에서 성적이 중간쯤이다."
+  },
+  {
+    "id": 496,
+    "word": "might",
+    "meaning": "아마도 ~이다",
+    "sentence": "It might be the free money.",
+    "translation": "그건 아마 꽁돈일 거야."
+  },
+  {
+    "id": 497,
+    "word": "milk",
+    "meaning": "우유",
+    "sentence": "There is no use crying over split milk.",
+    "translation": "이미 엎질러진 물이다."
+  },
+  {
+    "id": 498,
+    "word": "mind",
+    "meaning": "마음",
+    "sentence": "The mind makes heaven of hell and hell of heaven.",
+    "translation": "모든 일은 마음먹기에 달렸다."
+  },
+  {
+    "id": 499,
+    "word": "mirror",
+    "meaning": "거울",
+    "sentence": "The eye is the mirror of the soul.",
+    "translation": "눈은 마음의 거울이다."
+  },
+  {
+    "id": 500,
+    "word": "miss",
+    "meaning": "실수하다",
+    "sentence": "The ball just missed the goal.",
+    "translation": "공이 골대를 살짝 빗나갔다."
+  }
+]
