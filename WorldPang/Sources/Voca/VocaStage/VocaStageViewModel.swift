@@ -24,14 +24,7 @@ class VocaStageViewModel {
     }
 
 
-    private let wordManager = WordManager()
-
     
-    func loadwords(index: Int) {
-        wordManager.loadWordsFromFirebase(forPeriod: index) { [ weak self] vocaDetails in
-            self?.vocaDetailViewModel.vocaDetailRelay.accept(vocaDetails)
-        }
-    }
 
    
 }

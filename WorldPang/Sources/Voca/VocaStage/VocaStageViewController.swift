@@ -48,9 +48,7 @@ class VocaStageViewController: BaseViewController {
         
         collectionView.rx.itemSelected
             .subscribe(onNext: {  indexPath in
-                self.viewModel.loadwords(index: indexPath.item)
-                let vc = VocaDetailViewController()
-                
+                let vc = VocaDetailViewController(selectedIndex: indexPath.row)
                 self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)

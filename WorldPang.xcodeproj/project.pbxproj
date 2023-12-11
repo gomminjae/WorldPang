@@ -41,9 +41,6 @@
 		B59C08402B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
 		B59C08412B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
 		B59C08422B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
-		B59C08482B1439F500E96593 /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08472B1439F500E96593 /* WordManager.swift */; };
-		B59C08492B1439F500E96593 /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08472B1439F500E96593 /* WordManager.swift */; };
-		B59C084A2B1439F500E96593 /* WordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08472B1439F500E96593 /* WordManager.swift */; };
 		B59C084D2B14B07D00E96593 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = B59C084C2B14B07D00E96593 /* ObjectMapper */; };
 		B59C084F2B17B69700E96593 /* VocaDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C084E2B17B69700E96593 /* VocaDetailCell.swift */; };
 		B59C48D52B07AC8900680645 /* SpaceARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */; };
@@ -154,7 +151,6 @@
 		B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaumDictionaryService.swift; sourceTree = "<group>"; };
 		B59C083B2B1439E600E96593 /* TranslationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		B59C083F2B1439ED00E96593 /* TTSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTSManager.swift; sourceTree = "<group>"; };
-		B59C08472B1439F500E96593 /* WordManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordManager.swift; sourceTree = "<group>"; };
 		B59C084E2B17B69700E96593 /* VocaDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetailCell.swift; sourceTree = "<group>"; };
 		B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceARViewModel.swift; sourceTree = "<group>"; };
 		B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListViewController.swift; sourceTree = "<group>"; };
@@ -378,7 +374,6 @@
 		B59C08362B1439D300E96593 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				B59C08472B1439F500E96593 /* WordManager.swift */,
 				B59C083F2B1439ED00E96593 /* TTSManager.swift */,
 				B59C083B2B1439E600E96593 /* TranslationService.swift */,
 				B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */,
@@ -884,7 +879,6 @@
 				B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */,
 				B5BF5B6C2ABDD459008C53F4 /* Gradient+UIView.swift in Sources */,
 				B59C084F2B17B69700E96593 /* VocaDetailCell.swift in Sources */,
-				B59C08482B1439F500E96593 /* WordManager.swift in Sources */,
 				B5BF5B722ABEF703008C53F4 /* CustomTabbarController.swift in Sources */,
 				B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */,
 				B59C08402B1439ED00E96593 /* TTSManager.swift in Sources */,
@@ -930,7 +924,6 @@
 			files = (
 				B59C08392B1439DE00E96593 /* DaumDictionaryService.swift in Sources */,
 				B59C08412B1439ED00E96593 /* TTSManager.swift in Sources */,
-				B59C08492B1439F500E96593 /* WordManager.swift in Sources */,
 				B5BF5B492ABDC457008C53F4 /* WorldPangTests.swift in Sources */,
 				B59C083D2B1439E600E96593 /* TranslationService.swift in Sources */,
 			);
@@ -944,7 +937,6 @@
 				B5BF5B532ABDC457008C53F4 /* WorldPangUITests.swift in Sources */,
 				B59C08422B1439ED00E96593 /* TTSManager.swift in Sources */,
 				B5BF5B552ABDC457008C53F4 /* WorldPangUITestsLaunchTests.swift in Sources */,
-				B59C084A2B1439F500E96593 /* WordManager.swift in Sources */,
 				B59C083E2B1439E600E96593 /* TranslationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,13 +14,22 @@ class VocaDetailViewController: BaseViewController {
 
     private let viewModel = VocaDetailViewModel()
     private let disposeBag = DisposeBag()
+    
+    init(selectedIndex: Int) {
+        super.init(nibName: nil, bundle: nil)
+        viewModel.loadData(row: selectedIndex)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-       
 
-        // Do any additional setup after loading the view.
     }
     
     override func setupView() {
@@ -38,14 +47,16 @@ class VocaDetailViewController: BaseViewController {
     
     override func bindRX() {
         
-        Observable.of(viewModel.dummydata)
-            .bind(to: tableView.rx.items(cellIdentifier: VocaDetailCell.reusableIdentifier, cellType: VocaDetailCell.self)) { row,model,cell in
+        viewModel.vocaDetailRelay
+            .bind(to: tableView.rx.items(cellIdentifier: VocaDetailCell.reusableIdentifier, cellType: VocaDetailCell.self)) { row,model,cell  in
+                cell.isUserInteractionEnabled = false
+                
                 cell.titleLabel.text = model.word
-                //cell.meanLabel.text = model.sentence
+                cell.meanLabel.text = model.meaning
                 
                 cell.meanButton.rx.tap
                     .subscribe(onNext: { _ in
-                        cell.meanButton.setTitle(model.sentence, for: .normal)
+                        cell.meanButton.setTitle(model.meaning, for: .normal)
                     })
                     .disposed(by: self.disposeBag)
                 
