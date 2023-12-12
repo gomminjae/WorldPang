@@ -15,15 +15,17 @@ class VocaDetailViewModel {
     let vocaDetailRelay = BehaviorRelay<[VocaDetail]>(value: [])
     let realm = try! Realm()
     
+    
+    
     func loadData(row: Int) {
         let fileName = "output_\(row + 1)"
         if let path = Bundle.main.path(forResource: fileName, ofType: "json"),
            let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path)),
            let vocaDetails = try? JSONDecoder().decode([VocaDetail].self, from: jsonData) {
-            // 데이터를 업데이트합니다.
+            
             vocaDetailRelay.accept(vocaDetails)
         } else {
-            // 실패할 경우 빈 데이터를 업데이트합니다.
+            
             vocaDetailRelay.accept([])
         }
     }

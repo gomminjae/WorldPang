@@ -70,11 +70,13 @@ class TranslationView: UIView {
     let englishLabel: UILabel = {
         let label = UILabel()
         label.text = "English"
+        label.textColor = .black
         return label
     }()
     let koreanLabel: UILabel = {
         let label = UILabel()
         label.text = "Korean"
+        label.textColor = .black
         return label
     }()
     
@@ -82,6 +84,7 @@ class TranslationView: UIView {
         let label = UILabel()
         label.text = "ㅇㅁㄴㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㄴㄹㅁㅇ"
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textColor = .black
         label.sizeToFit()
         return label
     }()
@@ -90,6 +93,7 @@ class TranslationView: UIView {
         label.sizeToFit()
         label.text = "sdㄹㅁㄴㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹ"
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textColor = .black
         return label
     }()
     

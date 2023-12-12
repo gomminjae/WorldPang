@@ -29,7 +29,8 @@ class VocaDetailCell: UITableViewCell {
         }
         meanButton.snp.makeConstraints {
             $0.top.equalTo(titleLabel).offset(40)
-            $0.leading.trailing.equalTo(titleLabel)
+            $0.centerX.equalTo(self)
+            $0.width.equalTo(90)
         }
     }
     
@@ -42,6 +43,7 @@ class VocaDetailCell: UITableViewCell {
         let label = UILabel()
         label.sizeToFit()
         label.textAlignment = .center
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return label
     }()
@@ -57,9 +59,10 @@ class VocaDetailCell: UITableViewCell {
   
     let meanButton: UIButton = {
         let button = UIButton()
-        button.setTitle("힌트 보기", for: .normal)
+        button.setTitle("정답 보기", for: .normal)
         button.backgroundColor = .mainBlue
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 10
         return button
         
     }()

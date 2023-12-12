@@ -15,6 +15,7 @@ class VocaDetailViewController: BaseViewController {
     private let viewModel = VocaDetailViewModel()
     private let disposeBag = DisposeBag()
     
+    
     init(selectedIndex: Int) {
         super.init(nibName: nil, bundle: nil)
         viewModel.loadData(row: selectedIndex)
@@ -35,6 +36,8 @@ class VocaDetailViewController: BaseViewController {
     override func setupView() {
         view.addSubview(tableView)
         tableView.delegate = self
+        
+        navigationItem.rightBarButtonItem = learnButton
     }
     
     override func setupLayout() {
@@ -70,8 +73,18 @@ class VocaDetailViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
+        learnButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.startLearning()
+            })
+            .disposed(by: disposeBag)
         
         
+        
+    }
+    
+    func startLearning() {
+        navigationItem.rightBarButtonItem?.title = "종료하기"
     }
     
     //MARK: UI
@@ -81,6 +94,8 @@ class VocaDetailViewController: BaseViewController {
         view.register(VocaDetailCell.self, forCellReuseIdentifier:  VocaDetailCell.reusableIdentifier)
         return view
     }() 
+    
+    let learnButton = UIBarButtonItem(title: "학습하기", style: .plain, target: self, action: nil)
     
 
 
@@ -92,7 +107,7 @@ extension VocaDetailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let edit = UIContextualAction(style: .normal, title: "아는단어에요"){ _,_,_ in
+        let edit = UIContextualAction(style: .destructive, title: "아는단어에요"){ _,_,_ in
             print("Eddit")
         }
         edit.backgroundColor = .mainBlue
@@ -102,7 +117,7 @@ extension VocaDetailViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let edit = UIContextualAction(style: .normal, title: "모르는단어에요"){ _,_,_ in
+        let edit = UIContextualAction(style: .destructive, title: "모르는단어에요"){ _,_,_ in
             print("Eddit")
         }
         edit.backgroundColor = .blue
@@ -113,3 +128,4 @@ extension VocaDetailViewController: UITableViewDelegate {
         return swipeConfiguration
     }
 }
+

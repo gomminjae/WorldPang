@@ -82,9 +82,12 @@ class SpaceViewController: BaseViewController {
                 
                 if let textGeometry = hitedNode.geometry {
                     let nodeName = textGeometry.value(forKey: "planet")
-                    print(nodeName)
+                    if let quizVC = self.storyboard?.instantiateViewController(withIdentifier: "QuizVC") as? QuizViewController {
+                        quizVC.textNodeString = nodeName as! String
+                        self.present(quizVC,animated: true)
+                    }
                 }
-                self.animateNodeAndPresentView(node: hitedNode)
+                //self.animateNodeAndPresentView(node: hitedNode)
             })
             .disposed(by: disposeBag)
         
@@ -157,7 +160,7 @@ class SpaceViewController: BaseViewController {
         let nodeVenus = SCNNode()
         nodeVenus.position = SCNVector3(x: 1, y: 0, z: 0)
         nodeVenus.geometry = venus
-        nodeVenus.setValue("venus", forKey: "planet")
+        nodeVenus.geometry?.setValue("venus", forKey: "planet")
         
         parentNode.addChildNode(nodeVenus)
         

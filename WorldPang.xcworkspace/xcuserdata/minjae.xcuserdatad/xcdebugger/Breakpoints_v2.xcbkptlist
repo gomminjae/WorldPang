@@ -14,10 +14,42 @@
             filePath = "WorldPang/Sources/OCRWord/OCRViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "25CD48E4-FCD4-435D-93ED-8B157E8A585F - e6e077d0b2af9601"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorldPang.OCRViewController.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
+                  moduleName = "WorldPang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minjae/Desktop/WorldPang/WorldPang/Sources/OCRWord/OCRViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "1120">
+               </Location>
+               <Location
+                  uuid = "25CD48E4-FCD4-435D-93ED-8B157E8A585F - e6e077d0b2af9601"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WorldPang.OCRViewController.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
+                  moduleName = "WorldPang"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minjae/Desktop/WorldPang/WorldPang/Sources/OCRWord/OCRViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -93,10 +125,10 @@
             filePath = "WorldPang/Sources/OCRWord/TranslationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "koreanLabel"
-            landmarkType = "24">
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "TranslationView"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "58A8793F-FFA4-49E6-A0AF-96926453A6BA - 9e2dc7db335a69af"

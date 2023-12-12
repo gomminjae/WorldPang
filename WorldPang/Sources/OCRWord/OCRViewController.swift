@@ -36,6 +36,7 @@ class OCRViewController: BaseViewController {
     override func setupView() {
         view.backgroundColor = .white
         view.addSubview(titleLabel)
+        actionButton.layer.cornerRadius = 20
         
     }
     

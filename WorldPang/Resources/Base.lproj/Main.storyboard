@@ -60,19 +60,18 @@
             <objects>
                 <tabBarController storyboardIdentifier="tabbar" automaticallyAdjustsScrollViewInsets="NO" id="nwt-xk-gFa" customClass="CustomTabbarController" customModule="WorldPang" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JP1-xb-BEG">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="JP1-xb-BEG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="mainBackground"/>
                         <color key="tintColor" name="mainBlack"/>
-                        <color key="barTintColor" name="mainText"/>
+                        <color key="barTintColor" name="mainBackground"/>
                         <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="Td3-e7-IbV" kind="relationship" relationship="viewControllers" id="oOl-0g-gKf"/>
                         <segue destination="5O4-Ph-WaD" kind="relationship" relationship="viewControllers" id="z5F-gz-g8G"/>
                         <segue destination="I34-9W-OWz" kind="relationship" relationship="viewControllers" id="gWJ-yL-ArF"/>
-                        <segue destination="093-Sm-n7I" kind="relationship" relationship="viewControllers" id="DXn-8g-87y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AoV-L6-Ez7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -83,8 +82,7 @@
         <scene sceneID="bD5-G2-Fri">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Td3-e7-IbV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" springLoaded="YES" id="oof-jX-s0D">
-                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" springLoaded="YES" id="oof-jX-s0D">
                         <color key="badgeColor" systemColor="systemIndigoColor"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
@@ -92,6 +90,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ai9-NC-BiK">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="mainBackground"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -124,11 +123,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-8d-qvq">
                                 <rect key="frame" x="71" y="593" width="250" height="51"/>
-                                <color key="backgroundColor" name="subIndigo"/>
+                                <color key="backgroundColor" name="mainBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="cZG-Qk-6r2"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Recognition"/>
                             </button>
@@ -309,6 +308,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GTi-fB-dDB">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="mainBackground"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -328,7 +328,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vaO-sk-8AM">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="mainBackground"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -353,11 +353,8 @@
         <namedColor name="mainBlack">
             <color red="0.12941176470588237" green="0.12941176470588237" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="mainText">
-            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="subIndigo">
-            <color red="0.35686274509803922" green="0.50980392156862742" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="mainBlue">
+            <color red="0.23529411764705882" green="0.20784313725490197" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

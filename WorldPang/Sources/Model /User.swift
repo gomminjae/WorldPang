@@ -27,4 +27,5 @@ struct User: Codable {
 struct ProblemRecord: Codable {
     var date: Date
     var solvedProblemCount: Int
+    var points: Int
 }
