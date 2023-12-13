@@ -10,18 +10,31 @@ import RxGesture
 
 enum ARCategory {
     case normal
-    case aquarium
     case space
+    case fruits
 }
 
+enum RecognitionError: Error {
+    case unableToInitializeCoreMLModel
+    case resultIsEmpty
+    case lowConfidence
+    case yoloOutputFormatMismatch
+}
 
 class ARViewController: UIViewController {
     
+   
     
     @IBOutlet weak var sceneView: ARSCNView!
     
     private let disposeBag = DisposeBag()
     private let arViewModel = ARViewModel()
+    
+    var selectedCategory: ARCategory = .normal {
+        didSet {
+            updateMLModel(for: selectedCategory)
+        }
+    }
     
 
     
@@ -41,7 +54,7 @@ class ARViewController: UIViewController {
         setupView()
         bindRX()
         
-        setupMLModel()
+        //setupMLModel()
         
         // Do any additional setup after loading the view.
     }
@@ -94,11 +107,6 @@ class ARViewController: UIViewController {
     }
     
     private func bindRX() {
-        exitButton.rx.tap
-            .subscribe(onNext: { [weak self] in
-                self?.navigationController?.popToViewController(HomeViewController(), animated: true)
-            })
-            .disposed(by: disposeBag)
         
         aimView.rx.tap
             .subscribe(onNext: { [weak self] in
@@ -151,16 +159,66 @@ class ARViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+    }
+    
+    private func updateMLModel(for category: ARCategory) {
+        switch category {
+        case .normal:
+            guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
+            updateVisionRequests(with: model)
+        case.fruits:
+            guard let model = try? VNCoreMLModel(for: fruits_yolov5s().model) else { fatalError() }
+            updateVisionRequests(with: model)
+        default:
+            print("없음")
+        }
+    }
+    private func updateVisionRequests(with model: VNCoreMLModel) {
         
+        if selectedCategory == .normal {
+            let request = VNCoreMLRequest(model: model, completionHandler: classificationCompleteHandler)
+            request.imageCropAndScaleOption = .centerCrop
+            visionRequests = [request]
+        } else if selectedCategory == .fruits {
+            let request = VNCoreMLRequest(model: model, completionHandler: classificationYoloCompleteHandler)
+            request.imageCropAndScaleOption = .centerCrop
+            visionRequests = [request]
+        }
+    }
+    
+    func classificationYoloCompleteHandler(request: VNRequest, error: Error?) {
+        // Handle Errors
+        guard error == nil else {
+            print("Error: \(error!.localizedDescription)")
+            return
+        }
+
+        // Get Classifications
+        guard let observations = request.results as? [VNClassificationObservation], !observations.isEmpty else {
+            print("No results")
+            return
+        }
+
+        // Take the top result
+        guard let topResult = observations.first else {
+            print("No top result")
+            return
+        }
+
+        // Check confidence level
+        guard topResult.confidence > 0.6 else {
+            print("Low confidence")
+            return
+        }
+
+        // Extract object name
+        let objectName = topResult.identifier.components(separatedBy: "-")[0].components(separatedBy: ",")[0]
+
+        predictedObjectName.onNext(objectName)
     }
 
-    private func setupMLModel() {
-        guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
-        
-        let request = VNCoreMLRequest(model: model, completionHandler: classificationCompleteHandler)
-        request.imageCropAndScaleOption = .centerCrop
-        visionRequests = [request]
-    }
+    
+    
     
     
     func classificationCompleteHandler(request: VNRequest, error: Error?) {

@@ -127,8 +127,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "TranslationView"
-            landmarkType = "3">
+            landmarkName = "koreanLabel"
+            landmarkType = "24">
             <Locations>
                <Location
                   uuid = "58A8793F-FFA4-49E6-A0AF-96926453A6BA - 9e2dc7db335a69af"
@@ -173,8 +173,8 @@
             filePath = "WorldPang/Sources/AR/QuizAR/ARViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
             landmarkName = "changeAllNode()"
             landmarkType = "7">
             <Locations>

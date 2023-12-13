@@ -14,6 +14,9 @@ import SnapKit
 class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
     
+    let pointManager = PointManager.shared
+    
+    
     var textNodeString: String = "" {
         didSet {
             let alphabetArr = textNodeString.replacingOccurrences(of: " ", with: "").map { String($0) }
@@ -102,6 +105,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
             $0.leading.trailing.equalTo(view)
             $0.centerX.equalTo(view)
         }
+        
     }
     
     override func bindRX() {
@@ -139,7 +143,9 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
             .subscribe(onNext: { [weak self] in
                 if  self?.boardTextField.text == self?.textNodeString.replacingOccurrences(of: " ", with: "") {
                     print("success")
+                    self?.pointManager.updatePoints(by: 10)
                     self?.showAnswerView(isCorrect: true)
+                    
                     //self?.dismiss(animated: true)
                 }
                 else {
@@ -179,6 +185,9 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
             boardTextField.text = ""
 
     }
+    private func quizComplete() {
+        
+    }
     
     private func showAnswerView(isCorrect: Bool) {
         let answerView = UIView()
@@ -187,7 +196,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
         answerView.layer.cornerRadius = 20
         
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         
         answerView.addSubview(label)
@@ -266,6 +275,14 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
         button.backgroundColor = .mainBlue
         button.setImage(UIImage(systemName: "delete.backward.fill"), for: .normal)
         return button
+    }()
+    
+    lazy var countOfSolvedProblem: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = UIColor.mainBlue
+        label.textColor = .white
+        label.sizeToFit()
+        return label
     }()
     
     

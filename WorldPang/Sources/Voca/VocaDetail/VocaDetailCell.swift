@@ -14,6 +14,7 @@ class VocaDetailCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = .mainWhite
         addSubview(speakerEnButton)
+        addSubview(meanLabel)
         addSubview(meanButton)
         addSubview(titleLabel)
         
@@ -27,11 +28,22 @@ class VocaDetailCell: UITableViewCell {
             $0.centerX.equalTo(self)
             $0.top.equalTo(self).inset(10)
         }
+        
+        
         meanButton.snp.makeConstraints {
             $0.top.equalTo(titleLabel).offset(40)
             $0.centerX.equalTo(self)
             $0.width.equalTo(90)
         }
+        meanLabel.snp.makeConstraints {
+            $0.top.equalTo(titleLabel).offset(40)
+            $0.centerX.equalTo(self)
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -53,6 +65,7 @@ class VocaDetailCell: UITableViewCell {
         label.textAlignment = .center
         label.sizeToFit()
         label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.textColor = .black
         return label
     }()
     

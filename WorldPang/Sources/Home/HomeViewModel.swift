@@ -22,11 +22,13 @@ protocol ViewModelType {
 class HomeViewModel {
     
     var userInfo: BehaviorSubject<User?> = BehaviorSubject(value: nil)
-    
+
+         
+   
     
     private var disposeBag: DisposeBag = DisposeBag()
     
-    
+    var pointsSubject: BehaviorSubject<Int> = BehaviorSubject(value: 0)
     var nickname = ""
     let dummyData = ["AR", "MAP", "SPACE","CITY"]
     
@@ -36,12 +38,15 @@ class HomeViewModel {
             
             Stage(title: "AR Solar System", content: "AR환경에서 \n느끼는 태양계!", stageType: .space),
             
-            Stage(title: "AR Aquarium 단어 공부", content: "아쿠아리움에서, \n특별한 단어 공부!!", stageType: .aquarium)
+            Stage(title: "AR Fruits 단어 공부", content: "과일 단어 공부!!", stageType: .fruits)
         ])
     }
     
     init() {
+        
         loadUserInfo()
+        let initialPoints = loadPoints()
+        pointsSubject = BehaviorSubject<Int>(value: initialPoints)
     }
     
     
@@ -73,6 +78,10 @@ class HomeViewModel {
         } else {
             completion(nil)
         }
+    }
+    
+    func loadPoints() -> Int {
+        return UserDefaults.standard.integer(forKey: "userPoints")
     }
     
 }

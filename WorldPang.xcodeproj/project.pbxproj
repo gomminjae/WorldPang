@@ -86,6 +86,8 @@
 		B5C4C24F2B26F9D000117C73 /* output_2.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C4C23F2B26F9D000117C73 /* output_2.json */; };
 		B5C4C2502B26F9D000117C73 /* output_11.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C4C2402B26F9D000117C73 /* output_11.json */; };
 		B5C4C2522B270DCA00117C73 /* VocaStageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4C2512B270DCA00117C73 /* VocaStageHeaderView.swift */; };
+		B5C4C2542B29B2A500117C73 /* PointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4C2532B29B2A500117C73 /* PointManager.swift */; };
+		B5C4C2562B29DB5E00117C73 /* fruits_yolov5s.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B5C4C2552B29DB5E00117C73 /* fruits_yolov5s.mlmodel */; };
 		B5D2C0BF2B13987C00783196 /* VocaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2C0BE2B13987C00783196 /* VocaDetailViewController.swift */; };
 		B5D2C0C12B1398ED00783196 /* VocaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2C0C02B1398ED00783196 /* VocaDetailViewModel.swift */; };
 		B5F7FAE52B013ACE0027403D /* PlanetCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */; };
@@ -199,6 +201,8 @@
 		B5C4C23F2B26F9D000117C73 /* output_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = output_2.json; sourceTree = "<group>"; };
 		B5C4C2402B26F9D000117C73 /* output_11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = output_11.json; sourceTree = "<group>"; };
 		B5C4C2512B270DCA00117C73 /* VocaStageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaStageHeaderView.swift; sourceTree = "<group>"; };
+		B5C4C2532B29B2A500117C73 /* PointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointManager.swift; sourceTree = "<group>"; };
+		B5C4C2552B29DB5E00117C73 /* fruits_yolov5s.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fruits_yolov5s.mlmodel; sourceTree = "<group>"; };
 		B5D2C0BE2B13987C00783196 /* VocaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetailViewController.swift; sourceTree = "<group>"; };
 		B5D2C0C02B1398ED00783196 /* VocaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetailViewModel.swift; sourceTree = "<group>"; };
 		B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCardViewController.swift; sourceTree = "<group>"; };
@@ -208,7 +212,6 @@
 		B5F7FAED2B03BFE70027403D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B5F7FAEF2B03C4CC0027403D /* Voca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voca.swift; sourceTree = "<group>"; };
 		B5F7FAF12B03DBAF0027403D /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
-		B5F994F02AF2B4FE00F2208B /* Yolov5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Yolov5.mlmodel; sourceTree = "<group>"; };
 		CF760308424700BBEA3B7D98 /* Pods_WorldPang_WorldPangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang_WorldPangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -377,6 +380,7 @@
 				B59C083F2B1439ED00E96593 /* TTSManager.swift */,
 				B59C083B2B1439E600E96593 /* TranslationService.swift */,
 				B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */,
+				B5C4C2532B29B2A500117C73 /* PointManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -444,7 +448,7 @@
 				B52E445C2AC04658001135BC /* Sources */,
 				B5BF5B3F2ABDC456008C53F4 /* Info.plist */,
 				B5C4C2302B26F9D000117C73 /* output_json */,
-				B5F994F02AF2B4FE00F2208B /* Yolov5.mlmodel */,
+				B5C4C2552B29DB5E00117C73 /* fruits_yolov5s.mlmodel */,
 				B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */,
 				B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */,
 				B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */,
@@ -866,6 +870,7 @@
 				B5F7FAE52B013ACE0027403D /* PlanetCardViewController.swift in Sources */,
 				B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */,
 				B5BF5B652ABDC559008C53F4 /* LoginViewController.swift in Sources */,
+				B5C4C2562B29DB5E00117C73 /* fruits_yolov5s.mlmodel in Sources */,
 				B52E44582AC0336B001135BC /* LoginButton.swift in Sources */,
 				B5F7FAF22B03DBAF0027403D /* TranslationView.swift in Sources */,
 				B59C48E32B08E4BF00680645 /* Stage.swift in Sources */,
@@ -888,6 +893,7 @@
 				B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */,
 				B5BF5B8F2ADECA2C008C53F4 /* OCRViewController.swift in Sources */,
 				B50EBDE92AEFDA4E007E8D6A /* ARViewModel.swift in Sources */,
+				B5C4C2542B29B2A500117C73 /* PointManager.swift in Sources */,
 				B59C48DC2B07D39A00680645 /* PlanetListCell.swift in Sources */,
 				B5F7FAEE2B03BFE70027403D /* String+Extension.swift in Sources */,
 				B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */,

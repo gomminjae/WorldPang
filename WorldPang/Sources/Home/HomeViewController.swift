@@ -16,7 +16,7 @@ class HomeViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
     private let viewModel = HomeViewModel()
-    
+    let pointManager = PointManager.shared
     
     
     override func viewDidLoad() {
@@ -24,6 +24,10 @@ class HomeViewController: BaseViewController {
         
         print("Hello")
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updatePoints()
     }
     
     override func setupView() {
@@ -42,7 +46,6 @@ class HomeViewController: BaseViewController {
         userCurrentStateView.addSubview(vocaNumberLabel)
         userCurrentStateView.addSubview(pointLabel)
         userCurrentStateView.addSubview(pointTitleLabel)
-        
         
         
         //navigationItem.rightBarButtonItem = UIBarButtonItem(customView: userProfileImageButton)
@@ -150,6 +153,7 @@ class HomeViewController: BaseViewController {
                     // ARViewController로 화면 전환
                     if let arViewController = storyboard?.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
                         arViewController.modalPresentationStyle = .fullScreen
+                        arViewController.selectedCategory = .normal
                         present(arViewController,animated: true)
                     }
                 case 1:
@@ -159,15 +163,15 @@ class HomeViewController: BaseViewController {
                         present(spaceViewController,animated: true)
                     }
                 default:
-                    arViewModel.arCategory = .aquarium
+                    arViewModel.arCategory = .fruits
                     if let arViewController = storyboard?.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
                         arViewController.modalPresentationStyle = .fullScreen
+                        arViewController.selectedCategory = .fruits
                         present(arViewController,animated: true)
                     }
                 }
             })
             .disposed(by: disposeBag)
-        
         
         viewModel.userInfo
             .subscribe(onNext: { [weak self] user in
@@ -196,6 +200,12 @@ class HomeViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
         
+        viewModel.pointsSubject
+            .map { String($0)}
+            .bind(to: pointLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        
     }
     
     private func updateUserData(with user: User) {
@@ -210,6 +220,15 @@ class HomeViewController: BaseViewController {
             }
         }
     }
+    private func updatePoints() {
+        print("AR dismissed")
+        DispatchQueue.main.async {
+            let points = self.pointManager.getPoints()
+            self.pointLabel.text = String(points)
+            self.vocaNumberLabel.text = String(points/10)
+        }
+    }
+    
     
     //MARK: UI
     
@@ -299,8 +318,6 @@ class HomeViewController: BaseViewController {
     
 
 }
-
-
 extension HomeViewController: UIScrollViewDelegate {
     
 }
