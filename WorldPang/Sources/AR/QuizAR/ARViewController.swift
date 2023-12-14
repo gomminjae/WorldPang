@@ -54,7 +54,7 @@ class ARViewController: UIViewController {
         setupView()
         bindRX()
         
-        //setupMLModel()
+        updateMLModel(for: selectedCategory)
         
         // Do any additional setup after loading the view.
     }
@@ -167,7 +167,7 @@ class ARViewController: UIViewController {
             guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
             updateVisionRequests(with: model)
         case.fruits:
-            guard let model = try? VNCoreMLModel(for: fruits_yolov5s().model) else { fatalError() }
+            guard let model = try? VNCoreMLModel(for: fruits().model) else { fatalError() }
             updateVisionRequests(with: model)
         default:
             print("없음")
@@ -180,42 +180,47 @@ class ARViewController: UIViewController {
             request.imageCropAndScaleOption = .centerCrop
             visionRequests = [request]
         } else if selectedCategory == .fruits {
-            let request = VNCoreMLRequest(model: model, completionHandler: classificationYoloCompleteHandler)
+            let request = VNCoreMLRequest(model: model, completionHandler: classificationFruitsCompleteHandler)
             request.imageCropAndScaleOption = .centerCrop
             visionRequests = [request]
         }
     }
     
-    func classificationYoloCompleteHandler(request: VNRequest, error: Error?) {
-        // Handle Errors
-        guard error == nil else {
-            print("Error: \(error!.localizedDescription)")
+    func classificationFruitsCompleteHandler(request: VNRequest, error: Error?) {
+        // Catch Errors
+        if let error = error {
+            print("Error: \(error.localizedDescription)")
             return
         }
-
-        // Get Classifications
-        guard let observations = request.results as? [VNClassificationObservation], !observations.isEmpty else {
+        
+        guard let observations = request.results else {
             print("No results")
             return
         }
-
-        // Take the top result
-        guard let topResult = observations.first else {
-            print("No top result")
+        
+        // Get Classifications
+        let topClassifications = observations
+            .compactMap { $0 as? VNClassificationObservation }
+            .prefix(1) // top result
+        
+        guard let topClassification = topClassifications.first else {
+            print("No classifications found")
             return
         }
-
-        // Check confidence level
-        guard topResult.confidence > 0.6 else {
-            print("Low confidence")
-            return
-        }
-
-        // Extract object name
-        let objectName = topResult.identifier.components(separatedBy: "-")[0].components(separatedBy: ",")[0]
-
+        
+        // Extract information from the top classification
+        let objectNameComponents = topClassification.identifier.components(separatedBy: ",")
+        let objectName = objectNameComponents[0]
+        
+        // Print or use the information as needed
+        let confidenceString = String(format: "%.2f", topClassification.confidence * 100)
+        print("Classification: \(objectName) Confidence: \(confidenceString)%")
+        
+        // Pass the predicted object name to the appropriate method or property
         predictedObjectName.onNext(objectName)
     }
+
+    
 
     
     
@@ -409,5 +414,11 @@ extension UIFont {
     func withTraits(traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
         let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits))
         return UIFont(descriptor: descriptor!, size: 0)
+    }
+}
+extension Array where Element: Comparable {
+    func argmax() -> Int? {
+        guard let maxElement = self.max() else { return nil }
+        return firstIndex(of: maxElement)
     }
 }

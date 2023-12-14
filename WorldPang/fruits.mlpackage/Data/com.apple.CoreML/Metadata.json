@@ -1,0 +1,12 @@
+{
+  "MLModelVersionStringKey" : "1.0.0",
+  "MLModelDescriptionKey" : "Fruits classification model using Kaggle fruits100 dataset",
+  "MLModelCreatorDefinedKey" : {
+    "com.apple.createml.app.tag" : "121.2",
+    "com.apple.createml.version" : "14.1.1",
+    "com.apple.coreml.model.preview.type" : "imageClassifier",
+    "com.apple.createml.app.version" : "5.0"
+  },
+  "MLModelAuthorKey" : "Minjae Gwon",
+  "MLModelLicenseKey" : "MIT "
+}

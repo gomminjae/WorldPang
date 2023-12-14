@@ -128,10 +128,10 @@ class HomeViewController: BaseViewController {
                     cell.imageView.image = UIImage(named: "planet")
                 default:
                     cell.titleLabel.text = stage.content
-                    cell.imageView.image = UIImage(named: "aquarium")
+                    cell.imageView.image = UIImage(named: "fruits")
                 }
                 cell.layer.borderColor = UIColor.mainBlue.cgColor
-                cell.layer.borderWidth = 18
+                cell.layer.borderWidth = 5
                
                 //cell.backgroundColor = UIColor.random()
             }

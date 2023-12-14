@@ -87,7 +87,7 @@
 		B5C4C2502B26F9D000117C73 /* output_11.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C4C2402B26F9D000117C73 /* output_11.json */; };
 		B5C4C2522B270DCA00117C73 /* VocaStageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4C2512B270DCA00117C73 /* VocaStageHeaderView.swift */; };
 		B5C4C2542B29B2A500117C73 /* PointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C4C2532B29B2A500117C73 /* PointManager.swift */; };
-		B5C4C2562B29DB5E00117C73 /* fruits_yolov5s.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B5C4C2552B29DB5E00117C73 /* fruits_yolov5s.mlmodel */; };
+		B5C4C2602B2AEC6000117C73 /* fruits.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = B5C4C25F2B2AEC6000117C73 /* fruits.mlpackage */; };
 		B5D2C0BF2B13987C00783196 /* VocaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2C0BE2B13987C00783196 /* VocaDetailViewController.swift */; };
 		B5D2C0C12B1398ED00783196 /* VocaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D2C0C02B1398ED00783196 /* VocaDetailViewModel.swift */; };
 		B5F7FAE52B013ACE0027403D /* PlanetCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */; };
@@ -202,7 +202,7 @@
 		B5C4C2402B26F9D000117C73 /* output_11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = output_11.json; sourceTree = "<group>"; };
 		B5C4C2512B270DCA00117C73 /* VocaStageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaStageHeaderView.swift; sourceTree = "<group>"; };
 		B5C4C2532B29B2A500117C73 /* PointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointManager.swift; sourceTree = "<group>"; };
-		B5C4C2552B29DB5E00117C73 /* fruits_yolov5s.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = fruits_yolov5s.mlmodel; sourceTree = "<group>"; };
+		B5C4C25F2B2AEC6000117C73 /* fruits.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = fruits.mlpackage; sourceTree = "<group>"; };
 		B5D2C0BE2B13987C00783196 /* VocaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetailViewController.swift; sourceTree = "<group>"; };
 		B5D2C0C02B1398ED00783196 /* VocaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetailViewModel.swift; sourceTree = "<group>"; };
 		B5F7FAE42B013ACE0027403D /* PlanetCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCardViewController.swift; sourceTree = "<group>"; };
@@ -448,8 +448,8 @@
 				B52E445C2AC04658001135BC /* Sources */,
 				B5BF5B3F2ABDC456008C53F4 /* Info.plist */,
 				B5C4C2302B26F9D000117C73 /* output_json */,
-				B5C4C2552B29DB5E00117C73 /* fruits_yolov5s.mlmodel */,
 				B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */,
+				B5C4C25F2B2AEC6000117C73 /* fruits.mlpackage */,
 				B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */,
 				B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */,
 				B54E55EA2B13162D00855330 /* GoogleService-Info.plist */,
@@ -870,7 +870,6 @@
 				B5F7FAE52B013ACE0027403D /* PlanetCardViewController.swift in Sources */,
 				B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */,
 				B5BF5B652ABDC559008C53F4 /* LoginViewController.swift in Sources */,
-				B5C4C2562B29DB5E00117C73 /* fruits_yolov5s.mlmodel in Sources */,
 				B52E44582AC0336B001135BC /* LoginButton.swift in Sources */,
 				B5F7FAF22B03DBAF0027403D /* TranslationView.swift in Sources */,
 				B59C48E32B08E4BF00680645 /* Stage.swift in Sources */,
@@ -879,6 +878,7 @@
 				B52E44542AC0229A001135BC /* PagerCell.swift in Sources */,
 				B5BF5B922ADECD62008C53F4 /* SettingViewController.swift in Sources */,
 				B59C48D52B07AC8900680645 /* SpaceARViewModel.swift in Sources */,
+				B5C4C2602B2AEC6000117C73 /* fruits.mlpackage in Sources */,
 				B59C48D72B07CE5F00680645 /* PlanetListViewController.swift in Sources */,
 				B59C48DE2B07D83F00680645 /* PlanetListViewModel.swift in Sources */,
 				B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */,

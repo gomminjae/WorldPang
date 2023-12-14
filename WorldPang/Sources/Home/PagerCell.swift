@@ -13,6 +13,8 @@ class PagerCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layer.cornerRadius = 20
+        self.backgroundColor = .mainWhite
+        self.setShadow()
         setupCell()
     }
     
@@ -25,16 +27,17 @@ class PagerCell: UICollectionViewCell {
         addSubview(titleLabel)
         
         imageView.snp.makeConstraints {
-            $0.leading.trailing.top.bottom.equalTo(self)
+            $0.leading.trailing.top.equalTo(self)
+            $0.bottom.equalTo(titleLabel.snp.top)
         }
         
         
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(self).inset(20)
+            $0.bottom.equalTo(self).inset(10)
+            $0.centerX.equalTo(self)
             $0.leading.equalTo(self).inset(20)
             $0.trailing.equalTo(self).inset(20)
-            $0.width.equalTo(self.frame.width * 0.7)
         }
     }
     
@@ -55,9 +58,9 @@ class PagerCell: UICollectionViewCell {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "물건을 촬영하여 영아단어를 학습하세요!"
         label.font = UIFont.systemFont(ofSize: 20,weight: .bold)
         label.textColor = .black
+        label.textAlignment = .center
         label.sizeToFit()
         label.numberOfLines = 2
         return label
