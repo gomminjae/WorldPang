@@ -23,9 +23,8 @@ enum RecognitionError: Error {
 
 class ARViewController: UIViewController {
     
-   
-    
     @IBOutlet weak var sceneView: ARSCNView!
+    
     
     private let disposeBag = DisposeBag()
     private let arViewModel = ARViewModel()
@@ -65,6 +64,8 @@ class ARViewController: UIViewController {
         configuration.planeDetection = [.vertical,.horizontal]
         
         sceneView.session.run(configuration)
+       
+
     
        
     }
@@ -88,6 +89,9 @@ class ARViewController: UIViewController {
         
         toolBox.addArrangedSubview(exitButton)
         toolBox.addArrangedSubview(startButton)
+        
+       
+       
         
         aimView.snp.makeConstraints {
             $0.centerX.equalTo(sceneView)
@@ -124,7 +128,8 @@ class ARViewController: UIViewController {
         exitButton.rx.tap
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
-                self?.dismiss(animated: true)
+                //self?.dismiss(animated: true)
+                self?.showResultView()
             })
             .disposed(by: disposeBag)
         
@@ -153,11 +158,13 @@ class ARViewController: UIViewController {
                        let textName = self.getTextNodeData(for: hitedNode)  {
                         print(textName)
                         quizVC.textNodeString = textName
+                        quizVC.selectedNode = hitedNode
                     }
                     self.present(quizVC, animated: true)
                 }
             })
             .disposed(by: disposeBag)
+        
         
     }
     
@@ -333,6 +340,41 @@ class ARViewController: UIViewController {
         
         return nil
     }
+    
+    private func showResultView() {
+        let view = UIView()
+        view.backgroundColor = .white
+        
+        let label = UILabel()
+        label.textColor = .mainBlue
+        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        sceneView.addSubview(view)
+        view.addSubview(label)
+        
+        view.layer.cornerRadius = 20 
+        
+        view.snp.makeConstraints {
+            $0.centerX.equalTo(sceneView)
+            $0.centerY.equalTo(sceneView)
+            $0.width.equalTo(300)
+            $0.height.equalTo(250)
+        }
+        
+        label.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.centerY.equalTo(view)
+        }
+        
+        var currentScore = PointManager.shared.getPoints()
+        label.text = "총 획득한 포인트는 \(currentScore)입니다!"
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            view.removeFromSuperview()
+            self.dismiss(animated: true)
+        }
+    }
+    
+    
 
     //MARK: UI
     let aimView: UIButton = {
@@ -380,18 +422,18 @@ class ARViewController: UIViewController {
         return button
     }()
 
-    let userStateView: UIView = {
-        let view = UIView()
-        return view
-    }()
     
     let userQuizStateView: UIView = {
         let view = UIView()
+        view.backgroundColor = .black
+        view.alpha = 0.4
         return view
     }()
     
     let correntScoreLabel: UILabel = {
         let label = UILabel()
+        label.text = "현재 맞춘 퀴즈: 0"
+        label.textColor = .white
         return label
     }()
     

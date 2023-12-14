@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
-
+import SceneKit
 
 class QuizViewController: BaseViewController, UICollectionViewDelegate {
     
@@ -23,6 +23,7 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
             bindableTextNodeString.onNext(alphabetArr)
         }
     }
+    var selectedNode: SCNNode?
     
     private var viewModel: QuizViewModel?
     
@@ -219,6 +220,12 @@ class QuizViewController: BaseViewController, UICollectionViewDelegate {
             label.text = "Correct!"
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 answerView.removeFromSuperview()
+                
+                if let selectedNode = self.selectedNode,
+                   let textGeometry = selectedNode.geometry as? SCNText {
+                    textGeometry.string = self.textNodeString
+                }
+    
                 self.dismiss(animated: true)
             }
         } else {
