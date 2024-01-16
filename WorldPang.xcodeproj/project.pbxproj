@@ -12,7 +12,6 @@
 		B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */; };
 		B50EBDE32AEFB54D007E8D6A /* BasicVoca.json in Resources */ = {isa = PBXBuildFile; fileRef = B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */; };
 		B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */; };
-		B50EBDE92AEFDA4E007E8D6A /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */; };
 		B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */; };
 		B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */; };
 		B50EBDF82AF1625D007E8D6A /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDF72AF1625D007E8D6A /* UIDevice+Extension.swift */; };
@@ -129,7 +128,6 @@
 		B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetail.swift; sourceTree = "<group>"; };
 		B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BasicVoca.json; path = ../../../../../../Downloads/BasicVoca.json; sourceTree = "<group>"; };
 		B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 		B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
 		B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		B50EBDF72AF1625D007E8D6A /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extension.swift"; path = "../../../Downloads/CoreML-in-ARKit-master 2/CoreML-in-ARKit/Extension/UIDevice+Extension.swift"; sourceTree = "<group>"; };
@@ -274,12 +272,12 @@
 		B50EBDEA2AEFEA77007E8D6A /* SpaceAR */ = {
 			isa = PBXGroup;
 			children = (
+				B596FD002AF5F781003B56C2 /* SpaceViewController.swift */,
 				B59C48E12B08A32000680645 /* List */,
 				B59C48E02B08865A00680645 /* Detail */,
 				B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */,
 				B59C48DF2B07E0B800680645 /* ViewModels */,
 				B59C48DA2B07CFA600680645 /* Cells */,
-				B596FD002AF5F781003B56C2 /* SpaceViewController.swift */,
 			);
 			path = SpaceAR;
 			sourceTree = "<group>";
@@ -297,7 +295,6 @@
 			isa = PBXGroup;
 			children = (
 				B52E44502ABFEAAC001135BC /* ARViewController.swift */,
-				B50EBDE82AEFDA4E007E8D6A /* ARViewModel.swift */,
 			);
 			path = QuizAR;
 			sourceTree = "<group>";
@@ -892,7 +889,6 @@
 				B54E55E62B0D0D0500855330 /* VocaStageCell.swift in Sources */,
 				B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */,
 				B5BF5B8F2ADECA2C008C53F4 /* OCRViewController.swift in Sources */,
-				B50EBDE92AEFDA4E007E8D6A /* ARViewModel.swift in Sources */,
 				B5C4C2542B29B2A500117C73 /* PointManager.swift in Sources */,
 				B59C48DC2B07D39A00680645 /* PlanetListCell.swift in Sources */,
 				B5F7FAEE2B03BFE70027403D /* String+Extension.swift in Sources */,

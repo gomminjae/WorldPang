@@ -27,7 +27,6 @@ class ARViewController: UIViewController {
     
     
     private let disposeBag = DisposeBag()
-    private let arViewModel = ARViewModel()
     
     var selectedCategory: ARCategory = .normal {
         didSet {
