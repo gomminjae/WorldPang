@@ -14,17 +14,12 @@ import NaturalLanguage
 class OCRViewController: BaseViewController {
     
 
-    let picker = UIImagePickerController()
-    
     @IBOutlet weak var actionButton: UIButton!
-    
     @IBOutlet weak var selectedImageView: UIImageView!
     
+    let picker = UIImagePickerController()
+    
     private let disposeBag = DisposeBag()
-    
-    
-    //Papago
-    
     
     @IBOutlet weak var resultTextView: UITextView!
     override func viewDidLoad() {

@@ -27,23 +27,6 @@ class OCRResultViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let arr = ["danger", "do", "not", "enter"]
-//        let dispatchGroup = DispatchGroup()
-//
-//        for word in arr {
-//            dispatchGroup.enter()
-//
-//            DaumDictionaryService.shared.searchDaumDictionary(queryKeyword: word) { result, means in
-//                // 여기에서 결과를 처리하거나 저장
-//                print(result, means)
-//
-//                // 해당 비동기 작업이 완료되었음을 DispatchGroup에 알림
-//                dispatchGroup.leave()
-//            }
-//        }
-        
-
-        // Do any additional setup after loading the view.
     }
     
     override func setupView() {
