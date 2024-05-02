@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 import RxDataSources
-import FirebaseDatabase
 import RxCocoa
 
 class VocaStageViewModel {

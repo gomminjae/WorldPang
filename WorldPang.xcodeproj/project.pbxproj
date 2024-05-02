@@ -10,11 +10,9 @@
 		5F7306DECF716A5B77EFC2E2 /* Pods_WorldPang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E279DF4263CAD500385D76 /* Pods_WorldPang.framework */; };
 		8439D1DF9D30522E53373542 /* Pods_WorldPang_WorldPangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF760308424700BBEA3B7D98 /* Pods_WorldPang_WorldPangUITests.framework */; };
 		B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */; };
-		B50EBDE32AEFB54D007E8D6A /* BasicVoca.json in Resources */ = {isa = PBXBuildFile; fileRef = B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */; };
 		B50EBDE52AEFD941007E8D6A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */; };
 		B50EBDEC2AEFECE0007E8D6A /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */; };
 		B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */; };
-		B50EBDF82AF1625D007E8D6A /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EBDF72AF1625D007E8D6A /* UIDevice+Extension.swift */; };
 		B519FF402ADCCEAD000FACAB /* VocaStageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF3F2ADCCEAD000FACAB /* VocaStageViewController.swift */; };
 		B519FF422ADCCEB5000FACAB /* VocaStageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519FF412ADCCEB5000FACAB /* VocaStageViewModel.swift */; };
 		B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E44502ABFEAAC001135BC /* ARViewController.swift */; };
@@ -29,7 +27,6 @@
 		B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */; };
 		B5389D742B05E3CA00EDC878 /* TranslationResponsePapagoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389D732B05E3CA00EDC878 /* TranslationResponsePapagoResponse.swift */; };
 		B54E55E62B0D0D0500855330 /* VocaStageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54E55E52B0D0D0500855330 /* VocaStageCell.swift */; };
-		B54E55EB2B13162D00855330 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B54E55EA2B13162D00855330 /* GoogleService-Info.plist */; };
 		B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD002AF5F781003B56C2 /* SpaceViewController.swift */; };
 		B59C08382B1439DE00E96593 /* DaumDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */; };
 		B59C08392B1439DE00E96593 /* DaumDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */; };
@@ -40,7 +37,6 @@
 		B59C08402B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
 		B59C08412B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
 		B59C08422B1439ED00E96593 /* TTSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C083F2B1439ED00E96593 /* TTSManager.swift */; };
-		B59C084D2B14B07D00E96593 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = B59C084C2B14B07D00E96593 /* ObjectMapper */; };
 		B59C084F2B17B69700E96593 /* VocaDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C084E2B17B69700E96593 /* VocaDetailCell.swift */; };
 		B59C48D52B07AC8900680645 /* SpaceARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48D42B07AC8900680645 /* SpaceARViewModel.swift */; };
 		B59C48D72B07CE5F00680645 /* PlanetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */; };
@@ -126,7 +122,6 @@
 		73E279DF4263CAD500385D76 /* Pods_WorldPang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldPang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79065554DE549DF6549385D4 /* Pods-WorldPang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldPang.release.xcconfig"; path = "Target Support Files/Pods-WorldPang/Pods-WorldPang.release.xcconfig"; sourceTree = "<group>"; };
 		B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaDetail.swift; sourceTree = "<group>"; };
-		B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BasicVoca.json; path = ../../../../../../Downloads/BasicVoca.json; sourceTree = "<group>"; };
 		B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
 		B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -146,7 +141,6 @@
 		B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		B5389D732B05E3CA00EDC878 /* TranslationResponsePapagoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationResponsePapagoResponse.swift; sourceTree = "<group>"; };
 		B54E55E52B0D0D0500855330 /* VocaStageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaStageCell.swift; sourceTree = "<group>"; };
-		B54E55EA2B13162D00855330 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B596FD002AF5F781003B56C2 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaumDictionaryService.swift; sourceTree = "<group>"; };
 		B59C083B2B1439E600E96593 /* TranslationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
@@ -218,7 +212,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59C084D2B14B07D00E96593 /* ObjectMapper in Frameworks */,
 				B5BF5B862ACDBB47008C53F4 /* ARKit.framework in Frameworks */,
 				5F7306DECF716A5B77EFC2E2 /* Pods_WorldPang.framework in Frameworks */,
 			);
@@ -257,16 +250,9 @@
 		B50EBDDE2AEB7B58007E8D6A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B52E44532AC0229A001135BC /* PagerCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		B50EBDE12AEFB534007E8D6A /* VocaData */ = {
-			isa = PBXGroup;
-			children = (
-				B50EBDE22AEFB54D007E8D6A /* BasicVoca.json */,
-			);
-			path = VocaData;
 			sourceTree = "<group>";
 		};
 		B50EBDEA2AEFEA77007E8D6A /* SpaceAR */ = {
@@ -274,7 +260,6 @@
 			children = (
 				B596FD002AF5F781003B56C2 /* SpaceViewController.swift */,
 				B59C48E12B08A32000680645 /* List */,
-				B59C48E02B08865A00680645 /* Detail */,
 				B59C48D62B07CE5F00680645 /* PlanetListViewController.swift */,
 				B59C48DF2B07E0B800680645 /* ViewModels */,
 				B59C48DA2B07CFA600680645 /* Cells */,
@@ -342,7 +327,6 @@
 		B52E44632AC704CC001135BC /* Model  */ = {
 			isa = PBXGroup;
 			children = (
-				B50EBDE12AEFB534007E8D6A /* VocaData */,
 				B52E446B2AC712D0001135BC /* User.swift */,
 				B50EBDDF2AEFB496007E8D6A /* VocaDetail.swift */,
 				B5F7FAEF2B03C4CC0027403D /* Voca.swift */,
@@ -399,13 +383,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		B59C48E02B08865A00680645 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		B59C48E12B08A32000680645 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,7 +426,6 @@
 				B5C4C25F2B2AEC6000117C73 /* fruits.mlpackage */,
 				B5BF5B6F2ABEC526008C53F4 /* BaseViewController.swift */,
 				B5BF5B712ABEF703008C53F4 /* CustomTabbarController.swift */,
-				B54E55EA2B13162D00855330 /* GoogleService-Info.plist */,
 			);
 			path = WorldPang;
 			sourceTree = "<group>";
@@ -487,7 +463,6 @@
 				B52E44642AC7058B001135BC /* HomeViewModel.swift */,
 				B59C48E22B08E4BF00680645 /* Stage.swift */,
 				B50EBDDE2AEB7B58007E8D6A /* Cells */,
-				B52E44532AC0229A001135BC /* PagerCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -618,7 +593,6 @@
 			);
 			name = WorldPang;
 			packageProductDependencies = (
-				B59C084C2B14B07D00E96593 /* ObjectMapper */,
 			);
 			productName = WorldPang;
 			productReference = B5BF5B2E2ABDC455008C53F4 /* WorldPang.app */;
@@ -696,7 +670,6 @@
 			);
 			mainGroup = B5BF5B252ABDC455008C53F4;
 			packageReferences = (
-				B59C084B2B14B07D00E96593 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 			);
 			productRefGroup = B5BF5B2F2ABDC455008C53F4 /* Products */;
 			projectDirPath = "";
@@ -726,13 +699,11 @@
 				B5C4C24F2B26F9D000117C73 /* output_2.json in Resources */,
 				B5BF5B842ACD8EF8008C53F4 /* art.scnassets in Resources */,
 				B5C4C2442B26F9D000117C73 /* output_7.json in Resources */,
-				B50EBDE32AEFB54D007E8D6A /* BasicVoca.json in Resources */,
 				B5C4C24A2B26F9D000117C73 /* output_16.json in Resources */,
 				B5C4C2452B26F9D000117C73 /* output_14.json in Resources */,
 				B5C4C2462B26F9D000117C73 /* output_15.json in Resources */,
 				B5BF5B3B2ABDC456008C53F4 /* Assets.xcassets in Resources */,
 				B5BF5B392ABDC455008C53F4 /* Main.storyboard in Resources */,
-				B54E55EB2B13162D00855330 /* GoogleService-Info.plist in Resources */,
 				B5C4C2492B26F9D000117C73 /* output_9.json in Resources */,
 				B5C4C2502B26F9D000117C73 /* output_11.json in Resources */,
 				B5C4C2422B26F9D000117C73 /* output_1.json in Resources */,
@@ -885,7 +856,6 @@
 				B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */,
 				B59C08402B1439ED00E96593 /* TTSManager.swift in Sources */,
 				B52E44682AC71274001135BC /* ProfileViewController.swift in Sources */,
-				B50EBDF82AF1625D007E8D6A /* UIDevice+Extension.swift in Sources */,
 				B54E55E62B0D0D0500855330 /* VocaStageCell.swift in Sources */,
 				B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */,
 				B5BF5B8F2ADECA2C008C53F4 /* OCRViewController.swift in Sources */,
@@ -1124,6 +1094,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Minjae.WorldPang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1157,6 +1131,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Minjae.WorldPang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1283,25 +1261,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B59C084B2B14B07D00E96593 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B59C084C2B14B07D00E96593 /* ObjectMapper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B59C084B2B14B07D00E96593 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
-			productName = ObjectMapper;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B5BF5B262ABDC455008C53F4 /* Project object */;
 }

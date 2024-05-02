@@ -321,3 +321,8 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: UIScrollViewDelegate {
     
 }
+
+
+class ARViewModel {
+    var arCategory: ARCategory = .normal
+}

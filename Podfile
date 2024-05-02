@@ -16,8 +16,8 @@ target 'WorldPang' do
    pod 'RxDataSources'
    pod 'RxGesture'
    pod 'SwiftSoup'
-   pod 'RealmSwift', '~>10'
-   pod 'Firebase/Database' 
+   pod 'ObjectMapper'
+   pod 'RealmSwift'
   # Pods for WorldPang
 
   target 'WorldPangTests' do
