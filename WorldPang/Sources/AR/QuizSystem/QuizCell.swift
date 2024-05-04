@@ -31,8 +31,6 @@ class QuizCell: UICollectionViewCell {
         }
         
     }
-    
-    
     let letterLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black

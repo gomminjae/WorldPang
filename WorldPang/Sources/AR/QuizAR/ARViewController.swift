@@ -7,42 +7,20 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
-
-enum ARCategory {
-    case normal
-    case space
-    case fruits
-}
-
-enum RecognitionError: Error {
-    case unableToInitializeCoreMLModel
-    case resultIsEmpty
-    case lowConfidence
-    case yoloOutputFormatMismatch
-}
-
 class ARViewController: UIViewController {
     
     @IBOutlet weak var sceneView: ARSCNView!
     
-    
     private let disposeBag = DisposeBag()
-    
-    var selectedCategory: ARCategory = .normal {
-        didSet {
-            updateMLModel(for: selectedCategory)
-        }
-    }
-    
-
+    private let viewModel = ARViewModel()
     
     var visionRequests = [VNRequest]()
     let dispatchQueueForML = DispatchQueue(label: "mobilenet")
-    
     var predictedObjectName = PublishSubject<String>()
     var objectName: String = "_"
-    
     let tapGesture = UITapGestureRecognizer()
+    
+    
     
     
     override func viewDidLoad() {
@@ -51,8 +29,10 @@ class ARViewController: UIViewController {
         
         setupView()
         bindRX()
+        bindViewModel()
         
-        updateMLModel(for: selectedCategory)
+        
+       //updateMLModel(for: selectedCategory)
         
         // Do any additional setup after loading the view.
     }
@@ -63,9 +43,6 @@ class ARViewController: UIViewController {
         configuration.planeDetection = [.vertical,.horizontal]
         
         sceneView.session.run(configuration)
-       
-
-    
        
     }
     
@@ -164,115 +141,19 @@ class ARViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        
     }
-    
-    private func updateMLModel(for category: ARCategory) {
-        switch category {
-        case .normal:
-            guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
-            updateVisionRequests(with: model)
-        case.fruits:
-            guard let model = try? VNCoreMLModel(for: fruits().model) else { fatalError() }
-            updateVisionRequests(with: model)
-        default:
-            print("없음")
-        }
-    }
-    private func updateVisionRequests(with model: VNCoreMLModel) {
-        
-        if selectedCategory == .normal {
-            let request = VNCoreMLRequest(model: model, completionHandler: classificationCompleteHandler)
-            request.imageCropAndScaleOption = .centerCrop
-            visionRequests = [request]
-        } else if selectedCategory == .fruits {
-            let request = VNCoreMLRequest(model: model, completionHandler: classificationFruitsCompleteHandler)
-            request.imageCropAndScaleOption = .centerCrop
-            visionRequests = [request]
-        }
-    }
-    
-    func classificationFruitsCompleteHandler(request: VNRequest, error: Error?) {
-        // Catch Errors
-        if let error = error {
-            print("Error: \(error.localizedDescription)")
-            return
-        }
-        
-        guard let observations = request.results else {
-            print("No results")
-            return
-        }
-        
-        // Get Classifications
-        let topClassifications = observations
-            .compactMap { $0 as? VNClassificationObservation }
-            .prefix(1) // top result
-        
-        guard let topClassification = topClassifications.first else {
-            print("No classifications found")
-            return
-        }
-        
-        // Extract information from the top classification
-        let objectNameComponents = topClassification.identifier.components(separatedBy: ",")
-        let objectName = objectNameComponents[0]
-        
-        // Print or use the information as needed
-        let confidenceString = String(format: "%.2f", topClassification.confidence * 100)
-        print("Classification: \(objectName) Confidence: \(confidenceString)%")
-        
-        // Pass the predicted object name to the appropriate method or property
-        predictedObjectName.onNext(objectName)
-    }
-
-    
-
-    
-    
-    
-    
-    func classificationCompleteHandler(request: VNRequest, error: Error?) {
-        // Catch Errors
-        if error != nil {
-            print("Error: " + (error?.localizedDescription)!)
-            return
-        }
-        guard let observations = request.results else {
-            print("No results")
-            return
-        }
-        
-        // Get Classifications
-        let classifications = observations[0...1] // top 2 results
-            .compactMap({ $0 as? VNClassificationObservation })
-            .map({ "\($0.identifier) \(String(format:"- %.2f", $0.confidence))" })
-            .joined(separator: "\n")
-        
-        let objectName: String = classifications.components(separatedBy: "-")[0].components(separatedBy: ",")[0]
-        
-        predictedObjectName.onNext(objectName)
-    }
-    
-    func updateImageForCoreML() {
-        let pixelBuff: CVPixelBuffer? = (sceneView.session.currentFrame?.capturedImage)
-        
-        if pixelBuff == nil { return }
-        
-        let ciImage: CIImage = CIImage(cvImageBuffer: pixelBuff!)
-        
-        let imageRequestHander = VNImageRequestHandler(ciImage: ciImage, options: [:])
-        
-        do {
-            try imageRequestHander.perform(self.visionRequests)
-        } catch {
-            print(error)
-        }
+    private func bindViewModel() {
+        viewModel.setupBindings(
+            sceneTap: tapGesture.rx.event.asObservable().map { _ in },
+            exitTap: exitButton.rx.tap.asObservable(),
+            startTap: startButton.rx.tap.asObservable(),
+            sceneView: sceneView,
+            storyboard: storyboard,
+            viewController: self
+        )
     }
     
     func aimViewTapped() {
-        
-        updateImageForCoreML()
         
         
         let screenCenter: CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
@@ -280,11 +161,10 @@ class ARViewController: UIViewController {
         let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint])
         
         if let closestResult = arHitTestResults.first {
-            // Get Coordinates of HitTest
+           
             let transform : matrix_float4x4 = closestResult.worldTransform
             let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
-            
-            // Create 3D Text
+        
             let node : SCNNode = createNewBubbleParentNode(objectName)
             sceneView.scene.rootNode.addChildNode(node)
             node.position = worldCoord
@@ -364,7 +244,7 @@ class ARViewController: UIViewController {
             $0.centerY.equalTo(view)
         }
         
-        var currentScore = PointManager.shared.getPoints()
+        let currentScore = PointManager.shared.getPoints()
         label.text = "총 획득한 포인트는 \(currentScore)입니다!"
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
@@ -435,31 +315,16 @@ class ARViewController: UIViewController {
         label.textColor = .white
         return label
     }()
-    
-    
-    
-    
-    
 }
 
 extension ARViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         DispatchQueue.main.async {
-            // Do any desired updates to SceneKit here.
+            
         }
+    }
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        viewModel.updateImageForCoreML(with: frame.capturedImage, sceneView: sceneView)
     }
 }
 
-extension UIFont {
-    // Based on: https://stackoverflow.com/questions/4713236/how-do-i-set-bold-and-italic-on-uilabel-of-iphone-ipad
-    func withTraits(traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
-        let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits))
-        return UIFont(descriptor: descriptor!, size: 0)
-    }
-}
-extension Array where Element: Comparable {
-    func argmax() -> Int? {
-        guard let maxElement = self.max() else { return nil }
-        return firstIndex(of: maxElement)
-    }
-}
