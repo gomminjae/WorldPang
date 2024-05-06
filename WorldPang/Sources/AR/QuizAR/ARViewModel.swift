@@ -33,7 +33,6 @@ protocol ARViewModelBindable {
     var selectedCategory: BehaviorSubject<ARCategory> { get }
     var predictedObjectName: BehaviorSubject<String> { get }
     
-    func setupBindings(sceneTap: Observable<Void>, exitTap: Observable<Void>, startTap: Observable<Void>, sceneView: ARSCNView, storyboard: UIStoryboard?, viewController: UIViewController)
 
 }
 
@@ -41,10 +40,15 @@ class ARViewModel: ARViewModelBindable {
     
     
     var selectedCategory: BehaviorSubject<ARCategory> = BehaviorSubject(value: .normal)
-    var predictedObjectName: BehaviorSubject<String> = BehaviorSubject(value: "")
+    var predictedObjectName: BehaviorSubject<String> = BehaviorSubject(value: "확인")
     
     private var visionRequests = [VNRequest]()
     private let disposeBag = DisposeBag()
+    
+    
+    init() {
+        bindToSelectedCategory()
+    }
     
     
     
@@ -70,24 +74,95 @@ class ARViewModel: ARViewModelBindable {
         }
     }
     private func updateVisionRequests(with model: VNCoreMLModel) {
-        let request = VNCoreMLRequest(model: model, completionHandler: classificationCompleteHandler)
-        request.imageCropAndScaleOption = .centerCrop
-        visionRequests = [request]
+        do {
+            let completionHandler: VNRequestCompletionHandler?
+            
+            switch try selectedCategory.value() {
+            case .normal:
+                completionHandler = classificationCompleteHandler
+            case .fruits:
+                completionHandler = classificationFruitsCompleteHandler
+            default:
+                print("Not supported")
+                return
+            }
+            
+            let request = VNCoreMLRequest(model: model, completionHandler: completionHandler)
+            request.imageCropAndScaleOption = .centerCrop
+            
+            visionRequests = [request]
+        } catch {
+            print("Error creating VNCoreMLRequest: \(error)")
+        }
     }
-    
-    func updateImageForCoreML(with pixelBuff: CVPixelBuffer?, sceneView: ARSCNView) {
-        guard let pixelBuff = pixelBuff else { return }
+    func updateImageForCoreML(sceneView: ARSCNView) {
+        guard let pixelBuff = sceneView.session.currentFrame?.capturedImage else { return }
         let ciImage = CIImage(cvImageBuffer: pixelBuff)
-        let imageRequestHander = VNImageRequestHandler(ciImage: ciImage, options: [:])
+        let imageRequestHandler = VNImageRequestHandler(ciImage: ciImage, options: [:])
         
         do {
-            try imageRequestHander.perform(self.visionRequests)
+            try imageRequestHandler.perform(visionRequests)
         } catch {
             print(error)
         }
     }
+    
+    func aimViewTapped(sceneView: ARSCNView) {
+        updateImageForCoreML(sceneView: sceneView)
+        //print("aimView Tapped")
+        
+        let screenCenter: CGPoint = CGPoint(x: sceneView.bounds.midX, y: sceneView.bounds.midY)
+        
+        let arHitTestResults: [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint])
+        
+        if let closestResult = arHitTestResults.first {
+            // Get Coordinates of HitTest
+            let transform: matrix_float4x4 = closestResult.worldTransform
+            let worldCoord: SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
+            
+            
+
+            
+            if let objectName = try? predictedObjectName.value() {
+                print("Object Name:", objectName)
+                let node: SCNNode = createNewBubbleParentNode(objectName)
+                node.position = worldCoord
+                sceneView.scene.rootNode.addChildNode(node)
+            } else {
+                print("No predicted object name")
+            }
+        }
+        
+    }
+    
+    func createNewBubbleParentNode(_ text : String) -> SCNNode {
+       
+        let billboardConstraint = SCNBillboardConstraint()
+        billboardConstraint.freeAxes = SCNBillboardAxis.Y
+        
+        let bubble = SCNText(string: text, extrusionDepth: CGFloat(0.01))
+        var font = UIFont(name: "Futura", size: 0.15)
+        font = font?.withTraits(traits: .traitBold)
+        bubble.font = font
+        bubble.firstMaterial?.diffuse.contents = UIColor.green
+        bubble.firstMaterial?.specular.contents = UIColor.white
+        bubble.firstMaterial?.isDoubleSided = true
+        bubble.chamferRadius = CGFloat(0.1)
+        
+        let (minBound, maxBound) = bubble.boundingBox
+        let bubbleNode = SCNNode(geometry: bubble)
+        bubbleNode.pivot = SCNMatrix4MakeTranslation( (maxBound.x - minBound.x)/2, minBound.y, 0.1/2)
+        bubbleNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
+        
+
+        let bubbleNodeParent = SCNNode()
+        bubbleNodeParent.addChildNode(bubbleNode)
+        bubbleNodeParent.constraints = [billboardConstraint]
+        
+        return bubbleNodeParent
+    }
     func classificationCompleteHandler(request: VNRequest, error: Error?) {
-        // Catch Errors
+    
         if error != nil {
             print("Error: " + (error?.localizedDescription)!)
             return
@@ -97,7 +172,7 @@ class ARViewModel: ARViewModelBindable {
             return
         }
         
-        // Get Classifications
+    
         let classifications = observations[0...1] // top 2 results
             .compactMap({ $0 as? VNClassificationObservation })
             .map({ "\($0.identifier) \(String(format:"- %.2f", $0.confidence))" })
@@ -108,8 +183,10 @@ class ARViewModel: ARViewModelBindable {
         predictedObjectName.onNext(objectName)
     }
     
-    func classificationFruitsCompleteHandler(request: VNRequest, error: Error?) {
-        // Catch Errors
+    func classificationFruitsCompleteHandler(
+        request: VNRequest,
+        error: Error?) {
+
         if let error = error {
             print("Error: \(error.localizedDescription)")
             return
@@ -130,24 +207,15 @@ class ARViewModel: ARViewModelBindable {
             return
         }
         
-        // Extract information from the top classification
         let objectNameComponents = topClassification.identifier.components(separatedBy: ",")
         let objectName = objectNameComponents[0]
         
-        // Print or use the information as needed
         let confidenceString = String(format: "%.2f", topClassification.confidence * 100)
         print("Classification: \(objectName) Confidence: \(confidenceString)%")
         
-        // Pass the predicted object name to the appropriate method or property
         predictedObjectName.onNext(objectName)
     }
 
-    
-    
-    
-    func setupBindings(sceneTap: RxSwift.Observable<Void>, exitTap: Observable<Void>, startTap: RxSwift.Observable<Void>, sceneView: ARSCNView, storyboard: UIStoryboard?, viewController: UIViewController) {
-        print("binding")
-    }
     
     
     

@@ -48,7 +48,6 @@ class HomeViewController: BaseViewController {
         userCurrentStateView.addSubview(pointTitleLabel)
         
         
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(customView: userProfileImageButton)
         
         
     }
