@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 
+
 class PagerCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
@@ -17,7 +18,6 @@ class PagerCell: UICollectionViewCell {
         self.setShadow()
         setupCell()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -40,7 +40,6 @@ class PagerCell: UICollectionViewCell {
             $0.trailing.equalTo(self).inset(20)
         }
     }
-    
     
     //MARK: UI
     lazy var baseView: UIView = {
@@ -65,9 +64,4 @@ class PagerCell: UICollectionViewCell {
         label.numberOfLines = 2
         return label
     }()
-    
-    
-    
-    
-    
 }

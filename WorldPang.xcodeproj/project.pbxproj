@@ -27,6 +27,9 @@
 		B52E44702ACC67C0001135BC /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */; };
 		B5389D742B05E3CA00EDC878 /* TranslationResponsePapagoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5389D732B05E3CA00EDC878 /* TranslationResponsePapagoResponse.swift */; };
 		B54E55E62B0D0D0500855330 /* VocaStageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54E55E52B0D0D0500855330 /* VocaStageCell.swift */; };
+		B56E2F2E2BE53567004A5E08 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E2F2D2BE53567004A5E08 /* Array+Extension.swift */; };
+		B56E2F302BE53619004A5E08 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56E2F2F2BE53619004A5E08 /* UIFont+Extension.swift */; };
+		B5931C002BE5232200197E34 /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5931BFF2BE5232200197E34 /* ARViewModel.swift */; };
 		B596FD012AF5F781003B56C2 /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596FD002AF5F781003B56C2 /* SpaceViewController.swift */; };
 		B59C08382B1439DE00E96593 /* DaumDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */; };
 		B59C08392B1439DE00E96593 /* DaumDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */; };
@@ -125,7 +128,6 @@
 		B50EBDE42AEFD941007E8D6A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		B50EBDEB2AEFECE0007E8D6A /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
 		B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		B50EBDF72AF1625D007E8D6A /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extension.swift"; path = "../../../Downloads/CoreML-in-ARKit-master 2/CoreML-in-ARKit/Extension/UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		B519FF3F2ADCCEAD000FACAB /* VocaStageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaStageViewController.swift; sourceTree = "<group>"; };
 		B519FF412ADCCEB5000FACAB /* VocaStageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaStageViewModel.swift; sourceTree = "<group>"; };
 		B52E44502ABFEAAC001135BC /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,9 @@
 		B52E446F2ACC67C0001135BC /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		B5389D732B05E3CA00EDC878 /* TranslationResponsePapagoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationResponsePapagoResponse.swift; sourceTree = "<group>"; };
 		B54E55E52B0D0D0500855330 /* VocaStageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocaStageCell.swift; sourceTree = "<group>"; };
+		B56E2F2D2BE53567004A5E08 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		B56E2F2F2BE53619004A5E08 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B5931BFF2BE5232200197E34 /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 		B596FD002AF5F781003B56C2 /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		B59C08372B1439DE00E96593 /* DaumDictionaryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaumDictionaryService.swift; sourceTree = "<group>"; };
 		B59C083B2B1439E600E96593 /* TranslationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
@@ -280,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				B52E44502ABFEAAC001135BC /* ARViewController.swift */,
+				B5931BFF2BE5232200197E34 /* ARViewModel.swift */,
 			);
 			path = QuizAR;
 			sourceTree = "<group>";
@@ -480,11 +486,12 @@
 		B5BF5B6A2ABDD449008C53F4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				B50EBDF72AF1625D007E8D6A /* UIDevice+Extension.swift */,
 				B5BF5B6B2ABDD459008C53F4 /* Gradient+UIView.swift */,
 				B52E44552AC023A6001135BC /* reusableIdentifier.swift */,
 				B50EBDF12AF15835007E8D6A /* UIImage+Extension.swift */,
 				B5F7FAED2B03BFE70027403D /* String+Extension.swift */,
+				B56E2F2D2BE53567004A5E08 /* Array+Extension.swift */,
+				B56E2F2F2BE53619004A5E08 /* UIFont+Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -856,6 +863,7 @@
 				B50EBDF22AF15835007E8D6A /* UIImage+Extension.swift in Sources */,
 				B59C08402B1439ED00E96593 /* TTSManager.swift in Sources */,
 				B52E44682AC71274001135BC /* ProfileViewController.swift in Sources */,
+				B56E2F2E2BE53567004A5E08 /* Array+Extension.swift in Sources */,
 				B54E55E62B0D0D0500855330 /* VocaStageCell.swift in Sources */,
 				B52E44512ABFEAAC001135BC /* ARViewController.swift in Sources */,
 				B5BF5B8F2ADECA2C008C53F4 /* OCRViewController.swift in Sources */,
@@ -864,6 +872,7 @@
 				B5F7FAEE2B03BFE70027403D /* String+Extension.swift in Sources */,
 				B5BF5B322ABDC455008C53F4 /* AppDelegate.swift in Sources */,
 				B5BF5B672ABDC5AA008C53F4 /* LoginViewModel.swift in Sources */,
+				B5931C002BE5232200197E34 /* ARViewModel.swift in Sources */,
 				B52E446A2AC712B4001135BC /* ProfileViewModel.swift in Sources */,
 				B519FF402ADCCEAD000FACAB /* VocaStageViewController.swift in Sources */,
 				B50EBDE02AEFB496007E8D6A /* VocaDetail.swift in Sources */,
@@ -876,6 +885,7 @@
 				B5F7FAF02B03C4CC0027403D /* Voca.swift in Sources */,
 				B5389D742B05E3CA00EDC878 /* TranslationResponsePapagoResponse.swift in Sources */,
 				B5F7FAEC2B03B0E00027403D /* WordCell.swift in Sources */,
+				B56E2F302BE53619004A5E08 /* UIFont+Extension.swift in Sources */,
 				B519FF422ADCCEB5000FACAB /* VocaStageViewModel.swift in Sources */,
 				B59C083C2B1439E600E96593 /* TranslationService.swift in Sources */,
 				B5D2C0BF2B13987C00783196 /* VocaDetailViewController.swift in Sources */,

@@ -28,8 +28,6 @@ class QuizViewModel: QuizViewModelBindable {
     var shuffledLetters: Observable<[String]>
     var isSelectionEnabled: Observable<Bool>
     
- 
-    
     
     private let disposeBag = DisposeBag()
     
@@ -43,11 +41,7 @@ class QuizViewModel: QuizViewModelBindable {
             .map { _ in true }
             .startWith(true)
         
-    
-        
     }
     
-    
-
     
 }

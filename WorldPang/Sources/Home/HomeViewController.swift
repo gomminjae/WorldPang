@@ -48,7 +48,6 @@ class HomeViewController: BaseViewController {
         userCurrentStateView.addSubview(pointTitleLabel)
         
         
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(customView: userProfileImageButton)
         
         
     }
@@ -137,36 +136,31 @@ class HomeViewController: BaseViewController {
             }
             .disposed(by: disposeBag)
         
-        
-        
         pagerCollectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
         
        
-        
         pagerCollectionView.rx.itemSelected
-            .subscribe(onNext: { [unowned self] indexPath in
+            .subscribe(onNext: { [unowned self] selectedItem in
                 let arViewModel = ARViewModel()
-                switch indexPath.item {
+                switch selectedItem.row {
                 case 0:
-                    arViewModel.arCategory = .normal
+                    arViewModel.selectedCategory.onNext(.normal)
                     // ARViewController로 화면 전환
                     if let arViewController = storyboard?.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
                         arViewController.modalPresentationStyle = .fullScreen
-                        arViewController.selectedCategory = .normal
                         present(arViewController,animated: true)
                     }
                 case 1:
-                    arViewModel.arCategory = .space
+                    arViewModel.selectedCategory.onNext(.space)
                     if let spaceViewController = storyboard?.instantiateViewController(withIdentifier: "SpaceVC") as? SpaceViewController {
                         spaceViewController.modalPresentationStyle = .fullScreen
                         present(spaceViewController,animated: true)
                     }
                 default:
-                    arViewModel.arCategory = .fruits
+                    arViewModel.selectedCategory.onNext(.fruits)
                     if let arViewController = storyboard?.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController {
                         arViewController.modalPresentationStyle = .fullScreen
-                        arViewController.selectedCategory = .fruits
                         present(arViewController,animated: true)
                     }
                 }
@@ -322,7 +316,3 @@ extension HomeViewController: UIScrollViewDelegate {
     
 }
 
-
-class ARViewModel {
-    var arCategory: ARCategory = .normal
-}

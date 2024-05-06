@@ -10,21 +10,11 @@ import RxSwift
 import RxCocoa
 import Alamofire
 
-protocol ViewModelType {
-    associatedtype Input
-    associatedtype Output
-    
-    var disposeBag: DisposeBag { get set }
-    func transform(_ input: Input)
-    
-}
 
 class HomeViewModel {
     
     var userInfo: BehaviorSubject<User?> = BehaviorSubject(value: nil)
 
-         
-   
     
     private var disposeBag: DisposeBag = DisposeBag()
     

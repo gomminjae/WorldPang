@@ -7,71 +7,37 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
-
-enum ARCategory {
-    case normal
-    case space
-    case fruits
-}
-
-enum RecognitionError: Error {
-    case unableToInitializeCoreMLModel
-    case resultIsEmpty
-    case lowConfidence
-    case yoloOutputFormatMismatch
-}
-
 class ARViewController: UIViewController {
     
     @IBOutlet weak var sceneView: ARSCNView!
     
-    
     private let disposeBag = DisposeBag()
-    
-    var selectedCategory: ARCategory = .normal {
-        didSet {
-            updateMLModel(for: selectedCategory)
-        }
-    }
-    
-
+    private let viewModel = ARViewModel()
     
     var visionRequests = [VNRequest]()
     let dispatchQueueForML = DispatchQueue(label: "mobilenet")
-    
-    var predictedObjectName = PublishSubject<String>()
-    var objectName: String = "_"
-    
     let tapGesture = UITapGestureRecognizer()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
-        
         setupView()
         bindRX()
         
-        updateMLModel(for: selectedCategory)
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = [.vertical,.horizontal]
-        
         sceneView.session.run(configuration)
-       
-
-    
        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         sceneView.session.pause()
         self.tabBarController?.tabBar.isHidden = false
         
@@ -79,13 +45,10 @@ class ARViewController: UIViewController {
     }
     
     private func setupView() {
+        
         sceneView.addGestureRecognizer(tapGesture)
-        
-        
-        
         sceneView.addSubview(aimView)
         sceneView.addSubview(toolBox)
-        
         toolBox.addArrangedSubview(exitButton)
         toolBox.addArrangedSubview(startButton)
         
@@ -113,16 +76,11 @@ class ARViewController: UIViewController {
         
         aimView.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.aimViewTapped()
+                guard let sceneView = self?.sceneView else { return }
+                self?.viewModel.aimViewTapped(sceneView: sceneView)
             })
             .disposed(by: disposeBag)
         
-        predictedObjectName
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] objectName in
-                self?.objectName = objectName
-            })
-            .disposed(by: disposeBag)
         
         exitButton.rx.tap
             .observe(on: MainScheduler.instance)
@@ -164,160 +122,11 @@ class ARViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        
-    }
-    
-    private func updateMLModel(for category: ARCategory) {
-        switch category {
-        case .normal:
-            guard let model = try? VNCoreMLModel(for: MobileNetV2().model) else { fatalError() }
-            updateVisionRequests(with: model)
-        case.fruits:
-            guard let model = try? VNCoreMLModel(for: fruits().model) else { fatalError() }
-            updateVisionRequests(with: model)
-        default:
-            print("없음")
-        }
-    }
-    private func updateVisionRequests(with model: VNCoreMLModel) {
-        
-        if selectedCategory == .normal {
-            let request = VNCoreMLRequest(model: model, completionHandler: classificationCompleteHandler)
-            request.imageCropAndScaleOption = .centerCrop
-            visionRequests = [request]
-        } else if selectedCategory == .fruits {
-            let request = VNCoreMLRequest(model: model, completionHandler: classificationFruitsCompleteHandler)
-            request.imageCropAndScaleOption = .centerCrop
-            visionRequests = [request]
-        }
-    }
-    
-    func classificationFruitsCompleteHandler(request: VNRequest, error: Error?) {
-        // Catch Errors
-        if let error = error {
-            print("Error: \(error.localizedDescription)")
-            return
-        }
-        
-        guard let observations = request.results else {
-            print("No results")
-            return
-        }
-        
-        // Get Classifications
-        let topClassifications = observations
-            .compactMap { $0 as? VNClassificationObservation }
-            .prefix(1) // top result
-        
-        guard let topClassification = topClassifications.first else {
-            print("No classifications found")
-            return
-        }
-        
-        // Extract information from the top classification
-        let objectNameComponents = topClassification.identifier.components(separatedBy: ",")
-        let objectName = objectNameComponents[0]
-        
-        // Print or use the information as needed
-        let confidenceString = String(format: "%.2f", topClassification.confidence * 100)
-        print("Classification: \(objectName) Confidence: \(confidenceString)%")
-        
-        // Pass the predicted object name to the appropriate method or property
-        predictedObjectName.onNext(objectName)
     }
 
     
-
     
     
-    
-    
-    func classificationCompleteHandler(request: VNRequest, error: Error?) {
-        // Catch Errors
-        if error != nil {
-            print("Error: " + (error?.localizedDescription)!)
-            return
-        }
-        guard let observations = request.results else {
-            print("No results")
-            return
-        }
-        
-        // Get Classifications
-        let classifications = observations[0...1] // top 2 results
-            .compactMap({ $0 as? VNClassificationObservation })
-            .map({ "\($0.identifier) \(String(format:"- %.2f", $0.confidence))" })
-            .joined(separator: "\n")
-        
-        let objectName: String = classifications.components(separatedBy: "-")[0].components(separatedBy: ",")[0]
-        
-        predictedObjectName.onNext(objectName)
-    }
-    
-    func updateImageForCoreML() {
-        let pixelBuff: CVPixelBuffer? = (sceneView.session.currentFrame?.capturedImage)
-        
-        if pixelBuff == nil { return }
-        
-        let ciImage: CIImage = CIImage(cvImageBuffer: pixelBuff!)
-        
-        let imageRequestHander = VNImageRequestHandler(ciImage: ciImage, options: [:])
-        
-        do {
-            try imageRequestHander.perform(self.visionRequests)
-        } catch {
-            print(error)
-        }
-    }
-    
-    func aimViewTapped() {
-        
-        updateImageForCoreML()
-        
-        
-        let screenCenter: CGPoint = CGPoint(x: self.sceneView.bounds.midX, y: self.sceneView.bounds.midY)
-        
-        let arHitTestResults : [ARHitTestResult] = sceneView.hitTest(screenCenter, types: [.featurePoint])
-        
-        if let closestResult = arHitTestResults.first {
-            // Get Coordinates of HitTest
-            let transform : matrix_float4x4 = closestResult.worldTransform
-            let worldCoord : SCNVector3 = SCNVector3Make(transform.columns.3.x, transform.columns.3.y, transform.columns.3.z)
-            
-            // Create 3D Text
-            let node : SCNNode = createNewBubbleParentNode(objectName)
-            sceneView.scene.rootNode.addChildNode(node)
-            node.position = worldCoord
-        }
-    }
-    
-    
-    func createNewBubbleParentNode(_ text : String) -> SCNNode {
-       
-        let billboardConstraint = SCNBillboardConstraint()
-        billboardConstraint.freeAxes = SCNBillboardAxis.Y
-        
-        let bubble = SCNText(string: text, extrusionDepth: CGFloat(0.01))
-        var font = UIFont(name: "Futura", size: 0.15)
-        font = font?.withTraits(traits: .traitBold)
-        bubble.font = font
-        bubble.firstMaterial?.diffuse.contents = UIColor.green
-        bubble.firstMaterial?.specular.contents = UIColor.white
-        bubble.firstMaterial?.isDoubleSided = true
-        bubble.chamferRadius = CGFloat(0.1)
-        
-        let (minBound, maxBound) = bubble.boundingBox
-        let bubbleNode = SCNNode(geometry: bubble)
-        bubbleNode.pivot = SCNMatrix4MakeTranslation( (maxBound.x - minBound.x)/2, minBound.y, 0.1/2)
-        bubbleNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
-        
-
-        let bubbleNodeParent = SCNNode()
-        bubbleNodeParent.addChildNode(bubbleNode)
-        bubbleNodeParent.constraints = [billboardConstraint]
-        
-        return bubbleNodeParent
-    }
     
     private func changeAllNode() {
         let allTextNodes = sceneView.scene.rootNode.childNodes(passingTest: { (node, _) in
@@ -364,7 +173,7 @@ class ARViewController: UIViewController {
             $0.centerY.equalTo(view)
         }
         
-        var currentScore = PointManager.shared.getPoints()
+        let currentScore = PointManager.shared.getPoints()
         label.text = "총 획득한 포인트는 \(currentScore)입니다!"
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
@@ -435,31 +244,13 @@ class ARViewController: UIViewController {
         label.textColor = .white
         return label
     }()
-    
-    
-    
-    
-    
 }
 
 extension ARViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         DispatchQueue.main.async {
-            // Do any desired updates to SceneKit here.
+            
         }
     }
 }
 
-extension UIFont {
-    // Based on: https://stackoverflow.com/questions/4713236/how-do-i-set-bold-and-italic-on-uilabel-of-iphone-ipad
-    func withTraits(traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
-        let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits))
-        return UIFont(descriptor: descriptor!, size: 0)
-    }
-}
-extension Array where Element: Comparable {
-    func argmax() -> Int? {
-        guard let maxElement = self.max() else { return nil }
-        return firstIndex(of: maxElement)
-    }
-}

@@ -279,9 +279,6 @@ class SpaceViewController: BaseViewController {
         }
     }
     
-    
-    
-    
     //MARK: UI`
     
     let stackView: UIStackView = {
@@ -309,7 +306,6 @@ class SpaceViewController: BaseViewController {
         button.backgroundColor = .mainBlue
         return button
     }()
-    
     
   
 }

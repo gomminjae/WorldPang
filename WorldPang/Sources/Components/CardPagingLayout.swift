@@ -7,7 +7,6 @@ import UIKit
 
 class CardPagingLayout: UICollectionViewLayout {
     
-    // MARK: Book keeping
     private var itemCount = 0
     private var itemSize = CGSize.zero
     private var contentInsets = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
@@ -25,7 +24,6 @@ class CardPagingLayout: UICollectionViewLayout {
             (contentInsets.left + contentInsets.right)
     }
     
-    // Cached layout attributes
     private var layoutAttributes: [UICollectionViewLayoutAttributes] = []
     
     // ContentSize
@@ -34,7 +32,6 @@ class CardPagingLayout: UICollectionViewLayout {
         return CGSize(width: contentWidth, height: cv.bounds.height)
     }
     
-    // MARK: - Prepare
     
     override func prepare() {
         super.prepare()
@@ -47,31 +44,25 @@ class CardPagingLayout: UICollectionViewLayout {
         itemSize = CGSize(width: cv.bounds.width - (interitemSpace * 2.5),
                           height: cv.bounds.height - 70 - (contentInsets.top + contentInsets.bottom))
 
-        // Pre-variables
         layoutAttributes = []
         var currentX: CGFloat = 0
         
-        // Calculating the attributes for all the items.
-        // For large collection views more a thouthand item
-        // Consider splitting these calculations into chunks
         for item in 0..<itemCount {
-            
-            // Create attributes for each item
+    
             let indexPath = IndexPath(item: item, section: 0)
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             
-            // Set attributes size
+         
             attributes.size = itemSize
             
-            // Set attributes center
+        
             let xCenter = currentX + (itemSize.width / 2.0)
             let yCenter = cv.bounds.midY
             attributes.center = CGPoint(x: xCenter, y: yCenter)
             
-            // Append to cache
+         
             layoutAttributes.append(attributes)
             
-            // Shift current x with item width and interitem spacing
             currentX += itemAndSpaceWidth
         }
         
