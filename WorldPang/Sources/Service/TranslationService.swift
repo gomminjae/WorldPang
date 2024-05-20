@@ -27,8 +27,8 @@ class TranslationService {
 
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-            "X-Naver-Client-Id": "OhZagNKjZGIR9_hf5AGp",
-            "X-Naver-Client-Secret": "EVCz3zUZBl"
+            "X-Naver-Client-Id": "",
+            "X-Naver-Client-Secret": ""
         ]
 
         let parameters: [String: String] = [
